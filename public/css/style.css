@@ -1,0 +1,287 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #CED8E1;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 30px;
+    color: white;
+}
+
+#nav {
+    background-color: rgb(16, 43, 62);
+    padding-left: 20px;
+}
+
+#nabo {
+    height: 100%;
+    padding: 3%;
+}
+
+#nabot {
+    height: 100%;
+    padding: 4.4%;
+}
+
+#pru a {
+    list-style: none;
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #ffffff;
+    line-height: 80px;
+}
+
+#pru a:hover {
+    background: #9DA7AF;
+}
+
+#texma {
+    margin: 5px;
+    font-size: xx-small;
+}
+
+#inicio {
+    margin-top: 50%;
+    border-radius: 50px;
+    cursor: pointer;
+    background: #000018;
+}
+
+#fon {
+    box-shadow: -900px 300px 0px 2000px rgba(0, 0, 0, 0.6);
+    margin-top: 25%;
+}
+
+.dropdown-item:hover {
+    cursor: pointer;
+    background: #9DA7AF;
+}
+
+#hero {
+    background: #CED8E1;
+    padding-top: 60px;
+    min-height: 90px;
+    color: black;
+}
+
+#texto {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+.content-center {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+#reg {
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 15px 80px;
+    min-width: 160px;
+    border-radius: 46px;
+    display: inline-block;
+    background: #102B3E;
+    color: white;
+}
+
+#reg:hover {
+    background: #9DA7AF;
+}
+
+#cuadro {
+    padding: 15px;
+}
+
+#momo {
+    background: #102B3E;
+    padding: 50px;
+    padding-left: 50px;
+    border-radius: 65px;
+    text-align: center;
+}
+
+#bot {
+    width: 100%;
+    background: #9DA7AF;
+    padding: 15%;
+    border-radius: 58px;
+}
+
+#bot:hover {
+    background: #CED8E1;
+}
+
+#moda {
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(17, 22, 49, 1) 0%, rgba(15, 28, 56, 1) 35%, rgba(0, 84, 129, 1) 100%);
+    box-shadow: 8px 8px 15px;
+    color: black;
+    border-radius: 50px;
+}
+
+#letra {
+    text-align: center;
+    color: white;
+}
+
+#gato {
+    color: black;
+    box-shadow: 8px 8px 15px;
+}
+
+#caja {
+    color: black;
+    background: #102B3E;
+    background-size: cover;
+    min-height: 350px;
+    padding-top: 50px;
+}
+
+.content-all {
+    /*Todo el contenedor*/
+    background: #102B3E;
+    width: 210px;
+    margin: auto;
+    perspective: 800px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.content-carrousel {
+    /*Contenedor de las imagenes*/
+    width: 100%;
+    position: absolute;
+    animation: rotar 30s infinite linear;
+    /*Aqui se controla la velocidad de rotacion */
+    transform-style: preserve-3d;
+}
+
+.content-carrousel:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.content-carrousel figure {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px black;
+    transition: all 300ms;
+}
+
+.content-carrousel figure:hover {
+    box-shadow: 0px 0px 0px 0px black;
+    transition: all 300ms;
+}
+
+.content-carrousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
+}
+
+
+/*Esto quiere decir que yo estoy seleccionando la imagen numero1*/
+
+.content-carrousel figure:nth-child(2) {
+    transform: rotateY(40deg) translateZ(300px);
+}
+
+.content-carrousel figure:nth-child(3) {
+    transform: rotateY(80deg) translateZ(300px);
+}
+
+.content-carrousel figure:nth-child(4) {
+    transform: rotateY(120deg) translateZ(300px);
+}
+
+.content-carrousel figure:nth-child(5) {
+    transform: rotateY(160deg) translateZ(300px);
+}
+
+.content-carrousel figure:nth-child(6) {
+    transform: rotateY(200deg) translateZ(300px);
+}
+
+.content-carrousel figure:nth-child(7) {
+    transform: rotateY(240deg) translateZ(300px);
+}
+
+.content-carrousel figure:nth-child(8) {
+    transform: rotateY(280deg) translateZ(300px);
+}
+
+.content-carrousel figure:nth-child(9) {
+    transform: rotateY(320deg) translateZ(300px);
+}
+
+.content-carrousel figure:nth-child(10) {
+    transform: rotateY(360deg) translateZ(300px);
+}
+
+.content-carrousel img {
+    width: 100%;
+    transition: all 300ms;
+}
+
+.content-carrousel img:hover {
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+
+footer {
+    background: #9b9b9b;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#copy {
+    color: #ffffff;
+    background: #0f2a3d;
+}
+
+#cop {
+    color: #ffffff;
+    background: #3a5268;
+}
+
+#redes {
+    float: left;
+    text-align: left;
+}
