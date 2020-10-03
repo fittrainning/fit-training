@@ -18,36 +18,34 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+    <div class="container-fluid">
+        <!--Esta es la principal etiqueta que contiene la pagina-->
+        <div id="nav" class="row">
+            <!--Esta etiqueta contiene el contenido de toda la barra de navegacion-->
+            <nav id="pru" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <!--Define el responsive de la barra de navegacion-->
+                <a id="nabo" class="navbar" href="welcome.blade.php"><img src="img/logo.png" width="95px"></a>
+            </nav>
+            <nav class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <li class="nav dropdown justify-content-end">
+                    <!--Esta etiqueta contiene el icono de inicio de sesion-->
+                    <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!--Esta determina el boton-->
+                        <img id="inicio" src="img/porfile.png" alt="porfile" width="80px">
+                        <!--Esta etiqueta define la imagen de inicio de sesion-->
+                    </a>
+                    <div id="fon" class="dropdown-menu dropdown-menu-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
-                            </li>
+                        <div class="top-right links">
+                            <a class="dropdown-item btn" type="button" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrate') }}</a>
-                                </li>
+                                <a class="dropdown-item btn" type="button" href="{{ route('register') }}">{{ __('Registrate') }}</a>
                             @endif
+                        <div>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -56,8 +54,8 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
                                         {{ __('Cerrar Sesion') }}
                                     </a>
 
@@ -67,10 +65,10 @@
                                 </div>
                             </li>
                         @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                    </div>
+                </li>
+            </nav>
+        </div>
 
         <main class="py-4">
             @yield('content')
