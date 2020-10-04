@@ -14,10 +14,10 @@ class CreateTbDosificacionTable extends Migration
     public function up()
     {
         Schema::create('tb_dosificacion', function (Blueprint $table) {
-            $table->tinyInteger('Dos_Mes_Pla_id')->references('Mes_Pla_id')->on('tb_mesociclo')->onUpdate('cascade');
-            $table->tinyInteger('Dos_Mes_id')->references('Mes_id')->on('tb_mesociclo')->onUpdate('cascade');
-            $table->tinyInteger('Dos_Dosificacion');
-            $table->tinyInteger('Dos_porcentaje');
+            $table->Integer('Dos_Id')->autoIncrement();
+            $table->smallInteger('Dos_Dosificacion');
+            $table->Integer('Dos_Mes_Id_Gen');
+            $table->smallInteger('Dos_porcentaje');
             $table->integer('Dos_minutos');
             $table->timestamps();
             $table->softDeletes();

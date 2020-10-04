@@ -14,9 +14,9 @@ class CreateTbResmensualTable extends Migration
     public function up()
     {
         Schema::create('tb_resmensual', function (Blueprint $table) {
-            $table->bigIncrements('Rem_id');
-            $table->integer('Rem_Tes_id')->references('Tes_id')->on('tb_test')->onUpdate('cascade');
-            $table->string('Rem_Usu_id')->references('Dep_Usu_id')->on('tb_deportistas')->onUpdate('cascade');
+            $table->Integer('Rem_id')->autoIncrement();
+            $table->Integer('Rem_Tes_id');
+            $table->string('Rem_Usu_id');
             $table->date('Rem_fecha');
             $table->float('Rem_resultado');
             $table->timestamps();

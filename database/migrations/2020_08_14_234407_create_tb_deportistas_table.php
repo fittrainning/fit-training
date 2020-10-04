@@ -14,13 +14,13 @@ class CreateTbDeportistasTable extends Migration
     public function up()
     {
         Schema::create('tb_deportistas', function (Blueprint $table) {
-            $table->string('Dep_Usu_id');
+            $table->string('Dep_Usu_id')->primary();
             $table->string('Dep_deporte');
             $table->integer('Dep_estado');
             $table->string('Dep_razon');
-            $table->integer('Dep_Cod_Fic')->references('Cod_Fic')->on('tb_ficha')->onUpdate('cascade');
-            $table->integer('Dep_cod_Dee')->references('Dee_cod')->on('tb_deporte')->onUpdate('cascade');
-            $table->integer('Dep_id_Ana')->references('Ana_id')->on('tb_anamnesis')->onUpdate('cascade');
+            $table->integer('Dep_Cod_Fic');
+            $table->integer('Dep_cod_Dee');
+            $table->integer('Dep_id_Ana');
             $table->timestamps();
             $table->softDeletes();
         });

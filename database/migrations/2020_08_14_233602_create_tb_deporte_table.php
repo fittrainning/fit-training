@@ -14,7 +14,7 @@ class CreateTbDeporteTable extends Migration
     public function up()
     {
         Schema::create('tb_deporte', function (Blueprint $table) {
-            $table->bigIncrements('Dee_cod')->unsigned();
+            $table->Integer('Dee_cod')->primary();
             $table->string('Dee_nombre');
             $table->string('Dee_caracterizacion');
             $table->timestamps();

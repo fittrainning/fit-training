@@ -14,7 +14,7 @@ class CreateTbDirectorTable extends Migration
     public function up()
     {
         Schema::create('tb_director', function (Blueprint $table) {
-            $table->string('Dir_Usu_id')->references('Usu_id')->on('tb_usuarios')->onDelete('cascade');
+            $table->string('Dir_Usu_id')->primary()->references('Usu_id')->on('tb_usuarios')->onDelete('cascade');
             $table->string('Dir_Especialidad');
         });
     }

@@ -14,7 +14,7 @@ class CreateTbEntrenadorTable extends Migration
     public function up()
     {
         Schema::create('tb_entrenador', function (Blueprint $table) {
-            $table->string('Ent_Usu_id')->references('Usu_id')->on('tb_usuarios')->onDelete('cascade');
+            $table->string('Ent_Usu_id')->primary()->references('Usu_id')->on('tb_usuarios')->onDelete('cascade');
             $table->string('Ent_ficha');
             $table->string('Ent_nivel_de_formacion');
             $table->string('Ent_Deporte');

@@ -14,11 +14,8 @@ class CreateTbSeleccioncapacidadTable extends Migration
     public function up()
     {
         Schema::create('tb_seleccioncapacidad', function (Blueprint $table) {
-            $table->integer('Sec_Cap_Dos_Mes_Pla_id')->references('Cap_Dos_Mes_Pla_id')->on('tb_capacidad')->onUpdate('cascade');
-            $table->tinyInteger('Sec_Cap_Dos_Mes_id')->references('Cap_Dos_Mes_id')->on('tb_capacidad')->onUpdate('cascade');
-            $table->tinyInteger('Sec_Cap_Dos_Dosificacion')->references('Cap_Dos_Dosificacion')->on('tb_capacidad')->onUpdate('cascade');
-            $table->Integer('Sec_Cap_Capacidad')->references('Cap_Capacidad')->on('tb_capacidad')->onUpdate('cascade');
-            $table->Integer('Sec_id');
+            $table->Integer('Sec_Id')->autoIncrement();
+            $table->Integer('Sec_Cap_Id');
             $table->string('Sec_nombre');
             $table->string('Sec_descripcion');
             $table->timestamps();

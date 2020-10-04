@@ -14,7 +14,7 @@ class CreateTbAnamnesisTable extends Migration
     public function up()
     {
         Schema::create('tb_anamnesis', function (Blueprint $table) {
-            $table->bigIncrements('Ana_id')->unsigned();
+            $table->Integer('Ana_id')->primary();
             $table->string('Ana_DepPract');
             $table->string('Ana_depo');
             $table->string('Ana_Logros');

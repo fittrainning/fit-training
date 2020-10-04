@@ -14,7 +14,7 @@ class CreateTbUsuariosTable extends Migration
     public function up()
     {
         Schema::create('tb_usuarios', function (Blueprint $table) {
-            $table->bigIncrements('Usu_id');
+            $table->string('Usu_id')->primary()->uniqued();
             $table->string('Usu_tipodoc');
             $table->string('Usu_nombre');
             $table->string('Usu_apellidos');

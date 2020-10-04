@@ -14,15 +14,16 @@ class CreateTbMesocicloTable extends Migration
     public function up()
     {
         Schema::create('tb_mesociclo', function (Blueprint $table) {
-            $table->bigIncrements('Mes_Pla_id')->references('Pla_id')->on('tb_planentrenamiento')->onUpdate('cascade');
-            $table->tinyInteger('Mes_id');
-            $table->float('Mes_volumen_meso');
-            $table->float('Mes_intensidad_meso');
-            $table->date('Mes_fecini');
-            $table->date('Mes_fecfin');
-            $table->tinyInteger('Mes_nummes');
-            $table->Integer('Mes_minutos_totales');
-            $table->Integer('Mes_num_Sesxmes');
+            $table->Integer('Mes_Id_Gen')->autoIncrement();
+            $table->Integer('Mes_Pla_Id');
+            $table->smallInteger('Mes_Id');
+            $table->float('Mes_Volumen_Meso');
+            $table->float('Mes_Intensidad_Meso');
+            $table->date('Mes_Fecini');
+            $table->date('Mes_Fecfin');
+            $table->smallInteger('Mes_Nummes');
+            $table->Integer('Mes_Minutos_Totales');
+            $table->Integer('Mes_Num_Sesxmes');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -14,10 +14,8 @@ class CreateTbSesionTable extends Migration
     public function up()
     {
         Schema::create('tb_sesion', function (Blueprint $table) {
-            $table->bigIncrements('Ses_Pla_id')->references('Mic_Pla_id')->on('tb_microciclo')->onUpdate('cascade');
-            $table->tinyInteger('Ses_Mes_id')->references('Mic_Mes_id')->on('tb_microciclo')->onUpdate('cascade');
-            $table->tinyInteger('Ses_Mic_id')->references('Mic_id')->on('tb_microciclo')->onUpdate('cascade');
-            $table->tinyInteger('Ses_id');
+            $table->smallInteger('Ses_id')->autoIncrement();
+            $table->Integer('Ses_Mic_Id_Gen');
             $table->date('Ses_fecha');
             $table->string('Ses_lugar');
             $table->date('Ses_hora');

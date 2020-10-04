@@ -14,7 +14,7 @@ class CreateTbFichaTable extends Migration
     public function up()
     {
         Schema::create('tb_ficha', function (Blueprint $table) {
-            $table->integer('Fic_Cod');
+            $table->integer('Fic_Cod')->primary();
             $table->string('Fic_Nombre');
             $table->string('Fic_Tipo');
             $table->string('Fic_Jornada');

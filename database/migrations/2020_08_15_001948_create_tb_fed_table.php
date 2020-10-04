@@ -14,7 +14,7 @@ class CreateTbFedTable extends Migration
     public function up()
     {
         Schema::create('tb_fed', function (Blueprint $table) {
-            $table->string('Fed_cod');
+            $table->string('Fed_cod')->primary();
             $table->string('Fed_nombre');
             $table->string('Fed_tipo');
             $table->string('Fed_jornada');

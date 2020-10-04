@@ -14,7 +14,7 @@ class CreateTbPeriodosTable extends Migration
     public function up()
     {
         Schema::create('tb_periodos', function (Blueprint $table) {
-            $table->tinyInteger('Per_id');
+            $table->tinyInteger('Per_Id')->primary();
             $table->string('Per_nombre');
             $table->date('Per_fecini');
             $table->date('Per_fecfin');

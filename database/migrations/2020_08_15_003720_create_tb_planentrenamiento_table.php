@@ -14,7 +14,7 @@ class CreateTbPlanentrenamientoTable extends Migration
     public function up()
     {
         Schema::create('tb_planentrenamiento', function (Blueprint $table) {
-            $table->bigIncrements('Pla_id');
+            $table->Integer('Pla_id')->autoIncrement();
             $table->date('Pla_fecini');
             $table->date('Pla_fecfin');
             $table->string('Pla_deporte');

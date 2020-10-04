@@ -14,13 +14,15 @@ class CreateTbTestTable extends Migration
     public function up()
     {
         Schema::create('tb_test', function (Blueprint $table) {
-            $table->bigIncrements('Tes_id');
+            $table->Integer('Tes_id')->autoIncrement();
             $table->string('Tes_nombre');
             $table->string('Tes_capacidad');
             $table->string('Tes_objetivo');
             $table->string('Tes_desarrollo');
             $table->string('Tes_material');
             $table->string('Tes_evaluacion');
+            $table->string('Tes_imagen');
+            $table->string('Tes_icono');
             $table->timestamps();
             $table->softDeletes();
         });

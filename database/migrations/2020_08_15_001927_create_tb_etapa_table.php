@@ -14,7 +14,7 @@ class CreateTbEtapaTable extends Migration
     public function up()
     {
         Schema::create('tb_etapa', function (Blueprint $table) {
-            $table->tinyIncrements('Eta_Id');
+            $table->tinyInteger('Eta_Id')->primary();
             $table->string('Eta_nombre');
             $table->date('Eta_Fecini');
             $table->date('Eta_Fecfin');
