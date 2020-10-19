@@ -21,7 +21,7 @@
                 <!--Esta etiqueta contiene el contenido de toda la barra de navegacion-->
                 <nav id="pru" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                     <!--Define el responsive de la barra de navegacion-->
-                    <a id="nabo" class="navbar" href="Index.html"><img src="img/logo.png" width="95px"></a>
+                    <a id="nabo" class="navbar" href="{{ url('/') }}"><img src="img/logo.png" width="95px"></a>
                     <!--Esta etiqueta muestra el logo de la pagina-->
                     <a id="nabot" class="navbar" href="galeria">GALERIA</a>
                     <a id="nabot" class="navbar" href="">CONTACTENOS</a>
@@ -65,7 +65,7 @@
                         <!-- Este es el nombre de la pagina -->
                         <p>El entrenamiento es un concepto que reúne todas las medidas del proceso para aumentar el rendimiento deportivo. (Grosser, Starischka y Zimmermann, 1983)</p>
                         <!-- Esta es una breve descripcion de la pagina -->
-                        <a href="vista/registrar.php" id="reg" class="btn">
+                        <a href="{{ route('register') }}" id="reg" class="btn">
                             <!-- Aqui hay un boton que redirije a la pagina de registro en la pagina -->
                             REGISTRO
                         </a>

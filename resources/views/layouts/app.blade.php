@@ -19,6 +19,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <!-- Logo -->
+    <link rel="icon" type="image/png" href="{{ asset('../img/logo.png')}}">
 </head>
 <body>
     <div class="container-fluid">
@@ -27,48 +30,42 @@
             <!--Esta etiqueta contiene el contenido de toda la barra de navegacion-->
             <nav id="pru" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                 <!--Define el responsive de la barra de navegacion-->
-                <a id="nabo" class="navbar" href="welcome.blade.php"><img src="img/logo.png" width="95px"></a>
+                <a id="nabo" class="navbar" href="{{ url('/') }}"><img src="img/logo.png" width="95px"></a>
             </nav>
             <nav class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                 <li class="nav dropdown justify-content-end">
                     <!--Esta etiqueta contiene el icono de inicio de sesion-->
-                    <a href="{{ route('home') }}" class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <!--Esta determina el boton-->
                         <img id="inicio" src="img/porfile.png" alt="porfile" width="80px">
                         <!--Esta etiqueta define la imagen de inicio de sesion-->
                     </a>
                     
-                        <!-- Authentication Links -->
-                        @guest
-                            <div id="fon" class="dropdown-menu dropdown-menu-right">
-                                <div class="top-right links">
-                                    <a class="dropdown-item btn" type="button" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
-                                    @if (Route::has('register'))
-                                        <a class="dropdown-item btn" type="button" href="{{ route('register') }}">{{ __('Registrate') }}</a>
-                                    @endif
-                                <div>
-                            </div>
-                        @else
-                            <div id="fon" class="dropdown-menu dropdown-menu-right">
-                                <div class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
+                    <!-- Authentication Links -->
+                    @guest
+                        <div id="fon" class="dropdown-menu dropdown-menu-right">
+                            <div class="top-right links">
+                                <a class="dropdown-item btn" type="button" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
+                                @if (Route::has('register'))
+                                    <a class="dropdown-item btn" type="button" href="{{ route('register') }}">{{ __('Registrate') }}</a>
+                                @endif
+                            <div>
+                        </div>
+                    @else
+                        <div id="fon" class="dropdown-menu dropdown-menu-right">
+                            <div class="nav-item dropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    {{ __('Cerrar Sesion') }}
+                                </a>
 
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                            {{ __('Cerrar Sesion') }}
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </div>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </div>
-                        @endguest
+                        </div>
+                    @endguest
                 </li>
             </nav>
         </div>
