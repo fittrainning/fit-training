@@ -44,10 +44,6 @@
                                             <a href="{{ url('/home') }}">Inicio</a>
                                         @else
                                             <a class="dropdown-item btn" type="button" href="{{ route('login') }}">Iniciar Sesion</a>
-
-                                            @if (Route::has('register'))
-                                                <a class="dropdown-item btn" type="button" href="{{ route('register') }}">Registrate</a>
-                                            @endif
                                         @endauth
                                     </div>
                                 @endif
