@@ -18,8 +18,8 @@
                                 
                                 <select id="tdoc" type="text" class="form-control @error('doc') is-invalid @enderror" name="tdoc" value="{{ old('tdoc') }}" required autocomplete="tdoc" autofocus>
                                     <option> </option>
-                                        <option value="C.C">C.C</option>
-                                        <option value="T.I">T.I</option>
+                                        <option value="C.C">Cedula de Ciudadania</option>
+                                        <option value="T.I">Tarjeta de Identidad</option>
                                 </select>
                                 @error('tdoc')
                                     <span class="invalid-feedback" role="alert">
@@ -123,7 +123,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label id="let" for="email" class="col-md-4 col-form-label text-md-right">{{ __('Dirección de correo electrónico') }}</label>
+                            <label id="let" for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo electrónico') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
