@@ -2,9 +2,11 @@
 
 @section('content')
 <div class="container">
+    <br><br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card" id="card">
+                <br>
                 <div class=""><center><img src="img/logo.png" width="20%" id="imgr"></center>{{ __('') }}</div>
 
                 <div class="card-body">
@@ -13,9 +15,9 @@
 
                         <!-- DOCUMENTO -->
                         <div class="form-group row">
-                            <label id="let" for="doc" class="col-md-4 col-form-label text-md-right">{{ __('Numero de Documento') }}</label>
+                            <label for="doc" class="col-md-4 col-form-label text-md-right">{{ __('Numero de Documento') }}</label>
 
-                            <div class="col-md-6">
+                            <div id="let" class="col-md-6">
                                 <input id="doc" type="text" class="form-control @error('doc') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
                                 @error('doc')
                                     <span class="invalid-feedback" role="alert">
@@ -26,9 +28,9 @@
                         </div>
 
                         <div class="form-group row">
-                            <label id="let" for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
-                            <div class="col-md-6">
+                            <div id="let" class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')

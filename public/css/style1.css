@@ -152,3 +152,57 @@ a.article:hover {
     min-height: 100vh;
     transition: all 0.3s;
 }
+
+
+/* ---------------------------------------------------
+    END NAVBAR
+----------------------------------------------------- */
+
+#card {
+    color: #fff;
+    font-family: Arial Rounded MT;
+    background-image: linear-gradient(rgb(16, 24, 51), rgb(0, 81, 125));
+    box-shadow: 15px 15px 5px #000000da;
+    border-radius: 45px;
+}
+
+#but {
+    background-color: #CED8E1;
+    border: none;
+    color: rgb(16, 24, 51);
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 20px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+    box-shadow: 0 10px 30px 0 black;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10rem;
+    font-family: Arial Rounded MT;
+}
+
+#but:hover {
+    background-color: #9DA7AF;
+    border-radius: 10rem;
+}
+
+#let input {
+    background: #CED8E1;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px #000000;
+}
+
+#let select {
+    background: #CED8E1;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px #000000;
+}
