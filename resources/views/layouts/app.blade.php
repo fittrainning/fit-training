@@ -25,33 +25,25 @@
 </head>
 <body>
     <div class="container-fluid">
-        <!--Esta es la principal etiqueta que contiene la pagina-->
-        <div id="nav" class="row">
-            <!--Esta etiqueta contiene el contenido de toda la barra de navegacion-->
-            <nav id="pru" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                <!--Define el responsive de la barra de navegacion-->
-                <a id="nabo" class="navbar" href="{{ url('/') }}"><img src="img/logo.png" width="95px"></a>
-            </nav>
-            <nav class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                <li class="nav dropdown justify-content-end">
-                    <!--Esta etiqueta contiene el icono de inicio de sesion-->
-                    <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <!--Esta determina el boton-->
-                        <img id="inicio" src="img/porfile.png" alt="porfile" width="80px">
-                        <!--Esta etiqueta define la imagen de inicio de sesion-->
-                    </a>
-                    
-                    <!-- Authentication Links -->
-                    @guest
-                        <div id="fon" class="dropdown-menu dropdown-menu-right">
-                            <div class="top-right links">
-                                <a class="dropdown-item btn" type="button" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
-                                @if (Route::has('register'))
-                                    <a class="dropdown-item btn" type="button" href="{{ route('register') }}">{{ __('Registrate') }}</a>
-                                @endif
-                            <div>
-                        </div>
-                    @else
+        @guest
+        @else
+            <!--Esta es la principal etiqueta que contiene la pagina-->
+            <div id="nav" class="row">
+                <!--Esta etiqueta contiene el contenido de toda la barra de navegacion-->
+                <nav id="pru" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                    <!--Define el responsive de la barra de navegacion-->
+                    <a id="nabo" class="navbar" href="{{ url('/') }}"><img src="img/logo.png" width="95px"></a>
+                </nav>
+                <nav class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                    <li class="nav dropdown justify-content-end">
+                        <!--Esta etiqueta contiene el icono de inicio de sesion-->
+                        <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <!--Esta determina el boton-->
+                            <img id="inicio" src="img/porfile.png" alt="porfile" width="80px">
+                            <!--Esta etiqueta define la imagen de inicio de sesion-->
+                        </a>
+                        
+                        <!-- Authentication Links -->
                         <div id="fon" class="dropdown-menu dropdown-menu-right">
                             <div class="nav-item dropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -65,10 +57,10 @@
                                 </form>
                             </div>
                         </div>
-                    @endguest
-                </li>
-            </nav>
-        </div>
+                    </li>
+                </nav>
+            </div>
+        @endguest
 
         <main class="py-4">
             @yield('content')
