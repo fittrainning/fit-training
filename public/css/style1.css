@@ -33,6 +33,11 @@ body {
     background: #000018;
 }
 
+#fon {
+    box-shadow: -900px 300px 0px 2000px rgba(0, 0, 0, 0.6);
+    margin-top: 25%;
+}
+
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
