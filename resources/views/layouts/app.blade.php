@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style1.css') }}" rel="stylesheet">
 
     <!-- Logo -->
     <link rel="icon" type="image/png" href="{{ asset('../img/logo.png')}}">
@@ -32,14 +32,14 @@
                 <!--Esta etiqueta contiene el contenido de toda la barra de navegacion-->
                 <nav id="pru" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                     <!--Define el responsive de la barra de navegacion-->
-                    <a id="nabo" class="navbar" href="{{ url('/') }}"><img src="img/logo.png" width="95px"></a>
+                    <a class="navbar" href="{{ url('/') }}"><img src="img/logo.png" width="55px"></a>
                 </nav>
                 <nav class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     <li class="nav dropdown justify-content-end">
                         <!--Esta etiqueta contiene el icono de inicio de sesion-->
                         <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <!--Esta determina el boton-->
-                            <img id="inicio" src="img/porfile.png" alt="porfile" width="80px">
+                            <img id="inicio" src="img/porfile.png" alt="porfile" width="50px">
                             <!--Esta etiqueta define la imagen de inicio de sesion-->
                         </a>
                         
