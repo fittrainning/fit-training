@@ -82,24 +82,25 @@
                 <nav id="sidebar">
                     <ul class="list-unstyled components">
                         <li>
-                            <a class="nav-link" href="cargar_ficha.php" id="barra">
-                                <p id="texma"><img src="../img/clipboard109-01.png" alt="gestion_ficha" width="35px">&nbsp;Gestion Ficha</p>
+                            <a class="nav-link" href="{{ url('/construccion') }}">
+                                <p id="texma"><img src="../img/bioquimica.png" alt="gestion_ficha" width="35px">Caracterizacion</p>
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="cargar_usuario.php">
-                                <p id="texma"><img src="../img/impreso-1.png" alt="gestion_usuario" width="35px">&nbsp;Gestion Usuario</p>
+                            <a class="nav-link" href="{{ url('/bateria') }}">
+                                <p id="texma"><img src="../img/entrenamiento.png" alt="gestion_usuario" width="35px" >   Bateria de Test</p>
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="Di_construccion.php">
-                                <p id="texma"><img src="../img/multitudb.png" alt="entrenadores" width="35px">&nbsp;&nbsp;Entrenadores</p>
+                            <a class="nav-link" href="{{ url('/construccion') }}">
+                                <p id="texma"><img src="../img/Agenda.png" width="35px">    Agenda</p>
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="Di_construccion.php">
-                                <p id="texma"><img src="../img/estadistica.png" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
+                            <a class="nav-link" href="{{ url('/construccion') }}">
+                                <p id="texma"><img src="../img/estadistica.png" alt="estadisticas" width="35px">    Estadisticas</p>
                             </a>
+                        
                         </li>
                     </ul>
                 </nav>
