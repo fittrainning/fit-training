@@ -51,10 +51,10 @@
 @isset($actionText)
 @slot('subcopy')
 @lang(
-    "Si tiene problemas para hacer clic en el botón \": actionText \", copie y pegue la URL a continuación \n ".
+    "Si tiene problemas para hacer clic en el botón \": Restablecer \", copie y pegue la URL a continuación \n ".
      'en su navegador web:',
     [
-        'actionText' => $actionText,
+        'Restablecer' => $actionText,
     ]
 ) <span class="break-all">[{{ $displayableActionUrl }}]({{ $actionUrl }})</span>
 @endslot
