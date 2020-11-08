@@ -15,11 +15,12 @@
 
                         <!-- DOCUMENTO -->
                         <div class="form-group row">
-                            <label for="doc" class="col-md-4 col-form-label text-md-right">{{ __('Numero de Documento') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo electrónico') }}</label>
 
                             <div id="let" class="col-md-6">
-                                <input id="doc" type="text" class="form-control @error('doc') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
-                                @error('doc')
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
