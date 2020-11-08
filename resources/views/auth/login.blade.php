@@ -7,6 +7,10 @@
         <div class="col-md-8">
             <div class="card" id="card">
                 <br>
+                <div id="cerrar">
+                    <input OnClick="location.href='{{ url('/') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
+                   </div>
+                   <br>
                 <div class=""><center><img src="img/logo.png" width="20%" id="imgr"></center>{{ __('') }}</div>
 
                 <div class="card-body">
