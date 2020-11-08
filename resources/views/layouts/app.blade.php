@@ -25,6 +25,8 @@
 </head>
 <body>
     <div class="container-fluid">
+        @guest
+        @else
         <!--Esta es la principal etiqueta que contiene la pagina-->
         <div id="nav" class="row">
             <!--Esta etiqueta contiene el contenido de toda la barra de navegacion-->
@@ -41,17 +43,17 @@
                         <!--Esta etiqueta define la imagen de inicio de sesion-->
                     </a>
                     
-                    <!-- Authentication Links -->
-                    @guest
+                    <!-- Authentication Links 
+                    @ guest
                         <div id="fon" class="dropdown-menu dropdown-menu-right">
                             <div class="top-right links">
-                                <a class="dropdown-item btn" type="button" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
-                                @if (Route::has('register'))
-                                    <a class="dropdown-item btn" type="button" href="{{ route('register') }}">{{ __('Registrate') }}</a>
-                                @endif
+                                <a class="dropdown-item btn" type="button" href="{ { route('login') }}">{ { __('Iniciar Sesion') }}</a>
+                                @ if (Route::has('register'))
+                                    <a class="dropdown-item btn" type="button" href="{ { route('register') }}">{ { __('Registrate') }}</a>
+                                @ endif
                             <div>
                         </div>
-                    @else
+                    @ else-->
                         <div id="fon" class="dropdown-menu dropdown-menu-right">
                             <div class="nav-item dropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -65,7 +67,7 @@
                                 </form>
                             </div>
                         </div>
-                    @endguest
+                    <!--@ endguest-->
                 </li>
             </nav>
         </div>
@@ -105,6 +107,7 @@
                     </button>
         
         
+                @endguest
                     <main class="py-4">
                         @yield('content')
                     </main>
