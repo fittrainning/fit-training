@@ -31,6 +31,7 @@
                     </a>
                     <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="../img/Main.png" alt="porfile" width="40px">
+
                         <div id="men" class="dropdown-menu dropdown-menu-right">
                             <spam class="dropdown-item">
                                 <img id="imag" src="../img/porfile.jpeg" alt="" width="110px"><br>
@@ -56,7 +57,7 @@
                 </li>
                 <li>
                     <a class="nav-link" href="cargar_usuario.php">
-                        <p id="texma"><img src="../img/impreso-1.png" alt="gestion_usuario" width="35px">Gestion Usuario</p>
+                        <p id="texma"><img src="../img/impreso-1.png" alt="gestion_usuario" width="35px">&nbsp;Gestion Usuario</p>
                     </a>
                 </li>
                 <li>
