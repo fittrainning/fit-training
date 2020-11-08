@@ -219,3 +219,49 @@ a.article:hover {
     border-radius: 15px;
     box-shadow: 5px 5px 3px 0px #000000;
 }
+
+#cont {
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background: #3B5369;
+    width: 96%;
+    padding-left: 15px;
+    padding-bottom: 65px;
+}
+
+#cap {
+    border-radius: 20%;
+    background: #042333;
+    color: #fff;
+    margin: 5%;
+}
+
+#img {
+    margin-left: 30%;
+    margin-top: 10%;
+    width: 40%;
+}
+
+#buttonn {
+    border-radius: 10px;
+    color: #000000;
+    font-family: Arial;
+    background-color: #CED8E1;
+    float: right;
+    width: 100%;
+}
+
+#lo {
+    float: left;
+    text-align: center;
+}
+
+#buttons {
+    border-radius: 10px;
+    color: #000000;
+    font-family: Arial;
+    background-color: #CED8E1;
+    float: right;
+    margin-right: 20px;
+}

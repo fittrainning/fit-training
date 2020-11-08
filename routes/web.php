@@ -25,6 +25,10 @@ Route::get('/bateria', function () {
 Route::get('/boton', function () {
     return view('entrenador.boton');
 });
+
+Route::get('/construccion', function () {
+    return view('construccion');
+});
 //_________________________________________________________________________
 
 Auth::routes();
