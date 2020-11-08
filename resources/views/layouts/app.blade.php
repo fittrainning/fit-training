@@ -56,6 +56,10 @@
                     @ else-->
                         <div id="fon" class="dropdown-menu dropdown-menu-right">
                             <div class="nav-item dropdown">
+                                <a class="dropdown-item">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                                <hr>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
@@ -77,7 +81,7 @@
                 <!-- Sidebar  -->
                 <nav id="sidebar">
                     <ul class="list-unstyled components">
-                    <li>
+                        <li>
                             <a class="nav-link" href="cargar_ficha.php" id="barra">
                                 <p id="texma"><img src="../img/clipboard109-01.png" alt="gestion_ficha" width="35px">&nbsp;Gestion Ficha</p>
                             </a>
