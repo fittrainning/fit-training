@@ -17,6 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//_________________________________________________________________________
+Route::get('/bateria', function () {
+    return view('entrenador.bateriat');
+});
+
+Route::get('/boton', function () {
+    return view('entrenador.boton');
+});
+//_________________________________________________________________________
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
