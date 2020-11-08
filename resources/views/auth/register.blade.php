@@ -7,7 +7,20 @@
         <div class="col-md-8">
             <div class="card" id="card">
                 <br>
-                <div class=""><center><img src="img/logo.png" width="20%" id="imgr"></center>{{ __('') }}</div>
+                <br>
+                <div class="row">
+                    <div class="col-10"></div>
+                    <div class="col-2">
+                        <div id="cerrar">
+                            <input OnClick="location.href='{{ url('/') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6"><img id="imgr" src="img/logo.png"></div>
+                    <div class="col-3"></div>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -161,8 +174,8 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-3">
-                               <button type="submit" class="btn btn-primary" id="but">
+                            <div class="col-12">
+                                <button id="but" type="submit" class="btn btn-primary">
                                     {{ __('REGISTRAR') }}
                                 </button>
                             </div>

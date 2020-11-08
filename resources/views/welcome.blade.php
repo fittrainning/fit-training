@@ -42,7 +42,7 @@
                                     <div class="top-right links">
                                         @auth
                                         <a href="vista/login.php" class="dropdown-item btn" type="button"></a>
-                                            <a href="{{ url('/inicio') }}">Inicio</a>
+                                            <a href="{{ url('/home') }}">Inicio</a>
                                         @else
                                             <a class="dropdown-item btn" type="button" href="{{ route('login') }}">Iniciar Sesion</a>
                                         @endauth
