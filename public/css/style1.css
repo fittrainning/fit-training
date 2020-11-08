@@ -28,6 +28,7 @@ body {
 
 #inicio {
     margin-top: 25%;
+    margin-bottom: 25%;
     border-radius: 50px;
     cursor: pointer;
     background: #000018;
@@ -35,7 +36,11 @@ body {
 
 #fon {
     box-shadow: -900px 300px 0px 2000px rgba(0, 0, 0, 0.6);
-    margin-top: 25%;
+}
+
+.dropdown-item:hover {
+    cursor: pointer;
+    background: #9DA7AF;
 }
 
 
