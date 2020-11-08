@@ -88,12 +88,12 @@
                         </li>
                         <li>
                             <a class="nav-link" href="cargar_usuario.php">
-                                <p id="texma"><img src="../img/impreso-1.png" alt="gestion_usuario" width="35px">Gestion Usuario</p>
+                                <p id="texma"><img src="../img/impreso-1.png" alt="gestion_usuario" width="35px">&nbsp;Gestion Usuario</p>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link" href="Di_construccion.php">
-                                <p id="texma"><img src="../img/multitudb.png" alt="entrenadores" width="35px">&nbsp;Entrenadores</p>
+                                <p id="texma"><img src="../img/multitudb.png" alt="entrenadores" width="35px">&nbsp;&nbsp;Entrenadores</p>
                             </a>
                         </li>
                         <li>
