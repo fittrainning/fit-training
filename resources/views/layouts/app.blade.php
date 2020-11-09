@@ -26,6 +26,9 @@
 <body>
     <div class="container-fluid">
         @guest
+        <main class="py-4">
+            @yield('content')
+        </main>
         @else
         <!--Esta es la principal etiqueta que contiene la pagina-->
         <div id="nav" class="row">
@@ -111,12 +114,9 @@
                         <img src="../img/vista.png" alt="ver" width="50px">
                     </button>
         
-        
-                @endguest
                     <main class="py-4">
                         @yield('content')
                     </main>
-        
         
                 </div>
             </div>
@@ -134,5 +134,6 @@
             });
         });
     </script>
+    @endguest
 </body>
 </html>
