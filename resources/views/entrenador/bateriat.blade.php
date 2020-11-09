@@ -59,7 +59,7 @@
                 </table><br>
                 
                 
-                <button type="button" class="btn btn-secondary  btn-sm"  id="buttons">
+                <button type="button" class="btn btn-secondary  btn-sm"  id="buttons" href="{{ url('/construccion') }}">
                     <img src="../img/22.png" alt="img" width="40px"> &nbsp; AGREGAR TEST
                 </button>
             </div>
