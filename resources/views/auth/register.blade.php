@@ -48,7 +48,7 @@
                             <label for="doc" class="col-md-4 col-form-label text-md-right">{{ __('Numero de Documento') }}</label>
 
                             <div id="let" class="col-md-6">
-                                <input id="doc" type="text" class="form-control @error('doc') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
+                                <input id="doc" type="text" class="form-control @error('doc') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" pattern="[0-9]+" autofocus>
                                 @error('doc')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
