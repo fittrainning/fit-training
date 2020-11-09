@@ -32,7 +32,6 @@
                             <div id="let" class="col-md-6">
                                 
                                 <select id="tdoc" type="text" class="form-control @error('doc') is-invalid @enderror" name="tdoc" value="{{ old('tdoc') }}" required autocomplete="tdoc" autofocus>
-                                    <option> </option>
                                         <option value="C.C">Cedula de Ciudadania</option>
                                         <option value="T.I">Tarjeta de Identidad</option>
                                 </select>
@@ -171,7 +170,7 @@
                             <div id="let" class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
-                        </div>
+                        </div><br>
 
                         <div class="form-group row mb-0">
                             <div class="col-12">
