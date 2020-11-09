@@ -83,22 +83,22 @@
                     <ul class="list-unstyled components">
                         <li>
                             <a class="nav-link" href="{{ url('/construccion') }}">
-                                <p id="texma"><img src="../img/bioquimica.png" alt="gestion_ficha" width="35px">Caracterizacion</p>
+                                <p id="texma"><img src="../img/bioquimica.png" alt="gestion_ficha" width="35px">&nbsp;Caracterizacion</p>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link" href="{{ url('/bateria') }}">
-                                <p id="texma"><img src="../img/entrenamiento.png" alt="gestion_usuario" width="35px" >   Bateria de Test</p>
+                                <p id="texma"><img src="../img/entrenamiento.png" alt="gestion_usuario" width="35px" >&nbsp;Bateria de Test</p>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link" href="{{ url('/construccion') }}">
-                                <p id="texma"><img src="../img/Agenda.png" width="35px">    Agenda</p>
+                                <p id="texma"><img src="../img/Agenda.png" width="35px">&nbsp;Agenda</p>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link" href="{{ url('/construccion') }}">
-                                <p id="texma"><img src="../img/estadistica.png" alt="estadisticas" width="35px">    Estadisticas</p>
+                                <p id="texma"><img src="../img/estadistica.png" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
                             </a>
                         
                         </li>
