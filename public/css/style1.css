@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+h5 {
+    text-align: center;
+}
+
 body {
     background-color: #CED8E1;
 }
