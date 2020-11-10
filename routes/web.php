@@ -26,6 +26,10 @@ Route::get('/boton', function () {
     return view('entrenador.boton');
 });
 
+Route::get('/perfil', function () {
+    return view('perfil');
+});
+
 Route::get('/construccion', function () {
     return view('construccion');
 });
