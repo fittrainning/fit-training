@@ -91,8 +91,9 @@
                 <img id="centro" src="../img/Proceso-1.png" width="30%">
             </div>
             <div class="col-2">
-                <a href="Anamnesis_2.php"><img id="fle" src="../img/flechas.png" alt="siguiente"
-                        width="30%"></a>
+                <a href="{{ url('/anamnesis_2') }}">
+                    <img id="fle" src="{{ asset('../img/flechas.png') }}" alt="siguiente" width="30%">
+                </a>
             </div>
         </div>
         <br>
