@@ -30,6 +30,26 @@ Route::get('/perfil', function () {
     return view('perfil');
 });
 
+Route::get('/cargar_ficha', function () {
+    return view('director.cargar_ficha');
+});
+
+Route::get('/cargar_usuario', function () {
+    return view('director.cargar_usuario');
+});
+
+Route::get('/anamnesis1', function () {
+    return view('deportistas.Anamnesis_1');
+});
+
+Route::get('/anamnesis2', function () {
+    return view('deportistas.Anamnesis_2');
+});
+
+Route::get('/anamnesis3', function () {
+    return view('deportistas.Anamnesis_3');
+});
+
 Route::get('/construccion', function () {
     return view('construccion');
 });
