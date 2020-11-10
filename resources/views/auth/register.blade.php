@@ -27,7 +27,7 @@
                         @csrf
                         <!-- TIPO DE DOCUMENTO -->
                         <div class="form-group row">
-                            <label for="tdoc" class="col-md-4 col-form-label text-md-right">{{ __('Tipo de documento') }}</label>
+                            <label for="tdoc" class="col-md-4 col-form-label text-md-right">{{ __('Tipo de documento*') }}</label>
 
                             <div id="let" class="col-md-6">
                                 
@@ -45,7 +45,7 @@
 
                         <!-- DOCUMENTO -->
                         <div class="form-group row">
-                            <label for="doc" class="col-md-4 col-form-label text-md-right">{{ __('Numero de Documento') }}</label>
+                            <label for="doc" class="col-md-4 col-form-label text-md-right">{{ __('Numero de Documento*') }}</label>
 
                             <div id="let" class="col-md-6">
                                 <input id="doc" type="text" class="form-control @error('doc') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" pattern="[0-9]+" autofocus>
@@ -59,7 +59,7 @@
 
                         <!-- NOMBRE -->
                         <div class="form-group row">
-                            <label  for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombres') }}</label>
+                            <label  for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombres*') }}</label>
 
                             <div id="let" class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -137,7 +137,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo electrónico') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo electrónico*') }}</label>
 
                             <div id="let" class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -151,7 +151,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña*') }}</label>
 
                             <div id="let" class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -165,10 +165,13 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar Contraseña') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar Contraseña*') }}</label>
 
                             <div id="let" class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </br>
+                                {{ __('campo requerido (*)') }}
+                                <!-- pedir los capos obligatorios en el archivo app/Http/Controller/Auth/RegisterController.php -->
                             </div>
                         </div><br>
 
