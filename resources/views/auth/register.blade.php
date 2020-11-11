@@ -152,35 +152,11 @@
                             </div>
                         </div>
 
-                        <!-- DIRECCION -->
-                        <div class="form-group row">
-                            <label for="Usu_rol" class="col-md-4 col-form-label text-md-right">{{ __('Direccion') }}</label>
+                        <!-- ROL -->
+                        <input id="Usu_rol" type="text" class="form-control @error('Usu_rol') is-invalid @enderror" name="Usu_rol" value="cliente" required autocomplete="Usu_rol" autofocus>
 
-                            <div id="let" class="col-md-6">
-                                <input id="Usu_rol" type="text" class="form-control @error('Usu_rol') is-invalid @enderror" name="Usu_rol" value="cliente" required autocomplete="Usu_rol" autofocus>
-
-                                @error('Usu_rol')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <!-- DIRECCION -->
-                        <div class="form-group row">
-                            <label for="Usu_foto" class="col-md-4 col-form-label text-md-right">{{ __('Direccion') }}</label>
-
-                            <div id="let" class="col-md-6">
-                                <input id="Usu_foto" type="text" class="form-control @error('Usu_foto') is-invalid @enderror" name="Usu_foto" value="hola" required autocomplete="Usu_foto" autofocus>
-
-                                @error('Usu_foto')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                        <!-- FOTO -->
+                        <input id="Usu_foto" type="hidden" class="form-control @error('Usu_foto') is-invalid @enderror" name="Usu_foto" value="hola" required autocomplete="Usu_foto" autofocus>
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo electrónico*') }}</label>
