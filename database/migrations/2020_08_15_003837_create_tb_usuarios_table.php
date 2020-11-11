@@ -14,19 +14,20 @@ class CreateTbUsuariosTable extends Migration
     public function up()
     {
         Schema::create('tb_usuarios', function (Blueprint $table) {
-            $table->string('Usu_id')->primary()->uniqued();
+            $table->id();
+            $table->string('Usu_id');
             $table->string('Usu_tipodoc');
-            $table->string('Usu_nombre');
+            $table->string('name');
             $table->string('Usu_apellidos');
-            $table->string('Usu_correo');
-            $table->date('Usu_fecha_nacimiento');
+            $table->string('email')->unique();
+            $table->string('Usu_fecha_nacimiento');
             $table->string('Usu_telefono');
-            $table->string('Usu_contrasena');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
             $table->string('Usu_genero');
             $table->string('Usu_direccion');
             $table->string('Usu_rol');
-            $table->binary('Usu_foto');
-            $table->string('Usu_verificacion');
+            $table->string('Usu_foto');
             $table->timestamps();
             $table->softDeletes();
         });

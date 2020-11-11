@@ -14,7 +14,7 @@ class CreateTbCapacidadTable extends Migration
     public function up()
     {
         Schema::create('tb_capacidad', function (Blueprint $table) {
-            $table->smallInteger('Cap_id')->autoIncrement();
+            $table->smallInteger('Cap_Id')->autoIncrement();
             $table->Integer('Cap_Dos_Id');
             $table->Integer('Cap_Capacidad');
             $table->Integer('Cap_Sec_id');

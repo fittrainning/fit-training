@@ -27,15 +27,16 @@
                         @csrf
                         <!-- TIPO DE DOCUMENTO -->
                         <div class="form-group row">
-                            <label for="tdoc" class="col-md-4 col-form-label text-md-right">{{ __('Tipo de documento*') }}</label>
+                            <label for="Usu_tipodoc" class="col-md-4 col-form-label text-md-right">{{ __('Tipo de documento*') }}</label>
 
                             <div id="let" class="col-md-6">
                                 
-                                <select id="tdoc" type="text" class="form-control @error('doc') is-invalid @enderror" name="tdoc" value="{{ old('tdoc') }}" required autocomplete="tdoc" autofocus>
+                                <select id="Usu_tipodoc" type="text" class="form-control @error('Usu_tipodoc') is-invalid @enderror" 
+                                name="Usu_tipodoc" value="{{ old('Usu_tipodoc') }}" required autocomplete="Usu_tipodoc" autofocus>
                                     <option value="T.I">Tarjeta de Identidad</option>
                                     <option value="C.C">Cedula de Ciudadania</option>
                                 </select>
-                                @error('tdoc')
+                                @error('Usu_tipodoc')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -45,11 +46,11 @@
 
                         <!-- DOCUMENTO -->
                         <div class="form-group row">
-                            <label for="doc" class="col-md-4 col-form-label text-md-right">{{ __('Numero de Documento*') }}</label>
+                            <label for="Usu_id" class="col-md-4 col-form-label text-md-right">{{ __('Numero de Documento*') }}</label>
 
                             <div id="let" class="col-md-6">
-                                <input id="doc" type="text" class="form-control @error('doc') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" pattern="[0-9]+" autofocus>
-                                @error('doc')
+                                <input id="Usu_id" type="number" class="form-control @error('Usu_id') is-invalid @enderror" name="Usu_id" value="{{ old('Usu_id') }}" required autocomplete="Usu_id" autofocus>
+                                @error('Usu_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -74,12 +75,12 @@
 
                         <!-- APELLIDO -->
                         <div id="let" class="form-group row">
-                            <label for="ape" class="col-md-4 col-form-label text-md-right">{{ __('Apellidos') }}</label>
+                            <label for="Usu_apellidos" class="col-md-4 col-form-label text-md-right">{{ __('Apellidos*') }}</label>
 
                             <div class="col-md-6">
-                                <input id="ape" type="text" class="form-control @error('ape') is-invalid @enderror" name="ape" value="{{ old('ape') }}" required autocomplete="ape" autofocus>
+                                <input id="Usu_apellidos" type="text" class="form-control @error('Usu_apellidos') is-invalid @enderror" name="Usu_apellidos" value="{{ old('Usu_apellidos') }}" required autocomplete="Usu_apellidos" autofocus>
 
-                                @error('ape')
+                                @error('Usu_apellidos')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -89,12 +90,12 @@
 
                         <!-- FECHA DE NACIMIENTO -->
                         <div class="form-group row">
-                            <label for="fec" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento') }}</label>
+                            <label for="Usu_fecha_nacimiento" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento*') }}</label>
 
                             <div id="let" class="col-md-6">
-                                <input id="fec" type="date" class="form-control @error('fec') is-invalid @enderror" name="fec" value="{{ old('fec') }}" required autocomplete="fec" autofocus>
+                                <input id="Usu_fecha_nacimiento" type="date" class="form-control @error('Usu_fecha_nacimiento') is-invalid @enderror" name="Usu_fecha_nacimiento" value="{{ old('Usu_fecha_nacimiento') }}" required autocomplete="Usu_fecha_nacimiento" autofocus>
 
-                                @error('fec')
+                                @error('Usu_fecha_nacimiento')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -104,12 +105,27 @@
 
                        <!-- NUMERO DE TELEFONO -->
                         <div class="form-group row">
-                            <label for="num" class="col-md-4 col-form-label text-md-right">{{ __('Numero Telefonico') }}</label>
+                            <label for="Usu_telefono" class="col-md-4 col-form-label text-md-right">{{ __('Numero Telefonico') }}</label>
 
                             <div id="let" class="col-md-6">
-                                <input id="num" type="text" class="form-control @error('num') is-invalid @enderror" name="num" value="{{ old('num') }}" required autocomplete="num" autofocus>
+                                <input id="Usu_telefono" type="tel" class="form-control @error('Usu_telefono') is-invalid @enderror" name="Usu_telefono" value="{{ old('Usu_telefono') }}" required autocomplete="Usu_telefono" autofocus>
 
-                                @error('num')
+                                @error('Usu_telefono')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <!-- DIRECCION -->
+                        <div class="form-group row">
+                            <label for="Usu_direccion" class="col-md-4 col-form-label text-md-right">{{ __('Direccion') }}</label>
+
+                            <div id="let" class="col-md-6">
+                                <input id="Usu_direccion" type="text" class="form-control @error('Usu_direccion') is-invalid @enderror" name="Usu_direccion" value="{{ old('Usu_direccion') }}" required autocomplete="Usu_direccion" autofocus>
+
+                                @error('Usu_direccion')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -119,17 +135,46 @@
 
                         <!-- GENERO -->
                         <div class="form-group row">
-                            <label for="sex" class="col-md-4 col-form-label text-md-right">{{ __('Genero') }}</label>
+                            <label for="Usu_genero" class="col-md-4 col-form-label text-md-right">{{ __('Genero*') }}</label>
 
                             <div id="let" class="col-md-6">
                                 
-                                <select id="sex" type="text" class="form-control @error('sex') is-invalid @enderror" name="sex" value="{{ old('sex') }}" required autocomplete="sex" autofocus>
-                                    <option> </option>
-                                        <option value="Masculino">Masculino</option>
-                                        <option value="Femenino">Femenino</option>
-                                        <option value="Otro">Otro</option>
+                                <select id="Usu_genero" type="text" class="form-control @error('Usu_genero') is-invalid @enderror" name="Usu_genero" value="{{ old('Usu_genero') }}" required autocomplete="Usu_genero" autofocus>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Femenino">Femenino</option>
+                                    <option value="Otro">Otro</option>
                                 </select>
-                                @error('sex')
+                                @error('Usu_genero')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <!-- DIRECCION -->
+                        <div class="form-group row">
+                            <label for="Usu_rol" class="col-md-4 col-form-label text-md-right">{{ __('Direccion') }}</label>
+
+                            <div id="let" class="col-md-6">
+                                <input id="Usu_rol" type="text" class="form-control @error('Usu_rol') is-invalid @enderror" name="Usu_rol" value="cliente" required autocomplete="Usu_rol" autofocus>
+
+                                @error('Usu_rol')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <!-- DIRECCION -->
+                        <div class="form-group row">
+                            <label for="Usu_foto" class="col-md-4 col-form-label text-md-right">{{ __('Direccion') }}</label>
+
+                            <div id="let" class="col-md-6">
+                                <input id="Usu_foto" type="text" class="form-control @error('Usu_foto') is-invalid @enderror" name="Usu_foto" value="hola" required autocomplete="Usu_foto" autofocus>
+
+                                @error('Usu_foto')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
