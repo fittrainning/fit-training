@@ -169,7 +169,7 @@
 
                             <div id="let" class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </br>
+                            <br>
                                 {{ __('campo requerido (*)') }}
                                 <!-- pedir los capos obligatorios en el archivo app/Http/Controller/Auth/RegisterController.php -->
                             </div>
