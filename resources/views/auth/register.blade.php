@@ -32,8 +32,8 @@
                             <div id="let" class="col-md-6">
                                 
                                 <select id="tdoc" type="text" class="form-control @error('doc') is-invalid @enderror" name="tdoc" value="{{ old('tdoc') }}" required autocomplete="tdoc" autofocus>
-                                        <option value="C.C">Cedula de Ciudadania</option>
-                                        <option value="T.I">Tarjeta de Identidad</option>
+                                    <option value="T.I">Tarjeta de Identidad</option>
+                                    <option value="C.C">Cedula de Ciudadania</option>
                                 </select>
                                 @error('tdoc')
                                     <span class="invalid-feedback" role="alert">
@@ -127,6 +127,7 @@
                                     <option> </option>
                                         <option value="Masculino">Masculino</option>
                                         <option value="Femenino">Femenino</option>
+                                        <option value="Otro">Otro</option>
                                 </select>
                                 @error('sex')
                                     <span class="invalid-feedback" role="alert">
