@@ -41,18 +41,18 @@
                                 <p id="inp1">Confirmar Contraseña</p>
                             </div>
 
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                <input id="inp" type="hidden" value=""><br>
-                                <input id="inp" type="hidden" value=""><br>
-                                <input id="inp" type="text" value=""><br>
-                                <input id="inp" type="text" value=""><br>
-                                <input id="inp" type="email" value=""><br>
-                                <input id="inp" type="date" value=""><br>
-                                <input id="inp" type="number" value=""><br>
-                                <input id="inp" type="text" value=""><br>
-                                <input id="inp" type="text" value=""><br>
-                                <input id="inp" type="password" value=""><br>
-                                <input id="inp" type="password" value=""><br>
+                            <div id="let" class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <input type="text" readonly value="{{ Auth::user()->Usu_tipodoc }}"><br><br>
+                                <input type="text" readonly value="{{ Auth::user()->Usu_id }}"><br><br>
+                                <input type="text" value="{{ Auth::user()->name }}"><br><br>
+                                <input type="text" value="{{ Auth::user()->Usu_apellidos }}"><br><br>
+                                <input type="email" readonly value="{{ Auth::user()->email }}"><br><br>
+                                <input type="date" value="{{ Auth::user()->Usu_fecha_nacimiento }}"><br><br>
+                                <input type="number" value="{{ Auth::user()->Usu_telefono }}"><br><br>
+                                <input type="text" value="{{ Auth::user()->Usu_direccion }}"><br><br>
+                                <input type="text" value="{{ Auth::user()->Usu_genero }}"><br><br>
+                                <input type="password" value="{{ Auth::user()->password }}"><br><br>
+                                <input type="password" value="{{ Auth::user()->password }}"><br><br>
                             </div>
                         </form>
                     </div>

@@ -61,6 +61,9 @@
                             <div class="nav-item dropdown">
                                 <a class="dropdown-item">
                                     {{ Auth::user()->name }} <span class="caret"></span>
+                                </a><br>
+                                <a class="dropdown-item" href="{{ route('editar_perfil') }}">
+                                    {{ __('Editar Perfil') }}
                                 </a>
                                 <hr>
                                 <a class="dropdown-item" href="{{ route('logout') }}"

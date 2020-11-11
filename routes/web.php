@@ -53,8 +53,14 @@ Route::get('/anamnesis3', function () {
 Route::get('/construccion', function () {
     return view('construccion');
 });
+
+Route::get('/mensajeria', function () {
+    return view('mensajeria');
+});
 //_________________________________________________________________________
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/editar_perfil', 'HomeController@editar')->name('editar_perfil');

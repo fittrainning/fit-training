@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return view('entrenador.inicioen');
     }
+
+    public function editar()
+    {
+        return view('perfil');
+    }
 }

@@ -153,7 +153,7 @@
                         </div>
 
                         <!-- ROL -->
-                        <input id="Usu_rol" type="text" class="form-control @error('Usu_rol') is-invalid @enderror" name="Usu_rol" value="cliente" required autocomplete="Usu_rol" autofocus>
+                        <input id="Usu_rol" type="hidden" class="form-control @error('Usu_rol') is-invalid @enderror" name="Usu_rol" value="cliente" required autocomplete="Usu_rol" autofocus>
 
                         <!-- FOTO -->
                         <input id="Usu_foto" type="hidden" class="form-control @error('Usu_foto') is-invalid @enderror" name="Usu_foto" value="hola" required autocomplete="Usu_foto" autofocus>
