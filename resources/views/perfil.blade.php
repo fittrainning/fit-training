@@ -20,51 +20,114 @@
                                 <input OnClick="location.href='{{ url('/') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
                             </div>
                         </div>
-                    </div>
+                    </div><br><br>
                     <div class="row">
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
 
                         </div>
-                        <form action="../controlador/Control_EditarPerfil.php" method="POST" Enctype="multipart/form-data">    
+                        <form action="../controlador/Control_EditarPerfil.php" method="POST" Enctype="multipart/form-data" class="form-group">    
+                            
+                            <div  id="color" class="card-body">
+                                
+                                <!--TIPO DE DOCUMENTO -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">Tipo de Documento</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="text" readonly value="{{ Auth::user()->Usu_tipodoc }}">
+                                        </div>
+                                    </div>
+                                
 
-                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <p id="inp1">Tipo de Documento</p>
-                                <p id="inp1">Documento</p>
-                                <p id="inp1">Nombres</p>
-                                <p id="inp1">Apellidos</p>
-                                <p id="inp1">E-mail</p>
-                                <p id="inp1">Fecha de Nacimiento</p>
-                                <p id="inp1">Telefono</p>
-                                <p id="inp1">Direccion</p>
-                                <p id="inp1">Genero</p>
-                                <p id="inp1">Contraseña</p>
-                                <p id="inp1">Confirmar Contraseña</p>
+                                <!-- DOCUMENTO -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">Documento</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="text" readonly value="{{ Auth::user()->Usu_id }}">
+                                        </div>
+                                    </div>
+                                
+
+                                <!-- NOMBRES -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">Nombres</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="text" value="{{ Auth::user()->name }}">
+                                        </div>
+                                    </div>
+
+                                <!-- APELLIDOS -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">Aellidos</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="text" value="{{ Auth::user()->Usu_apellidos }}">
+                                        </div>
+                                    </div> 
+                                
+                                <!-- E-MAIL -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">E-mail</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="email" readonly value="{{ Auth::user()->email }}">
+                                        </div>
+                                    </div> 
+
+                                <!-- FECHA DE NACIMIENTO -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">Fecha de Nacimiento</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="date" value="{{ Auth::user()->Usu_fecha_nacimiento }}">
+                                        </div>
+                                    </div> 
+                                 
+                                <!-- TELEFONO -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">Telefono</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="number" value="{{ Auth::user()->Usu_telefono }}">
+                                        </div>
+                                    </div>
+
+                                <!-- DIRECCION -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">Direccion</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="text" value="{{ Auth::user()->Usu_direccion }}">
+                                        </div>
+                                    </div>  
+
+                                <!-- GENERO -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">Genero</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="text" value="{{ Auth::user()->Usu_genero }}">
+                                        </div>
+                                    </div> 
+
+                                <!-- CONTRASEÑA -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">Contraseña</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="password" value="{{ Auth::user()->password }}">
+                                        </div>
+                                    </div>
+
+                                <!-- CONFIRMAR CONTRASEÑA -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">Confirmar Contraseña</label>
+                                        <div id="let2" class="col-md-6">
+                                            <input type="password" value="{{ Auth::user()->password }}">
+                                        </div>
+                                    </div>
                             </div>
 
-                            <div id="let" class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                <input type="text" readonly value="{{ Auth::user()->Usu_tipodoc }}"><br><br>
-                                <input type="text" readonly value="{{ Auth::user()->Usu_id }}"><br><br>
-                                <input type="text" value="{{ Auth::user()->name }}"><br><br>
-                                <input type="text" value="{{ Auth::user()->Usu_apellidos }}"><br><br>
-                                <input type="email" readonly value="{{ Auth::user()->email }}"><br><br>
-                                <input type="date" value="{{ Auth::user()->Usu_fecha_nacimiento }}"><br><br>
-                                <input type="number" value="{{ Auth::user()->Usu_telefono }}"><br><br>
-                                <input type="text" value="{{ Auth::user()->Usu_direccion }}"><br><br>
-                                <input type="text" value="{{ Auth::user()->Usu_genero }}"><br><br>
-                                <input type="password" value="{{ Auth::user()->password }}"><br><br>
-                                <input type="password" value="{{ Auth::user()->password }}"><br><br>
-                            </div>
                         </form>
                     </div>
-                    <div class="row">
-                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
 
-                        </div>
-                        <div id="centro1" class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                            <input id="sub" type="submit" name="actualizar" value="GUARDAR">
-                        </div>
-                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-
+                    <div class="form-group row mb-0">
+                        <div class="col-12">
+                            <button id="but" type="submit" class="btn btn-primary">
+                                {{ __('GUARDAR') }}
+                            </button>
                         </div>
                     </div>
                 </form>
