@@ -11,11 +11,11 @@
 
                         </div>
                         <div id="centro" class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                            <h2 id="titulo">Editar Perfil</h2>
+                            <h2 id="titulo">Editar Perfil</h2><br>
                             <input id="inp" type="file" name="archivo">
                         </div>
-                        <div  class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-                        <div  class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                        <div  class="col-10"></div>
+                        <div  class="col-2 ">
                             <div id="cerrar">
                                 <input OnClick="location.href='{{ url('/') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
                             </div>
