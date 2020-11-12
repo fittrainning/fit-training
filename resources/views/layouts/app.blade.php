@@ -86,7 +86,7 @@
             <div class="wrapper">
                 <!-- Sidebar  -->
                 <nav id="sidebar">
-                    <ul class="list-unstyled components">
+                    <ul class="list-unstyled components" id="barra">
                         <li>
                             <a class="nav-link" href="{{ url('/construccion') }}">
                                 <p id="texma"><img src="../img/bioquimica.png" alt="gestion_ficha" width="35px">&nbsp;Caracterizacion</p>

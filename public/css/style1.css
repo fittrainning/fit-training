@@ -232,6 +232,10 @@ a.article:hover {
     box-shadow: 5px 5px 3px 0px #000000;
 }
 
+#barra {
+    margin-top: -20px;
+}
+
 #color {
     color: #ffffff;
     font-size: medium;

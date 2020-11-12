@@ -80,9 +80,9 @@
             <div class="wrapper">
                 <!-- Sidebar  -->
                 <nav id="sidebar">
-                    <ul class="list-unstyled components">
+                    <ul class="list-unstyled components" id="barra">
                     <li>
-                            <a class="nav-link" href="cargar_ficha.php" id="barra">
+                            <a class="nav-link" href="cargar_ficha.php">
                                 <p id="texma"><img src="../img/clipboard109-01.png" alt="gestion_ficha" width="35px">&nbsp;Gestion Ficha</p>
                             </a>
                         </li>

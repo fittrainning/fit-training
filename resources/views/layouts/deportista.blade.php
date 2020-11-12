@@ -80,7 +80,7 @@
             <div class="wrapper">
                 <!-- Sidebar  -->
                 <nav id="sidebar">
-                    <ul class="list-unstyled components">
+                    <ul class="list-unstyled components" id="barra">
                         <li>
                             <a class="nav-link" href="Anamnesis_1.php" id="barra">
                                 <p id="texma"><img src="../img/impreso-1.png" alt="anamnesis" width="35px">&nbsp;Anamnesis</p>
