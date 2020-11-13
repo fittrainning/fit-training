@@ -33,6 +33,10 @@ class HomeController extends Controller
 
     public function mensajeria()
     {
-        return view('mensajeria');
+        return view('mensajeria1');
+    }
+    public function mensajeriaa()
+    {
+        return view('mensajeria2');
     }
 }
