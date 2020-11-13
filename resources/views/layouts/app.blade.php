@@ -33,19 +33,23 @@
         <!--Esta es la principal etiqueta que contiene la pagina-->
         <div id="nav" class="row">
             <!--Esta etiqueta contiene el contenido de toda la barra de navegacion-->
-            <nav id="pru" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <nav id="pru" class="col-6 col-sm-8 col-md-8 col-lg-10 col-xl-10">
                 <!--Define el responsive de la barra de navegacion-->
                 <a class="navbar" href="{{ url('/') }}"><img src="img/logo.png" width="55px"></a>
             </nav>
-            <nav class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            <nav class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                <a class="nav justify-content-end" href="{{ route('mensajeria') }}">
+                    <img id="mensa" src="{{ asset('img/men.png') }}" alt="" width="50px">
+                </a>
+            </nav>
+            <nav class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
                 <li class="nav dropdown justify-content-end">
                     <!--Esta etiqueta contiene el icono de inicio de sesion-->
                     <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <!--Esta determina el boton-->
-                        <img id="inicio" src="img/porfile.png" alt="porfile" width="50px">
+                        <img id="inicio" src="{{ asset('img/porfile.png') }}" alt="porfile" width="50px">
                         <!--Esta etiqueta define la imagen de inicio de sesion-->
                     </a>
-                    
                     <!-- Authentication Links 
                     @ guest
                         <div id="fon" class="dropdown-menu dropdown-menu-right">
@@ -57,26 +61,26 @@
                             <div>
                         </div>
                     @ else-->
-                        <div id="fon" class="dropdown-menu dropdown-menu-right">
-                            <div class="nav-item dropdown">
-                                <a class="dropdown-item">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a><br>
-                                <a class="dropdown-item" href="{{ route('editar_perfil') }}">
-                                    {{ __('Editar Perfil') }}
-                                </a>
-                                <hr>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                    {{ __('Cerrar Sesion') }}
-                                </a>
+                    <div id="fon" class="dropdown-menu dropdown-menu-right">
+                        <div class="nav-item dropdown">
+                            <a class="dropdown-item">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a><br>
+                            <a class="dropdown-item" href="{{ route('editar_perfil') }}">
+                                {{ __('Editar Perfil') }}
+                            </a>
+                            <hr>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('Cerrar Sesion') }}
+                            </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </div>
+                    </div>
                     <!--@ endguest-->
                 </li>
             </nav>
@@ -89,7 +93,7 @@
                     <ul class="list-unstyled components" id="barra">
                         <li>
                             <a class="nav-link" href="{{ url('/construccion') }}">
-                                <p id="texma"><img src="../img/bioquimica.png" alt="gestion_ficha" width="35px">&nbsp;Caracterizacion</p>
+                                <p id="texma"><img src="{{ asset('../img/bioquimica.png') }}" alt="gestion_ficha" width="35px">&nbsp;Caracterizacion</p>
                             </a>
                         </li>
                         <li>

@@ -108,7 +108,7 @@
                             <label for="Usu_telefono" class="col-md-4 col-form-label text-md-right">{{ __('Numero Telefonico') }}</label>
 
                             <div id="let" class="col-md-6">
-                                <input id="Usu_telefono" type="tel" class="form-control @error('Usu_telefono') is-invalid @enderror" name="Usu_telefono" value="{{ old('Usu_telefono') }}" required autocomplete="Usu_telefono" autofocus>
+                                <input id="Usu_telefono" type="tel" class="form-control @error('Usu_telefono') is-invalid @enderror" name="Usu_telefono" value="{{ old('Usu_telefono') }}" autocomplete="Usu_telefono" autofocus>
 
                                 @error('Usu_telefono')
                                     <span class="invalid-feedback" role="alert">
@@ -123,7 +123,7 @@
                             <label for="Usu_direccion" class="col-md-4 col-form-label text-md-right">{{ __('Direccion') }}</label>
 
                             <div id="let" class="col-md-6">
-                                <input id="Usu_direccion" type="text" class="form-control @error('Usu_direccion') is-invalid @enderror" name="Usu_direccion" value="{{ old('Usu_direccion') }}" required autocomplete="Usu_direccion" autofocus>
+                                <input id="Usu_direccion" type="text" class="form-control @error('Usu_direccion') is-invalid @enderror" name="Usu_direccion" value="{{ old('Usu_direccion') }}" autocomplete="Usu_direccion" autofocus>
 
                                 @error('Usu_direccion')
                                     <span class="invalid-feedback" role="alert">

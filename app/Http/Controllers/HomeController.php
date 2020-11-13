@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('perfil');
     }
+
+    public function mensajeria()
+    {
+        return view('mensajeria');
+    }
 }
