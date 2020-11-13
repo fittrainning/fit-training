@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'tb_usuarios',
     ],
 
     /*
@@ -38,12 +38,12 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'tb_usuarios',
         ],
 
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'tb_usuarios',
             'hash' => false,
         ],
     ],
@@ -66,7 +66,7 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'tb_usuarios' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
@@ -93,8 +93,8 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'tb_usuarios' => [
+            'provider' => 'tb_usuarios',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
@@ -115,3 +115,4 @@ return [
     'password_timeout' => 10800,
 
 ];
+
