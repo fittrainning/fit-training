@@ -47,7 +47,7 @@
                     <!--Esta etiqueta contiene el icono de inicio de sesion-->
                     <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <!--Esta determina el boton-->
-                        <img id="inicio" src="{{ asset('img/porfile.png') }}" alt="porfile" width="50px">
+                        <img id="inicio" src="{{ asset('img/Main.png') }}" alt="porfile" width="50px">
                         <!--Esta etiqueta define la imagen de inicio de sesion-->
                     </a>
                     <!-- Authentication Links 
@@ -64,8 +64,9 @@
                     <div id="fon" class="dropdown-menu dropdown-menu-right">
                         <div class="nav-item dropdown">
                             <a class="dropdown-item">
+                                <img id="porfile" src="{{ asset('img/porfile.png') }}"><br>
                                 {{ Auth::user()->name }} <span class="caret"></span>
-                            </a><br>
+                            </a>
                             <a class="dropdown-item" href="{{ route('editar_perfil') }}">
                                 {{ __('Editar Perfil') }}
                             </a>
