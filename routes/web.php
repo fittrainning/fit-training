@@ -62,3 +62,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/editar_perfil', 'HomeController@editar')->name('editar_perfil');
 Route::get('/mensajeria', 'HomeController@mensajeria')->name('mensajeria');
 Route::get('/enviar', 'HomeController@mensajeriaa')->name('enviar');
+
+
+Route::get('/anamnesis_1', 'HomeController@anam1')->name('anamnesis_1');
