@@ -81,7 +81,7 @@
                 <!-- Sidebar  -->
                 <nav id="sidebar">
                     <ul class="list-unstyled components" id="barra">
-                    <li>
+                        <li>
                             <a class="nav-link" href="cargar_ficha.php">
                                 <p id="texma"><img src="../img/clipboard109-01.png" alt="gestion_ficha" width="35px">&nbsp;Gestion Ficha</p>
                             </a>
