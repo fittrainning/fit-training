@@ -22,7 +22,7 @@ Route::get('/bateria', function () {
     return view('entrenador.bateriat');
 });
 
-Route::get('/boto', function () {
+Route::get('/boton', function () {
     return view('entrenador.boton');
 });
 

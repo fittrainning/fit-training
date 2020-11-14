@@ -58,10 +58,11 @@
                     
                 </table><br>
                 
-                
-                <button type="button" class="btn btn-secondary  btn-sm"  id="buttons" href="boton.php">
+                <a href="{{ url('/boton') }}">
+                <button type="button" class="btn btn-secondary  btn-sm"  id="buttons">
                     <img src="../img/22.png" alt="img" width="40px"> &nbsp; AGREGAR TEST
                 </button>
+                </a>
             </div>
         </div>
     </div>
