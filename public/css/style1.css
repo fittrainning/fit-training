@@ -224,6 +224,13 @@ a.article:hover {
     box-shadow: 5px 5px 3px 0px #000000;
 }
 
+#let3 select {
+    background: #CED8E1;
+    width: 140%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px #000000;
+}
+
 #let2 input {
     background: #CED8E1;
     border-radius: 15px;
