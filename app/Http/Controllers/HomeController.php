@@ -39,4 +39,8 @@ class HomeController extends Controller
     {
         return view('mensajeria2');
     }
+
+    public function dosifi(){
+        return view('entrenador.');
+    }
 }
