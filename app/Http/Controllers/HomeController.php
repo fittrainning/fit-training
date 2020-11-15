@@ -41,6 +41,6 @@ class HomeController extends Controller
     }
 
     public function dosifi(){
-        return view('entrenador.');
+        return view('entrenador.dosificacion');
     }
 }

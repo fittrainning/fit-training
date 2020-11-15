@@ -65,3 +65,4 @@ Route::get('/enviar', 'HomeController@mensajeriaa')->name('enviar');
 
 
 Route::get('/anamnesis_1', 'HomeController@anam1')->name('anamnesis_1');
+Route::get('/caracterizacion', 'HomeController@dosifi')->name('caracterizacion');
