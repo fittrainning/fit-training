@@ -43,4 +43,8 @@ class HomeController extends Controller
     public function cara(){
         return view('entrenador.caracterizacion');
     }
+
+    public function estadi(){
+        return view('estadisticas');
+    }
 }

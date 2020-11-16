@@ -11,6 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/jquery-3.5.1.min.js') }}" defer></script>
+    <script src="{{ asset('js/style.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -93,7 +95,7 @@
                 <nav id="sidebar">
                     <ul class="list-unstyled components" id="barra">
                         <li>
-                            <a class="nav-link" href="{{ url('/caracterizacion') }}">
+                            <a class="nav-link" href="{{ route('caracterizacion') }}">
                                 <p id="texma"><img src="{{ asset('../img/bioquimica.png') }}" alt="gestion_ficha" width="35px">&nbsp;Caracterizacion</p>
                             </a>
                         </li>
@@ -108,7 +110,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{ url('/construccion') }}">
+                            <a class="nav-link" href="{{ route('estadisticas') }}">
                                 <p id="texma"><img src="../img/estadistica.png" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
                             </a>
                         
