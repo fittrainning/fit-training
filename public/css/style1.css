@@ -38,6 +38,19 @@ body {
     box-shadow: -900px 300px 0px 2000px rgba(0, 0, 0, 0.6);
 }
 
+
+/*#fondo {
+    background-image: url(../img/fondologin.jpg);
+    font-weight: 200;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: content-box;
+    position: absolute;
+    width: 100%;
+}*/
+
 .dropdown-item:hover {
     cursor: pointer;
     background: #9DA7AF;
