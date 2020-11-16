@@ -39,7 +39,7 @@
                             <a href="">
                                 <div id="cap">
                                     <div id="botdos">
-                                        <h5>ATLETISMO</h5>
+                                        <h5>VOLEIBOL</h5>
                                     </div>
                                 </div>
                             </a>
