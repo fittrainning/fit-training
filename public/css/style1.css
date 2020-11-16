@@ -328,3 +328,8 @@ a.article:hover {
     width: 100%;
     border-radius: 100%;
 }
+
+#botdos {
+    text-align: center;
+    padding: 5px;
+}

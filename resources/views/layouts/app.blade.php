@@ -93,7 +93,7 @@
                 <nav id="sidebar">
                     <ul class="list-unstyled components" id="barra">
                         <li>
-                            <a class="nav-link" href="{{ url('/construccion') }}">
+                            <a class="nav-link" href="{{ url('/caracterizacion') }}">
                                 <p id="texma"><img src="{{ asset('../img/bioquimica.png') }}" alt="gestion_ficha" width="35px">&nbsp;Caracterizacion</p>
                             </a>
                         </li>
