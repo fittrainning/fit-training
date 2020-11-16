@@ -39,6 +39,10 @@ class HomeController extends Controller
     {
         return view('mensajeria2');
     }
+    public function mensaje()
+    {
+        return view('enviarm');
+    }
 
     public function cara(){
         return view('entrenador.caracterizacion');

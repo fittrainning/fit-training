@@ -46,6 +46,13 @@
                 </div>
                 <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
             </div>
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <a href="{{ route('enviar') }}"><button id="mensabot">Enviar Mensaje</button></a>
+                </div>
+                <div class="col-3"></div>
+            </div>
         </div><br>
     </div>
     <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>

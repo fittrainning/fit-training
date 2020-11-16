@@ -298,6 +298,22 @@ a.article:hover {
     margin-top: 25%;
 }
 
+#mensabot {
+    background: rgb(150, 150, 150);
+    border-radius: 50px;
+    border: 0px;
+    margin-top: 25px;
+    width: 100%;
+    padding: 20px;
+}
+
+#bucarmens {
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #ffffff;
+}
+
 #color111 {
     background: rgb(231, 231, 231);
     border-radius: 5px;
