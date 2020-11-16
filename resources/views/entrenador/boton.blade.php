@@ -37,7 +37,7 @@
                                     <div id="color" class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-left">CAPACIDAD</label>
                                         <div id="let3" class="col-md-6">
-                                            <select name="capacidad" class="form-control" required>
+                                            <select id="selectb" name="capacidad" class="form-control" required>
                                                 <option> Seleccione la Capacidad</option>
                                                     <option value="Fuerza">Fuerza</option>
                                                     <option value="Velocidad">Velocidad</option>
