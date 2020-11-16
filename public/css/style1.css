@@ -259,7 +259,7 @@ a.article:hover {
 }
 
 #cap {
-    border-radius: 20%;
+    border-radius: 25px;
     background: #042333;
     color: #fff;
     margin: 5%;
@@ -332,4 +332,6 @@ a.article:hover {
 #botdos {
     text-align: center;
     padding: 5px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
