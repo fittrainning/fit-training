@@ -26,18 +26,6 @@ Route::get('/boton', function () {
     return view('entrenador.boton');
 });
 
-Route::get('/anamnesis1', function () {
-    return view('deportistas.Anamnesis_1');
-});
-
-Route::get('/anamnesis2', function () {
-    return view('deportistas.Anamnesis_2');
-});
-
-Route::get('/anamnesis3', function () {
-    return view('deportistas.Anamnesis_3');
-});
-
 Route::get('/construccion', function () {
     return view('construccion');
 });
@@ -53,7 +41,9 @@ Route::get('/responder', 'HomeController@mensajeriaa')->name('responder');
 Route::get('/enviar', 'HomeController@mensaje')->name('enviar');
 Route::get('/estadisticas', 'HomeController@estadi')->name('estadisticas');
 
-Route::get('/anamnesis_1', 'HomeController@anam1')->name('anamnesis_1');
+Route::get('/anam1', 'HomeController@anam1')->name('anam1');
+Route::get('/anam2', 'HomeController@anam2')->name('anam2');
+Route::get('/anam3', 'HomeController@anam3')->name('anam3');
 
 Route::get('/caracterizacion', 'HomeController@cara')->name('caracterizacion');
 

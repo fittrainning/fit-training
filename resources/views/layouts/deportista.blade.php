@@ -11,6 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/jquery-3.5.1.min.js') }}" defer></script>
+    <script src="{{ asset('js/style.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -26,23 +28,30 @@
 <body>
     <div class="container-fluid">
         @guest
+        <main class="py-4">
+            @yield('content')
+        </main>
         @else
         <!--Esta es la principal etiqueta que contiene la pagina-->
         <div id="nav" class="row">
             <!--Esta etiqueta contiene el contenido de toda la barra de navegacion-->
-            <nav id="pru" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <nav id="pru" class="col-6 col-sm-8 col-md-8 col-lg-10 col-xl-10">
                 <!--Define el responsive de la barra de navegacion-->
                 <a class="navbar" href="{{ url('/') }}"><img src="img/logo.png" width="55px"></a>
             </nav>
-            <nav class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            <nav class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                <a class="nav justify-content-end" href="{{ route('mensajeria') }}">
+                    <img id="mensa" src="{{ asset('img/men.png') }}" alt="" width="50px">
+                </a>
+            </nav>
+            <nav class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
                 <li class="nav dropdown justify-content-end">
                     <!--Esta etiqueta contiene el icono de inicio de sesion-->
                     <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <!--Esta determina el boton-->
-                        <img id="inicio" src="img/porfile.png" alt="porfile" width="50px">
+                        <img id="inicio" src="{{ asset('img/Main.png') }}" alt="porfile" width="50px">
                         <!--Esta etiqueta define la imagen de inicio de sesion-->
                     </a>
-                    
                     <!-- Authentication Links 
                     @ guest
                         <div id="fon" class="dropdown-menu dropdown-menu-right">
@@ -54,23 +63,27 @@
                             <div>
                         </div>
                     @ else-->
-                        <div id="fon" class="dropdown-menu dropdown-menu-right">
-                            <div class="nav-item dropdown">
-                                <a class="dropdown-item">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-                                <hr>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                    {{ __('Cerrar Sesion') }}
-                                </a>
+                    <div id="fon" class="dropdown-menu dropdown-menu-right">
+                        <div class="nav-item dropdown">
+                            <a class="dropdown-item">
+                                <img id="porfile" src="{{ asset('img/porfile.png') }}"><br>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                            <a class="dropdown-item" href="{{ route('editar_perfil') }}">
+                                {{ __('Editar Perfil') }}
+                            </a>
+                            <hr>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('Cerrar Sesion') }}
+                            </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </div>
+                    </div>
                     <!--@ endguest-->
                 </li>
             </nav>
@@ -82,18 +95,18 @@
                 <nav id="sidebar">
                     <ul class="list-unstyled components" id="barra">
                         <li>
-                            <a class="nav-link" href="Anamnesis_1.php" id="barra">
-                                <p id="texma"><img src="../img/impreso-1.png" alt="anamnesis" width="35px">&nbsp;Anamnesis</p>
+                            <a class="nav-link" href="{{ route('anam1') }}">
+                                <p id="texma"><img src="{{ asset('../img/impreso-1.png') }}" alt="anamnesis" width="35px">&nbsp;Anamnesis</p>
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="De_construccion.php">
-                                <p id="texma"><img src="../img/h.png" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
+                            <a class="nav-link" href="{{ route('estadisticas') }}">
+                                <p id="texma"><img src="{{ asset('../img/h.png') }}" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="De_construccion.php">
-                                <p id="texma"><img src="../img/Agenda.png" alt="agenda" width="35px">&nbsp;Agenda</p>
+                            <a class="nav-link" href="{{ url('/construccion') }}">
+                                <p id="texma"><img src="{{ asset('../img/Agenda.png') }}" alt="agenda" width="35px">&nbsp;Agenda</p>
                             </a>
                         </li>
                     </ul>
@@ -105,12 +118,9 @@
                         <img src="../img/vista.png" alt="ver" width="50px">
                     </button>
         
-        
-                @endguest
                     <main class="py-4">
                         @yield('content')
                     </main>
-        
         
                 </div>
             </div>
@@ -128,5 +138,6 @@
             });
         });
     </script>
+    @endguest
 </body>
 </html>
