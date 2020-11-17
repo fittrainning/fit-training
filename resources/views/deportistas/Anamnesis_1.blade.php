@@ -9,7 +9,7 @@
                         <form action="" method="post">
                             <!-- Falta asignar el action -->
                             <div class="row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
                                     <div class="row">
                                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                             <img id="logo" src="{{ asset('../img/logo.png') }}" alt="logo">
@@ -34,19 +34,19 @@
                                     <br>
                                     <div class="row d-flex justify-content-center">
                                         <p>
-                                            Deporte que practica:&nbsp;
-                                            <div>
-                                                <input type="radio" id="huey" name="drone" value="huey" checked>
+                                            Practica Deporte? &nbsp;
+                                            <div id="radio">
+                                                <input type="radio" name="depo" value="huey" checked>
                                                 <label for="huey">si</label>&nbsp;&nbsp;
-                                              </div>
+                                            </div>
                                               
-                                              <div>
-                                                <input type="radio" id="dewey" name="drone" value="dewey">
+                                            <div id="radio">
+                                                <input type="radio" name="depo" value="dewey">
                                                 <label for="dewey">no</label>
-                                              </div>
+                                            </div>
                                         </p>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <p>Cual? </p>
+                                        <p>Cual?&nbsp;</p>
                                         <div id="let2">
                                             <input type="text" id="input">
                                         </div>
@@ -56,15 +56,21 @@
         
                                     <div class="row d-flex justify-content-center">
                                         <p>
-                                            Posee logros deportivos?:
-                                            <input type="radio" name="1" value="boton1" /> Si
-        
-                                            <input type="radio" name="2" value="boton2" /> No
+                                            Posee logros deportivos?:&nbsp;
                                         </p>
+                                        <div id="radio">
+                                                <input type="radio" name="logdep" value="si" checked>
+                                                <label for="huey">si</label>&nbsp;&nbsp;
+                                            </div>
+                                              
+                                            <div id="radio">
+                                                <input type="radio" name="logdep" value="no">
+                                                <label for="dewey">no</label>
+                                            </div>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                         <p>Cual? Adjunte pdf</p>&nbsp;
                                         <div class="form-group">
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            <input type="file" class="form-control-file">
                                         </div>
         
                                     </div>
@@ -73,34 +79,41 @@
                                     <br>
                                     <div class="row d-flex justify-content-center">
                                         <p>
-                                            Posee experiencia deportiva?:
-                                            <input type="radio" name="111" value="Si" /> Si
-        
-                                            <input type="radio" name="211" value="No" /> No
+                                            Posee experiencia deportiva? &nbsp;
                                         </p>
+                                        <div id="radio">
+                                            <input type="radio" name="logdep" value="si" checked>
+                                            <label for="huey">si</label>&nbsp;&nbsp;
+                                        </div>
+                                          
+                                        <div id="radio">
+                                            <input type="radio" name="logdep" value="no">
+                                            <label for="dewey">no</label>
+                                        </div>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <p>Cual? </p>
-                                        <input type="text" id="input">
+                                        <p>Cual?&nbsp;</p>
+                                        <div id="let2">
+                                            <input type="text">
+                                        </div>
                                     </div>
                                     <br>
-                                    <div class="form-group d-flex justify-content-center">
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    <div id="centro" class="form-group">
+                                        <input type="file" class="form-control-file">
                                     </div>
                                 </div>
                             </div>
                             <br>
                             <br>
                             <div class="row">
-                                <div class="col-2">
+                                <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
         
                                 </div>
-                                <div class="col-8">
-                                    <br>
-                                    <img id="centro" src="../img/Proceso-1.png" width="30%">
+                                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                    <img id="centro1" src="{{ asset('../img/Proceso-1.png') }}">
                                 </div>
-                                <div class="col-2">
-                                    <a href="{{ url('/anamnesis_2') }}">
-                                        <img id="fle" src="{{ asset('../img/flechas.png') }}" alt="siguiente" width="30%">
+                                <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                    <a href="{{ route('anam2') }}">
+                                        <img id="centro1" src="{{ asset('../img/flechas.png') }}" alt="siguiente">
                                     </a>
                                 </div>
                             </div>

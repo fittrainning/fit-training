@@ -271,6 +271,14 @@ a.article:hover {
     box-shadow: 5px 5px 3px 0px #000000;
 }
 
+#let2 textarea {
+    background: #CED8E1;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 5px 5px 3px 0px #000000;
+}
+
 #barra {
     margin-top: -20px;
 }
@@ -288,6 +296,7 @@ a.article:hover {
     background: #3B5369;
     width: 96%;
     padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 40px;
 }
 
@@ -326,11 +335,9 @@ a.article:hover {
     float: right;
     margin-right: 20px;
 }
-<<<<<<< HEAD
-=======
 
 #mensa {
-    margin-top: 25%;
+    margin-top: 20px;
 }
 
 #mensabot {
@@ -437,4 +444,28 @@ a.article:hover {
 #ebot h5 {
     font-size: 0.8vw;
 }
->>>>>>> b3a672e602641bb50bcfd40244819b370c5f7378
+
+#radio input {
+    background: #CED8E1;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+#colo {
+    color: #ffffff;
+}
+
+#centro {
+    text-align-last: center;
+}
+
+#centro1 {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#cenn {
+    text-align: center;
+}
