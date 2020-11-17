@@ -45,6 +45,19 @@ body {
     text-align: center;
 }
 
+
+/*#fondo {
+    background-image: url(../img/fondologin.jpg);
+    font-weight: 200;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: content-box;
+    position: absolute;
+    width: 100%;
+}*/
+
 .dropdown-item:hover {
     cursor: pointer;
     background: #9DA7AF;
@@ -313,6 +326,8 @@ a.article:hover {
     float: right;
     margin-right: 20px;
 }
+<<<<<<< HEAD
+=======
 
 #mensa {
     margin-top: 25%;
@@ -422,3 +437,4 @@ a.article:hover {
 #ebot h5 {
     font-size: 0.8vw;
 }
+>>>>>>> b3a672e602641bb50bcfd40244819b370c5f7378
