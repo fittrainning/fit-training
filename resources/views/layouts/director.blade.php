@@ -103,7 +103,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{ url('/construccion') }}">
+                            <a class="nav-link" href="{{ route('entrenadores') }}">
                                 <p id="texma"><img src="../img/multitudb.png" alt="entrenadores" width="35px">&nbsp;Entrenadores</p>
                             </a>
                         </li>

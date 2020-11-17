@@ -69,6 +69,9 @@ class HomeController extends Controller
     public function usuario(){
         return view('director.cargar_usuario');
     }
+    public function entre(){
+        return view('director.entrenador');
+    }
 
 
     // vistas deportista
