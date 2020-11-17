@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div id="fondo1" class="col-10">
-                        <img id="centro1" src="../img/construccion.png" alt="img" >
+                        <img id="centro1" src="{{ asset('../img/construccion.png') }}" alt="img" >
                     </div>
                 </div>
             </div>

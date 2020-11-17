@@ -10,7 +10,7 @@
                         <th scope="col">
                         <div class="">
                             <div id="cap">
-                                <img id="img" src="../img/fuerza.png"><br><br><!--Define la imagen de la capacidad-->
+                                <img id="img" src="{{ asset('../img/fuerza.png') }}"><br><br><!--Define la imagen de la capacidad-->
                                 <h5>FUERZA</h5><br> 
                             </div>
                         </div>
@@ -19,7 +19,7 @@
                         <th scope="col">
                         <div class="">
                             <div id="cap">
-                                <img id="img" src="../img/velocidad.png"><br><br>
+                                <img id="img" src="{{ asset('../img/velocidad.png') }}"><br><br>
                                 <h5>VELOCIDAD</h5><br>
                             </div>
                         </div> 
@@ -28,7 +28,7 @@
                         <th scope="col">
                         <div  class="">
                             <div id="cap">
-                                <img id="img" src="../img/resis.png"><br><br>
+                                <img id="img" src="{{ asset('../img/resis.png') }}"><br><br>
                                 <h5>RESISTENCIA</h5><br>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                         <th scope="col">
                         <div class="">
                             <div id="cap">
-                                <img id="img" src="../img/flex.png"><br><br>
+                                <img id="img" src="{{ asset('../img/flex.png') }}"><br><br>
                                 <h5>ELASTICIDAD</h5><br>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                         
                             <td>
                                 <button type="button" class="btn btn-secondary  btn-sm " id="buttonn">
-                                    <h6><img id="lo" src="../img/salto.png" alt="img" width="40px">&nbsp;TEST SALTO<br> HORIZONTAL</h6>
+                                    <h6><img id="lo" src="{{ asset('../img/salto.png') }}" alt="img" width="40px">&nbsp;TEST SALTO<br> HORIZONTAL</h6>
                                 </button>
                             </td>
                             <td><label type="text" class="usu" name="usu" value=" "></label></td>
@@ -58,9 +58,9 @@
                     
                 </table><br>
                 
-                <a href="{{ url('/boton') }}">
+                <a href="{{ route('boton') }}">
                 <button type="button" class="btn btn-secondary  btn-sm"  id="buttons">
-                    <img src="../img/22.png" alt="img" width="40px"> &nbsp; AGREGAR TEST
+                    <img src="{{ asset('../img/22.png') }}" alt="img" width="40px"> &nbsp; AGREGAR TEST
                 </button>
                 </a><br><br>
             </div>

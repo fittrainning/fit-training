@@ -100,7 +100,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{ url('/bateria') }}">
+                            <a class="nav-link" href="{{ route('bateria') }}">
                                 <p id="texma"><img src="../img/entrenamiento.png" alt="gestion_usuario" width="35px" >&nbsp;Bateria de Test</p>
                             </a>
                         </li>

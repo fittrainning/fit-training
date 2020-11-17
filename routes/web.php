@@ -18,13 +18,6 @@ Route::get('/', function () {
 });
 
 //_________________________________________________________________________
-Route::get('/bateria', function () {
-    return view('entrenador.bateriat');
-});
-
-Route::get('/boton', function () {
-    return view('entrenador.boton');
-});
 
 Route::get('/construccion', function () {
     return view('construccion');
@@ -46,6 +39,8 @@ Route::get('/anam2', 'HomeController@anam2')->name('anam2');
 Route::get('/anam3', 'HomeController@anam3')->name('anam3');
 
 Route::get('/caracterizacion', 'HomeController@cara')->name('caracterizacion');
+Route::get('/bateria', 'HomeController@bateri')->name('bateria');
+Route::get('/boton', 'HomeController@boto')->name('boton');
 
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
