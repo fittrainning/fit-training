@@ -1,153 +1,74 @@
-<?php 
-    session_start();
-?>
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+@section('content')
+<div class="row">
+    <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
+        <div id="cont">
+            <div id="fondo">
+                <form id="edit">
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
 
-        <title>Bateria de test</title>
+                        </div><br><br>
 
-        <!-- Bootstrap CSS CDN -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="../css/registro_test.css">
-        <link rel="icon" type="image/png" href="../img/logo.png">
-    </head>
-
-    <body>
-        <div class="container-fluid">
-            <div id="nav" class="row">
-                <nav class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9">
-                    <a href="inicio_entrenador.php" id="home"><img src="../img/logo.png" width="60px"></a>
-                </nav>
-                <nav class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <li class="nav dropdown justify-content-end">
-                        <a href="En_construccion.php" class="nav-link dropdown" role="button">
-                            <img src="../img/men.png" alt="mensajes" width="45px">
-                        </a>
-                        <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="../img/Main.png" alt="porfile" width="40px">
-                            <div id="men" class="dropdown-menu dropdown-menu-right">
-                            <spam class="dropdown-item">
-                                <img id="imag" src="../img/porfile.jpeg" alt="" width="110px"><br>
-                                <label><?php print_r($_SESSION['nombre']);?></label>&nbsp;<label><?php print_r($_SESSION['apellidos']);?></label>
-                            </spam>
-                            <a href="En_construccion.php"><button class="dropdown-item" type="button">Editar Perfil</button></a>
-                            <a href="En_construccion.php"><button class="dropdown-item" type="button">Agenda</button></a>
-                            <a href="../controlador/control_logout.php?destroy"><button class="dropdown-item" type="button">Cerrar Sesion</button></a>
+                        <div  class="col-10"></div>
+                        <div  class="col-2 ">
+                            <div id="cerrar">
+                                <input OnClick="location.href='{{ url('/bateria') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
+                            </div>
                         </div>
-                        </a>
-                    </li>
-                </nav>
-            </div>
-        </div>
-        <div class="wrapper">
-            <!-- Sidebar  -->
-            <nav id="sidebar">
-                <ul class="list-unstyled components" id="barra">
-                    <li id="li1">
-                        <a class="nav-link" href="inicio_entrenador.php">
-                            <p id="texma"><img src="../img/atras.png" alt="gestion_ficha" width="35px">&nbsp; &nbsp; &nbsp; &nbsp;Inicio</p>
-                        </a>
-                    </li>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
 
-                    <li>
-                        <a class="nav-link" href="En_construccion.php">
-                            <p id="texma"><img src="../img/bioquimica.png" alt="gestion_ficha" width="35px">Caracterizacion</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="Bateria de test.php">
-                            <p id="texma"><img src="../img/entrenamiento.png" alt="gestion_usuario" width="35px">   Bateria de Test</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="En_construccion.php">
-                            <p id="texma"><img src="../img/Agenda.png" width="35px">    Agenda</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a  class="nav-link" href="En_construccion.php">
-                            <p id="texma"><img src="../img/estadistica.png" alt="estadisticas" width="35px">    Estadisticas</p>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+                        </div>
+                        <form action = "../controlador/controlBoton.php" method="POST" Enctype="multipart/form-data" class="form-group">    
+                            <div>   
+                            <!--TITULO -->
+                                <div id="color" class="form-group row">
+                                    <label class="col-md-4 col-form-label text-md-left">TÍTULO</label>
+                                    <div id="let2" class="col-md-6">
+                                        <input id="msg" type="text" name="nombre"  placeholder="Titulo" class="form-control placeholder" required>
+                                    </div>
+                                </div>
+                                
+                                <!-- CAPACIDAD -->
+                                
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-left">CAPACIDAD</label>
+                                        <div id="let3" class="col-md-6">
+                                            <select id="selectb" name="capacidad" class="form-control" required>
+                                                <option> Seleccione la Capacidad</option>
+                                                    <option value="Fuerza">Fuerza</option>
+                                                    <option value="Velocidad">Velocidad</option>
+                                                    <option value="Resistencia">Resisitencia</option>
+                                                    <option value="Elasticidad">Elasticidad</option>
+                                            </select>
+                                        </div>
+                                    </div> 
 
-            <!-- Page Content  -->
-            <div id="content">
-                <button type="button" id="sidebarCollapse" class="btn colo1">
-                    <img src="../img/vista.png" alt="ver" width="50px">
-                </button></br></br>
+                                <!-- IMAGEN -->
+                                    <div id="color" class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-left">IMAGEN</label>
+                                        <div class="col-md-6">
+                                            <input type="file" class="form-control-file" name="foto">
+                                        </div>
+                                    </div>
+                            </div>
+                        </form>
+                    </div>
 
-                <!--contenido de la pagina-->
-
-                <div id="cont"><br><br>
-                    
-                    <!--Icono de cerrar-->
-                    <div class="row bm" id="cerrar">
-                        <p><input type="image" name="botondeenvio" src="../img/equis.png"  width="40px"></p>
-                    </div><br><br><br>
-                    
-                    <!--FORMULARIO-->
-                    <div class="form">
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                        <form action = "../controlador/controlBoton.php" method="POST" Enctype="multipart/form-data">
-                        
-                                <label for="name" id="titulo">TÍTULO</label>
-                                <input id="msg" type="text" name="nombre"  placeholder="Titulo" class="form-control placeholder" required><br><br>
-
-                                <div class="form-group">
-                                <p>Capacidad</p>
-                                <select name="capacidad" class="form-control"  required>
-                                    <option> Seleccione la Capacidad</option>
-                                        <option value="Fuerza">Fuerza</option>
-                                        <option value="Velocidad">Velocidad</option>
-                                        <option value="Resistencia">Resisitencia</option>
-                                        <option value="Elasticidad">Elasticidad</option>
-                                </select><br>
-
-                                <label for="name"><h6>INSERTE LA IMAGEN CORRESPONDIENTE AL TEST</h6></label><br><br>
-                                <div class="form-group">
-                                    <input type="file" class="form-control-file" name="foto">
-                                </div><br><br>
-
-                                <button type="submit" class="btn btn-secondary  btn-sm " name="crear" id="buttons">
-                                    <img src="../img/22.png" alt="img" width="40px"> &nbsp; GUARDAR
-                                </button>
-                            </form>
+                    <div class="form-group row mb-0">
+                        <div class="col-12">
+                            <button id="but" type="submit" class="btn btn-primary">
+                                {{ __('GUARDAR') }}
+                            </button>
                         </div>
                     </div>
-                </div><br>
+                </form>
             </div>
         </div>
-        
-
-        <!-- jQuery CDN - Slim version (=without AJAX) -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <!-- Popper.JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar').toggleClass('active');
-                });
-            });
-        </script>
-
-        <!--SRIPT PARA CERRAR-->
-        <script type="text/javascript">
-            document.getElementById("cerrar").onclick = function () {
-            location.href = "Bateria de test.php";
-            };
-        </script>
-    </body>
-
-</html>
+    </div>
+    <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+</div>
+@endsection

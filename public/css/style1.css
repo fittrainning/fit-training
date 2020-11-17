@@ -3,6 +3,14 @@
     padding: 0px;
 }
 
+#selectb {
+    text-align-last: center;
+}
+
+h5 {
+    text-align: center;
+}
+
 body {
     background-color: #CED8E1;
 }
@@ -29,13 +37,12 @@ body {
 #inicio {
     margin-top: 25%;
     margin-bottom: 25%;
-    border-radius: 50px;
     cursor: pointer;
-    background: #000018;
 }
 
 #fon {
     box-shadow: -900px 300px 0px 2000px rgba(0, 0, 0, 0.6);
+    text-align: center;
 }
 
 
@@ -233,6 +240,31 @@ a.article:hover {
     box-shadow: 5px 5px 3px 0px #000000;
 }
 
+#let3 select {
+    background: #CED8E1;
+    width: 140%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px #000000;
+}
+
+#let2 input {
+    background: #CED8E1;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 5px 5px 3px 0px #000000;
+}
+
+#barra {
+    margin-top: -20px;
+}
+
+#color {
+    color: #ffffff;
+    font-size: medium;
+    font-family: Arial Rounded MT;
+}
+
 #cont {
     border-radius: 30px;
     margin-top: 30px;
@@ -240,11 +272,11 @@ a.article:hover {
     background: #3B5369;
     width: 96%;
     padding-left: 15px;
-    padding-bottom: 65px;
+    padding-bottom: 40px;
 }
 
 #cap {
-    border-radius: 20%;
+    border-radius: 25px;
     background: #042333;
     color: #fff;
     margin: 5%;
@@ -278,3 +310,115 @@ a.article:hover {
     float: right;
     margin-right: 20px;
 }
+<<<<<<< HEAD
+=======
+
+#mensa {
+    margin-top: 25%;
+}
+
+#mensabot {
+    background: rgb(150, 150, 150);
+    border-radius: 50px;
+    border: 0px;
+    margin-top: 25px;
+    width: 100%;
+    padding: 20px;
+}
+
+#buscarme {
+    border-bottom: 1px solid #ffffff;
+}
+
+#bucarmens {
+    background: rgba(0, 0, 0, 0);
+    width: 90%;
+    height: 100%;
+    border: 0px;
+    color: rgb(255, 255, 255);
+    text-align-last: center;
+}
+
+#buss {
+    color: #000000;
+}
+
+#bucarmens1 {
+    background: rgba(0, 0, 0, 0);
+    width: 9%;
+    height: 100%;
+    border: 0px;
+}
+
+#cancelar {
+    float: right;
+}
+
+#color111 {
+    background: rgb(231, 231, 231);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#mensajes {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#mensajes1 {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#porfile {
+    width: 100%;
+    border-radius: 100%;
+}
+
+#botdos {
+    text-align: center;
+    padding: 5px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#est {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#econ {
+    background: rgb(255, 255, 255);
+    height: 100%;
+}
+
+#ecoo {
+    border-radius: 5px 5px 5px 5px;
+    background: rgb(150, 150, 150);
+    padding-top: 10px;
+}
+
+#ebot {
+    text-align: center;
+    padding: 5px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+#ebot h5 {
+    font-size: 0.8vw;
+}
+>>>>>>> b3a672e602641bb50bcfd40244819b370c5f7378

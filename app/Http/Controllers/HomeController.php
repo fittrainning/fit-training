@@ -25,4 +25,30 @@ class HomeController extends Controller
     {
         return view('entrenador.inicioen');
     }
+
+    public function editar()
+    {
+        return view('perfil');
+    }
+
+    public function mensajeria()
+    {
+        return view('mensajeria1');
+    }
+    public function mensajeriaa()
+    {
+        return view('mensajeria2');
+    }
+    public function mensaje()
+    {
+        return view('enviarm');
+    }
+
+    public function cara(){
+        return view('entrenador.caracterizacion');
+    }
+
+    public function estadi(){
+        return view('estadisticas');
+    }
 }

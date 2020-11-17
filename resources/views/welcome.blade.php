@@ -33,7 +33,7 @@
                         <!--Esta etiqueta contiene el icono de inicio de sesion-->
                         <a class="nav-link dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <!--Esta determina el boton-->
-                            <img id="inicio" src="img/porfile.png" alt="porfile" width="80px">
+                            <img id="inicio" src="{{ asset('img/Main.png') }}" alt="porfile" width="80px">
                             <!--Esta etiqueta define la imagen de inicio de sesion-->
                         </a>
                         <div id="fon" class="dropdown-menu dropdown-menu-right">

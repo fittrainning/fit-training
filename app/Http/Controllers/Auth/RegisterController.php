@@ -50,9 +50,18 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'Usu_id' => ['required', 'String', 'max:15'],
+            'Usu_tipodoc' => ['required', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'Usu_apellidos' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:tb_usuarios'],
+            'Usu_fecha_nacimiento' => ['required', 'string', 'max:255'],
+            'Usu_telefono' => ['string', 'max:10'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'Usu_genero' => ['string', 'max:9'],
+            'Usu_direccion' => ['string', 'max:255'],
+            'Usu_rol' => ['required', 'string', 'max:255'],
+            'Usu_foto' => ['string', 'max:255']
         ]);
     }
 
@@ -65,9 +74,18 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'Usu_id' => $data['Usu_id'],
+            'Usu_tipodoc' => $data['Usu_tipodoc'],
             'name' => $data['name'],
+            'Usu_apellidos' => $data['Usu_apellidos'],
             'email' => $data['email'],
+            'Usu_fecha_nacimiento' => $data['Usu_fecha_nacimiento'],
+            'Usu_telefono' => $data['Usu_telefono'],
             'password' => Hash::make($data['password']),
+            'Usu_genero' => $data['Usu_genero'],
+            'Usu_direccion' => $data['Usu_direccion'],
+            'Usu_rol' => $data['Usu_rol'],
+            'Usu_foto' => $data['Usu_foto'],
         ]);
     }
 }
