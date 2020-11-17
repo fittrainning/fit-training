@@ -21,16 +21,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    
+    // _________________Redireccionamiento_______________________
+    // vistas generales
     public function index()
     {
         return view('entrenador.inicioen');
     }
-
     public function editar()
     {
         return view('perfil');
     }
-
     public function mensajeria()
     {
         return view('mensajeria1');
@@ -44,11 +46,25 @@ class HomeController extends Controller
         return view('enviarm');
     }
 
+    // vistas entrenador y director
+    public function estadi(){
+        return view('estadisticas');
+    }
+
+    // vistas entrenador
     public function cara(){
         return view('entrenador.caracterizacion');
     }
 
-    public function estadi(){
-        return view('estadisticas');
+    // vistas director
+    public function ficha(){
+        return view('director.cargar_ficha');
     }
+    public function usuario(){
+        return view('director.cargar_usuario');
+    }
+
+
+    // vistas deportista
+
 }
