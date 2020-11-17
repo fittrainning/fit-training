@@ -169,6 +169,16 @@ a.article:hover {
     END NAVBAR
 ----------------------------------------------------- */
 
+#logo {
+    margin-top: 25px;
+    margin-left: 25%;
+    width: 50%;
+}
+
+#separa {
+    border-color: #fff;
+}
+
 #card {
     color: #fff;
     font-family: Arial Rounded MT;
@@ -216,6 +226,12 @@ a.article:hover {
 }
 
 #let input {
+    background: #CED8E1;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px #000000;
+}
+
+#let1 input {
     background: #CED8E1;
     border-radius: 15px;
     box-shadow: 5px 5px 3px 0px #000000;
@@ -339,7 +355,7 @@ a.article:hover {
     float: right;
 }
 
-#color111 {
+#color1 {
     background: rgb(231, 231, 231);
     border-radius: 5px;
     padding-left: 10px;
