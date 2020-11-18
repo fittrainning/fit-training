@@ -44,4 +44,8 @@ Route::get('/boton', 'HomeController@boto')->name('boton');
 
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
+<<<<<<< HEAD
 
+=======
+Route::get('/entrenadores', 'HomeController@entre')->name('entrenadores');
+>>>>>>> a9800af20b5bcfe36008822b6a457390b4416a74
