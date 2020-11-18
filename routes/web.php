@@ -33,6 +33,7 @@ Route::get('/mensajeria', 'HomeController@mensajeria')->name('mensajeria');
 Route::get('/responder', 'HomeController@mensajeriaa')->name('responder');
 Route::get('/enviar', 'HomeController@mensaje')->name('enviar');
 Route::get('/estadisticas', 'HomeController@estadi')->name('estadisticas');
+Route::get('/plan', 'HomeController@plan')->name('plan');
 
 Route::get('/anam1', 'HomeController@anam1')->name('anam1');
 Route::get('/anam2', 'HomeController@anam2')->name('anam2');
