@@ -105,7 +105,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{ url('/construccion') }}">
+                            <a class="nav-link" href="{{ route('plan') }}">
                                 <p id="texma"><img src="{{ asset('../img/Agenda.png') }}" alt="agenda" width="35px">&nbsp;Agenda</p>
                             </a>
                         </li>
