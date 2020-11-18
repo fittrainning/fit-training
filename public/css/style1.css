@@ -502,3 +502,11 @@ a.article:hover {
     padding-right: 10px;
     border-radius: 5px;
 }
+
+#let2 #auto {
+    padding: 10px;
+    background: #CED8E1;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 5px 5px 3px 0px #000000;
+}

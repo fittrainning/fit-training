@@ -53,9 +53,9 @@ class HomeController extends Controller
     {
         return view('entrenador.cinicio');
     }
-    public function carabio()
+    public function caraedit()
     {
-        return view('entrenador.cbioquimica');
+        return view('entrenador.ceditar');
     }
 
     // vistas entrenador y director

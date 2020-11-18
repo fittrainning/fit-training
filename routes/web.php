@@ -41,6 +41,7 @@ Route::get('/anam3', 'HomeController@anam3')->name('anam3');
 
 Route::get('/caracterizacion', 'HomeController@cara')->name('caracterizacion');
 Route::get('/caracterizacion/deporte', 'HomeController@caraini')->name('caracterizacion/deporte');
+Route::get('/caracterizacion/editardeporte', 'HomeController@caraedit')->name('caracterizacion/editardeporte');
 Route::get('/bateria', 'HomeController@bateri')->name('bateria');
 Route::get('/boton', 'HomeController@boto')->name('boton');
 

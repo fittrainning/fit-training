@@ -44,7 +44,7 @@
             <!--Esta etiqueta contiene el contenido de toda la barra de navegacion-->
             <nav id="pru" class="col-6 col-sm-8 col-md-8 col-lg-10 col-xl-10">
                 <!--Define el responsive de la barra de navegacion-->
-                <a class="navbar" href="{{ url('/') }}"><img src="img/logo.png" width="55px"></a>
+                <a class="navbar" href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" width="55px"></a>
             </nav>
             <nav class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
                 <a class="nav justify-content-end" href="{{ route('mensajeria') }}">
