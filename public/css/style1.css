@@ -512,7 +512,7 @@ a.article:hover {
 }
 
 #opp {
-    background: #6d7fcc;
+    background: rgb(16, 43, 62);
     font-size: 0.7vw;
     padding: 5px;
     border-radius: 10px 10px 10px 10px;
