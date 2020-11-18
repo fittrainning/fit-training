@@ -16,7 +16,7 @@ class CreateTbDeporteTable extends Migration
         Schema::create('tb_deporte', function (Blueprint $table) {
             $table->Integer('Dee_cod')->primary();
             $table->string('Dee_nombre');
-            $table->string('Dee_caracterizacion');
+            $table->string('Dee_detalle');
             $table->timestamps();
             $table->softDeletes();
         });
