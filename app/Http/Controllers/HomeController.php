@@ -45,6 +45,10 @@ class HomeController extends Controller
     {
         return view('enviarm');
     }
+    public function plan()
+    {
+        return view('plan');
+    }
 
     // vistas entrenador y director
     public function estadi(){
@@ -68,6 +72,9 @@ class HomeController extends Controller
     }
     public function usuario(){
         return view('director.cargar_usuario');
+    }
+    public function entre(){
+        return view('director.entrenador');
     }
 
 
