@@ -149,6 +149,7 @@
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
+            $('#CalendarioWeb').fullCalendar();
         });
     </script>
     @endguest
