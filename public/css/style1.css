@@ -469,3 +469,36 @@ a.article:hover {
 #cenn {
     text-align: center;
 }
+
+#tabla {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: #7386D5;
+}
+
+#cabe {
+    padding: 3px;
+}
+
+#cabe th {
+    padding: 3px;
+}
+
+#cuer {
+    padding: 3px;
+    background: #9DA7AF;
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+#cuer td {
+    padding: 3px;
+    background: #9DA7AF;
+}
+
+#inn {
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
