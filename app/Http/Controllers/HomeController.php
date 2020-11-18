@@ -49,6 +49,14 @@ class HomeController extends Controller
     {
         return view('plan');
     }
+    public function caraini()
+    {
+        return view('entrenador.cinicio');
+    }
+    public function carabio()
+    {
+        return view('entrenador.cbioquimica');
+    }
 
     // vistas entrenador y director
     public function estadi(){

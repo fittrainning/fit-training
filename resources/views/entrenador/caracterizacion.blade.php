@@ -9,7 +9,7 @@
                 <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                     <div class="row">
                         <div class="col-3">
-                            <a href="">
+                            <a href="{{ route('caracterizacion/deporte') }}">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h5>FUTBOL</h5>
@@ -18,7 +18,7 @@
                             </a>
                         </div>
                         <div class="col-3">
-                            <a href="">
+                            <a href="{{ route('caracterizacion/deporte') }}">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h5>BALONCESTO</h5>
@@ -27,7 +27,7 @@
                             </a>
                         </div>
                         <div class="col-3">
-                            <a href="">
+                            <a href="{{ route('caracterizacion/deporte') }}">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h5>ATLETISMO</h5>
@@ -36,7 +36,7 @@
                             </a>
                         </div>
                         <div class="col-3">
-                            <a href="">
+                            <a href="{{ route('caracterizacion/deporte') }}">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h5>VOLEIBOL</h5>

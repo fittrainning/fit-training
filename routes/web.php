@@ -40,10 +40,10 @@ Route::get('/anam2', 'HomeController@anam2')->name('anam2');
 Route::get('/anam3', 'HomeController@anam3')->name('anam3');
 
 Route::get('/caracterizacion', 'HomeController@cara')->name('caracterizacion');
+Route::get('/caracterizacion/deporte', 'HomeController@caraini')->name('caracterizacion/deporte');
 Route::get('/bateria', 'HomeController@bateri')->name('bateria');
 Route::get('/boton', 'HomeController@boto')->name('boton');
 
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
-
 Route::get('/entrenadores', 'HomeController@entre')->name('entrenadores');
