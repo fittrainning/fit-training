@@ -52,7 +52,7 @@
                         <img id="inicio" src="{{ asset('img/Main.png') }}" alt="porfile" width="50px">
                         <!--Esta etiqueta define la imagen de inicio de sesion-->
                     </a>
-                    <!-- Authentication Links 
+                    <!-- Authentication Links
                     @ guest
                         <div id="fon" class="dropdown-menu dropdown-menu-right">
                             <div class="top-right links">
@@ -111,17 +111,17 @@
                         </li>
                     </ul>
                 </nav>
-        
+
                 <!-- Page Content  -->
                 <div id="content">
                     <button type="button" id="sidebarCollapse" class="btn colo1">
                         <img src="../img/vista.png" alt="ver" width="50px">
                     </button>
-        
+
                     <main class="py-4">
                         @yield('content')
                     </main>
-        
+
                 </div>
             </div>
         </div>
@@ -130,7 +130,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
