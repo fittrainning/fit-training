@@ -23,7 +23,6 @@
 
                         </div>
                         <form action = "{{ url('/boton') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
-                            {{ csrf_field() }}
                             <div>   
                             <!--TITULO -->
                                 <div id="color" class="form-group row">
