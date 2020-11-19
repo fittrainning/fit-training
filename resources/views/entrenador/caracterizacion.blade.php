@@ -45,6 +45,19 @@
                             </a>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                            <a href="{{ route('caracterizacion/deporte') }}">
+                                <div id="cap">
+                                    <div id="botdos">
+                                        <h5>Agregar</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
                 </div>
                 <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
             </div>
