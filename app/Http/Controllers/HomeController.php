@@ -67,6 +67,12 @@ class HomeController extends Controller
     public function cara(){
         return view('entrenador.caracterizacion');
     }
+    public function bateri(){
+        return view('entrenador.bateriat');
+    }
+    public function boto(){
+        return view('entrenador.boton');
+    }
 
     // vistas director
     public function ficha(){
