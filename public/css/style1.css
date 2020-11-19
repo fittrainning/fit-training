@@ -524,3 +524,10 @@ a.article:hover {
     margin-right: -1px;
     border-right: 1px solid #FFFFFF;
 }
+
+#imag {
+    width: 40%;
+    border-radius: 100%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
