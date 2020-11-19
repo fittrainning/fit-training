@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::get('/construccion', function () {
     return view('construccion');
 });
+
 //_________________________________________________________________________
 
 Auth::routes();
@@ -42,8 +43,10 @@ Route::get('/anam3', 'HomeController@anam3')->name('anam3');
 Route::get('/caracterizacion', 'HomeController@cara')->name('caracterizacion');
 Route::get('/caracterizacion/deporte', 'HomeController@caraini')->name('caracterizacion/deporte');
 Route::get('/caracterizacion/editardeporte', 'HomeController@caraedit')->name('caracterizacion/editardeporte');
-Route::get('/bateria', 'HomeController@bateri')->name('bateria');
-Route::get('/boton', 'HomeController@boto')->name('boton');
+
+
+Route::get('/bateria', 'BotonController@bateri')->name('bateria');
+Route::get('/boton', 'BotonController@boto')->name('boton');
 
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');

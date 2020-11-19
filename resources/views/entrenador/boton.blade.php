@@ -22,10 +22,12 @@
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
 
                         </div>
-                        <form action = "../controlador/controlBoton.php" method="POST" Enctype="multipart/form-data" class="form-group">    
+                        <form action = "{{ url('/boton') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
+                            {{ csrf_field() }}
                             <div>   
                             <!--TITULO -->
                                 <div id="color" class="form-group row">
+
                                     <label class="col-md-4 col-form-label text-md-left">TÍTULO</label>
                                     <div id="let2" class="col-md-6">
                                         <input id="msg" type="text" name="nombre"  placeholder="Titulo" class="form-control placeholder" required>

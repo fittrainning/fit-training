@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class cboton extends Model
+class boton extends Model
 {
     //
 }

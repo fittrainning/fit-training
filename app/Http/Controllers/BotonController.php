@@ -2,31 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\cboton;
+use App\boton;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 
-class CbotonController extends Controller
+class BotonController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function bateri(){
+        return view('entrenador.bateriat');
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
 
+    public function boto(){
+        return view('entrenador.boton');
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -35,16 +34,18 @@ class CbotonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $datos = request()->all();//almacenar todo lo que se envia
+        return response()->json ($datos);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\cboton  $cboton
+     * @param  \App\boton  $boton
      * @return \Illuminate\Http\Response
      */
-    public function show(cboton $cboton)
+    public function show(boton $boton)
     {
         //
     }
@@ -52,10 +53,10 @@ class CbotonController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\cboton  $cboton
+     * @param  \App\boton  $boton
      * @return \Illuminate\Http\Response
      */
-    public function edit(cboton $cboton)
+    public function edit(boton $boton)
     {
         //
     }
@@ -64,10 +65,10 @@ class CbotonController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\cboton  $cboton
+     * @param  \App\boton  $boton
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cboton $cboton)
+    public function update(Request $request, boton $boton)
     {
         //
     }
@@ -75,10 +76,10 @@ class CbotonController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\cboton  $cboton
+     * @param  \App\boton  $boton
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cboton $cboton)
+    public function destroy(boton $boton)
     {
         //
     }
