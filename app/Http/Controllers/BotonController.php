@@ -36,6 +36,12 @@ class BotonController extends Controller
     {
         
         $datos = request()->all();//almacenar todo lo que se envia
+       
+        if($request -> hasFile('foto')){
+            $datos
+        }
+        
+        
         return response()->json ($datos);
     }
 

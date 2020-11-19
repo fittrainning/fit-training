@@ -22,7 +22,7 @@
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
 
                         </div>
-                        <form action = "{{ url('/boton') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
+                        <form action = "{{ url('/boton') }}" method="post" Enctype="multipart/form-data" class="form-group">    
                             <div>   
                             <!--TITULO -->
                                 <div id="color" class="form-group row">
