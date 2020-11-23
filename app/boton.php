@@ -13,6 +13,6 @@ class boton extends Model
      */
     protected $table = 'tb_test';
     protected $fillable = [
-        'Tes_id', 'Tes_nombre', 'Tes_capacidad', 'Tes_objetivo', 'Tes_desarrollo', 'Tes_material','Tes_evaluacion','Tes_imagen','Tes_icono', 
+        'Tes_id', 'Tes_nombre', 'Tes_capacidad', /*'Tes_objetivo', 'Tes_desarrollo', 'Tes_material','Tes_evaluacion','Tes_imagen',*/'Tes_icono', 
     ];
 }
