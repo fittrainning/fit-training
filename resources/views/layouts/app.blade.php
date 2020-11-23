@@ -13,12 +13,26 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}" defer></script>
     <script src="{{ asset('js/style.js') }}" defer></script>
-    <script src="{{ asset('js/jquery.min.js') }}" defer></script>
-    <script src="{{ asset('js/moment.min.js') }}" defer></script>
 
     <!--fullcalendar-->
-    <link href="{{ asset('css/fullcalendar.min.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/fullcalendar.min.js') }}" defer></script>
+    <script src="{{ asset('calendarioweb/core/main.js') }}" defer></script>
+    <script src="{{ asset('calendarioweb/daygrid/main.js') }}" defer></script>
+    <script src="{{ asset('calendarioweb/interaction/main.js') }}" defer></script>
+
+    <link href="{{ asset('calendarioweb/core/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('calendarioweb/daygrid/main.css') }}" rel="stylesheet">
+
+    <!--- pligins (funcionalidades adicionales)--->
+    <script src="{{ asset('calendarioweb/list/main.js') }}" defer></script>
+    <script src="{{ asset('calendarioweb/timegrid/main.js') }}" defer></script>
+
+    <!--estilo de vistas calendario-->
+    <link href="{{ asset('calendarioweb/list/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('calendarioweb/timegrid/main.css') }}" rel="stylesheet">
+
+
+
+
 
 
     <!-- Fonts -->
@@ -145,13 +159,59 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-            $('#CalendarioWeb').fullCalendar();
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            //defaultDate:new Date(2020,11,20),
+            plugins: [ 'dayGrid', 'interaction', 'timeGrid', 'list' ],
+            //defaultView:'timeGridDay'
+            header:{
+                left:'prev,next today Miboton',
+                center:'title',
+                right:'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            customButtons:{
+                Miboton:{
+                    text:"Boton",
+                    click:function(){
+                            alert("¡Hola mundo!");
+                            $('#exampleModal').modal('toggle');
+                    }
+                }
+
+
+            },
+            dateClick:function(info){
+
+                $('#exampleModal').modal();
+                //console.log(info);
+
+            },
+            events:[
+                {
+                    title:"evento 1",
+                    start:"2020-09-13 12:30:00"
+                },{
+                    title:"evento 1",
+                    start:"2020-09-13 12:30:00",
+                    end:"2020-09-20 12:30:00",
+                    color:"#FFCCAA",
+                    textColor:"#000000"
+                }
+            ]
+
+
+
+          });
+          calendar.setOption('locale','Es');
+
+
+          calendar.render();
         });
-    </script>
+
+      </script>
     @endguest
 </body>
 </html>
