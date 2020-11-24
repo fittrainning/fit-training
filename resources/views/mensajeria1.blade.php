@@ -13,7 +13,7 @@
                                 Mensajeria
                             </div>
                             <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
-                                <a href="{{ route('enviar') }}">
+                                <a href="{{ route('responder') }}">
                                     <img src="{{ asset('img/responder.png') }}" alt="" width="25px">
                                 </a>
                             </div>
@@ -25,7 +25,7 @@
                                 Mensajeria
                             </div>
                             <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
-                                <a href="{{ route('enviar') }}">
+                                <a href="{{ route('responder') }}">
                                     <img src="{{ asset('img/responder.png') }}" alt="" width="25px">
                                 </a>
                             </div>
@@ -37,7 +37,7 @@
                                 Mensajeria
                             </div>
                             <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
-                                <a href="{{ route('enviar') }}">
+                                <a href="{{ route('responder') }}">
                                     <img src="{{ asset('img/responder.png') }}" alt="" width="25px">
                                 </a>
                             </div>
