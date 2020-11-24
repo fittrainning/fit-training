@@ -43,7 +43,7 @@
                         </div>
                         </th>
                     </tr>
-                    
+                    <!--RESULTADO -->
                         <tr>
                         
                             <td>
@@ -51,9 +51,9 @@
                                     <h6><img id="lo" src="{{ asset('../img/salto.png') }}" alt="img" width="40px">&nbsp;TEST SALTO<br> HORIZONTAL</h6>
                                 </button>
                             </td>
-                            <td><label type="text" class="usu" name="usu" value=" "></label></td>
-                            <td><label type="text" class="sex" name="sex" value=" "></label></td>
-                            <td><label type="text" class="cla" name="cla" value=" "></label></td>
+                            <td><input type="button" class="vel" name="vel" value=" "></td>
+                            <td><input type="button" class="res" name="res" value=" "></td>
+                            <td><input type="button" class="ela" name="ela" value="  "></td>
                         </tr>
                     
                 </table><br>

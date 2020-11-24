@@ -23,12 +23,14 @@ Route::get('/construccion', function () {
     return view('construccion');
 });
 
-Route::get('/entrenador', function () {
+/*Route::get('/entrenador', function () {
     return view('entrenador.bateria');
 });
 Route::get('/entrenador', function () {
     return view('entrenador.boton');
-});;
+});
+*/
+
 
 //_________________________________________________________________________
 
