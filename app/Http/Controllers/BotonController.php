@@ -12,15 +12,25 @@ class BotonController extends Controller
     //
     public function index()
     {
-     $Boton = boton::select('Tes_id', 'Tes_nombre', 'Tes_capacidad', 'Tes_icono', 'url');
- 
-        //
- 
-        // return view('entrenador.bateriat', compact('bateriat')); //No estoy segura
+     //$Boton = boton::select('Tes_id', 'Tes_nombre', 'Tes_capacidad', 'Tes_icono', 'url');
+      //return view('entrenador.bateria', compact('bateria')); //No estoy segura
+      return view('entrenador.bateria');
     }
 
+    public function create()
+    {
+        //$Boton = boton::all();
+      //return view('entrenador.boton', compact('boton')); 
+      return view('entrenador.boton'); 
+    }
+
+    public function store(Request $request) //solicitud realizaada request
+        {
+            $Boton=request()->all(); //alamcenar todo lo que se envia de request
+        return response()->json($Boton);
+        }
     // Crear un Registro (Create) 
-    public function crear()
+    /*public function crear()
     {
         $Boton = boton::all();
         // return view('entrenador.boton', compact('boton')); No estoy segura
@@ -56,7 +66,7 @@ class BotonController extends Controller
                     $image->move(public_path().'/uploads/', $imagen);
      
                     // Guardamos el nombre de la imagen en la tabla 'img_bicicletas'
-                    /*DB::table('tb_test')->insert(
+                    DB::table('tb_test')->insert(
          [
           'formato' => $formato,
           'Tes_id' => $Boton->id,
@@ -64,7 +74,7 @@ class BotonController extends Controller
           'updated_at' => date("Y-m-d H:i:s")
          ]
      );
-     */
+    
      
                 }         
      
@@ -77,5 +87,6 @@ class BotonController extends Controller
         {
             //
         }
+        */
 
 }

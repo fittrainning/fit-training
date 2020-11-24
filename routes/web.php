@@ -23,6 +23,13 @@ Route::get('/construccion', function () {
     return view('construccion');
 });
 
+Route::get('/entrenador', function () {
+    return view('entrenador.bateria');
+});
+Route::get('/entrenador', function () {
+    return view('entrenador.boton');
+});;
+
 //_________________________________________________________________________
 
 Auth::routes();

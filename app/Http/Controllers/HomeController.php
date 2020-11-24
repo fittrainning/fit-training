@@ -69,7 +69,7 @@ class HomeController extends Controller
     }
     
     public function bateri(){
-        return view('entrenador.bateriat');
+        return view('entrenador.bateria');
     }
     public function boto(){
         return view('entrenador.boton');
