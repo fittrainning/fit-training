@@ -35,6 +35,8 @@ Route::get('/entrenador', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/depor', 'HomeController@dep')->name('depor');
+Route::get('/direc', 'HomeController@dir')->name('direc');
 
 Route::get('/editar_perfil', 'HomeController@editar')->name('editar_perfil');
 Route::get('/mensajeria', 'HomeController@mensajeria')->name('mensajeria');
