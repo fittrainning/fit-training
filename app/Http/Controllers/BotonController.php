@@ -22,7 +22,7 @@ class BotonController extends Controller
     public function boto(Request $request)
     {
         //dd($request->all());
-        //lo campos de request debeb ser lo mismos que en el formulario los name si am
+        //lo campos de request deben ser lo mismos que en el formulario 
         $Boton = new boton;
         $Boton->Tes_nombre = $request->Nombre;
         $Boton->Tes_capacidad = $request->Capacidad;
