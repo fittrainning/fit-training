@@ -61,7 +61,7 @@
                     
                 </table><br>
                 
-                <a href="{{ route('boton') }}">
+                <a href="{{ route('/boton') }}">
                 <button type="button" class="btn btn-secondary  btn-sm"  id="buttons">
                     <img src="{{ asset('../img/22.png') }}" alt="img" width="40px"> &nbsp; AGREGAR TEST
                 </button>

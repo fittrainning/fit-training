@@ -5,7 +5,7 @@
     <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
         <div id="cont">
             <div id="fondo">
-                <form id="edit">
+                
                     <div class="row">
                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
 
@@ -22,8 +22,8 @@
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
 
                         </div>
-                        <form action = "{{ url('/boton') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
-                            
+                        <form action = "{{ route('boton') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
+                            @csrf
                             <div>
                                 
                             <!--TITULO -->
@@ -101,7 +101,7 @@
                                     </div>
                             </div>
                         
-                        </form>
+                        
                     </div>
 
                     <div class="form-group row mb-0">
