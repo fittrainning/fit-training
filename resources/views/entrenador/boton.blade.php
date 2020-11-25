@@ -22,13 +22,14 @@
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
 
                         </div>
-                        <form action = "{{ url('/bateria') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
-                            {{ csrf_field()}} <!-- Llave de acceso-->
-                            <div>   
+                        <form action = "{{ url('/boton') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
+                            
+                            <div>
+                                
                             <!--TITULO -->
                                 <div id="color" class="form-group row">
 
-                                    <label class="col-md-4 col-form-label text-md-left">{{ 'TÍTULO' }}</label>
+                                    <label class="col-md-4 col-form-label text-md-left">TÍTULO</label>
                                     <div id="let2" class="col-md-6">
                                         <input id="msg" type="text" name="Nombre"  placeholder="Titulo" class="form-control placeholder" required>
                                     </div>
@@ -37,7 +38,7 @@
                                 <!-- CAPACIDAD -->
                                 
                                     <div id="color" class="form-group row">
-                                        <label class="col-md-4 col-form-label text-md-left">{{ 'CAPACIDAD' }}</label>
+                                        <label class="col-md-4 col-form-label text-md-left">CAPACIDAD</label>
                                         <div id="let3" class="col-md-6">
                                             <select id="selectb" name="Capacidad" class="form-control" required>
                                                 <option> Seleccione la Capacidad</option>
@@ -53,7 +54,7 @@
 
                                 <div id="color" class="form-group row">
 
-                                    <label class="col-md-4 col-form-label text-md-left">{{ 'OBJETIVO' }}</label>
+                                    <label class="col-md-4 col-form-label text-md-left">OBJETIVO</label>
                                     <div id="let2" class="col-md-6">
                                         <input id="msg" type="text" name="Objetivo"  placeholder="Objetivo" class="form-control placeholder" required>
                                     </div>
@@ -63,7 +64,7 @@
 
                                 <div id="color" class="form-group row">
 
-                                    <label class="col-md-4 col-form-label text-md-left">{{ 'DESARROLLO' }}</label>
+                                    <label class="col-md-4 col-form-label text-md-left">DESARROLLO</label>
                                     <div id="let2" class="col-md-6">
                                         <textarea id="msg" type="text" name="Desarrollo"  placeholder="Desarrollo" class="form-control placeholder" required></textarea>
                                     </div>
@@ -73,7 +74,7 @@
 
                                 <div id="color" class="form-group row">
 
-                                    <label class="col-md-4 col-form-label text-md-left">{{ 'MATERIAL' }}</label>
+                                    <label class="col-md-4 col-form-label text-md-left">MATERIAL</label>
                                     <div id="let2" class="col-md-6">
                                         <input id="msg" type="text" name="Material"  placeholder="Material" class="form-control placeholder" required>
                                     </div>
@@ -83,7 +84,7 @@
 
                                 <div id="color" class="form-group row">
 
-                                    <label class="col-md-4 col-form-label text-md-left">{{ 'EVALUACION' }}</label>
+                                    <label class="col-md-4 col-form-label text-md-left">EVALUACION</label>
                                     <div id="let2" class="col-md-6">
                                         <input id="msg" type="text" name="Evaluacion"  placeholder="Evaluacion" class="form-control placeholder" required>
                                     </div>
@@ -93,12 +94,13 @@
                                 <!-- IMAGEN -->
                                     <div id="color" class="form-group row">
                                         
-                                        <label class="col-md-4 col-form-label text-md-left">{{ 'IMAGEN' }}</label>
+                                        <label class="col-md-4 col-form-label text-md-left">IMAGEN</label>
                                         <div class="col-md-6">
                                             <input type="file" class="form-control-file" name="Foto">
                                         </div>
                                     </div>
                             </div>
+                        
                         </form>
                     </div>
 

@@ -23,14 +23,6 @@ Route::get('/construccion', function () {
     return view('construccion');
 });
 
-/*Route::get('/entrenador', function () {
-    return view('entrenador.bateria');
-});
-Route::get('/entrenador', function () {
-    return view('entrenador.boton');
-});
-*/
-
 
 //_________________________________________________________________________
 
@@ -62,3 +54,16 @@ Route::get('/boton', 'HomeController@boto')->name('boton');
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
 Route::get('/entrenadores', 'HomeController@entre')->name('entrenadores');
+
+/* Rutas CRUD
+ 
+/* Crear 
+Route::get('entrenador/boton/crear', 'BotonController@crear')->name('entrenador/boton/crear');
+Route::put('entrenador/boton/store', 'BotonController@store')->name('entrenador/boton/store');
+ 
+/* Leer 
+Route::get('entrenador/boton', 'BotonController@index')->name('entrenador/boton');
+
+/* Vista para los detalles de un registro 
+Route::get('entrenador/boton/dbateria/{Tes_id}', ['as' => 'entrenador/boton/dbateria', 'uses' => 'BotonController@dbateria']);
+*/
