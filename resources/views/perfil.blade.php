@@ -5,8 +5,7 @@
     <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
         <div id="cont">
             <div id="fondo">
-                <form id="edit">
-                    <br><br><br>    
+                <form id="edit"><br><br><br>    
                     <div class="row" id="color" >
                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
                         <div id="centro" class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">

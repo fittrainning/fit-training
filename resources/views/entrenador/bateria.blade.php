@@ -48,11 +48,14 @@
                         
                             <td>
                                 <button type="button" class="btn btn-secondary  btn-sm " id="buttonn">
-                                    <h6><img id="lo" src="{{ asset('../img/salto.png') }}" alt="img" width="40px">&nbsp;TEST SALTO<br> HORIZONTAL</h6>
+                                    <h6><img id="lo" src="{{asset('img/clipboard.png')}}" alt="img" width="40px">&nbsp;TEST SALTO<br> HORIZONTAL</h6>
                                 </button>
                             </td>
-                            <td><input type="button" class="vel" name="vel" value=" "></td>
-                            <td><input type="button" class="res" name="res" value=" "></td>
+                            
+                            <td><button type="button" class="vel" name="vel" value=" "><img src="{{asset('img/clipboard.png')}}" width="25px"></button>
+                            </td>
+                            <td><input type="button" class="res" name="res" value=" ">
+                            </td>
                             <td><input type="button" class="ela" name="ela" value="  "></td>
                         </tr>
                     

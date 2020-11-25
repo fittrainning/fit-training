@@ -7,6 +7,12 @@
     text-align-last: center;
 }
 
+#letras {
+    font-family: Arial Rounded MT;
+    color: #ffffff;
+    font-size: medium;
+}
+
 h5 {
     text-align: center;
 }
