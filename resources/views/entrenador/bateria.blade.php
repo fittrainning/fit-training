@@ -7,14 +7,11 @@
 
                 <table class="table table-borderless">
                     <tr>
-                        @foreach($Capacidades as $Capacidad)
-                            
-                        @endforeach
                         <th scope="col">
                         <div class="">
                             <div id="cap">
                                 <img id="img" src="{{ asset('../img/fuerza.png') }}"><br><br><!--Define la imagen de la capacidad-->
-                                <h5>{{ $Capacidad->Men_Mensaje }}</h5><br> 
+                                <h5>FUERZA</h5><br> 
                             </div>
                         </div>
                         </th>

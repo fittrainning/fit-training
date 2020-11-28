@@ -36,6 +36,20 @@ class HomeController extends Controller
     {
         return view('director.iniciodi');
     }
+    /*
+    public function index()
+    { 
+        if (Auth::user()->Usu_rol == 'Deportista') {
+            return view('deportistas.iniciode');
+        }
+        if (Auth::user()->Usu_rol == 'Entrenador') {
+            return view('entrenador.inicioen');
+        }
+        if (Auth::user()->Usu_rol == 'Director') {
+            return view('director.iniciodi');
+        }
+    }
+    */
 
     public function editar()
     {
