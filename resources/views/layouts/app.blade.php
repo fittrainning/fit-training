@@ -61,7 +61,7 @@
                 <a class="navbar" href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" width="55px"></a>
             </nav>
             <nav class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                <a class="nav justify-content-end" href="{{ route('mensajeria') }}">
+                <a class="nav justify-content-end" href="{{ route('Mensajes.index') }}">
                     <img id="mensa" src="{{ asset('img/men.png') }}" alt="" width="50px">
                 </a>
             </nav>

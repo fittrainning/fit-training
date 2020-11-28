@@ -7,16 +7,29 @@
             <div class="row">
                 <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
                 <div data-spy="scroll" id="color111" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                    @foreach($Mensajeria as $men)
+
+                    @foreach($Mensajes as $Mensaje)
                         <div id="mensajes">
                             <div class="row" id="mmm">
                                 <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
-                                    <label>{{ $men->Men_Mensaje }}</label>
+                                    <label>{{$Mensaje->Men_Mensaje}}</label>
                                 </div>
                                 <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
                                     <a href="{{ route('responder') }}">
                                         <img src="{{ asset('img/responder.png') }}" alt="" width="25px">
                                     </a>
+
+                                    <a class="btn btn-warning" href="{{route("Mensajes.edit",[$Mensaje])}}">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <form action="{{route("Mensajes.destroy", [$Mensaje])}}" method="post">
+                                        @method("delete")
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </a>
                                 </div>
                             </div>
                         </div>

@@ -23,7 +23,7 @@ Route::get('/construccion', function () {
     return view('construccion');
 });
 
-
+Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
 //_________________________________________________________________________
 
 Auth::routes();
@@ -33,7 +33,7 @@ Route::get('/depor', 'HomeController@dep')->name('depor');
 Route::get('/direc', 'HomeController@dir')->name('direc');
 
 Route::get('/editar_perfil', 'HomeController@editar')->name('editar_perfil');
-Route::get('/mensajeria', 'HomeController@mensajeria')->name('mensajeria');
+//Route::get('/mensajeria', 'HomeController@mensajeria')->name('mensajeria');
 Route::get('/responder', 'HomeController@mensajeriaa')->name('responder');
 Route::get('/enviar', 'HomeController@mensaje')->name('enviar');
 Route::get('/estadisticas', 'HomeController@estadi')->name('estadisticas');
