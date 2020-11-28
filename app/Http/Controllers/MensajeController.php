@@ -60,7 +60,8 @@ class MensajeController extends Controller
      */
     public function edit(Mensajeria $mensajeria)
     {
-        //
+        return view("edimensaje", ["menssaje" => $mensajeria,
+        ]);
     }
 
     /**
@@ -72,7 +73,8 @@ class MensajeController extends Controller
      */
     public function update(Request $request, Mensajeria $mensajeria)
     {
-        //
+        $mensajeria->fill($request->input())->saveOrFail();
+        return redirect()->route("Mensajes.index")->with(["menssaje" => "Mensaje actualizado"]);
     }
 
     /**
@@ -83,6 +85,8 @@ class MensajeController extends Controller
      */
     public function destroy(Mensajeria $mensajeria)
     {
-        //
+        $mensajeria->delete();
+        return redirect()->route("Mensajes.index")->with(["menssaje" => "Mensaje eliminado",
+        ]);
     }
 }
