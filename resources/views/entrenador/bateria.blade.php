@@ -47,21 +47,19 @@
                         <tr>
                         
                             <td>
-                                <button type="button" class="btn btn-secondary  btn-sm " id="buttonn" href="{{ route('dbateria') }}">
+                                <a type="button" class="btn btn-secondary  btn-sm " id="buttonn" href="{{ route('dbateria') }}">
                                     <h6><img id="lo" src="{{asset('img/clipboard.png')}}" alt="img" width="40px">&nbsp;TEST SALTO<br> HORIZONTAL</h6>
-                                </button>
+                                </a>
                             </td>
                             
-                            <td><button type="button" class="vel" name="vel" value=" "><img src="{{asset('img/clipboard.png')}}" width="25px"></button>
-                            </td>
-                            <td><input type="button" class="res" name="res" value=" ">
-                            </td>
-                            <td><input type="button" class="ela" name="ela" value="  "></td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
                         </tr>
                     
                 </table><br>
                 
-                <a href="{{ route('/boton') }}">
+                <a href="{{ route('boton') }}">
                 <button type="button" class="btn btn-secondary  btn-sm"  id="buttons">
                     <img src="{{ asset('../img/22.png') }}" alt="img" width="40px"> &nbsp; AGREGAR TEST
                 </button>

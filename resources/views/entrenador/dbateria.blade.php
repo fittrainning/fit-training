@@ -22,7 +22,7 @@
                         <div class="panel-heading">
                     
                             <div class="panel-title">
-                                <h2>titulo test</h2></div>
+                                <h2>titulo</h2></div>
                     
                         </div>
                     
@@ -31,7 +31,7 @@
                             <section class="example mt-4">
                     
                                 <strong>OBJETIVO:</strong>
-                                <br> 
+                                <br>
                     
                                 <br>
                                 <br>
@@ -65,7 +65,7 @@
                     
                                 <br><br>
                     
-                                <a href="{{ url('/bateria') }}" class="btn btn-dark">Volver</a>
+                                
                     
                             </section>
                     
