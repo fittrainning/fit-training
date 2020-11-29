@@ -47,7 +47,7 @@
                         <tr>
                         
                             <td>
-                                <button type="button" class="btn btn-secondary  btn-sm " id="buttonn">
+                                <button type="button" class="btn btn-secondary  btn-sm " id="buttonn" href="{{ route('dbateria') }}">
                                     <h6><img id="lo" src="{{asset('img/clipboard.png')}}" alt="img" width="40px">&nbsp;TEST SALTO<br> HORIZONTAL</h6>
                                 </button>
                             </td>

@@ -97,6 +97,10 @@ class HomeController extends Controller
         return view('entrenador.boton');
     }
 
+    public function detalles(){
+        return view('entrenador.dbateria');
+    }
+
     // vistas director
     public function ficha(){
         return view('director.cargar_ficha');

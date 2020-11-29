@@ -49,9 +49,14 @@ Route::get('/caracterizacion/editardeporte', 'HomeController@caraedit')->name('c
 
 
 Route::get('/bateria', 'HomeController@bateri')->name('/bateria');
-Route::get('/boton', 'HomeController@boto')->name('/boton');
 
+Route::get('/boton', 'HomeController@boto')->name('/boton');
 Route::post('boton', 'BotonController@boto')->name('boton');
+
+Route::get('dbateria', 'BotonController@detalles')->name('dbateria');
+Route::post('dbateria', 'BotonController@detalles')->name('dbateria');
+
+
 
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');

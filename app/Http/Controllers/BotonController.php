@@ -55,14 +55,12 @@ class BotonController extends Controller
 
 
     // Detalles del Producto
-    public function detallesproducto($id)
+    public function detalles($id)
     {
         // Seleccionar un registro por su 'id' 
         $Boton = boton::where('Tes_id', '=', $id)->firstOrFail();
 
-        // Seleccionamos las imágenes por su 'id' 
-        $imagenes = boton::find($id)->imagenesbicicletas;
-
-        return view('admin/boton.dbateria', compact('boton', 'imagenes'));
+       
+        return view('entrenador.dbateria');
     }
 }

@@ -1,68 +1,79 @@
-<div class="content-box-large">
- 
-    <div class="panel-heading">
- 
-        <div class="panel-title">
-            <h2>{{ $Boton->Tes_nombre }}</h2></div>
- 
+@extends('layouts.app')
+
+@section('content')
+    <div class="row">
+        <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
+            <div id="cont"><br><br>
+                <div id="fondo">
+                
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+                        </div>
+                        <div  class="col-10"></div>
+                        <div  class="col-2 ">
+                            <div id="cerrar">
+                                <input OnClick="location.href='{{ url('/bateria') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
+                            </div>
+                        </div>
+                    </div><br><br>
+                    <div id="color" class="content-box-large">
+                    
+                        <div class="panel-heading">
+                    
+                            <div class="panel-title">
+                                <h2>titulo test</h2></div>
+                    
+                        </div>
+                    
+                        <div class="panel-body">
+                    
+                            <section class="example mt-4">
+                    
+                                <strong>OBJETIVO:</strong>
+                                <br> 
+                    
+                                <br>
+                                <br>
+                    
+                                <strong>DESARROLLO:</strong>
+                                <br> 
+                    
+                                <br>
+                                <br>
+                    
+                                
+                                <strong>MATERIAL:</strong>
+                                <br> 
+                    
+                                <br>
+                                <br>
+                                
+                                <strong>EVALUACION:</strong>
+                                <br> 
+                    
+                                <br>
+                                <br>
+                    
+
+                    
+                                <strong>IMAGEN:</strong>
+                                <br>
+                    
+                                <!-- Mostramos todas las imágenes pertenecientes a a este registro -->
+
+                    
+                                <br><br>
+                    
+                                <a href="{{ url('/bateria') }}" class="btn btn-dark">Volver</a>
+                    
+                            </section>
+                    
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
- 
-    <div class="panel-body">
- 
-        <section class="example mt-4">
- 
-            <strong>OBJEIVO:</strong>
-            <br> {{ $Boton->Tes_objetivo }}
- 
-            <br>
-            <br>
- 
-            <strong>DESARROLLO:</strong>
-            <br> {{ $Boton->Tes_desarrollo }}
- 
-            <br>
-            <br>
- 
-             
-            <strong>MATERIAL:</strong>
-            <br> {{ $Boton->Tes_material }}
- 
-            <br>
-            <br>
-             
-            <strong>EVALUACION:</strong>
-            <br> {{ $Boton->Tes_imagen }}
- 
-            <br>
-            <br>
-
-
-            <strong>Creado:</strong>
-            <br> {{ $Boton->created_at }}
- 
-            <br>
-            <br>
- 
-
- 
-            <strong>IMAGEN:</strong>
-            <br>
- 
-            <!-- Mostramos todas las imágenes pertenecientes a a este registro -->
-            @foreach($imagenes as $img)
- 
-                <a data-fancybox="gallery" href="../../../uploads/{{ $img->nombre }}">
-                    <img src="../../../uploads/{{ $img->nombre }}" width="200" class="img-fluid"> 
-                </a> 
- 
-            @endforeach
- 
-            <br><br>
- 
-            <a href="{{ url('bateria') }}" class="btn btn-dark">Volver</a>
- 
-        </section>
- 
-    </div>
- 
-</div>
+@endsection
