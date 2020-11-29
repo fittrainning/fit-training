@@ -29,6 +29,7 @@ class CreateTbUsuariosTable extends Migration
             $table->string('Usu_rol');
             $table->string('Usu_foto');
             $table->timestamps();
+            $table->rememberToken();
             $table->softDeletes();
         });
     }
