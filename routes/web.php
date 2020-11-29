@@ -24,6 +24,7 @@ Route::get('/construccion', function () {
 });
 
 Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
+Route::resource("Deportistas", "DeportistaController")->parameters(["Deportistas"=>"Deportista"]);
 //_________________________________________________________________________
 
 Auth::routes();
@@ -55,8 +56,6 @@ Route::post('boton', 'BotonController@boto')->name('boton');
 
 Route::get('dbateria', 'HomeController@detalles')->name('dbateria');
 Route::post('dbateria', 'BotonController@detalles')->name('dbateria');
-
-
 
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
