@@ -25,8 +25,6 @@ Route::get('/construccion', function () {
 
 Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
 
-//Route::resource("Botones", "BotonController")->parameters(["Botones"=>"Boton"]);
-
 Route::resource("Deportistas", "DeportistaController")->parameters(["Deportistas"=>"Deportista"]);
 //_________________________________________________________________________
 
