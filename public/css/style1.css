@@ -476,6 +476,12 @@ a.article:hover {
     margin-right: 30%;
 }
 
+#centro2 {
+    color: rgb(16, 24, 51);
+    font-weight: bold;
+    text-align-last: center;
+}
+
 #cenn {
     text-align: center;
 }
@@ -545,6 +551,8 @@ a.article:hover {
 #color111 {
     background: rgb(231, 231, 231);
     border-radius: 5px;
+    width: 90%;
+    margin-right: 2%;
 }
 
 #bottt {
