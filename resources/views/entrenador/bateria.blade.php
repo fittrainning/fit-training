@@ -43,12 +43,15 @@
                         </div>
                         </th>
                     </tr>
+                    @foreach($bateria as $Boton)
+                        
+                    
                     <!--RESULTADO -->
                         <tr>
                         
                             <td>
                                 <a type="button" class="btn btn-secondary  btn-sm " id="buttonn" href="{{ route('dbateria') }}">
-                                    <h6><img id="lo" src="{{asset('img/clipboard.png')}}" alt="img" width="40px">&nbsp;TEST SALTO<br> HORIZONTAL</h6>
+                                    <h6><img id="lo" src="{{asset('img/clipboard.png')}}" alt="img" width="40px">&nbsp;{{ $Boton -> Tes_nombre }}</h6>
                                 </a>
                             </td>
                             
@@ -56,7 +59,7 @@
                             <td>   </td>
                             <td>   </td>
                         </tr>
-                    
+                    @endforeach
                 </table><br>
                 
                 <a href="{{ route('boton') }}">

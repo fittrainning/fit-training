@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Schema;
 
 class BotonController extends Controller
 {
+    
     // Leer Registros (Read) 
     public function boto(Request $request)
     {
@@ -41,9 +42,9 @@ class BotonController extends Controller
             $Boton->Tes_imagen = $imagen;
         }
         $Boton->save();
-        dd($Boton);
+        //dd($Boton);
 
-        //return view('entrenador.bateria',compact('Boton'));
+        return view('entrenador.bateria');
         //return redirect(),('status','$Boton->Tes_nombre');
     }
 

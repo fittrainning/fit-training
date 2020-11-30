@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -91,7 +91,8 @@ class HomeController extends Controller
     }
     
     public function bateri(){
-        return view('entrenador.bateria');
+        $bateria = DB::Table('tb_test')->get();
+        return view('entrenador.bateria', compact('bateria'));
     }
     public function boto(){
         return view('entrenador.boton');
