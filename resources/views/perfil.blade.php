@@ -124,23 +124,6 @@
                                         </div>
                                     </div> 
 
-                                    <!-- CONTRASEÑA -->
-                                    <div id="color" class="form-group row">
-                                        <div class="col-md-1"></div>
-                                        <label class="col-md-4 col-form-label text-md-left">Contraseña</label>
-                                        <div id="let2" class="col-md-6">
-                                            <input type="password" value="{{ Auth::user()->password }}">
-                                        </div>
-                                    </div>
-
-                                    <!-- CONFIRMAR CONTRASEÑA -->
-                                    <div id="color" class="form-group row">
-                                        <div class="col-md-1"></div>
-                                        <label class="col-md-4 col-form-label text-md-left">Confirmar Contraseña</label>
-                                        <div id="let2" class="col-md-6">
-                                            <input type="password" value="{{ Auth::user()->password }}">
-                                        </div>
-                                    </div>
                                     <div class="form-group row mb-0">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <button id="but" type="submit" class="btn btn-primary">
