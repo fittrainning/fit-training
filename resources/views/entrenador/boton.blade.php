@@ -56,7 +56,7 @@
 
                                     <label class="col-md-4 col-form-label text-md-left">OBJETIVO</label>
                                     <div id="let2" class="col-md-6">
-                                        <input id="msg" type="text" name="Objetivo"  placeholder="Objetivo" class="form-control placeholder" required>
+                                        <textarea id="msg" type="text" name="Objetivo"  placeholder="Objetivo" class="form-control placeholder" required></textarea>
                                     </div>
                                 </div>
 
