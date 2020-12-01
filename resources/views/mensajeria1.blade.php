@@ -5,6 +5,14 @@
     <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
         <div id="cont"><br><br>
             <div class="row">
+                @if(Session::has('menssaje'))
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        {{ Session::get('menssaje') }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
                 <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
                 <div data-spy="scroll"  data-offset="0" id="color111" class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
                     <div id="centro2"><h2>Enviados</h2></div>
