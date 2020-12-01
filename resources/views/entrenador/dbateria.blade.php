@@ -22,7 +22,7 @@
                         <div class="panel-heading">
                     
                             <div class="panel-title">
-                                <h2>titulo</h2></div>
+                                <h2>{{ $Boton -> Tes_nombre }}</h2></div>
                     
                         </div>
                     
@@ -30,27 +30,27 @@
                     
                             <section class="example mt-4">
                     
-                                <strong>OBJETIVO:</strong>
-                                <br>
+                                <strong>OBJETIVO</strong>
+                                <br>{{ $Boton -> Tes_objetivo }}
                     
                                 <br>
                                 <br>
                     
                                 <strong>DESARROLLO:</strong>
-                                <br> 
+                                <br> {{ $Boton -> Tes_desarrollo }}
                     
                                 <br>
                                 <br>
                     
                                 
                                 <strong>MATERIAL:</strong>
-                                <br> 
+                                <br> {{ $Boton -> Tes_material }}
                     
                                 <br>
                                 <br>
                                 
                                 <strong>EVALUACION:</strong>
-                                <br> 
+                                <br> {{ $Boton -> Tes_evaluacion }}
                     
                                 <br>
                                 <br>
