@@ -94,6 +94,7 @@ class HomeController extends Controller
         $bateria = DB::Table('tb_test')->get();
         return view('entrenador.bateria', compact('bateria'));
     }
+    
     public function boto(){
         return view('entrenador.boton');
     }

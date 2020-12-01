@@ -12,7 +12,7 @@
                         <input type="hidden" name="Men_em_Usu_id" value="{{ Auth::user()->Usu_id }}">
                         <select name="Men_re_Usu_id" id="bucarmens">
                             <option id="buss" value="1234567890">Prueba</option>
-                            <option id="buss" value="">yo</option>
+                            <option id="buss" value="1022437184">yo</option>
                         </select>
                         <img id="bucarmens1" src="{{ asset('img/buscar.png') }}" alt="">
                     </div>

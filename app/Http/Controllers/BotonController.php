@@ -2,6 +2,7 @@
 //holaque hace
 namespace App\Http\Controllers;
 
+use DB;
 use App\boton;
 use App\Http\Requests;
 use Illuminate\Http\Request;
@@ -44,7 +45,9 @@ class BotonController extends Controller
         $Boton->save();
         //dd($Boton);
 
-        return view('entrenador.bateria');
+        $bateria = DB::Table('tb_test')->get();
+        return view('entrenador.bateria', compact('bateria'));
+        //return view('entrenador.bateria');
         //return redirect(),('status','$Boton->Tes_nombre');
     }
 
