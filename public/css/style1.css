@@ -271,17 +271,15 @@ a.article:hover {
 
 #let2 input {
     background: #CED8E1;
+    width: 140%;
     border-radius: 15px;
-    width: 320px;
-    text-align: center;
     box-shadow: 5px 5px 3px 0px #000000;
 }
 
 #let2 textarea {
     background: #CED8E1;
+    width: 140%;
     border-radius: 15px;
-    width: 320px;
-    text-align: center;
     box-shadow: 5px 5px 3px 0px #000000;
 }
 
