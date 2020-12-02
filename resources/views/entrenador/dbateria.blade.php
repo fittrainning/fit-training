@@ -21,7 +21,7 @@
                                 <div class="row">
                                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                     <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8" id="centro">
-                                        <h2>{{ $Boton->Tes_nombre }}</h2>
+                                        <h2>nom</h2>
                                     </div>
                                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                 </div>
@@ -29,16 +29,16 @@
                                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                     <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                         <strong>OBJETIVO</strong>
-                                        <br>{{ $Boton->Tes_objetivo }}
+                                        <br>jn
                                         <br><br>
                                         <strong>DESARROLLO:</strong>
-                                        <br>{{ $Boton->Tes_desarrollo }}
+                                        <br>j
                                         <br><br>
                                         <strong>MATERIAL:</strong>
-                                        <br>{{ $Boton->Tes_material }}
+                                        <br>j
                                         <br><br>
                                         <strong>EVALUACION:</strong>
-                                        <br>{{ $Boton->Tes_evaluacion }}
+                                        <br>h
                                         <br><br>
                                         <strong>IMAGEN:</strong><br>
                                         <!-- Mostramos todas las imágenes pertenecientes a a este registro -->
