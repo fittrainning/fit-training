@@ -49,7 +49,22 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     @endforeach
+=======
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr></tr>
+                            </table>
+                        </div>
+                    </div>
+>>>>>>> a3f83041f571745c8511d5275736e06d8ef7b08e
                 </div>
             </div>
         </div>
