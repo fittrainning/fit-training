@@ -15,6 +15,7 @@
                                             <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8" id="centro">
                                                 <br>
                                                 <h2>{{ $Boton->Tes_nombre }}</h2>
+                                                <br><br>
                                             </div>
                                             <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                                 <div id="cerrar">
