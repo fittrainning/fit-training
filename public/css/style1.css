@@ -351,6 +351,14 @@ a.article:hover {
     text-align: center;
 }
 
+#buttonns {
+    border-radius: 10px;
+    color: #000000;
+    font-family: Arial;
+    background-image: linear-gradient(to right, #a1c4fd 0%, #CED8E1 51%, #a1c4fd 100%);
+    background-position: right center;
+}
+
 #buttons {
     border-radius: 10px;
     color: #000000;
