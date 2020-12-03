@@ -9,39 +9,39 @@
                     <thead>
                         <tr>
                             <th scope="col">
-                            <div class="">
-                                <div id="cap">
-                                    <img id="img" src="{{ asset('../img/fuerza.png') }}"><br><br><!--Define la imagen de la capacidad-->
-                                    <h5>FUERZA</h5><br> 
+                                <div class="">
+                                    <div id="cap">
+                                        <img id="img" src="{{ asset('../img/fuerza.png') }}"><br><br><!--Define la imagen de la capacidad-->
+                                        <h5>FUERZA</h5><br> 
+                                    </div>
                                 </div>
-                            </div>
                             </th>
             
                             <th scope="col">
-                            <div class="">
-                                <div id="cap">
-                                    <img id="img" src="{{ asset('../img/velocidad.png') }}"><br><br>
-                                    <h5>VELOCIDAD</h5><br>
-                                </div>
-                            </div> 
+                                <div class="">
+                                    <div id="cap">
+                                        <img id="img" src="{{ asset('../img/velocidad.png') }}"><br><br>
+                                        <h5>VELOCIDAD</h5><br>
+                                    </div>
+                                </div> 
                             </th>
             
                             <th scope="col">
-                            <div  class="">
-                                <div id="cap">
-                                    <img id="img" src="{{ asset('../img/resis.png') }}"><br><br>
-                                    <h5>RESISTENCIA</h5><br>
+                                <div  class="">
+                                    <div id="cap">
+                                        <img id="img" src="{{ asset('../img/resis.png') }}"><br><br>
+                                        <h5>RESISTENCIA</h5><br>
+                                    </div>
                                 </div>
-                            </div>
                             </th>
                             
                             <th scope="col">
-                            <div class="">
-                                <div id="cap">
-                                    <img id="img" src="{{ asset('../img/flex.png') }}"><br><br>
-                                    <h5>ELASTICIDAD</h5><br>
+                                <div class="">
+                                    <div id="cap">
+                                        <img id="img" src="{{ asset('../img/flex.png') }}"><br><br>
+                                        <h5>ELASTICIDAD</h5><br>
+                                    </div>
                                 </div>
-                            </div>
                             </th>
                         </tr>
                     </thead>
