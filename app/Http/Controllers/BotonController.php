@@ -62,10 +62,6 @@ class BotonController extends Controller
         // Seleccionar un registro por su 'id' 
         
         $bateri = DB::Table('tb_test')->where('Tes_id','=', $Tes_id)->get();
- 
-        // Seleccionamos las imágenes por su 'id' 
-        //$Boton = boton::find($Tes_id)->Tes_imagen;
-        
         return view('entrenador.dbateria', compact('bateri'));
     }
 }
