@@ -44,84 +44,75 @@
                                     <!--TIPO DE DOCUMENTO -->
                                     <div id="color" class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-left">Tipo de Documento</label>
-                                        <div id="let2" class="col-md-6">
+                                        <div id="let3" class="col-md-8">
                                             <input type="text" readonly value="{{ Auth::user()->Usu_tipodoc }}">
                                         </div>
-                                        <div class="col-md-1"></div>
                                     </div>
                                 
 
                                     <!-- DOCUMENTO -->
                                     <div id="color" class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-left">Documento</label>
-                                        <div id="let2" class="col-md-6">
+                                        <div id="let3" class="col-md-8">
                                             <input type="text" readonly value="{{ Auth::user()->Usu_id }}">
                                         </div>
-                                        <div class="col-md-1"></div>
                                     </div>
                                 
 
                                     <!-- NOMBRES -->
                                     <div id="color" class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-left">Nombres</label>
-                                        <div id="let2" class="col-md-6">
+                                        <div id="let3" class="col-md-8">
                                             <input type="text" value="{{ Auth::user()->name }}">
                                         </div>
-                                        <div class="col-md-1"></div>
                                     </div>
 
                                     <!-- APELLIDOS -->
                                     <div id="color" class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-left">Aellidos</label>
-                                        <div id="let2" class="col-md-6">
+                                        <div id="let3" class="col-md-8">
                                             <input type="text" value="{{ Auth::user()->Usu_apellidos }}">
                                         </div>
-                                        <div class="col-md-1"></div>
                                     </div> 
                                 
                                     <!-- E-MAIL -->
                                     <div id="color" class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-left">E-mail</label>
-                                        <div id="let2" class="col-md-6">
+                                        <div id="let3" class="col-md-8">
                                             <input type="email" readonly value="{{ Auth::user()->email }}">
                                         </div>
-                                        <div class="col-md-1"></div>
                                     </div> 
 
                                     <!-- FECHA DE NACIMIENTO -->
                                     <div id="color" class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-left">Fecha de Nacimiento</label>
-                                        <div id="let2" class="col-md-6">
+                                        <div id="let3" class="col-md-8">
                                             <input type="date" value="{{ Auth::user()->Usu_fecha_nacimiento }}">
                                         </div>
-                                        <div class="col-md-1"></div>
                                     </div> 
                                     
                                     <!-- TELEFONO -->
                                     <div id="color" class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-left">Telefono</label>
-                                        <div id="let2" class="col-md-6">
+                                        <div id="let3" class="col-md-8">
                                             <input type="number" value="{{ Auth::user()->Usu_telefono }}">
                                         </div>
-                                        <div class="col-md-1"></div>
                                     </div>
 
                                     <!-- DIRECCION -->
                                     <div id="color" class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-left">Direccion</label>
-                                        <div id="let2" class="col-md-6">
+                                        <div id="let3" class="col-md-8">
                                             <input type="text" value="{{ Auth::user()->Usu_direccion }}">
                                         </div>
-                                        <div class="col-md-1"></div>
                                     </div>  
 
                                     <!-- GENERO -->
                                     <div id="color" class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-left">Genero</label>
-                                        <div id="let2" class="col-md-6">
+                                        <div id="let3" class="col-md-8">
                                             <input type="text" value="{{ Auth::user()->Usu_genero }}">
                                         </div>
-                                        <div class="col-md-1"></div>
                                     </div> 
 
                                     <div class="form-group row mb-0">
