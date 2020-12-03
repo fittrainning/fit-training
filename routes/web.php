@@ -49,7 +49,8 @@ Route::get('/anam2', 'HomeController@anam2')->name('anam2');
 Route::get('/anam3', 'HomeController@anam3')->name('anam3');
 
 Route::get('/caracterizacion', 'HomeController@cara')->name('caracterizacion');
-Route::get('/caracterizacion/deporte', 'HomeController@caraini')->name('caracterizacion/deporte');
+Route::get('/caracterizacion/index', 'HomeController@caraini')->name('caracterizacion/index');
+Route::get('/caracterizacion/create', 'HomeController@caracre')->name('caracterizacion/create');
 Route::get('/caracterizacion/editardeporte', 'HomeController@caraedit')->name('caracterizacion/editardeporte');
 
 //
