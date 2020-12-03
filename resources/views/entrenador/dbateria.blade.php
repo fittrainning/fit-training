@@ -11,41 +11,52 @@
                         <div  class="col-10"></div>
                         <div  class="col-2 ">
                             <div id="cerrar">
-                                <input OnClick="location.href='{{ url('/bateria') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
+                                <input OnClick="location.href='{{ url('bateria') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
                             </div>
                         </div>
                     </div><br><br>
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                             <div id="color" class="content-box-large">
+                                @foreach($bateri as $Boton)
+                                    
+                                
+                                @if(!empty($Boton->Tes_id)) 
                                 <div class="row">
                                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                     <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8" id="centro">
-                                        <h2>nom</h2>
+                                        <h2>{{ $Boton->Tes_nombre }}</h2>
                                     </div>
                                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+                                   
                                     <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                         <strong>OBJETIVO</strong>
-                                        <br>jn
+                                        <br>{{ $Boton->Tes_objetivo}}
                                         <br><br>
                                         <strong>DESARROLLO:</strong>
-                                        <br>j
+                                        <br>{{ $Boton->Tes_desarrollo }}
                                         <br><br>
                                         <strong>MATERIAL:</strong>
-                                        <br>j
+                                        <br>{{ $Boton->Tes_material }}
                                         <br><br>
                                         <strong>EVALUACION:</strong>
-                                        <br>h
+                                        <br>{{ $Boton->Tes_evaluacion }}
                                         <br><br>
                                         <strong>IMAGEN:</strong><br>
-                                        <!-- Mostramos todas las imágenes pertenecientes a a este registro -->
+                                        <br><img src="/uploads/{{ $Boton->Tes_imagen}}">
+                                        <br><br>
+
+                                        
                                         <br><br>
                                     </div>
+                                    
                                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                 </div>
+                                @endif
+                                @endforeach
                             </div>
                         </div>
                     </div>

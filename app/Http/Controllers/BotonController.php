@@ -13,7 +13,6 @@ use Storage;
 use Illuminate\Support\Str;
 use File;
 //use GuzzleHttp\Psr7\Request;
-use Illuminate\Support\Facades\DB as FacadesDB;
 use Illuminate\Support\Facades\Schema;
 
 class BotonController extends Controller
@@ -47,7 +46,6 @@ class BotonController extends Controller
 
         $bateria = DB::Table('tb_test')->get();
         return view('entrenador.bateria', compact('bateria'));
-        //return view('entrenador.bateria');
         //return redirect(),('status','$Boton->Tes_nombre');
     }
 
@@ -59,14 +57,15 @@ class BotonController extends Controller
 
 
     // Detalles del Producto
-    public function detallesproducto($id)
+    public function detalles($Tes_id)
     {
         // Seleccionar un registro por su 'id' 
-        $Boton = boton::where('tes_id','=', $id)->firstOrFail();
+        
+        $bateri = DB::Table('tb_test')->where('Tes_id','=', $Tes_id)->get();
  
         // Seleccionamos las imágenes por su 'id' 
-        $Boton = boton::find($id)->Tes_imagen;
- 
-        return view('entrenador.dbateria', compact('detalles', 'Foto'));
+        //$Boton = boton::find($Tes_id)->Tes_imagen;
+        
+        return view('entrenador.dbateria', compact('bateri'));
     }
 }
