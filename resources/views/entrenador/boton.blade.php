@@ -13,7 +13,7 @@
                     <div  class="col-10"></div>
                     <div  class="col-2 ">
                         <div id="cerrar">
-                            <input OnClick="location.href='{{ url('/bateria') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
+                            <input OnClick="location.href='{{ url('/bateria') }}'" type=image src="{{asset ('img/cerrar.png ')}}" width="30" height="30"><!--input boton de cerrar y regresar a index-->
                         </div>
                     </div>
                 </div><br><br>
