@@ -123,17 +123,17 @@
                             </li>
                             <li>
                                 <a class="nav-link" href="{{ route('/bateria') }}">
-                                    <p id="texma"><img src="../img/entrenamiento.png" alt="gestion_usuario" width="35px" >&nbsp;Bateria de Test</p>
+                                    <p id="texma"><img src="{{ asset('../img/entrenamiento.png') }}" alt="gestion_usuario" width="35px" >&nbsp;Bateria de Test</p>
                                 </a>
                             </li>
                             <li>
                                 <a class="nav-link" href="{{ route('plan') }}">
-                                    <p id="texma"><img src="../img/Agenda.png" width="35px">&nbsp;Agenda</p>
+                                    <p id="texma"><img src="{{ asset('../img/Agenda.png') }}" width="35px">&nbsp;Agenda</p>
                                 </a>
                             </li>
                             <li>
                                 <a class="nav-link" href="{{ route('estadisticas') }}">
-                                    <p id="texma"><img src="../img/estadistica.png" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
+                                    <p id="texma"><img src="{{ asset('../img/estadistica.png') }}" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
                                 </a>
 
                             </li>
@@ -162,22 +162,22 @@
                         <ul class="list-unstyled components" id="barra">
                             <li>
                                 <a class="nav-link" href="{{ route('ficha') }}">
-                                    <p id="texma"><img src="../img/clipboard109-01.png" alt="gestion_ficha" width="35px">&nbsp;Gestion Ficha</p>
+                                    <p id="texma"><img src="{{ asset('../img/clipboard109-01.png') }}" alt="gestion_ficha" width="35px">&nbsp;Gestion Ficha</p>
                                 </a>
                             </li>
                             <li>
                                 <a class="nav-link" href="{{ route('usuario') }}">
-                                    <p id="texma"><img src="../img/impreso-1.png" alt="gestion_usuario" width="35px">&nbsp;Gestion Usuario</p>
+                                    <p id="texma"><img src="{{ asset('../img/impreso-1.png') }}" alt="gestion_usuario" width="35px">&nbsp;Gestion Usuario</p>
                                 </a>
                             </li>
                             <li>
                                 <a class="nav-link" href="{{ route('entrenadores') }}">
-                                    <p id="texma"><img src="../img/multitudb.png" alt="entrenadores" width="35px">&nbsp;Entrenadores</p>
+                                    <p id="texma"><img src="{{ asset('../img/multitudb.png') }}" alt="entrenadores" width="35px">&nbsp;Entrenadores</p>
                                 </a>
                             </li>
                             <li>
                                 <a class="nav-link" href="{{ route('estadisticas') }}">
-                                    <p id="texma"><img src="../img/estadistica.png" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
+                                    <p id="texma"><img src="{{ asset('../img/estadistica.png') }}" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
                                 </a>
                             </li>
                         </ul>
@@ -187,7 +187,7 @@
                 <!-- Page Content  -->
                 <div id="content">
                     <button type="button" id="sidebarCollapse" class="btn colo1">
-                        <img src="../img/vista.png" alt="ver" width="50px">
+                        <img src="{{ asset('../img/vista.png') }}" alt="ver" width="50px">
                     </button>
 
                     <main class="py-4">
