@@ -103,6 +103,9 @@ class HomeController extends Controller
         return view('entrenador.dbateria');
     }
 
+    public function rtest(){
+        return view('entrenador.rtest');
+    }
     // vistas director
     public function ficha(){
         return view('director.cargar_ficha');
