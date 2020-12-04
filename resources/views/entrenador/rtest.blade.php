@@ -5,13 +5,13 @@
         <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
             <div id="cont"><br><br>
                 <div id="fondo">
-                    @foreach($bate as $Boton)
+                    
                     <div class="row">
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                         <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8"></div>
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                             <div id="cerrar">
-                                <input href="{{ route('dbateria', [$Boton -> Tes_id] ) }}" type=image src="{{asset ('img/cerrar.png ')}}" width="30" height="30"><!--input boton de cerrar y regresar a index-->
+                                <input href="{{ route('/bateria' ) }}" type=image src="{{asset ('img/cerrar.png ')}}" width="30" height="30"><!--input boton de cerrar y regresar a index-->
                             </div>
                         </div>
                     </div><br><br>
@@ -43,15 +43,12 @@
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
-                                        @enderror
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    @endforeach
-=======
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                             <table>
@@ -64,7 +61,6 @@
                             </table>
                         </div>
                     </div>
->>>>>>> a3f83041f571745c8511d5275736e06d8ef7b08e
                 </div>
             </div>
         </div>
