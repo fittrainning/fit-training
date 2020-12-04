@@ -30,7 +30,6 @@ class CreateTbUsuariosTable extends Migration
             $table->string('Usu_foto');
             $table->rememberToken();
             $table->timestamps();
-            $table->rememberToken();
             $table->softDeletes();
         });
     }
