@@ -14,7 +14,7 @@ class AnamnesisController extends Controller
      */
     public function index()
     {
-        //
+        return view("deportistas.Anamnesis_3", ["Ananmnesis"=>Anamnesis::all()]);
     }
 
     /**
