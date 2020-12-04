@@ -55,7 +55,7 @@ Route::get('/caracterizacion/editardeporte', 'HomeController@caraedit')->name('c
 
 //
 Route::get('/bateria', 'HomeController@bateri')->name('/bateria');
-Route::get('rtest', 'RtestController@rtest')->name('rtest');
+Route::get('rtest', 'HomeController@rtest')->name('rtest');
 
 Route::get('boton', 'HomeController@boto')->name('boton');
 Route::post('boton', 'BotonController@boto')->name('boton');
