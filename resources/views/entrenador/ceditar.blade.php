@@ -30,7 +30,7 @@
                     </div>
                     <div class="row">
                         <div class="col-5 col-sm-5 col-md-5 col-lg-4 col-xl-4">
-                            <a href="{{ route('caracterizacion/deporte') }}" id="cap">
+                            <a href="{{ route('caracterizacion/index') }}" id="cap">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h6>Cancelar</h6>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="col-1 col-sm-2 col-md-2 col-lg-4 col-xl-4"></div>
                         <div class="col-5 col-sm-5 col-md-5 col-lg-4 col-xl-4">
-                            <a href="{{ route('caracterizacion/deporte') }}" id="cap">
+                            <a href="{{ route('caracterizacion/index') }}" id="cap">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h6>Guardar</h6>

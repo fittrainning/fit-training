@@ -12,6 +12,22 @@ class CaracterizacionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function cara(){
+        return view('entrenador.caracterizacion');
+    }
+    public function caraini()
+    {
+        return view('entrenador.cinicio');
+    }
+    public function ceditar()
+    {
+        return view('entrenador.ceditar');
+    }
+    public function caracre()
+    {
+        return view('entrenador.deporte');
+    }
+    
     public function index()
     {
         //

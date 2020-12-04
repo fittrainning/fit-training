@@ -71,14 +71,6 @@ class HomeController extends Controller
     {
         return view('plan');
     }
-    public function caraini()
-    {
-        return view('entrenador.cinicio');
-    }
-    public function caraedit()
-    {
-        return view('entrenador.ceditar');
-    }
 
     // vistas entrenador y director
     public function estadi(){
@@ -86,10 +78,6 @@ class HomeController extends Controller
     }
 
     // vistas entrenador
-    public function cara(){
-        return view('entrenador.caracterizacion');
-    }
-    
     public function bateri(){
         $bateria = DB::Table('tb_test')->get();
         return view('entrenador.bateria', compact('bateria'));

@@ -14,7 +14,7 @@
                     </div>
                     <div class="row">
                         <div class="col-3">
-                            <a href="{{ route('caracterizacion/deporte') }}">
+                            <a href="{{ route('caracterizacion/index') }}">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h5>FUTBOL</h5>
@@ -23,7 +23,7 @@
                             </a>
                         </div>
                         <div class="col-3">
-                            <a href="{{ route('caracterizacion/deporte') }}">
+                            <a href="{{ route('caracterizacion/index') }}">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h5>BALONCESTO</h5>
@@ -32,7 +32,7 @@
                             </a>
                         </div>
                         <div class="col-3">
-                            <a href="{{ route('caracterizacion/deporte') }}">
+                            <a href="{{ route('caracterizacion/index') }}">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h5>ATLETISMO</h5>
@@ -41,7 +41,7 @@
                             </a>
                         </div>
                         <div class="col-3">
-                            <a href="{{ route('caracterizacion/deporte') }}">
+                            <a href="{{ route('caracterizacion/index') }}">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h5>VOLEIBOL</h5>
@@ -53,7 +53,7 @@
                     <div class="row">
                         <div class="col-3"></div>
                         <div class="col-6">
-                            <a href="{{ route('caracterizacion/deporte') }}">
+                            <a href="{{ route('caracterizacion/create') }}">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h5>Agregar</h5>

@@ -51,7 +51,7 @@
                                     <div class="row">
                                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                         <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                            <a href="{{ route('caracterizacion/editardeporte') }}" id="cap">
+                                            <a href="{{ route('caracterizacion/editar') }}" id="cap">
                                                 <div id="cap">
                                                     <div id="botdos">
                                                         <h6>Editar</h6>
