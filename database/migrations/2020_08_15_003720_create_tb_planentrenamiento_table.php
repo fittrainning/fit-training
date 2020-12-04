@@ -18,7 +18,6 @@ class CreateTbPlanentrenamientoTable extends Migration
             $table->date('Pla_fecini');
             $table->date('Pla_fecfin');
             $table->string('Pla_deporte');
-            $table->string('Pla_codPla');
             $table->string('Pla_res_fuerza');
             $table->string('Pla_res_resistencia');
             $table->string('Pla_res_velocidad');
