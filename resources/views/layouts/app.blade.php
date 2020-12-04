@@ -9,29 +9,14 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}" defer></script>
     <script src="{{ asset('js/style.js') }}" defer></script>
-
-    <!--fullcalendar-->
-    <script src="{{ asset('calendarioweb/core/main.js') }}" defer></script>
-    <script src="{{ asset('calendarioweb/daygrid/main.js') }}" defer></script>
-    <script src="{{ asset('calendarioweb/interaction/main.js') }}" defer></script>
-
-    <link href="{{ asset('calendarioweb/core/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('calendarioweb/daygrid/main.css') }}" rel="stylesheet">
-
-    <!--- pligins (funcionalidades adicionales)--->
-    <script src="{{ asset('calendarioweb/list/main.js') }}" defer></script>
-    <script src="{{ asset('calendarioweb/timegrid/main.js') }}" defer></script>
-
-    <!--estilo de vistas calendario-->
-    <link href="{{ asset('calendarioweb/list/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('calendarioweb/timegrid/main.css') }}" rel="stylesheet">
-
-
-
 
 
 
@@ -40,13 +25,15 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <link href="{{ asset('css/style1.css') }}" rel="stylesheet">
+
 
     <!-- Logo -->
     <link rel="icon" type="image/png" href="{{ asset('../img/logo.png')}}">
 </head>
 <body>
+
     <div class="container-fluid">
         @guest
         <main class="py-4">
@@ -210,7 +197,10 @@
             });
         });
     </script>
+    @yield('script')
 
+<<<<<<< HEAD
+=======
     <script>
         document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
@@ -258,6 +248,7 @@
         calendar.render();
         });
     </script>
+>>>>>>> a2d17b9a02a6403341a58e9320519479e0421551
     @endguest
 </body>
 </html>
