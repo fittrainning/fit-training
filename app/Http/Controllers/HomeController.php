@@ -29,6 +29,14 @@ class HomeController extends Controller
     {
         return view('entrenador.inicioen');
     }
+    public function dep()
+    {
+        return view('deportistas.iniciode');
+    }public function dir()
+    {
+        return view('director.iniciodi');
+    }
+
     public function editar()
     {
         return view('perfil');
@@ -69,7 +77,7 @@ class HomeController extends Controller
     }
     
     public function bateri(){
-        return view('entrenador.bateriat');
+        return view('entrenador.bateria');
     }
     public function boto(){
         return view('entrenador.boton');

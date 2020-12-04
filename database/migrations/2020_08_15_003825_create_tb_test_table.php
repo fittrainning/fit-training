@@ -22,7 +22,6 @@ class CreateTbTestTable extends Migration
             $table->string('Tes_material');
             $table->string('Tes_evaluacion');
             $table->string('Tes_imagen');
-            $table->string('Tes_icono');
             $table->timestamps();
             $table->softDeletes();
         });

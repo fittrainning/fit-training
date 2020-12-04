@@ -108,11 +108,26 @@
             </button>
             </div>
             <div class="modal-body">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
+            ID:
+            <input type="text" name="txtid" id="txtid" >
+
+            <br>
+            fecha:
+            <input type="text" name="txtfecha" id="txtfecha">
+
+            <br>
+            Titulo:
+            <input type="text" name="txttitulo" id="txttitulo">
+
+            <br>
+            Hora:
+            <input type="text" name="txthora" id="txthora">
+            <br>
+            Descripcion:
+            <textarea name="txtdescripcion" id="" cols="30" rows="10"></textarea>
+            <br>
+            Color:
+            <input type="color" name="txtcolor" id="txtcolor">
 
             </div>
             <div class="modal-footer">

@@ -5,20 +5,20 @@
     <br><br><br><br><br>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" id="card">
+            <div class="card" id="card"> 
                 <br>
                 <br>
                 <div class="row">
                     <div class="col-10"></div>
                     <div class="col-2">
                         <div id="cerrar">
-                            <input OnClick="location.href='{{ url('/') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
+                            <input OnClick="location.href='{{ url('/') }}'" type=image src="{{ asset('img/cerrar.png') }}" width="30" height="30"><!--input boton de cerrar y regresar a index-->
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-3"></div>
-                    <div class="col-6"><img id="imgr" src="img/logo.png"></div>
+                    <div class="col-6"><img id="imgr" src="{{ asset('img/logo.png') }}"></div>
                     <div class="col-3"></div>
                 </div>
 

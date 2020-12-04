@@ -23,11 +23,14 @@ Route::get('/construccion', function () {
     return view('construccion');
 });
 
+
 //_________________________________________________________________________
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/depor', 'HomeController@dep')->name('depor');
+Route::get('/direc', 'HomeController@dir')->name('direc');
 
 Route::get('/editar_perfil', 'HomeController@editar')->name('editar_perfil');
 Route::get('/mensajeria', 'HomeController@mensajeria')->name('mensajeria');
@@ -45,8 +48,10 @@ Route::get('/caracterizacion/deporte', 'HomeController@caraini')->name('caracter
 Route::get('/caracterizacion/editardeporte', 'HomeController@caraedit')->name('caracterizacion/editardeporte');
 
 
-Route::get('/bateria', 'HomeController@bateri')->name('bateria');
-Route::get('/boton', 'HomeController@boto')->name('boton');
+Route::get('/bateria', 'HomeController@bateri')->name('/bateria');
+Route::get('/boton', 'HomeController@boto')->name('/boton');
+
+Route::post('boton', 'BotonController@boto')->name('boton');
 
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');

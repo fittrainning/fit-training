@@ -108,7 +108,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{ route('bateria') }}">
+                            <a class="nav-link" href="{{ route('/bateria') }}">
                                 <p id="texma"><img src="../img/entrenamiento.png" alt="gestion_usuario" width="35px" >&nbsp;Bateria de Test</p>
                             </a>
                         </li>
@@ -145,7 +145,7 @@
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 
-    <script>
+    <script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
@@ -154,6 +154,56 @@
     </script>
     @yield('script')
 
+<<<<<<< HEAD
+=======
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            //defaultDate:new Date(2020,11,20),
+            plugins: [ 'dayGrid', 'interaction', 'timeGrid', 'list' ],
+            //defaultView:'timeGridDay'
+            header:{
+                left:'prev,next today Miboton',
+                center:'title',
+                right:'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            customButtons:{
+                Miboton:{
+                    text:"Boton",
+                    click:function(){
+                            alert("¡Hola mundo!");
+                            $('#exampleModal').modal('toggle');
+                    }
+                }
+
+
+            },
+            dateClick:function(info){
+
+                $('#exampleModal').modal();
+                //console.log(info);
+
+            },
+            events:[
+                {
+                    title:"evento 1",
+                    start:"2020-09-13 12:30:00"
+                },{
+                    title:"evento 1",
+                    start:"2020-09-13 12:30:00",
+                    end:"2020-09-20 12:30:00",
+                    color:"#FFCCAA",
+                    textColor:"#000000"
+                }
+            ]
+        });
+        calendar.setOption('locale','Es');
+        calendar.render();
+        });
+    </script>
+>>>>>>> a2d17b9a02a6403341a58e9320519479e0421551
     @endguest
 </body>
 </html>

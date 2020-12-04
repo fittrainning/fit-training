@@ -5,7 +5,7 @@
         <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
             <div id="cont">
                 <br><br><br><br>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center" id="colo">
                     <h1>Gestion de Usuarios</h1>
                 </div>
                 <br>

@@ -7,6 +7,12 @@
     text-align-last: center;
 }
 
+#letras {
+    font-family: Arial Rounded MT;
+    color: #ffffff;
+    font-size: medium;
+}
+
 h5 {
     text-align: center;
 }
@@ -341,7 +347,11 @@ a.article:hover {
 }
 
 #mensabot {
-    background: rgb(150, 150, 150);
+    background-color: #CED8E1;
+    color: rgb(16, 24, 51);
+    text-align: center;
+    box-shadow: 0 10px 30px 0 black;
+    font-family: Arial Rounded MT;
     border-radius: 50px;
     border: 0px;
     margin-top: 25px;
@@ -530,4 +540,22 @@ a.article:hover {
     border-radius: 100%;
     margin-left: 30%;
     margin-right: 30%;
+}
+
+#color111 {
+    background: rgb(231, 231, 231);
+    border-radius: 5px;
+}
+
+#bottt {
+    background-color: #CED8E1;
+    color: rgb(16, 24, 51);
+    text-align: center;
+    box-shadow: 0 10px 30px 0 black;
+    font-family: Arial Rounded MT;
+    border-radius: 50px;
+    border: 0px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 25px;
 }
