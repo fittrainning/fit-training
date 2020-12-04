@@ -2,6 +2,7 @@
 //holaque hace
 namespace App\Http\Controllers;
 
+use DB;
 use App\boton;
 use App\Http\Requests;
 use Illuminate\Http\Request;
@@ -12,11 +13,11 @@ use Storage;
 use Illuminate\Support\Str;
 use File;
 //use GuzzleHttp\Psr7\Request;
-use Illuminate\Support\Facades\DB as FacadesDB;
 use Illuminate\Support\Facades\Schema;
 
 class BotonController extends Controller
 {
+    
     // Leer Registros (Read) 
     public function boto(Request $request)
     {
@@ -41,9 +42,10 @@ class BotonController extends Controller
             $Boton->Tes_imagen = $imagen;
         }
         $Boton->save();
-        dd($Boton);
+        //dd($Boton);
 
-        //return view('entrenador.bateria',compact('Boton'));
+        $bateria = DB::Table('tb_test')->get();
+        return view('entrenador.bateria', compact('bateria'));
         //return redirect(),('status','$Boton->Tes_nombre');
     }
 
@@ -55,14 +57,11 @@ class BotonController extends Controller
 
 
     // Detalles del Producto
-    public function detallesproducto($id)
+    public function detalles($Tes_id)
     {
         // Seleccionar un registro por su 'id' 
-        $Boton = boton::where('Tes_id', '=', $id)->firstOrFail();
-
-        // Seleccionamos las imágenes por su 'id' 
-        $imagenes = boton::find($id)->imagenesbicicletas;
-
-        return view('admin/boton.dbateria', compact('boton', 'imagenes'));
+        
+        $bateri = DB::Table('tb_test')->where('Tes_id','=', $Tes_id)->get();
+        return view('entrenador.dbateria', compact('bateri'));
     }
 }

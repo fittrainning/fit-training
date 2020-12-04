@@ -23,6 +23,11 @@ Route::get('/construccion', function () {
     return view('construccion');
 });
 
+Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
+Route::resource("Deportistas", "DeportistaController")->parameters(["Deportistas"=>"Deportista"]);
+
+//Route::resource("Tests", "TestController")->parameters(["Tests"=>"Test"]);
+
 
 //_________________________________________________________________________
 
@@ -33,7 +38,7 @@ Route::get('/depor', 'HomeController@dep')->name('depor');
 Route::get('/direc', 'HomeController@dir')->name('direc');
 
 Route::get('/editar_perfil', 'HomeController@editar')->name('editar_perfil');
-Route::get('/mensajeria', 'HomeController@mensajeria')->name('mensajeria');
+//Route::get('/mensajeria', 'HomeController@mensajeria')->name('mensajeria');
 Route::get('/responder', 'HomeController@mensajeriaa')->name('responder');
 Route::get('/enviar', 'HomeController@mensaje')->name('enviar');
 Route::get('/estadisticas', 'HomeController@estadi')->name('estadisticas');
@@ -44,14 +49,19 @@ Route::get('/anam2', 'HomeController@anam2')->name('anam2');
 Route::get('/anam3', 'HomeController@anam3')->name('anam3');
 
 Route::get('/caracterizacion', 'HomeController@cara')->name('caracterizacion');
-Route::get('/caracterizacion/deporte', 'HomeController@caraini')->name('caracterizacion/deporte');
+Route::get('/caracterizacion/index', 'HomeController@caraini')->name('caracterizacion/index');
+Route::get('/caracterizacion/create', 'HomeController@caracre')->name('caracterizacion/create');
 Route::get('/caracterizacion/editardeporte', 'HomeController@caraedit')->name('caracterizacion/editardeporte');
 
-
+//
 Route::get('/bateria', 'HomeController@bateri')->name('/bateria');
-Route::get('/boton', 'HomeController@boto')->name('/boton');
+Route::get('rtest', 'HomeController@rtest')->name('rtest');
 
+Route::get('boton', 'HomeController@boto')->name('boton');
 Route::post('boton', 'BotonController@boto')->name('boton');
+
+Route::get('dbateria/{Tes_id}', 'BotonController@detalles')->name('dbateria');
+//
 
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');

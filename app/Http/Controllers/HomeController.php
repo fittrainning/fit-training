@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -36,6 +36,20 @@ class HomeController extends Controller
     {
         return view('director.iniciodi');
     }
+    /*
+    public function index()
+    { 
+        if (Auth::user()->Usu_rol == 'Deportista') {
+            return view('deportistas.iniciode');
+        }
+        if (Auth::user()->Usu_rol == 'Entrenador') {
+            return view('entrenador.inicioen');
+        }
+        if (Auth::user()->Usu_rol == 'Director') {
+            return view('director.iniciodi');
+        }
+    }
+    */
 
     public function editar()
     {
@@ -77,12 +91,21 @@ class HomeController extends Controller
     }
     
     public function bateri(){
-        return view('entrenador.bateria');
+        $bateria = DB::Table('tb_test')->get();
+        return view('entrenador.bateria', compact('bateria'));
     }
+    
     public function boto(){
         return view('entrenador.boton');
     }
 
+    public function detalles(){
+        return view('entrenador.dbateria');
+    }
+
+    public function rtest(){
+        return view('entrenador.rtest');
+    }
     // vistas director
     public function ficha(){
         return view('director.cargar_ficha');

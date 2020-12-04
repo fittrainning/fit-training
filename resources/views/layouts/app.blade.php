@@ -48,7 +48,7 @@
                 <a class="navbar" href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" width="55px"></a>
             </nav>
             <nav class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                <a class="nav justify-content-end" href="{{ route('mensajeria') }}">
+                <a class="nav justify-content-end" href="{{ route('Mensajes.index') }}">
                     <img id="mensa" src="{{ asset('img/men.png') }}" alt="" width="50px">
                 </a>
             </nav>
@@ -101,35 +101,80 @@
             <div class="wrapper">
                 <!-- Sidebar  -->
                 <nav id="sidebar">
-                    <ul class="list-unstyled components" id="barra">
-                        <li>
-                            <a class="nav-link" href="{{ route('caracterizacion') }}">
-                                <p id="texma"><img src="{{ asset('../img/bioquimica.png') }}" alt="gestion_ficha" width="35px">&nbsp;Caracterizacion</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="{{ route('/bateria') }}">
-                                <p id="texma"><img src="../img/entrenamiento.png" alt="gestion_usuario" width="35px" >&nbsp;Bateria de Test</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="{{ route('plan') }}">
-                                <p id="texma"><img src="../img/Agenda.png" width="35px">&nbsp;Agenda</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="{{ route('estadisticas') }}">
-                                <p id="texma"><img src="../img/estadistica.png" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
-                            </a>
+                    @if (Auth::user()->Usu_rol == 'entrenador')
+                        <ul class="list-unstyled components" id="barra">
+                            <li>
+                                <a class="nav-link" href="{{ route('caracterizacion') }}">
+                                    <p id="texma"><img src="{{ asset('../img/bioquimica.png') }}" alt="gestion_ficha" width="35px">&nbsp;Caracterizacion</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('/bateria') }}">
+                                    <p id="texma"><img src="{{ asset('../img/entrenamiento.png') }}" alt="gestion_usuario" width="35px" >&nbsp;Bateria de Test</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('plan') }}">
+                                    <p id="texma"><img src="{{ asset('../img/Agenda.png') }}" width="35px">&nbsp;Agenda</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('estadisticas') }}">
+                                    <p id="texma"><img src="{{ asset('../img/estadistica.png') }}" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
+                                </a>
 
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    @endif
+                    @if (Auth::user()->Usu_rol == 'deportista')
+                        <ul class="list-unstyled components" id="barra">
+                            <li>
+                                <a class="nav-link" href="{{ route('anam1') }}">
+                                    <p id="texma"><img src="{{ asset('../img/impreso-1.png') }}" alt="anamnesis" width="35px">&nbsp;Anamnesis</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('estadisticas') }}">
+                                    <p id="texma"><img src="{{ asset('../img/h.png') }}" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('plan') }}">
+                                    <p id="texma"><img src="{{ asset('../img/Agenda.png') }}" alt="agenda" width="35px">&nbsp;Agenda</p>
+                                </a>
+                            </li>
+                        </ul>
+                    @endif
+                    @if (Auth::user()->Usu_rol == 'director')
+                        <ul class="list-unstyled components" id="barra">
+                            <li>
+                                <a class="nav-link" href="{{ route('ficha') }}">
+                                    <p id="texma"><img src="{{ asset('../img/clipboard109-01.png') }}" alt="gestion_ficha" width="35px">&nbsp;Gestion Ficha</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('usuario') }}">
+                                    <p id="texma"><img src="{{ asset('../img/impreso-1.png') }}" alt="gestion_usuario" width="35px">&nbsp;Gestion Usuario</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('entrenadores') }}">
+                                    <p id="texma"><img src="{{ asset('../img/multitudb.png') }}" alt="entrenadores" width="35px">&nbsp;Entrenadores</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('estadisticas') }}">
+                                    <p id="texma"><img src="{{ asset('../img/estadistica.png') }}" alt="estadisticas" width="35px">&nbsp;Estadisticas</p>
+                                </a>
+                            </li>
+                        </ul>
+                    @endif
                 </nav>
 
                 <!-- Page Content  -->
                 <div id="content">
                     <button type="button" id="sidebarCollapse" class="btn colo1">
-                        <img src="../img/vista.png" alt="ver" width="50px">
+                        <img src="{{ asset('../img/vista.png') }}" alt="ver" width="50px">
                     </button>
 
                     <main class="py-4">
