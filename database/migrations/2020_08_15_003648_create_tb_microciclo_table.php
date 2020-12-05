@@ -17,7 +17,6 @@ class CreateTbMicrocicloTable extends Migration
             $table->Integer('Mic_Id_Gen')->autoIncrement();
             $table->Integer('Mic_Mes_Id_Gen');
             $table->smallInteger('Mic_id');
-            $table->smallInteger('Mic_Nombre');
             $table->string('Mic_tipo');
             $table->date('Mic_dias');
             $table->string('Mic_capacidad');

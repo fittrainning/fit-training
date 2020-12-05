@@ -14,20 +14,7 @@
                                     <hr id="separa">
                                     <br>
                                     <div class="row d-flex justify-content-center">
-                                        <p>
-                                            Practica Deporte? &nbsp;
-                                            <div id="radio">
-                                                <input type="radio" name="depo" value="huey" checked>
-                                                <label for="huey">si</label>&nbsp;&nbsp;
-                                            </div>
-                                              
-                                            <div id="radio">
-                                                <input type="radio" name="depo" value="dewey">
-                                                <label for="dewey">no</label>
-                                            </div>
-                                        </p>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <p>Cual?&nbsp;</p>
+                                        <p>Practica Deporte &nbsp;</p>
                                         <div id="let2">
                                             <input type="text" id="input">
                                         </div>
