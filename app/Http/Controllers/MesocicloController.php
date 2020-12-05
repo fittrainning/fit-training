@@ -14,7 +14,7 @@ class MesocicloController extends Controller
      */
     public function index()
     {
-        //
+        return view('entrenador.cinicio');
     }
 
     /**
@@ -24,7 +24,7 @@ class MesocicloController extends Controller
      */
     public function create()
     {
-        //
+        return view('mesociclo', ["deportistas"=>Deportistas::all()], ["deportes"=>Deporte::all()]);
     }
 
     /**

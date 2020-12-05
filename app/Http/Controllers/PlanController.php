@@ -45,7 +45,9 @@ class PlanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $plan = new Plan($request->input());
+        $plan->saveOrFail();
+        return redirect()->route("Planes.index");
     }
 
     /**

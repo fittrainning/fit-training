@@ -6,23 +6,23 @@
             <div id="cont"><br><br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <form action="{{ route('Planes.store') }}" method="POST">
-                            @csrf
+                        <form action="{{ route('Deportes.store') }}" method="post">
+                            <!-- Falta asignar el action -->
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
-                                    <h2 id="centro">Plan de Entrenamiento</h2>
+                                    <h2 id="centro">Mesociclo</h2>
                                     <hr id="separa"><br>
                                     <div class="row">
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
                                                 Fecha Inicial
-                                                <input type="date" name="Pla_fecini">
+                                                <input type="date" name="">
                                             </div>
                                         </div>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
                                                 Fecha Final
-                                                <input type="date" name="Pla_fecfin">
+                                                <input type="date" name="">
                                             </div>
                                         </div>
                                     </div>
@@ -31,7 +31,7 @@
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let2">
                                                 Deportista
-                                                <select name="Pla_id_Dep">
+                                                <select name="Plan_id_Dep">
                                                     @foreach($deportistas as $deportista)
                                                     <option value="{{ $deportista->Dep_Usu_id }}">
                                                         {{ $deportista->Dep_Usu_id }} - <!--nombre usuario-->
@@ -43,18 +43,18 @@
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let2">
                                                 Deporte
-                                                <select name="Pla_deporte">
+                                                <select name="Plan_deporte">
                                                     @foreach($deportes as $deporte)
                                                         <option value="{{ $deporte->Dee_cod }}">{{ $deporte->Dee_nombre }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
                                         </div>
-                                        <input type="hidden" name="Pla_res_fuerza" value="0">
-                                        <input type="hidden" name="Pla_res_resistencia" value="0">
-                                        <input type="hidden" name="Pla_res_velocidad" value="0">
-                                        <input type="hidden" name="Pla_res_flexibilidad" value="0">
-                                        <input type="hidden" name="Pla_id_Ent" value="{{ Auth::user()->Usu_id }}">
+                                        <input type="hidden" name="Plan_res_fuerza" value="0">
+                                        <input type="hidden" name="Plan_res_resistencia" value="0">
+                                        <input type="hidden" name="Plan_res_velocidad" value="0">
+                                        <input type="hidden" name="Plan_res_flexibilidad" value="0">
+                                        <input type="hidden" name="Plan_id_Ent" value="{{ Auth::user()->Usu_id }}">
                                     </div>
                                 </div>
                             </div>
