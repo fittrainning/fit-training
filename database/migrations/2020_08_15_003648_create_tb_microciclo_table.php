@@ -25,8 +25,6 @@ class CreateTbMicrocicloTable extends Migration
             $table->smallInteger('Mic_numero_Ses');
             $table->smallInteger('Mic_volumen_micro');
             $table->smallInteger('Mic_intensidad_micro');
-            $table->tinyInteger('Mic_Eta_Id');
-            $table->tinyInteger('Mic_Per_Id');
             $table->timestamps();
             $table->softDeletes();
         });
