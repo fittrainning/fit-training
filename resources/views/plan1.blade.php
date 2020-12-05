@@ -11,62 +11,38 @@
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
                                     <h2 id="centro">Plan de Entrenamiento</h2>
-                                    <hr id="separa">
-                                    <br>
-                                    <div class="row d-flex justify-content-center">
-                                        <p>Practica Deporte &nbsp;</p>
-                                        <div id="let2">
-                                            <input type="text" id="input">
-                                        </div>
-                                    </div>
-                                    <hr id="separa">
-                                    <br>
-        
-                                    <div class="row d-flex justify-content-center">
-                                        <p>
-                                            Posee logros deportivos?:&nbsp;
-                                        </p>
-                                        <div id="radio">
-                                                <input type="radio" name="logdep" value="si" checked>
-                                                <label for="huey">si</label>&nbsp;&nbsp;
+                                    <hr id="separa"><br>
+                                    <div class="row">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
+                                            <div id="let3">
+                                                Fecha Inicial
+                                                <input type="date" name="">
                                             </div>
-                                              
-                                            <div id="radio">
-                                                <input type="radio" name="logdep" value="no">
-                                                <label for="dewey">no</label>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
+                                            <div id="let3">
+                                                Fecha Final
+                                                <input type="date" name="">
                                             </div>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <p>Cual? Adjunte pdf</p>&nbsp;
-                                        <div class="form-group">
-                                            <input type="file" class="form-control-file">
-                                        </div>
-        
-                                    </div>
-        
-                                    <hr id="separa">
-                                    <br>
-                                    <div class="row d-flex justify-content-center">
-                                        <p>
-                                            Posee experiencia deportiva? &nbsp;
-                                        </p>
-                                        <div id="radio">
-                                            <input type="radio" name="logdep" value="si" checked>
-                                            <label for="huey">si</label>&nbsp;&nbsp;
-                                        </div>
-                                          
-                                        <div id="radio">
-                                            <input type="radio" name="logdep" value="no">
-                                            <label for="dewey">no</label>
-                                        </div>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <p>Cual?&nbsp;</p>
-                                        <div id="let2">
-                                            <input type="text">
                                         </div>
                                     </div>
-                                    <br>
-                                    <div id="centro" class="form-group">
-                                        <input type="file" class="form-control-file">
+                                    <hr id="separa"><br>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro3">
+                                            <div id="let2">
+                                                Deporte
+                                                <select name="Plan_deporte">
+                                                    @foreach($deportes as $deporte)
+                                                        <option value="{{ $deporte->Dee_cod }}">{{ $deporte->Dee_nombre }}</option>
+                                                    @endforeach
+                                                </select>
+                                                <input type="hidden" name="Plan_res_fuerza" value=" ">
+                                                <input type="hidden" name="Plan_res_resistencia" value=" ">
+                                                <input type="hidden" name="Plan_res_velocidad" value=" ">
+                                                <input type="hidden" name="Plan_res_flexibilidad" value=" ">
+                                                <input type="hidden" name="Plan_id_Ent" value="{{ Auth::user()->Usu_id }}">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +56,7 @@
                                     <img id="centro1" src="{{ asset('../img/Proceso-1.png') }}">
                                 </div>
                                 <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                                    <a href="{{ route('anam2') }}">
+                                    <a href="{{ route('Planes.index') }}">
                                         <img id="centro1" src="{{ asset('../img/flechas.png') }}" alt="siguiente">
                                     </a>
                                 </div>

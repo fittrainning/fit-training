@@ -262,31 +262,6 @@ a.article:hover {
     box-shadow: 5px 5px 3px 0px #000000;
 }
 
-#let3 input {
-    text-align: center;
-    background: #CED8E1;
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 5px 5px 3px 0px #000000;
-}
-
-#let3 select {
-    background: #CED8E1;
-    width: 140%;
-    border-radius: 15px;
-    box-shadow: 5px 5px 3px 0px #000000;
-}
-
-#let4 div {
-    text-align: center;
-    background: #CED8E1;
-    width: 100%;
-    border: 0px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 3px 0px #000000;
-    color: #000000;
-}
-
 #let2 input {
     text-align: center;
     background: #CED8E1;
@@ -301,6 +276,41 @@ a.article:hover {
     width: 140%;
     border-radius: 15px;
     box-shadow: 5px 5px 3px 0px #000000;
+}
+
+#let2 select {
+    background: #CED8E1;
+    width: 100%;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px #000000;
+}
+
+#let3 input {
+    text-align: center;
+    background: #CED8E1;
+    width: 100%;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px #000000;
+}
+
+#let3 select {
+    background: #CED8E1;
+    width: 140%;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px #000000;
+}
+
+#let4 div {
+    text-align: center;
+    background: #CED8E1;
+    width: 100%;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px #000000;
+    color: #000000;
 }
 
 #barra {
@@ -506,6 +516,11 @@ a.article:hover {
     color: rgb(16, 24, 51);
     font-weight: bold;
     text-align-last: center;
+}
+
+#centro3 {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #cenn {

@@ -3,14 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Plan;
+use App\Deporte;
 use Illuminate\Http\Request;
 
 class PlanController extends Controller
 {
-    public function plan1()
-    {
-        return view('plan1');
-    }
     public function plan2()
     {
         return view('plan2');
@@ -26,7 +23,7 @@ class PlanController extends Controller
      */
     public function index()
     {
-        //
+        return view('plan1', ["deportes"=>Deporte::all()]);
     }
 
     /**
@@ -69,7 +66,15 @@ class PlanController extends Controller
      */
     public function edit(Plan $plan)
     {
-        //
+        return view("plan2", ["planes" => $plan,]);
+    }
+    public function edit2(Plan $plan)
+    {
+        return view("plan2", ["deportes"=>Deporte::all()]);
+    }
+    public function edit3(Plan $plan)
+    {
+        return view("plan3", ["deportes"=>Deporte::all()]);
     }
 
     /**

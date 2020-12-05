@@ -25,6 +25,8 @@ Route::get('/construccion', function () {
 
 Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
 Route::resource("Deportistas", "DeportistaController")->parameters(["Deportistas"=>"Deportista"]);
+Route::resource("Deportes", "DeporteController")->parameters(["Deportes"=>"Deporte"]);
+Route::resource("Planes", "PlanController")->parameters(["Planes"=>"Plan"]);
 //Route::resource("Caracterizacion", "CaracterizacionController")->parameters(["Caracterizaciones"=>"Caracterizacion"]);
 
 //Route::resource("Tests", "TestController")->parameters(["Tests"=>"Test"]);

@@ -114,7 +114,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="nav-link" href="{{ route('plan1') }}">
+                                <a class="nav-link" href="{{ route('Planes.index') }}">
                                     <p id="texma"><img src="{{ asset('../img/Agenda.png') }}" width="35px">&nbsp;Agenda</p>
                                 </a>
                             </li>

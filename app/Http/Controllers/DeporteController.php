@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class DeporteController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +15,7 @@ class DeporteController extends Controller
      */
     public function index()
     {
-        return view("entrenador.cinicio", ["Mensajes"=>Deporte::all()]);
+        return view("entrenador.deporte", ["Deportes"=>Deporte::all()]);
     }
 
     /**
