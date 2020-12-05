@@ -43,7 +43,11 @@ Route::get('/editar_perfil', 'HomeController@editar')->name('editar_perfil');
 Route::get('/responder', 'HomeController@mensajeriaa')->name('responder');
 Route::get('/enviar', 'HomeController@mensaje')->name('enviar');
 Route::get('/estadisticas', 'HomeController@estadi')->name('estadisticas');
-Route::get('/plan', 'HomeController@plan')->name('plan');
+Route::get('/agenda', 'HomeController@agenda')->name('agenda');
+
+Route::get('/plan1', 'PlanController@plan1')->name('plan1');
+Route::get('/plan2', 'PlanController@plan2')->name('plan2');
+Route::get('/plan3', 'PlanController@plan3')->name('plan3');
 
 Route::get('/anam1', 'HomeController@anam1')->name('anam1');
 Route::get('/anam2', 'HomeController@anam2')->name('anam2');

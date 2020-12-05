@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class MensajeController extends Controller
 {
+    public function mensajeriaa()
+    {
+        return view('mensajeria2');
+    }
     /**
      * Display a listing of the resource.
      *

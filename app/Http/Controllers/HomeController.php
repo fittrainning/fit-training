@@ -55,21 +55,10 @@ class HomeController extends Controller
     {
         return view('perfil');
     }
-    public function mensajeria()
+
+    public function agenda()
     {
-        return view('mensajeria1');
-    }
-    public function mensajeriaa()
-    {
-        return view('mensajeria2');
-    }
-    public function mensaje()
-    {
-        return view('enviarm');
-    }
-    public function plan()
-    {
-        return view('plan');
+        return view('agenda');
     }
 
     // vistas entrenador y director

@@ -7,6 +7,18 @@ use Illuminate\Http\Request;
 
 class PlanController extends Controller
 {
+    public function plan1()
+    {
+        return view('plan1');
+    }
+    public function plan2()
+    {
+        return view('plan2');
+    }
+    public function plan3()
+    {
+        return view('plan3');
+    }
     /**
      * Display a listing of the resource.
      *
