@@ -36,13 +36,27 @@
                                                         <option value="{{ $deporte->Dee_cod }}">{{ $deporte->Dee_nombre }}</option>
                                                     @endforeach
                                                 </select>
-                                                <input type="hidden" name="Plan_res_fuerza" value=" ">
-                                                <input type="hidden" name="Plan_res_resistencia" value=" ">
-                                                <input type="hidden" name="Plan_res_velocidad" value=" ">
-                                                <input type="hidden" name="Plan_res_flexibilidad" value=" ">
-                                                <input type="hidden" name="Plan_id_Ent" value="{{ Auth::user()->Usu_id }}">
                                             </div>
                                         </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro3">
+                                            <div id="let2">
+                                                Deportista
+                                                <select name="Plan_id_Dep">
+                                                    @foreach($deportistas as $deportista)
+                                                    <option value="{{ $deportista->Dep_Usu_id }}">
+                                                        @if ($deportista->Dep_Usu_id == 1234567890 )
+                                                            {{  $deportista->Dep_Usu_id }} - <!--nombre usuario-->
+                                                        @endif
+                                                    </option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="Plan_res_fuerza" value="0">
+                                        <input type="hidden" name="Plan_res_resistencia" value="0">
+                                        <input type="hidden" name="Plan_res_velocidad" value="0">
+                                        <input type="hidden" name="Plan_res_flexibilidad" value="0">
+                                        <input type="hidden" name="Plan_id_Ent" value="{{ Auth::user()->Usu_id }}">
                                     </div>
                                 </div>
                             </div>
@@ -61,8 +75,6 @@
                                     </a>
                                 </div>
                             </div>
-                            <br>
-                            <br>
                         </form>
                     </div>
                 </div>

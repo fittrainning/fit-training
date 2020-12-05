@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Plan;
 use App\Deporte;
+use App\Deportistas;
 use Illuminate\Http\Request;
 
 class PlanController extends Controller
@@ -23,7 +24,7 @@ class PlanController extends Controller
      */
     public function index()
     {
-        return view('plan1', ["deportes"=>Deporte::all()]);
+        return view('plan1', ["deportistas"=>Deportistas::all()], ["deportes"=>Deporte::all()]);
     }
 
     /**

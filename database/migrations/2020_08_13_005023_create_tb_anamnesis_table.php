@@ -18,10 +18,10 @@ class CreateTbAnamnesisTable extends Migration
             $table->string('Ana_DepPract');
             $table->string('Ana_depo');
             $table->string('Ana_Logros');
-            $table->binary('Ana_Logrosdeportivos');
-            $table->binary('Ana_HistorialDeportivo');
-            $table->binary('Ana_HistorialMedico');
-            $table->binary('Ana_HabitosAlimenticios');
+            $table->string('Ana_Logrosdeportivos');
+            $table->string('Ana_HistorialDeportivo');
+            $table->string('Ana_HistorialMedico');
+            $table->string('Ana_HabitosAlimenticios');
             $table->timestamps();
             $table->softDeletes();
         });
