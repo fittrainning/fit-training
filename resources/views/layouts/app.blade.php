@@ -199,8 +199,6 @@
     </script>
     @yield('script')
 
-<<<<<<< HEAD
-=======
     <script>
         document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
@@ -248,7 +246,6 @@
         calendar.render();
         });
     </script>
->>>>>>> a2d17b9a02a6403341a58e9320519479e0421551
     @endguest
 </body>
 </html>

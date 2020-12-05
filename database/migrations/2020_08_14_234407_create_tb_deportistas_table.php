@@ -20,7 +20,6 @@ class CreateTbDeportistasTable extends Migration
             $table->string('Dep_razon');
             $table->integer('Dep_Cod_Fic');
             $table->integer('Dep_cod_Dee');
-            $table->integer('Dep_id_Ana');
             $table->timestamps();
             $table->softDeletes();
         });

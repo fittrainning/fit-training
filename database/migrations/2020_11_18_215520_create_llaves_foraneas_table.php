@@ -13,7 +13,6 @@ class CreateLlavesForaneasTable extends Migration
      */
     public function up()
     {
-
         Schema::table('tb_capacidad', function (Blueprint $table) {
             $table->foreign('Cap_Dos_Id')->references('Dos_Id')->on('tb_dosificacion')->onUpdate('cascade');
             $table->foreign('Cap_Sec_Id')->references('Sec_Id')->on('tb_seleccioncapacidad')->onUpdate('cascade');
@@ -40,7 +39,10 @@ class CreateLlavesForaneasTable extends Migration
         Schema::table('tb_deportistas', function (Blueprint $table) {
             $table->foreign('Dep_Cod_Fic')->references('Fic_Cod')->on('tb_ficha')->onUpdate('cascade');
             $table->foreign('Dep_cod_Dee')->references('Dee_cod')->on('tb_deporte')->onUpdate('cascade');
-            $table->foreign('Dep_id_Ana')->references('Ana_id')->on('tb_anamnesis')->onUpdate('cascade');
+        });
+
+        Schema::table('tb_anamnesis', function (Blueprint $table) {
+            $table->foreign('Ana_Dep_id')->references('Dep_Usu_id')->on('tb_deportistas')->onUpdate('cascade');
         });
 
         Schema::table('tb_caracterizacion', function (Blueprint $table) {

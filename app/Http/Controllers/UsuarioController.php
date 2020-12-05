@@ -2,21 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Plan;
-use App\Deporte;
-use App\Deportistas;
+use App\User;
 use Illuminate\Http\Request;
 
-class PlanController extends Controller
+class UsuarioController extends Controller
 {
-    public function plan2()
-    {
-        return view('plan2');
-    }
-    public function plan3()
-    {
-        return view('plan3');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +14,7 @@ class PlanController extends Controller
      */
     public function index()
     {
-        return view('plan', ["planes"=>Plan::all()]);
+        //
     }
 
     /**
@@ -34,7 +24,7 @@ class PlanController extends Controller
      */
     public function create()
     {
-        return view('plan1', ["deportistas"=>Deportistas::all()], ["deportes"=>Deporte::all()]);
+        //
     }
 
     /**
@@ -51,10 +41,10 @@ class PlanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Plan  $plan
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Plan $plan)
+    public function show(User $user)
     {
         //
     }
@@ -62,30 +52,22 @@ class PlanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Plan  $plan
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Plan $plan)
+    public function edit(User $user)
     {
-        return view("plan2", ["planes" => $plan,]);
-    }
-    public function edit2(Plan $plan)
-    {
-        return view("plan2", ["deportes"=>Deporte::all()]);
-    }
-    public function edit3(Plan $plan)
-    {
-        return view("plan3", ["deportes"=>Deporte::all()]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Plan  $plan
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Plan $plan)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -93,10 +75,10 @@ class PlanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Plan  $plan
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Plan $plan)
+    public function destroy(User $user)
     {
         //
     }

@@ -6,7 +6,7 @@
             <div id="cont"><br><br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <form action="" method="post">
+                        <form action="{{ route('Deportes.store') }}ute}}" method="post">
                             <!-- Falta asignar el action -->
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
@@ -28,26 +28,24 @@
                                     </div>
                                     <hr id="separa"><br>
                                     <div class="row">
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro3">
-                                            <div id="let2">
-                                                Deporte
-                                                <select name="Plan_deporte">
-                                                    @foreach($deportes as $deporte)
-                                                        <option value="{{ $deporte->Dee_cod }}">{{ $deporte->Dee_nombre }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro3">
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let2">
                                                 Deportista
                                                 <select name="Plan_id_Dep">
                                                     @foreach($deportistas as $deportista)
                                                     <option value="{{ $deportista->Dep_Usu_id }}">
-                                                        @if ($deportista->Dep_Usu_id == 1234567890 )
-                                                            {{  $deportista->Dep_Usu_id }} - <!--nombre usuario-->
-                                                        @endif
+                                                        {{ $deportista->Dep_Usu_id }} - <!--nombre usuario-->
                                                     </option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
+                                            <div id="let2">
+                                                Deporte
+                                                <select name="Plan_deporte">
+                                                    @foreach($deportes as $deporte)
+                                                        <option value="{{ $deporte->Dee_cod }}">{{ $deporte->Dee_nombre }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
