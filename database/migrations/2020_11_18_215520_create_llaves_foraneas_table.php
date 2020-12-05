@@ -49,8 +49,6 @@ class CreateLlavesForaneasTable extends Migration
 
         Schema::table('tb_microciclo', function (Blueprint $table) {
             $table->foreign('Mic_Mes_Id_Gen')->references('Mes_Id_Gen')->on('tb_mesociclo')->onUpdate('cascade');
-            $table->foreign('Mic_Eta_Id')->references('Eta_Id')->on('tb_etapa')->onUpdate('cascade');
-            $table->foreign('Mic_Per_id')->references('Per_id')->on('tb_periodos')->onUpdate('cascade');
         });
 
         Schema::table('tb_mesociclo', function (Blueprint $table) {
