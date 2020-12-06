@@ -87,7 +87,7 @@
                                         <div class="">
                                             <!-- TELEFONO -->
                                             <div id="color" class="form-group row">
-                                                <label class="col-md-4 col-form-label text-md-left">Telefono</label>
+                                                <label class="col-md-4 col-form-label text-md-left">Deporte</label>
                                                 <div id="let3" class="col-md-8">
                                                     <input type="number" value="{{ $depo->Dep_deporte }}">
                                                 </div>
@@ -113,7 +113,7 @@
                                         <div class="">
                                             <!-- TELEFONO -->
                                             <div id="color" class="form-group row">
-                                                <label class="col-md-4 col-form-label text-md-left">Telefono</label>
+                                                <label class="col-md-4 col-form-label text-md-left">Deporte</label>
                                                 <div id="let3" class="col-md-8">
                                                     <input type="text" value="{{ $ent->Ent_Deporte }}">
                                                 </div>
@@ -130,7 +130,7 @@
                                     </form>
                                 @endif
                             @endforeach
-                            
+
                             @foreach($direc as $dire)
                                 @if ($dire->Dir_Usu_id == Auth::user()->Usu_id)
                                     <form action="" method="POST" Enctype="multipart/form-data" class="form-group">
@@ -139,7 +139,7 @@
                                         <div class="">
                                             <!-- TELEFONO -->
                                             <div id="color" class="form-group row">
-                                                <label class="col-md-4 col-form-label text-md-left">Telefono</label>
+                                                <label class="col-md-4 col-form-label text-md-left">Detalles</label>
                                                 <div id="let3" class="col-md-8">
                                                     <input type="number" value="{{ $dire->Dir_Especialidad }}">
                                                 </div>
