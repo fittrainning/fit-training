@@ -24,10 +24,20 @@
                             @foreach($user as $use)
                                 @if ($use->Usu_id == Auth::user()->Usu_id)
                                     <form action="{{ route('Users.update', Auth::user()->id) }}" method="POST" Enctype="multipart/form-data" class="form-group">
+                                        @method("PUT")
                                         @csrf
                                         <br><br>
                                         <div class="">
                                             <div class="row">
+                                                <input type="hidden" name="id" value="{{$use->id }}">
+                                                <input type="hidden" name="Usu_id" value="{{$use->Usu_id }}">
+                                                <input type="hidden" name="Usu_tipodoc" value="{{$use->Usu_tipodoc }}">
+                                                <input type="hidden" name="name" value="{{$use->name }}">
+                                                <input type="hidden" name="Usu_apellidos" value="{{$use->Usu_apellidos }}">
+                                                <input type="hidden" name="Usu_fecha_nacimiento" value="{{$use->Usu_fecha_nacimiento }}">
+                                                <input type="hidden" name="Usu_genero" value="{{$use->Usu_genero }}">
+                                                <input type="hidden" name="email" value="{{$use->email }}">
+                                                <input type="hidden" name="Usu_rol" value="{{$use->Usu_rol }}">
                                                 <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <img src="..img/ {{$use->Usu_foto }} " id="imag">
@@ -39,18 +49,15 @@
                                             <div id="color" class="form-group row">
                                                 <div class="col-md-3"></div>
                                                 <div class="col-md-6">
-                                                    <input id="inp" type="file" name="Usu_foto">
+                                                    <input id="inp" type="text" name="Usu_foto" value="{{ $use->Usu_foto }}">
                                                 </div>
                                                 <div class="col-md-3"></div>
                                             </div>
-                                            
-                                            
-                                            
                                             <!-- TELEFONO -->
                                             <div id="color" class="form-group row">
                                                 <label class="col-md-4 col-form-label text-md-left">Telefono</label>
                                                 <div id="let3" class="col-md-8">
-                                                    <input type="number" value="{{ $use->Usu_telefono }}">
+                                                    <input type="number" name="Usu_telefono" value="{{ $use->Usu_telefono }}">
                                                 </div>
                                             </div>
 
@@ -58,7 +65,13 @@
                                             <div id="color" class="form-group row">
                                                 <label class="col-md-4 col-form-label text-md-left">Direccion</label>
                                                 <div id="let3" class="col-md-8">
-                                                    <input type="text" value="{{ $use->Usu_direccion }}">
+                                                    <input type="text" name="Usu_direccion" value="{{ $use->Usu_direccion }}">
+                                                </div>
+                                            </div>
+                                            <div id="color" class="form-group row">
+                                                <label class="col-md-4 col-form-label text-md-left">Contraseña</label>
+                                                <div id="let3" class="col-md-8">
+                                                    <input type="password" name="password" value="{{ $use->password }}">
                                                 </div>
                                             </div>
 

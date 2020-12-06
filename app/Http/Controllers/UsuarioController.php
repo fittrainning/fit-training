@@ -77,7 +77,7 @@ class UsuarioController extends Controller
     public function update(Request $request, User $user)
     {
         $user->fill($request->input())->saveOrFail();
-        return redirect()->route("home")->with(["menssaje" => "Perfil Actualizado"]);
+        return redirect()->route("Users.edit")->with(["menssaje" => "Perfil Actualizado"]);
     }
 
     /**
