@@ -14,7 +14,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+        return view("home", ["Usuarios"=>User::all()]);
     }
 
     /**
@@ -57,7 +57,8 @@ class UsuarioController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view("perfil", ["user" => $user,
+        ]);
     }
 
     /**
@@ -69,7 +70,8 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $user->fill($request->input())->saveOrFail();
+        return redirect()->route("home")->with(["menssaje" => "Perfil Actualizado"]);
     }
 
     /**

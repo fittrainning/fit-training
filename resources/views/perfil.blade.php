@@ -5,7 +5,7 @@
     <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
         <div id="cont">
             <div id="fondo">
-                <form id="edit"><br><br><br>    
+                <div id="edit"><br><br><br>    
                     <div class="row" id="color" >
                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
                         <div id="centro" class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -21,7 +21,7 @@
                     <div class="row" id="color" >
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                         <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                            <form action="../controlador/Control_EditarPerfil.php" method="POST" Enctype="multipart/form-data" class="form-group">
+                            <form action="{{ route('') }}" method="POST" Enctype="multipart/form-data" class="form-group">
                                 <br><br>
                                 <div class="">
                                     <div class="row">
@@ -127,7 +127,7 @@
                         </div>
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
