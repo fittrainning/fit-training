@@ -72,7 +72,7 @@ class UsuarioController extends Controller
     public function update(Request $request, User $user)
     {
         $user->fill($request->input())->saveOrFail();
-        return redirect()->route("Users.index")->with(["menssaje" => "Perfil Actualizado"]);
+        return redirect()->route("users.index")->with(["menssaje" => "Perfil Actualizado"]);
     }
 
     /**
@@ -84,6 +84,6 @@ class UsuarioController extends Controller
     public function destroy(User $user)
     {
         $user -> delete();
-        return redirect()->route("Users.index")->with(["menssaje" => "Usuario eliminado"]);
+        return redirect()->route("users.index")->with(["menssaje" => "Usuario eliminado"]);
     }
 }

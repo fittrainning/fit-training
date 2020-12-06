@@ -25,15 +25,15 @@
                                 @if($user->Usu_id == Auth::user()->Usu_id)
                                     <div>
                                         <div class="row">
-                                            <input type="text" name="id" value="{{$user->id }}">
-                                            <input type="text" name="Usu_id" value="{{$user->Usu_id }}">
-                                            <input type="text" name="Usu_tipodoc" value="{{$user->Usu_tipodoc }}">
-                                            <input type="text" name="name" value="{{$user->name }}">
-                                            <input type="text" name="Usu_apellidos" value="{{$user->Usu_apellidos }}">
-                                            <input type="text" name="Usu_fecha_nacimiento" value="{{$user->Usu_fecha_nacimiento }}">
-                                            <input type="text" name="Usu_genero" value="{{$user->Usu_genero }}">
-                                            <input type="text" name="email" value="{{$user->email }}">
-                                            <input type="text" name="Usu_rol" value="{{$user->Usu_rol }}">
+                                            <input type="hidden" name="id" value="{{$user->id }}">
+                                            <input type="hidden" name="Usu_id" value="{{$user->Usu_id }}">
+                                            <input type="hidden" name="Usu_tipodoc" value="{{$user->Usu_tipodoc }}">
+                                            <input type="hidden" name="name" value="{{$user->name }}">
+                                            <input type="hidden" name="Usu_apellidos" value="{{$user->Usu_apellidos }}">
+                                            <input type="hidden" name="Usu_fecha_nacimiento" value="{{$user->Usu_fecha_nacimiento }}">
+                                            <input type="hidden" name="Usu_genero" value="{{$user->Usu_genero }}">
+                                            <input type="hidden" name="email" value="{{$user->email }}">
+                                            <input type="hidden" name="Usu_rol" value="{{$user->Usu_rol }}">
                                             <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
                                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                 <img src="..img/ {{$user->Usu_foto }} " id="imag">
