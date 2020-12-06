@@ -49,7 +49,7 @@ Route::get('boton', 'HomeController@boto')->name('boton');
 Route::post('boton', 'BotonController@boto')->name('boton');
 
 Route::get('dbateria/{Tes_id}', 'BotonController@detalles')->name('dbateria');
-//
+//Route::get("Users", "UsuarioController@update")->parameters(["Users"=>"User"]);
 
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
@@ -63,7 +63,7 @@ Route::resource("Deportes", "DeporteController")->parameters(["Deportes"=>"Depor
 Route::resource("Planes", "PlanController")->parameters(["Planes"=>"Plan"]);
 Route::resource("Mesociclos", "MesocicloController")->parameters(["Mesociclos"=>"Mesociclo"]);
 
-Route::resource("Users", "UsuarioController")->parameters(["Users"=>"User"]);
+Route::resource("Users/{user}", "UsuarioController")->parameters(["Users"=>"User"]);
 
 //Route::resource("Caracterizacion", "CaracterizacionController")->parameters(["Caracterizaciones"=>"Caracterizacion"]);
 

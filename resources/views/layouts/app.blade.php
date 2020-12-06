@@ -79,7 +79,7 @@
                                     <img id="porfile" src="{{ asset('img/porfile.png') }}"><br>
                                     {{ Auth::user()->name }}<br>{{ Auth::user()->Usu_id }} <span class="caret"></span>
                                 </a>
-                                <a class="dropdown-item" href="{{route("Users.edit",[$User = Auth::user()->id])}}">
+                                <a class="dropdown-item" href="{{route("Users.edit",[$user])}}">
                                     {{ __('Editar Perfil') }}
                                 </a>
                                 <hr>
