@@ -61,10 +61,12 @@ class UsuarioController extends Controller
      */
     public function edit(User $user)
     {
-        return view("perfil", ["user" => $user, "user"=>User::all(), 
-        "depor"=>Deportistas::all(), 
-        "entre"=>Entrenador::all(),
-        "direc"=>Director::all()]);
+        return view("perfil", ["user" => $user,
+        //"user"=>User::all(), 
+        //"depor"=>Deportistas::all(), 
+        //"entre"=>Entrenador::all(),
+        //"direc"=>Director::all()
+        ]);
     }
 
     /**

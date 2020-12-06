@@ -77,9 +77,9 @@
                                 @csrf
                                 <a class="dropdown-item">
                                     <img id="porfile" src="{{ asset('img/porfile.png') }}"><br>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->name }}<br>{{ Auth::user()->Usu_id }} <span class="caret"></span>
                                 </a>
-                                <a class="dropdown-item" href="{{ route('Users.edit', Auth::user()->id) }}">
+                                <a class="dropdown-item" href="{{route("Users.edit",[$User = Auth::user()->id])}}">
                                     {{ __('Editar Perfil') }}
                                 </a>
                                 <hr>
