@@ -58,8 +58,7 @@ class UsuarioController extends Controller
      */
     public function edit(User $user)
     {
-        return view("perfil", ["user" => $user,
-        ]);
+        return view("perfil", ["user" => $user, "user"=>User::all()]);
     }
 
     /**
