@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Deportistas;
-use App\Entrenador;
-use App\Director;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
@@ -62,10 +59,6 @@ class UsuarioController extends Controller
     public function edit(User $user)
     {
         return view("editarperfil", ["user" => $user,
-        //"user"=>User::all(), 
-        //"depor"=>Deportistas::all(), 
-        //"entre"=>Entrenador::all(),
-        //"direc"=>Director::all()
         ]);
     }
 
