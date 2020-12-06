@@ -77,15 +77,6 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <td>
-                                            <form action="{{route("Users.destroy", [$user])}}" method="post">
-                                                @method("delete")
-                                                @csrf
-                                                <button type="submit" class="btn btn-danger">
-                                                    <i class="fa fa-trash"></i>
-                                                </button>
-                                            </form>
-                                        </td>
                                     </div>
                                 @endif
                             @endforeach
