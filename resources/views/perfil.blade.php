@@ -21,148 +21,72 @@
                     <div class="row" id="color" >
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                         <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                            <form action="{{ route('Users.update', [$user]) }}" method="POST" Enctype="multipart/form-data" class="form-group">
-                                @method("PUT")
-                                @csrf
-                                <br><br>
-                                <div class="">
-                                    <div class="row">
-                                        <input type="hidden" name="id" value="{{$user->id }}">
-                                        <input type="hidden" name="Usu_id" value="{{$user->Usu_id }}">
-                                        <input type="hidden" name="Usu_tipodoc" value="{{$user->Usu_tipodoc }}">
-                                        <input type="hidden" name="name" value="{{$user->name }}">
-                                        <input type="hidden" name="Usu_apellidos" value="{{$user->Usu_apellidos }}">
-                                        <input type="hidden" name="Usu_fecha_nacimiento" value="{{$user->Usu_fecha_nacimiento }}">
-                                        <input type="hidden" name="Usu_genero" value="{{$user->Usu_genero }}">
-                                        <input type="hidden" name="email" value="{{$user->email }}">
-                                        <input type="hidden" name="Usu_rol" value="{{$user->Usu_rol }}">
-                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
-                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                            <img src="..img/ {{$user->Usu_foto }} " id="imag">
-                                        </div>
-                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
-                                    </div>
-                                    <br>
-                                    <!-- IMAGEN -->
-                                    <div id="color" class="form-group row">
-                                        <div class="col-md-3"></div>
-                                        <div class="col-md-6">
-                                            <input id="inp" type="text" name="Usu_foto" value="{{ $user->Usu_foto }}">
-                                        </div>
-                                        <div class="col-md-3"></div>
-                                    </div>
-                                    <!-- TELEFONO -->
-                                    <div id="color" class="form-group row">
-                                        <label class="col-md-4 col-form-label text-md-left">Telefono</label>
-                                        <div id="let3" class="col-md-8">
-                                            <input type="number" name="Usu_telefono" value="{{ $user->Usu_telefono }}">
-                                        </div>
-                                    </div>
-
-                                    <!-- DIRECCION -->
-                                    <div id="color" class="form-group row">
-                                        <label class="col-md-4 col-form-label text-md-left">Direccion</label>
-                                        <div id="let3" class="col-md-8">
-                                            <input type="text" name="Usu_direccion" value="{{ $user->Usu_direccion }}">
-                                        </div>
-                                    </div>
-                                    <div id="color" class="form-group row">
-                                        <label class="col-md-4 col-form-label text-md-left">Contraseña</label>
-                                        <div id="let3" class="col-md-8">
-                                            <input type="password" name="password" value="{{ $user->password }}">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row mb-0">
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                            <button id="but" type="submit" class="btn btn-primary">
-                                                {{ __('GUARDAR') }}
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-                    </div>
-                    <div class="row"  id="color">
-                        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-                        <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                            @foreach($depor as $depo)
-                                @if ($depo->Dep_Usu_id == Auth::user()->Usu_id)
-                                    <form action="" method="POST" Enctype="multipart/form-data" class="form-group">
-                                        @csrf
-                                        <br><br>
-                                        <div class="">
-                                            <!-- TELEFONO -->
-                                            <div id="color" class="form-group row">
-                                                <label class="col-md-4 col-form-label text-md-left">Deporte</label>
-                                                <div id="let3" class="col-md-8">
-                                                    <input type="number" value="{{ $depo->Dep_deporte }}">
-                                                </div>
+                            @foreach($users as $user)
+                                @if($user->Usu_id == Auth::user()->Usu_id)
+                                    <div>
+                                        <div class="row">
+                                            <input type="text" name="id" value="{{$user->id }}">
+                                            <input type="text" name="Usu_id" value="{{$user->Usu_id }}">
+                                            <input type="text" name="Usu_tipodoc" value="{{$user->Usu_tipodoc }}">
+                                            <input type="text" name="name" value="{{$user->name }}">
+                                            <input type="text" name="Usu_apellidos" value="{{$user->Usu_apellidos }}">
+                                            <input type="text" name="Usu_fecha_nacimiento" value="{{$user->Usu_fecha_nacimiento }}">
+                                            <input type="text" name="Usu_genero" value="{{$user->Usu_genero }}">
+                                            <input type="text" name="email" value="{{$user->email }}">
+                                            <input type="text" name="Usu_rol" value="{{$user->Usu_rol }}">
+                                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <img src="..img/ {{$user->Usu_foto }} " id="imag">
                                             </div>
-
-                                            <div class="form-group row mb-0">
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                    <button id="but" type="submit" class="btn btn-primary">
-                                                        {{ __('GUARDAR') }}
-                                                    </button>
-                                                </div>
+                                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+                                        </div>
+                                        <br>
+                                        <!-- IMAGEN -->
+                                        <div id="color" class="form-group row">
+                                            <div class="col-md-3"></div>
+                                            <div class="col-md-6">
+                                                <input id="inp" type="text" name="Usu_foto" value="{{ $user->Usu_foto }}">
+                                            </div>
+                                            <div class="col-md-3"></div>
+                                        </div>
+                                        <!-- TELEFONO -->
+                                        <div id="color" class="form-group row">
+                                            <label class="col-md-4 col-form-label text-md-left">Telefono</label>
+                                            <div id="let3" class="col-md-8">
+                                                <input type="number" name="Usu_telefono" value="{{ $user->Usu_telefono }}">
                                             </div>
                                         </div>
-                                    </form>
-                                @endif
-                            @endforeach
 
-                            @foreach($entre as $ent)
-                                @if ($ent->Ent_Usu_id == Auth::user()->Usu_id)
-                                    <form action="" method="POST" Enctype="multipart/form-data" class="form-group">
-                                        @csrf
-                                        <br><br>
-                                        <div class="">
-                                            <!-- TELEFONO -->
-                                            <div id="color" class="form-group row">
-                                                <label class="col-md-4 col-form-label text-md-left">Deporte</label>
-                                                <div id="let3" class="col-md-8">
-                                                    <input type="text" value="{{ $ent->Ent_Deporte }}">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row mb-0">
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                    <button id="but" type="submit" class="btn btn-primary">
-                                                        {{ __('GUARDAR') }}
-                                                    </button>
-                                                </div>
+                                        <!-- DIRECCION -->
+                                        <div id="color" class="form-group row">
+                                            <label class="col-md-4 col-form-label text-md-left">Direccion</label>
+                                            <div id="let3" class="col-md-8">
+                                                <input type="text" name="Usu_direccion" value="{{ $user->Usu_direccion }}">
                                             </div>
                                         </div>
-                                    </form>
-                                @endif
-                            @endforeach
-
-                            @foreach($direc as $dire)
-                                @if ($dire->Dir_Usu_id == Auth::user()->Usu_id)
-                                    <form action="" method="POST" Enctype="multipart/form-data" class="form-group">
-                                        @csrf
-                                        <br><br>
-                                        <div class="">
-                                            <!-- TELEFONO -->
-                                            <div id="color" class="form-group row">
-                                                <label class="col-md-4 col-form-label text-md-left">Detalles</label>
-                                                <div id="let3" class="col-md-8">
-                                                    <input type="number" value="{{ $dire->Dir_Especialidad }}">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row mb-0">
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                    <button id="but" type="submit" class="btn btn-primary">
-                                                        {{ __('GUARDAR') }}
-                                                    </button>
-                                                </div>
+                                        <div id="color" class="form-group row">
+                                            <label class="col-md-4 col-form-label text-md-left">Contraseña</label>
+                                            <div id="let3" class="col-md-8">
+                                                <input type="password" name="password" value="{{ $user->password }}">
                                             </div>
                                         </div>
-                                    </form>
+                                        <div class="form-group row mb-0">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                <a id="but" href="{{route("Users.edit",[$user])}}">
+                                                    {{ __('GUARDAR') }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <td>
+                                            <form action="{{route("Users.destroy", [$user])}}" method="post">
+                                                @method("delete")
+                                                @csrf
+                                                <button type="submit" class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </div>
                                 @endif
                             @endforeach
                         </div>

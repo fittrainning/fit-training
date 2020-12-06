@@ -18,7 +18,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        return view("entrenador.inicioen", ["user"=>User::all()]);
+        return view("perfil", ["users"=>User::all()]);
     }
 
     /**
@@ -61,7 +61,7 @@ class UsuarioController extends Controller
      */
     public function edit(User $user)
     {
-        return view("perfil", ["user" => $user,
+        return view("editarperfil", ["user" => $user,
         //"user"=>User::all(), 
         //"depor"=>Deportistas::all(), 
         //"entre"=>Entrenador::all(),
@@ -79,7 +79,7 @@ class UsuarioController extends Controller
     public function update(Request $request, User $user)
     {
         $user->fill($request->input())->saveOrFail();
-        return redirect()->route("Users.edit")->with(["menssaje" => "Perfil Actualizado"]);
+        return redirect()->route("Users.index")->with(["menssaje" => "Perfil Actualizado"]);
     }
 
     /**

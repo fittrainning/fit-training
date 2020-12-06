@@ -73,13 +73,11 @@
                     @ else-->
                     <div id="fon" class="dropdown-menu dropdown-menu-right">
                         <div class="nav-item dropdown">
-                            <form action="{{ route('Users.destroy', Auth::user()->id) }}" method="POST">
-                                @csrf
                                 <a class="dropdown-item">
                                     <img id="porfile" src="{{ asset('img/porfile.png') }}"><br>
                                     {{ Auth::user()->name }}<br>{{ Auth::user()->Usu_id }} <span class="caret"></span>
                                 </a>
-                                <a class="dropdown-item" href="{{route("Users.edit",[$user])}}">
+                                <a class="dropdown-item" href="{{route('Users.index')}}">
                                     {{ __('Editar Perfil') }}
                                 </a>
                                 <hr>
@@ -88,7 +86,6 @@
                                                 document.getElementById('logout-form').submit();">
                                     {{ __('Cerrar Sesion') }}
                                 </a>
-                            </form>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
