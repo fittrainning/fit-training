@@ -6,16 +6,16 @@
         <div id="cont">
             <div id="fondo">
                 <div id="edit">
-                    <form method="POST" action="{{route("Users.update", [$user])}}">
+                    <form method="POST" action="{{route("users.update", [$user])}}">
                         @method("PUT")
                         @csrf
                         <div class="form-group">
                             <label class="label">Nombre</label>
-                            <input required value="" autocomplete="off" name="name" class="form-control" type="text" placeholder="nombre">
+                            <input required value="{{ $user->Usu_id }}" autocomplete="off" name="name" class="form-control" type="text" placeholder="nombre">
                         </div>
 
                         <button class="btn btn-success">Guardar</button>
-                        <a class="btn btn-primary" href="{{route("Users.index")}}">Volver</a>
+                        <a class="btn btn-primary" href="{{route("users.index")}}">Volver</a>
                     </form>
                 </div>
             </div>

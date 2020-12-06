@@ -63,7 +63,7 @@ Route::resource("Deportes", "DeporteController")->parameters(["Deportes"=>"Depor
 Route::resource("Planes", "PlanController")->parameters(["Planes"=>"Plan"]);
 Route::resource("Mesociclos", "MesocicloController")->parameters(["Mesociclos"=>"Mesociclo"]);
 
-Route::resource("Users", "UsuarioController")->parameters(["Users"=>"User"]);
+Route::resource("users", "UsuarioController")->parameters(["users"=>"user"]);
 
 //Route::resource("Caracterizacion", "CaracterizacionController")->parameters(["Caracterizaciones"=>"Caracterizacion"]);
 
