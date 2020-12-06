@@ -14,20 +14,26 @@
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                         <div  class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                             <div id="cerrar">
-                                <input OnClick="location.href='{{ url('/') }}'" type=image src="img/cerrar.png" width="30" height="30"><!--input boton de cerrar y regresar a index-->
+                                <input OnClick="location.href='{{ ('/home') }}'" type=image src="{{ asset('img/cerrar.png') }}" width="30" height="30"><!--input boton de cerrar y regresar a index-->
                             </div>
                         </div>
                     </div>
                     <div class="row" id="color" >
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                         <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                            <form action="{{ route('') }}" method="POST" Enctype="multipart/form-data" class="form-group">
+                            @foreach($user as $use)
+                                @if ($use->Usu_id == Auth::user()->Usu_id)
+                                    <label for="">{{ $use->name }}</label>
+                                @endif
+                            @endforeach
+                            <form action="{{ route('Users.update', Auth::user()->id) }}" method="POST" Enctype="multipart/form-data" class="form-group">
+                                @csrf
                                 <br><br>
                                 <div class="">
                                     <div class="row">
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                            <img src="img/{{ Auth::user()->Usu_foto }}" id="imag">
+                                            <img src="..img/ {{ Auth::user()->Usu_foto }} " id="imag">
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
                                     </div>

@@ -17,23 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//_________________________________________________________________________
-
 Route::get('/construccion', function () {
     return view('construccion');
 });
 
-Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
-Route::resource("Deportistas", "DeportistaController")->parameters(["Deportistas"=>"Deportista"]);
-Route::resource("Deportes", "DeporteController")->parameters(["Deportes"=>"Deporte"]);
-Route::resource("Planes", "PlanController")->parameters(["Planes"=>"Plan"]);
-Route::resource("Mesociclos", "MesocicloController")->parameters(["Mesociclos"=>"Mesociclo"]);
-//Route::resource("Caracterizacion", "CaracterizacionController")->parameters(["Caracterizaciones"=>"Caracterizacion"]);
-
-//Route::resource("Tests", "TestController")->parameters(["Tests"=>"Test"]);
-
-
-//_________________________________________________________________________
 
 Auth::routes();
 
@@ -67,3 +54,17 @@ Route::get('dbateria/{Tes_id}', 'BotonController@detalles')->name('dbateria');
 Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
 Route::get('/entrenadores', 'HomeController@entre')->name('entrenadores');
+
+//_________________________________________________________________________
+
+Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
+Route::resource("Deportistas", "DeportistaController")->parameters(["Deportistas"=>"Deportista"]);
+Route::resource("Deportes", "DeporteController")->parameters(["Deportes"=>"Deporte"]);
+Route::resource("Planes", "PlanController")->parameters(["Planes"=>"Plan"]);
+Route::resource("Mesociclos", "MesocicloController")->parameters(["Mesociclos"=>"Mesociclo"]);
+Route::resource("Users", "UsuarioController")->parameters(["Users"=>"User"]);
+//Route::resource("Caracterizacion", "CaracterizacionController")->parameters(["Caracterizaciones"=>"Caracterizacion"]);
+
+//Route::resource("Tests", "TestController")->parameters(["Tests"=>"Test"]);
+
+//_________________________________________________________________________
