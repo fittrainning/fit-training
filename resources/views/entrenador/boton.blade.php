@@ -96,7 +96,7 @@
                                         
                                         <label class="col-md-4 col-form-label text-md-left">IMAGEN</label>
                                         <div class="col-md-6">
-                                            <input type="file" class="form-control-file" name="Foto">
+                                            <input type="file" class="form-control-file" name="Foto" required>
                                         </div>
                                     </div>
                                 </div>
