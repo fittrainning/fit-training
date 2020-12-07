@@ -11,7 +11,7 @@
                         @csrf
                         <div class="form-group">
                             <label class="label">Nombre</label>
-                            <input required value="{{ $user->Usu_id }}" autocomplete="off" name="name" class="form-control" type="text" placeholder="nombre">
+                            <input required value="{{ $user->name }}" autocomplete="off" name="name" class="form-control" type="text" placeholder="nombre">
                         </div>
 
                         <button class="btn btn-success">Guardar</button>
