@@ -78,7 +78,7 @@ class UsuarioController extends Controller
         $user=request()->except(['_token','_method']);
         
         if ($request->hasFile('Usu_foto')) {
-            $users= User::findOrFail($id);
+            $users = User::findOrFail($id);
 
             Storage::delete('public/img/foto/'.$users->Usu_foto);
 

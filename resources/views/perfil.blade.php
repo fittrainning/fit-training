@@ -45,7 +45,7 @@
                                         <div id="color" class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-left">Telefono</label>
                                             <div id="let3" class="col-md-8">
-                                                <input type="number" name="Usu_telefono" value="{{ $user->Usu_telefono }}">
+                                                <input type="number" name="Usu_telefono" value="{{ $user->Usu_telefono }}" readonly>
                                             </div>
                                         </div>
 
@@ -53,13 +53,13 @@
                                         <div id="color" class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-left">Direccion</label>
                                             <div id="let3" class="col-md-8">
-                                                <input type="text" name="Usu_direccion" value="{{ $user->Usu_direccion }}">
+                                                <input type="text" name="Usu_direccion" value="{{ $user->Usu_direccion }}" readonly>
                                             </div>
                                         </div>
                                         <div id="color" class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-left">Contraseña</label>
                                             <div id="let3" class="col-md-8">
-                                                <input type="password" name="password" value="························">
+                                                <input type="password" name="password" value="························" readonly>
                                             </div>
                                         </div>
                                         <div class="form-group row mb-0">
