@@ -36,7 +36,7 @@
                                             <input type="hidden" name="Usu_rol" value="{{$user->Usu_rol }}">
                                             <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
                                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                <img src="{{ asset('img').'/'.$user->Usu_foto }}" id="imag">
+                                                <img src="{{ asset('img/foto/')$user->Usu_foto }}" id="imag">
                                             </div>
                                             <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
                                         </div>
