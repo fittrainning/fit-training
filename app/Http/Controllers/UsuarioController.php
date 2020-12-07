@@ -17,8 +17,8 @@ class UsuarioController extends Controller
     public function index()
     {
         //return view("perfil", ["users"=>User::all()]);
-        $users['users']=User::all();
-        return view("perfil",$users);
+        $userss['users']=User::all();
+        return view("perfil",$userss);
     }
 
     /**
@@ -75,17 +75,24 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $users=request()->except(['_token','_method']);
+        $user=request()->except(['_token','_method']);
         
-        //return response()->json($users);
+        if ($request->hasFile('Usu_foto')) {
+            $users= User::findOrFail($id);
+
+            Storage::delete('public/img/foto/'.$users->Usu_foto);
+
+            $user['Usu_foto']=$request->file('Usu_foto')->store('foto','public');
+        }
         
-        User::where('id','=',$id)->update($users);
+        User::where('id','=',$id)->update($user);
 
         $users= User::findOrFail($id);
         return view("editarperfil",compact("users"));
 
         //$user->fill($request->input())->saveOrFail();
         //return redirect()->route("users.index")->with(["menssaje" => "Perfil Actualizado"]);
+        //return response()->json($users);
     }
 
     /**

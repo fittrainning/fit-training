@@ -34,11 +34,11 @@
                                             <input type="hidden" name="Usu_genero" value="{{$user->Usu_genero }}">
                                             <input type="hidden" name="email" value="{{$user->email }}">
                                             <input type="hidden" name="Usu_rol" value="{{$user->Usu_rol }}">
-                                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
-                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                <img src="{{ asset('img/foto/')$user->Usu_foto }}" id="imag">
+                                            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+                                            <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                <img src="{{ asset('img').'/'.$user->Usu_foto }}" id="imag">
                                             </div>
-                                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+                                            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                         </div>
                                         <br>
                                         <!-- TELEFONO -->
@@ -64,7 +64,7 @@
                                         </div>
                                         <div class="form-group row mb-0">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                <a id="but" href="{{route("users.edit",[$id])}}">
+                                                <a id="but" href="{{route("users.edit",[$user->id])}}">
                                                     {{ __('Editar Perfil') }}
                                                 </a>
                                             </div>
