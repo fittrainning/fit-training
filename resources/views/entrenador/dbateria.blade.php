@@ -54,8 +54,8 @@
                                                 </div><br>
                                                 <div class="row" id="let4">
                                                     <h4>IMAGEN:</h4>
-                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                        <img width ="35%" src="/uploads/{{ $Boton->Tes_imagen}}">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><br>
+                                                        <img width ="35%" src="/uploads/{{ $Boton->Tes_imagen}}"><br><br>
                                                     </div>
                                                 </div>
                                             </div>
