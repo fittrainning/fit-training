@@ -55,7 +55,7 @@
                                                 <div class="row" id="let4">
                                                     <h4>IMAGEN:</h4>
                                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                        <img src="/uploads/{{ $Boton->Tes_imagen}}">
+                                                        <img width ="35%" src="/uploads/{{ $Boton->Tes_imagen}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,7 +64,7 @@
                                     @endif
                                 @endforeach
                             </div><br><br>
-                            <div class="form-group row mb-0">
+                            <!--<div class="form-group row mb-0">
                                 <div class=" col-12 text-center">
                                     <a href="{{ route('rtest') }}">
                                         <button type="button" class="btn btn-secondary  btn-sm"  id="buttonns">
@@ -72,7 +72,7 @@
                                         </button>
                                     </a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
