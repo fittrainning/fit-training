@@ -9,7 +9,7 @@
                     <div class="row" id="color" >
                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
                         <div id="centro" class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                            <h2 id="titulo">Editar Perfil</h2>
+                            <h1 id="titulo">Perfil</h1>
                         </div>
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                         <div  class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
@@ -36,19 +36,11 @@
                                             <input type="hidden" name="Usu_rol" value="{{$user->Usu_rol }}">
                                             <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
                                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                <img src="..img/ {{$user->Usu_foto }} " id="imag">
+                                                <img src="{{ asset('img').'/'.$user->Usu_foto }}" id="imag">
                                             </div>
                                             <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
                                         </div>
                                         <br>
-                                        <!-- IMAGEN -->
-                                        <div id="color" class="form-group row">
-                                            <div class="col-md-3"></div>
-                                            <div class="col-md-6">
-                                                <input id="inp" type="text" name="Usu_foto" value="{{ $user->Usu_foto }}">
-                                            </div>
-                                            <div class="col-md-3"></div>
-                                        </div>
                                         <!-- TELEFONO -->
                                         <div id="color" class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-left">Telefono</label>
@@ -67,13 +59,13 @@
                                         <div id="color" class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-left">Contraseña</label>
                                             <div id="let3" class="col-md-8">
-                                                <input type="password" name="password" value="{{ $user->password }}">
+                                                <input type="password" name="password" value="························">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-0">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                <a id="but" href="{{route("users.edit",[$user])}}">
-                                                    {{ __('GUARDAR') }}
+                                                <a id="but" href="{{route("users.edit",[$id])}}">
+                                                    {{ __('Editar Perfil') }}
                                                 </a>
                                             </div>
                                         </div>
