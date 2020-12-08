@@ -36,7 +36,10 @@ class DeporteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $deporte = new Deporte($request->input());
+        $deporte->saveOrFail();
+        return redirect()->route("Deportes.index")->with(["menssaje" => "Deporte creado",
+        ]);
     }
 
     /**

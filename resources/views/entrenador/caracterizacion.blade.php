@@ -15,7 +15,7 @@
                     <div class="row">
                         @foreach($Deportes as $Deporte)
                             <div class="col-3">
-                                <a href="{{ route('caracterizacion/index') }}">
+                                <a href="{{ route('Caracterizacion.index') }}">
                                     <div id="cap">
                                         <div id="botdos">
                                             <h5>{{ $Deporte->Dee_nombre }}</h5>

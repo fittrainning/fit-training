@@ -12,18 +12,6 @@ class CaracterizacionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function caraini()
-    {
-        return view('entrenador.cinicio');
-    }
-    public function ceditar()
-    {
-        return view('entrenador.ceditar');
-    }
-    public function caracre()
-    {
-        return view('entrenador.deporte');
-    }
     
     public function index()
     {
@@ -70,7 +58,7 @@ class CaracterizacionController extends Controller
      */
     public function edit(Caracterizacion $caracterizacion)
     {
-        //
+        //return view('entrenador.ceditar');
     }
 
     /**

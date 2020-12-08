@@ -16,11 +16,12 @@
                     <div class="row">
                         <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
                         <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                            <form action="" method="POST">
+                            <form action="{{ route('Deportes.store') }}" method="POST">
+                                @csrf
                                 <div id="color" class="form-group row">
                                     <label class="col-md-4 col-form-label text-md-left">Nombre</label>
                                     <div id="let3" class="col-md-8">
-                                        <input type="number" name="Dee_nombre" value="">
+                                        <input type="text" name="Dee_nombre">
                                     </div>
                                 </div>
                                 <div id="color" class="form-group row">
