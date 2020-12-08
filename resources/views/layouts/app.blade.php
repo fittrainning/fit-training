@@ -103,7 +103,7 @@
                     @if (Auth::user()->Usu_rol == 'entrenador')
                         <ul class="list-unstyled components" id="barra">
                             <li>
-                                <a class="nav-link" href="{{ route('caracterizacion') }}">
+                                <a class="nav-link" href="{{ route('Deportes.index') }}">
                                     <p id="texma"><img src="{{ asset('../img/bioquimica.png') }}" alt="gestion_ficha" width="35px">&nbsp;Caracterizacion</p>
                                 </a>
                             </li>

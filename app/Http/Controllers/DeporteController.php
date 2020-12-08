@@ -15,7 +15,7 @@ class DeporteController extends Controller
      */
     public function index()
     {
-        return view("entrenador.deporte", ["Deportes"=>Deporte::all()]);
+        return view("entrenador.caracterizacion", ["Deportes"=>Deporte::all()]);
     }
 
     /**
@@ -25,7 +25,7 @@ class DeporteController extends Controller
      */
     public function create()
     {
-        //
+        return view("entrenador.deporte");
     }
 
     /**

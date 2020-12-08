@@ -50,7 +50,7 @@ class HomeController extends Controller
         $bateria = DB::Table('tb_test')->get();
         return view('entrenador.bateria', compact('bateria'));
     }
-    
+
     public function boto(){
         return view('entrenador.boton');
     }
@@ -62,6 +62,11 @@ class HomeController extends Controller
     public function rtest(){
         return view('entrenador.rtest');
     }
+    
+    public function cara(){
+        return view('entrenador.caracterizacion');
+    }
+    
     // vistas director
     public function ficha(){
         return view('director.cargar_ficha');

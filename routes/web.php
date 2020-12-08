@@ -36,7 +36,7 @@ Route::get('/anam1', 'HomeController@anam1')->name('anam1');
 Route::get('/anam2', 'HomeController@anam2')->name('anam2');
 Route::get('/anam3', 'HomeController@anam3')->name('anam3');
 
-Route::get('/caracterizacion', 'CaracterizacionController@cara')->name('caracterizacion');
+Route::get('/caracterizacion', 'HomeController@cara')->name('caracterizacion');
 Route::get('/caracterizacion/index', 'CaracterizacionController@caraini')->name('caracterizacion/index');
 Route::get('/caracterizacion/create', 'CaracterizacionController@caracre')->name('caracterizacion/create');
 Route::get('/caracterizacion/editar', 'CaracterizacionController@ceditar')->name('caracterizacion/editar');
@@ -59,7 +59,7 @@ Route::get('/entrenadores', 'HomeController@entre')->name('entrenadores');
 
 Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
 Route::resource("Deportistas", "DeportistaController")->parameters(["Deportistas"=>"Deportista"]);
-Route::resource("Deportes", "DeporteController")->parameters(["Deportes"=>"Deporte"]);
+Route::resource("Deportes", "DeporteController");
 Route::resource("Planes", "PlanController")->parameters(["Planes"=>"Plan"]);
 Route::resource("Mesociclos", "MesocicloController")->parameters(["Mesociclos"=>"Mesociclo"]);
 

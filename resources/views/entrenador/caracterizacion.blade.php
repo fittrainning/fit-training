@@ -13,47 +13,23 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-3">
-                            <a href="{{ route('caracterizacion/index') }}">
-                                <div id="cap">
-                                    <div id="botdos">
-                                        <h5>FUTBOL</h5>
+                        @foreach($Deportes as $Deporte)
+                            <div class="col-3">
+                                <a href="{{ route('caracterizacion/index') }}">
+                                    <div id="cap">
+                                        <div id="botdos">
+                                            <h5>{{ $Deporte->Dee_nombre }}</h5>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="{{ route('caracterizacion/index') }}">
-                                <div id="cap">
-                                    <div id="botdos">
-                                        <h5>BALONCESTO</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="{{ route('caracterizacion/index') }}">
-                                <div id="cap">
-                                    <div id="botdos">
-                                        <h5>ATLETISMO</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="{{ route('caracterizacion/index') }}">
-                                <div id="cap">
-                                    <div id="botdos">
-                                        <h5>VOLEIBOL</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
+                        @endforeach
+                        
                     </div>
                     <div class="row">
                         <div class="col-3"></div>
                         <div class="col-6">
-                            <a href="{{ route('caracterizacion/create') }}">
+                            <a href="{{ route('Deportes.create') }}">
                                 <div id="cap">
                                     <div id="botdos">
                                         <h5>Agregar</h5>
