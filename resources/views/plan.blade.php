@@ -12,10 +12,14 @@
                                 <hr id="separa"><br>
                                 <div class="row">
                                     <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                        <a href="{{ route('agenda') }}">Agenda</a>
+                                        <a href="{{ route('agenda') }}">
+                                            <div id="bott">Ver<br>Agenda</div>
+                                        </a>
                                     </div>
                                     <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                        <a href="{{ route('Planes.create') }}">Plan de Entrenamiento</a>
+                                        <a href="{{ route('Planes.create') }}">
+                                            <div id="bott">Plan de<br>Entrenamiento</div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

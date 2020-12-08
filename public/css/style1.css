@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: Arial Rounded MT;
 }
 
 #selectb {
@@ -640,4 +641,18 @@ a.article:hover {
     height: 150px;
     border-radius: 100%;
     margin: auto;
+}
+
+#bott {
+    background-color: #CED8E1;
+    color: rgb(16, 24, 51);
+    text-align: center;
+    box-shadow: 0 10px 30px 0 black;
+    border-radius: 50px;
+    border: 0px;
+    width: 50%;
+    padding: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 25px;
 }
