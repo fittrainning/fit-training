@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use DB;
 class HomeController extends Controller
@@ -72,7 +73,9 @@ class HomeController extends Controller
         return view('director.cargar_ficha');
     }
     public function usuario(){
-        return view('director.cargar_usuario');
+        
+        $users['users']=User::all();
+        return view("director.cargar_usuario",$users);
     }
     public function entre(){
         return view('director.entrenador');

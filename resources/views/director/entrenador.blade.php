@@ -6,7 +6,7 @@
             <div id="cont">
                 <br><br><br><br>
                 <div class="d-flex justify-content-center" id="colo">
-                    <h1>Entrenadores</h1>
+                    <a href=""></a><h1>Entrenadores</h1>
                 </div>
                 <br>
                 <br>
@@ -23,7 +23,7 @@
                         <td>{{ Auth::user()->name }}</td>
                         <td>{{ Auth::user()->Usu_apellidos }}</td>
                         <td>1907163</td>
-                        <td><a href="{{ route('plan') }}"><input id="inn" type="button" value="ver"></a></td>
+                        <td><a href=""><input id="inn" type="button" value="ver"></a></td>
                     </tr>
                 </table>
                 <br><br>

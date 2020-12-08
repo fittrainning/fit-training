@@ -18,7 +18,7 @@
             
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Fichas Creadas</h5>
@@ -36,27 +36,21 @@
                                             <th scope="col">Apellido</th>
                                             <th scope="col">E-mail</th>
                                             <th scope="col">Rol</th>
+                                            <th scope="col">Acciones</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <th scope="row">1907123</th>
-                                            <td>Analisis y desarrollo de sistemas de informacion  </td>
-                                            <td>Tecnologo </td>
-                                            <td>Mañana</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">10031232</th>
-                                            <td>Sistemas  </td>
-                                            <td>Tecnico </td>
-                                            <td>Mañana</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">1123121</th>
-                                            <td>Contabilidad  </td>
-                                            <td>Tecnologo </td>
-                                            <td>Tarde </td>
-                                        </tr>
+                                        @foreach($users as $user)
+                                            <tr>
+                                                <td>{{ $user->Usu_tipodoc }}</td>
+                                                <td>{{ $user->Usu_id }}</td>
+                                                <td>{{ $user->name }}</td>
+                                                <td>{{ $user->Usu_apellidos }}</td>
+                                                <td>{{ $user->email }}</td>
+                                                <td>{{ $user->Usu_rol }}</td>
+                                                <td><a href="">Editar</a></td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>
