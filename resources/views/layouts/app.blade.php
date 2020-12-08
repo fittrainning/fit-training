@@ -198,53 +198,7 @@
     </script>
     @yield('script')
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
 
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            //defaultDate:new Date(2020,11,20),
-            plugins: [ 'dayGrid', 'interaction', 'timeGrid', 'list' ],
-            //defaultView:'timeGridDay'
-            header:{
-                left:'prev,next today Miboton',
-                center:'title',
-                right:'dayGridMonth,timeGridWeek,timeGridDay'
-            },
-            customButtons:{
-                Miboton:{
-                    text:"Boton",
-                    click:function(){
-                            alert("¡Hola mundo!");
-                            $('#exampleModal').modal('toggle');
-                    }
-                }
-
-
-            },
-            dateClick:function(info){
-
-                $('#exampleModal').modal();
-                //console.log(info);
-
-            },
-            events:[
-                {
-                    title:"evento 1",
-                    start:"2020-09-13 12:30:00"
-                },{
-                    title:"evento 1",
-                    start:"2020-09-13 12:30:00",
-                    end:"2020-09-20 12:30:00",
-                    color:"#FFCCAA",
-                    textColor:"#000000"
-                }
-            ]
-        });
-        calendar.setOption('locale','Es');
-        calendar.render();
-        });
-    </script>
     @endguest
 </body>
 </html>

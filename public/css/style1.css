@@ -51,6 +51,11 @@ body {
     text-align: center;
 }
 
+#calendar {
+    background-color: #fff;
+    border: #000000;
+}
+
 
 /*#fondo {
     background-image: url(../img/fondologin.jpg);

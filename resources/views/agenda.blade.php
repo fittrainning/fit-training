@@ -19,6 +19,8 @@
 <!--estilo de vistas calendario-->
 <link href="{{ asset('calendarioweb/list/main.css') }}" rel="stylesheet">
 <link href="{{ asset('calendarioweb/timegrid/main.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="{{ asset('css/style1.css') }}" rel="stylesheet">
 
 <script>
 
@@ -94,21 +96,21 @@
 @section('content')
     <div class="row">
 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
+        <button type="button" class="btn btn-primary d-flex justify-content-center" data-toggle="modal" data-target="#exampleModal">
+           Agregar Evento
         </button>
          <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nuevo evento</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Agrega un evento</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
             <div class="modal-body">
-            ID:
+            Nombre del evento:
             <input type="text" name="txtid" id="txtid" >
 
             <br>
@@ -116,27 +118,39 @@
             <input type="text" name="txtfecha" id="txtfecha">
 
             <br>
-            Titulo:
-            <input type="text" name="txttitulo" id="txttitulo">
 
-            <br>
-            Hora:
-            <input type="text" name="txthora" id="txthora">
-            <br>
-            Descripcion:
-            <textarea name="txtdescripcion" id="" cols="30" rows="10"></textarea>
-            <br>
-            Color:
-            <input type="color" name="txtcolor" id="txtcolor">
+            <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label>Titulo:</label><br>
+            <input type="text" class="form-group" name="txttitulo" id="txttitulo">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Hora:</label>
+            <input type="text" class="form-group" name="txthora" id="txthora">
+            </div>
+            <div class="form-group col-md-12">
+                <label>Descripcion:</label><br> 
+            <textarea name="txtdescripcion" id="" class="form-group" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-group col-md-12">
+                <label>Color:</label><br>
+            <input type="color" name="txtcolor" class="form-group" id="txtcolor">
+            </div>
+
+
 
             </div>
+
+
+
+        </div>
+
             <div class="modal-footer">
             <button id="btnagregar" class="btn btn-success">Agregar</button>
             <button id="btnmodificar" class="btn btn-success">Modificar</button>
             <button id="btnborrar" class="btn btn-danger">Borrar</button>
             <button id="btncancelar" class="btn btn-default">Cancelar</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
         </div>
@@ -147,11 +161,11 @@
             <div id="cont"><br><br>
 
                 <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-8">
+                    <div class="col-1"></div>
+                    <div class="col-10">
                         <div id="calendar"></div>
                     </div>
-                    <div class="col-2"></div>
+                    <div class="col-1"></div>
                 </div>
 
             </div>
