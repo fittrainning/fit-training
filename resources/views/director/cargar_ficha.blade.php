@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
+    <!--<div class="row">
         <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
             <div id="cont">
                 <br><br><br><br>
@@ -11,12 +11,12 @@
                 <br>
                 <br>
                 <div class="d-flex justify-content-around">
-                    <!-- Button trigger modal -->
+                     Button trigger modal 
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         Ver Fichas Creadas
                     </button>
             
-                    <!-- Modal -->
+                     Modal 
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -66,12 +66,12 @@
                         </div>
                     </div>
             
-                    <!-- Button trigger modal -->
+                     Button trigger modal 
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
                         Ingresar Ficha 
                     </button>
             
-                    <!-- Modal -->
+                     Modal 
                     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -139,5 +139,17 @@
             </div>
         </div>
         <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+    </div>-->
+    <div class="container">
+        <form action="{{ route('users.import.excel') }}" method="post" enctype="multipart/form-data">
+            @csrf <!-- Token de seguridad -->
+            @if(Session::has('message'))
+                <p>{{ Session::get('message') }}</p>   
+                @else
+            @endif
+
+            <input type="file" name="file">
+            <button>Importar fichas</button>
+        </form>
     </div>
 @endsection

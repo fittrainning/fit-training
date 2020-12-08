@@ -630,3 +630,10 @@ a.article:hover {
     width: 100px;
     border: 0px;
 }
+
+#imag1 {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin: auto;
+}

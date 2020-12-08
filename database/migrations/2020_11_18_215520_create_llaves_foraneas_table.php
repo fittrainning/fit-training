@@ -28,7 +28,10 @@ class CreateLlavesForaneasTable extends Migration
 
         Schema::table('tb_fed', function (Blueprint $table) {
             $table->foreign('Fed_id_Dir')->references('Dir_Usu_id')->on('tb_director')->onUpdate('cascade');
-            $table->foreign('Fed_id_Ent')->references('Ent_Usu_id')->on('tb_entrenador')->onUpdate('cascade');
+        });
+
+        Schema::table('tb_entrenador', function (Blueprint $table){
+            $table->foreign('Ent_ficha')->references('Fed_cod')->on('tb_fed')->onUpdate('cascade');
         });
 
         Schema::table('tb_resmensual', function (Blueprint $table) {
