@@ -6,7 +6,7 @@
             <div id="cont"><br><br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <form action="{{ perfil.create }}" method="POST">
+                        <form action="" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
@@ -33,13 +33,13 @@
                                     <hr id="separa"><br>
                                     <div class="row">
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
-                                            <div id="let2">
+                                            <div id="let3">
                                                 Fecha Inicio
                                                 <input type="date" name="Mes_Fecini">
                                             </div>
                                         </div>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
-                                            <div id="let2">
+                                            <div id="let3">
                                                 Fecha Fin
                                                 <input type="date" name="Mes_Fecfin">
                                             </div>
@@ -49,19 +49,19 @@
                                     <hr id="separa"><br>
                                     <div class="row">
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
-                                            <div id="let2">
+                                            <div id="let3">
                                                 Numero de sesiones
                                                 <input type="number" name="Mes_Nummes">
                                             </div>
                                         </div>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
-                                            <div id="let2">
+                                            <div id="let3">
                                                 Minutos totales
                                                 <input type="number" name="'Mes_Minutos_Totales">
                                             </div>
-                                        </div>
+                                        </div><br><br><br>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
-                                            <div id="let2">
+                                            <div id="let3">
                                                 N° sesiones por mes
                                                 <input type="number" name="Mes_Num_Sesxmes">
                                             </div>
