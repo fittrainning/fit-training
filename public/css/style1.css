@@ -303,7 +303,7 @@ a.article:hover {
 
 #let3 select {
     background: #CED8E1;
-    width: 140%;
+    width: 100%;
     border: 0px;
     border-radius: 15px;
     box-shadow: 5px 5px 3px 0px #000000;
@@ -326,6 +326,14 @@ a.article:hover {
     border-radius: 15px;
     box-shadow: 5px 5px 3px 0px #000000;
     color: #000000;
+}
+
+#let4 select {
+    background: #CED8E1;
+    width: 100%;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 0px #000000;
 }
 
 #barra {

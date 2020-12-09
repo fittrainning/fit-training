@@ -9,20 +9,20 @@
                             <!-- Falta asignar el action -->
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
-                                    <h2 id="centro">Mesociclo</h2>
+                                    <h2 id="centro">Microciclo</h2>
                                     <hr id="separa"><br>
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro3">
                                             <div id="let3">
-                                                <a href="{{ route('Mesociclos.create') }}">crear mesociclo</a>
+                                                <a href="{{ route('Microciclos.create') }}">crear microciclo</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        @foreach($mesos as $meso)
+                                        @foreach($micro as $mic)
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro3">
                                             <div id="let3">
-                                                {{ $meso->Mes_Id }}
+                                                {{ $mic->Mic_id}} - {{ $mic->Mic_tipo}}
                                             </div>
                                         </div>
                                         @endforeach

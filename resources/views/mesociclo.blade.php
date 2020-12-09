@@ -14,15 +14,19 @@
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro3">
                                             <div id="let3">
-                                                <a href="{{ route('Microciclos.create', Auth::user()->Usu_id) }}">crear microciclo</a>
+                                                <a href="{{ route('Mesociclos.create') }}">crear mesociclo</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         @foreach($mesos as $meso)
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro3">
+                                            <a href="{{ route('Microciclos.index') }}">
+                                                <div id="bott">Crear Microciclos</div>
+                                            </a>
+                                            <br>
                                             <div id="let3">
-                                                {{ $meso->Mes_Id}}
+                                                {{ $meso->Mes_Id }}
                                             </div>
                                         </div>
                                         @endforeach

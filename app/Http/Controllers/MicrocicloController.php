@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Microciclo;
+use App\Mesociclo;
+use App\Plan;
+use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class MicrocicloController extends Controller
 {
@@ -15,7 +17,7 @@ class MicrocicloController extends Controller
      */
     public function index()
     {
-        return view('microciclo', ["micro"=>Microciclo::all()]);
+        return view('microciclo', ["micro"=>Microciclo::all()],["user"=>User::all()]);
     }
 
     /**
@@ -23,11 +25,9 @@ class MicrocicloController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create()
     {
-        $plan=DB::select('select Mes_Id_Gen from tb_planentrenamiento inner join tb_mesociclo on(Pla_id = Mes_Pla_Id) where Pla_id_Ent = ?', $id);
-        return view('director.microciclo1', $plan);
-        //return view('microciclo1', ["plan"=>Plan::all()]);
+        return view('microciclo1', ["plan"=>Plan::all()], ["meso"=>Mesociclo::all()]);
     }
 
     /**
