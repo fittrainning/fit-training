@@ -24,7 +24,7 @@ class MesocicloController extends Controller
      */
     public function create()
     {
-        return view('mesociclo', ["deportistas"=>Deportistas::all()], ["deportes"=>Deporte::all()]);
+        return view('mesociclo');
     }
 
     /**
@@ -35,7 +35,9 @@ class MesocicloController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nivel = new Mesociclo($request->input());
+        $nivel->saveOrFail();
+        return redirect()->route("Mesociclos.index")->with(["menssaje" => "Mesociclo enviado",]);
     }
 
     /**

@@ -6,7 +6,7 @@
             <div id="cont"><br><br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <form action="" method="POST">
+                        <form action="{{ perfil.create }}" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">

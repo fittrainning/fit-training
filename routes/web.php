@@ -61,6 +61,4 @@ Route::resource("users", "UsuarioController");
 Route::resource("Deportes", "DeporteController");
 Route::resource("Caracterizacion", "CaracterizacionController");
 
-//Route::resource("Tests", "TestController")->parameters(["Tests"=>"Test"]);
-
 //_________________________________________________________________________
