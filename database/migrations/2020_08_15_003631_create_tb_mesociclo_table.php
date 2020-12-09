@@ -19,7 +19,7 @@ class CreateTbMesocicloTable extends Migration
             $table->smallInteger('Mes_Id');
             $table->date('Mes_Fecini');
             $table->date('Mes_Fecfin');
-            $table->smallInteger('Mes_Nummes');
+            $table->Integer('Mes_Nummes');
             $table->Integer('Mes_Minutos_Totales');
             $table->Integer('Mes_Num_Sesxmes');
             $table->timestamps();
