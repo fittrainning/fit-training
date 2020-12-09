@@ -14,7 +14,7 @@ class FichaController extends Controller
 {
     function index()
     {
-     $data = DB::table('tb_ficha')->orderBy('Fic_id', 'DESC')->get();
+     $data = DB::table('tb_ficha')->orderBy('Fic_Cod', 'DESC')->get();
      return view('director.import_excel', compact('data'));
     }
 
@@ -56,7 +56,7 @@ class FichaController extends Controller
     public function subir(Request $request){
         $nivel = new Ficha($request->input());
         $nivel->saveOrFail();
-        return redirect()->route("ficha")->with(["menssaje" => "ficha creado",
+        return redirect()->route("import_excel")->with(["menssaje" => "ficha creado",
         ]);
     }
     public function import(Request $rows)

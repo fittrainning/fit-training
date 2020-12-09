@@ -58,6 +58,7 @@ Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensa
 Route::resource("Deportistas", "DeportistaController")->parameters(["Deportistas"=>"Deportista"]);
 Route::resource("Planes", "PlanController")->parameters(["Planes"=>"Plan"]);
 Route::resource("Mesociclos", "MesocicloController")->parameters(["Mesociclos"=>"Mesociclo"]);
+Route::resource("Microciclos", "MicrocicloController")->parameters(["Microciclos"=>"Microciclo"]);
 
 Route::resource("users", "UsuarioController");
 Route::resource("Deportes", "DeporteController");

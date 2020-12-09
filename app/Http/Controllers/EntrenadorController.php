@@ -14,7 +14,8 @@ class EntrenadorController extends Controller
      */
     public function index()
     {
-        //
+        return view("director.entrenador", ["entrenadores" => $mensajeria,
+        ]);
     }
 
     /**

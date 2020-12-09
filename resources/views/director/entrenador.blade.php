@@ -14,17 +14,21 @@
                     <tr id="cabe">
                         <th>Documento</th>
                         <th>Nombre</th>
-                        <th>Apellido</th>
+                        <th>E-mail</th>
+                        <th>Deporte</th>
                         <th>Ficha</th>
-                        <th>Plan</th>
                     </tr>
                     @foreach($entrenadores as $entrenador)
                         <tr id="cuer">
-                            <td>{{ Auth::user()->Usu_id }}</td>
-                            <td>{{ Auth::user()->name }}</td>
-                            <td>{{ Auth::user()->Usu_apellidos }}</td>
-                            <td>1907163</td>
-                            <td><a href=""><input id="inn" type="button" value="ver"></a></td>
+                            <td>{{ $entrenador->Ent_Usu_id }}</td>
+                            @foreach($users as $user)
+                                @if($entrenador->Ent_Usu_id == $user->Usu_id)
+                                <td>{{ $user->name }} {{ $user->Usu_apellidos }}</td>
+                                <td>{{ $user->email }}</td>
+                                @endif
+                            @endforeach
+                            <td>{{ $entrenador->Ent_Deporte }}</td>
+                            <td>{{ $entrenador->Ent_ficha }}</td>
                         </tr>
                     @endforeach
                 </table>
