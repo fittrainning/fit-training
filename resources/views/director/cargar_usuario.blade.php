@@ -13,7 +13,7 @@
                 <div class="d-flex justify-content-around">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Ver Usuarios no verificados
+                        Ver Usuarios Creados
                     </button>
             
                     <!-- Modal -->
@@ -77,48 +77,53 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form  action="../controlador/subir_archivo_usuario.php" method="POST">
+                                    <form  action="{{ route('insertarRol') }}" method="POST">
+                                        @csrf
                                         <div class="form-row align-items-center">
                                             <div class="col-auto my-1">
                                                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
                                                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected>Tipo de ficha.</option>
-                                                    <option value="1">General</option>
-                                                    <option value="2">Entrenamiento Deportivo</option>
-                                                    <option value="3">Organizacion Exterior</option>
+                                                    <option selected>Rol usuario.</option>
+                                                    <option value="1">Director</option>
+                                                    <option value="2">Entrenador</option>
                                                 </select>
+                                                <br>
+                                            </div>
+                                            <br>
+                                            <div class="form-group row">
+                                                <label  class="col-sm-5 col-form-label">tipo documeno</label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" class="form-control" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label  class="col-sm-5 col-form-label">Numero documento</label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" class="form-control" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label  class="col-sm-5 col-form-label">Nombre  </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" class="form-control" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label  class="col-sm-5 col-form-label">Apellido</label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" class="form-control" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label  class="col-sm-5 col-form-label">Email</label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" class="form-control" >
+                                                </div>
                                             </div>
                                             
-                                            <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Numero ficha</label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" class="form-control" >
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Nombre  Ficha</label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" class="form-control" >
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Tipo de Ficha  </label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" class="form-control" >
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Jornada  ficha</label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" class="form-control" >
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleFormControlFile1">Ingrese un archivo  para Ingresar fichas</label>
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                            </div>
-                                            <input type="submit"  class="btn btn-primary" name="enviar" value="SUBIR USUARIO">
+                                           
                                         </div>
+                                        <input type="submit"  class="btn btn-primary" name="enviar" value="SUBIR USUARIO">
                                     </form>
                                 </div>
                                 <div class="modal-footer">
