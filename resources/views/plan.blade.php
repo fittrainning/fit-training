@@ -24,8 +24,8 @@
                                     @foreach($planes as $plan)
                                         @if(Auth::user()->Usu_id == $plan->Pla_id_Ent)
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                            <a href="{{ route('Mesociclos.create') }}">
-                                                <div id="bott">Editar Plan de<br>Entrenamiento</div>
+                                            <a href="{{ route('Mesociclos.index') }}">
+                                                <div id="bott">Crear Mesociclos</div>
                                             </a>
                                         </div>
                                         @endif

@@ -75,10 +75,6 @@ class PlanController extends Controller
     {
         return view("plan2", ["deportes"=>Deporte::all()]);
     }
-    public function edit3(Plan $plan)
-    {
-        return view("plan3", ["deportes"=>Deporte::all()]);
-    }
 
     /**
      * Update the specified resource in storage.

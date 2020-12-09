@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mesociclo;
+use App\Plan;
 use Illuminate\Http\Request;
 
 class MesocicloController extends Controller
@@ -14,7 +15,7 @@ class MesocicloController extends Controller
      */
     public function index()
     {
-        return view('entrenador.cinicio', ["Mensajes"=>Mesociclo::all()]);
+        return view('mesociclo', ["mesos"=>Mesociclo::all()]);
     }
 
     /**
@@ -24,7 +25,7 @@ class MesocicloController extends Controller
      */
     public function create()
     {
-        return view('mesociclo');
+        return view('mesociclo1', ["plan"=>Plan::all()]);
     }
 
     /**
