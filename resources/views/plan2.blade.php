@@ -17,7 +17,7 @@
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
                                                 Tipo
-                                                <select name="Mes_Id">
+                                                <select name="Mes_Id" required>
                                                     <option value="1">Entrante</option>
                                                     <option value="2">Basico Desarrollador</option>
                                                     <option value="3">Basico Estabilizador</option>
@@ -35,13 +35,13 @@
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
                                                 Fecha Inicio
-                                                <input type="date" name="Mes_Fecini">
+                                                <input type="date" name="Mes_Fecini" required>
                                             </div>
                                         </div>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
                                                 Fecha Fin
-                                                <input type="date" name="Mes_Fecfin">
+                                                <input type="date" name="Mes_Fecfin"required>
                                             </div>
                                         </div>
                                         <input type="hidden" name="Pla_id_Ent" value="{{ Auth::user()->Usu_id }}">
@@ -51,19 +51,19 @@
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
                                                 Numero de sesiones
-                                                <input type="number" name="Mes_Nummes">
+                                                <input type="number" name="Mes_Nummes"required>
                                             </div>
                                         </div>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
                                                 Minutos totales
-                                                <input type="number" name="'Mes_Minutos_Totales">
+                                                <input type="number" name="'Mes_Minutos_Totales"required>
                                             </div>
                                         </div><br><br><br>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
                                                 N° sesiones por mes
-                                                <input type="number" name="Mes_Num_Sesxmes">
+                                                <input type="number" name="Mes_Num_Sesxmes"required>
                                             </div>
                                         </div>
                                         <input type="hidden" name="Pla_id_Ent" value="{{ Auth::user()->Usu_id }}">
