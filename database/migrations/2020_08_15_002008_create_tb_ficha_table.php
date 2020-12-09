@@ -19,6 +19,8 @@ class CreateTbFichaTable extends Migration
             $table->string('Fic_Nombre');
             $table->string('Fic_Tipo');
             $table->string('Fic_Jornada');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
