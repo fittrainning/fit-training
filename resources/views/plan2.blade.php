@@ -60,6 +60,24 @@
                                                 <input type="date" name="Mes_Fecfin">
                                             </div>
                                         </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
+                                            <div id="let2">
+                                                Numero de sesiones
+                                                <input type="number" name="Mes_Nummes">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
+                                            <div id="let2">
+                                                Minutos totales
+                                                <input type="number" name="'Mes_Minutos_Totales">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
+                                            <div id="let2">
+                                                N° sesiones por mes
+                                                <input type="number" name="Mes_Num_Sesxmes">
+                                            </div>
+                                        </div>
                                         <input type="hidden" name="Pla_id_Ent" value="{{ Auth::user()->Usu_id }}">
                                     </div>
                                 </div>
