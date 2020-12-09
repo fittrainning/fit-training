@@ -147,7 +147,7 @@
                     @if (Auth::user()->Usu_rol == 'director')
                         <ul class="list-unstyled components" id="barra">
                             <li>
-                                <a class="nav-link" href="{{ route('ficha') }}">
+                                <a class="nav-link" href="{{ route('import_excel') }}">
                                     <p id="texma"><img src="{{ asset('../img/clipboard109-01.png') }}" alt="gestion_ficha" width="35px">&nbsp;Gestion Ficha</p>
                                 </a>
                             </li>

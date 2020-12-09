@@ -70,7 +70,7 @@ class HomeController extends Controller
     
     // vistas director
     public function ficha(){
-        return view('director.cargar_ficha');
+        return view('director.import_excel');
     }
     public function usuario(){
         

@@ -4,82 +4,54 @@ namespace App\Http\Controllers;
 
 use App\Ficha;
 use Illuminate\Http\Request;
+use DB;
+use Maatwebsite\Excel\Facades\Excel;
+
+
+//class FichaController extends Controller
 
 class FichaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    function index()
     {
-        //
+     $data = DB::table('tb_ficha')->orderBy('Fic_id', 'DESC')->get();
+     return view('director.import_excel', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+//importar
+    function import(Request $request)
     {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Ficha  $ficha
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Ficha $ficha)
-    {
-        //
-    }
+     $this->validate($request, [
+      'select_file'  => 'required|mimes:xls,xlsx'
+     ]);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Ficha  $ficha
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Ficha $ficha)
-    {
-        //
-    }
+     $path = $request->file('select_file')->getRealPath();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Ficha  $ficha
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Ficha $ficha)
-    {
-        //
-    }
+     $data = Excel::import($path)->get();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Ficha  $ficha
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Ficha $ficha)
-    {
-        //
+     if($data->count() > 0)
+     {
+        foreach($data->toArray() as $key => $value)
+        {
+            foreach($value as $row)
+            {
+                $insert_data[] = array(
+                'Fic_Cod'  => $row['Codigo ficha'],
+                'Fic_Nombre'   => $row['Nombre'],
+                'Fic_Tipo'   => $row['Tipo'],
+                'Fic_Jornada'    => $row['Jornada'],
+                );
+        }
+      }
+
+      if(!empty($insert_data))
+      {
+       DB::table('tb_ficha')->insert($insert_data);
+      }
+     }
+     return back()->with('success', 'Fichas importadas correctamente.');
     }
 }
+

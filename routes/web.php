@@ -46,10 +46,12 @@ Route::post('boton', 'BotonController@boto')->name('boton');
 
 Route::get('dbateria/{Tes_id}', 'BotonController@detalles')->name('dbateria');
 
-Route::get('/ficha', 'HomeController@ficha')->name('ficha');
+//Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
 Route::get('/entrenadores', 'HomeController@entre')->name('entrenadores');
-
+//________________________________________________________________________
+Route::get('/import_excel', 'FichaController@index')->name('import_excel');
+Route::post('/import_excel/import', 'FichaController@import');
 //_________________________________________________________________________
 
 Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
