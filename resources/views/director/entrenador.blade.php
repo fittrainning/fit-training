@@ -18,13 +18,15 @@
                         <th>Ficha</th>
                         <th>Plan</th>
                     </tr>
-                    <tr id="cuer">
-                        <td>{{ Auth::user()->Usu_id }}</td>
-                        <td>{{ Auth::user()->name }}</td>
-                        <td>{{ Auth::user()->Usu_apellidos }}</td>
-                        <td>1907163</td>
-                        <td><a href=""><input id="inn" type="button" value="ver"></a></td>
-                    </tr>
+                    @foreach($entrenadores as $entrenador)
+                        <tr id="cuer">
+                            <td>{{ Auth::user()->Usu_id }}</td>
+                            <td>{{ Auth::user()->name }}</td>
+                            <td>{{ Auth::user()->Usu_apellidos }}</td>
+                            <td>1907163</td>
+                            <td><a href=""><input id="inn" type="button" value="ver"></a></td>
+                        </tr>
+                    @endforeach
                 </table>
                 <br><br>
             </div>
