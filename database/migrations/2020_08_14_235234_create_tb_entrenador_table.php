@@ -18,6 +18,8 @@ class CreateTbEntrenadorTable extends Migration
             $table->string('Ent_ficha');
             $table->string('Ent_nivel_de_formacion');
             $table->string('Ent_Deporte');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
