@@ -53,7 +53,12 @@ class FichaController extends Controller
      }
      return back()->with('success', 'Fichas importadas correctamente.');
     }*/
-
+    public function subir(Request $request){
+        $nivel = new Ficha($request->input());
+        $nivel->saveOrFail();
+        return redirect()->route("ficha")->with(["menssaje" => "ficha creado",
+        ]);
+    }
     public function import(Request $rows)
     {
         $this->validate($rows, [

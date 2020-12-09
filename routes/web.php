@@ -64,4 +64,5 @@ Route::resource("Deportes", "DeporteController");
 Route::resource("Caracterizacion", "CaracterizacionController");
 Route::post('insertar', 'RolesController@insertar')->name('insertar');
 Route::post('roll', 'RolesController@roll')->name('roll');
+Route::post('subir', 'FichaController@subir')->name('subir');
 //_________________________________________________________________________
