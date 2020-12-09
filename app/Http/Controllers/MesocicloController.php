@@ -14,7 +14,7 @@ class MesocicloController extends Controller
      */
     public function index()
     {
-        return view('entrenador.cinicio');
+        return view('entrenador.cinicio', ["Mensajes"=>Mesociclo::all()]);
     }
 
     /**
