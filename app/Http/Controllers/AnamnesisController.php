@@ -24,9 +24,30 @@ class AnamnesisController extends Controller
      */
     public function create(Request $request)
     {
-        $anamnesisdata = request()->all();
+        $anamnesisdata = request()->except('_token');
+        Anamnesis::insert($anamnesisdata);
 
-        return response()->json($anamnesisdata);
+
+        return 'datos guardados';
+    }
+
+    public function subirlogros(Request $request)
+    {
+        //Recibimos el archivo y lo guardamos en la carpeta storage/app/public
+        $request->file('Ana_Logrosdeportivos')->store('public');
+        dd("subido y guardado");
+    }
+    public function subirhismedico(Request $request)
+    {
+        //Recibimos el archivo y lo guardamos en la carpeta storage/app/public
+        $request->file('exampleFormControlFile1')->store('public');
+        dd("subido y guardado");
+    }
+    public function subirhisalimen(Request $request)
+    {
+        //Recibimos el archivo y lo guardamos en la carpeta storage/app/public
+        $request->file('exampleFormControlFile1')->store('public');
+        dd("subido y guardado");
     }
 
     /**

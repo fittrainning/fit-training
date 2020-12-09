@@ -6,8 +6,8 @@
             <div id="cont"><br><br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <form action="{{ route('create')}}" method="POST">
-                        @csrf
+                    <form action="{{ route('create')}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+                        {{ csrf_field() }}
                             <!-- Falta asignar el action -->
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
@@ -25,7 +25,7 @@
                                             <br>
                                             <div class="row">
                                                 <div id="let2">
-                                                    <p>Documento:&nbsp;<input type="text" name="doc" value="{{ Auth::user()->Usu_id }}"></p>
+                                                    <p>Documento:&nbsp;<input type="text" name="Ana_Dep_id" value="{{ Auth::user()->Usu_id }}"></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -37,19 +37,19 @@
                                         <p>
                                             Practica Deporte? &nbsp;
                                             <div id="radio">
-                                                <input type="radio" name="depo" value="huey" checked>
+                                                <input type="radio" name="Ana_DepPract" value="si" >
                                                 <label for="huey">si</label>&nbsp;&nbsp;
                                             </div>
 
                                             <div id="radio">
-                                                <input type="radio" name="depo" value="dewey">
+                                                <input type="radio" name="Ana_DepPract" value="no">
                                                 <label for="dewey">no</label>
                                             </div>
                                         </p>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                         <p>Cual?&nbsp;</p>
                                         <div id="let2">
-                                            <input type="text" id="input">
+                                            <input type="text" id="input" name="Ana_depo">
                                         </div>
                                     </div>
                                     <hr id="separa">
@@ -60,18 +60,18 @@
                                             Posee logros deportivos?:&nbsp;
                                         </p>
                                         <div id="radio">
-                                                <input type="radio" name="logdep" value="si" checked>
+                                                <input type="radio" name="Ana_Logros" value="si" checked>
                                                 <label for="huey">si</label>&nbsp;&nbsp;
                                             </div>
 
                                             <div id="radio">
-                                                <input type="radio" name="logdep" value="no">
+                                                <input type="radio" name="Ana_Logros" value="no">
                                                 <label for="dewey">no</label>
                                             </div>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                         <p>Cual? Adjunte pdf</p>&nbsp;
                                         <div class="form-group">
-                                            <input type="file" class="form-control-file">
+                                            <input type="file" class="form-control-file" name="Ana_Logrosdeportivos" value="logros">
                                         </div>
 
                                     </div>
@@ -83,12 +83,12 @@
                                             Posee experiencia deportiva? &nbsp;
                                         </p>
                                         <div id="radio">
-                                            <input type="radio" name="logdep2" value="si" checked>
+                                            <input type="radio" name="Ana_HistorialDeportivo" value="si" checked>
                                             <label for="huey">si</label>&nbsp;&nbsp;
                                         </div>
 
                                         <div id="radio">
-                                            <input type="radio" name="logdep2" value="no">
+                                            <input type="radio" name="Ana_HistorialDeportivo" value="no">
                                             <label for="dewey">no</label>
                                         </div>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -100,6 +100,40 @@
                                     <br>
                                     <div id="centro" class="form-group">
                                         <input type="file" class="form-control-file">
+                                    </div>
+                                    <hr id="separa">
+                                    <br>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="cenn">
+                                                <h3>Historial clinico</h3>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row d-flex justify-content-center">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <p>Adjunte el archivo de su historial medico: </p>  &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <div class="form-group">
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="Ana_HistorialMedico" value="medico">
+                                            </div>
+                                        </div>
+                                        <hr id="separa">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="cenn">
+                                                <h3>Alimentacion</h3>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row d-flex justify-content-center">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <p>Adjunte el archivo de su historial alimenticio: </p>  &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <div class="form-group">
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="Ana_HabitosAlimenticios" value="comer">
+                                            </div>
+                                        </div>
+                                        <br>
                                     </div>
                                 </div>
                             </div>
