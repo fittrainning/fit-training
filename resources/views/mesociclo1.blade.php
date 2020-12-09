@@ -61,7 +61,7 @@
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
                                                 Minutos totales
-                                                <input type="number" name="'Mes_Minutos_Totales"required>
+                                                <input type="number" name="Mes_Minutos_Totales"required>
                                             </div>
                                         </div><br><br><br>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
