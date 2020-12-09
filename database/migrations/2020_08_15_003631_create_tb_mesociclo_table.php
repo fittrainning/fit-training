@@ -17,8 +17,6 @@ class CreateTbMesocicloTable extends Migration
             $table->Integer('Mes_Id_Gen')->autoIncrement();
             $table->Integer('Mes_Pla_Id');
             $table->smallInteger('Mes_Id');
-            $table->float('Mes_Volumen_Meso');
-            $table->float('Mes_Intensidad_Meso');
             $table->date('Mes_Fecini');
             $table->date('Mes_Fecfin');
             $table->smallInteger('Mes_Nummes');
