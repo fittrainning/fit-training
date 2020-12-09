@@ -50,18 +50,6 @@
                                     <div class="row">
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let2">
-                                                Fecha Inicio
-                                                <input type="date" name="Mes_Fecini">
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
-                                            <div id="let2">
-                                                Fecha Fin
-                                                <input type="date" name="Mes_Fecfin">
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
-                                            <div id="let2">
                                                 Numero de sesiones
                                                 <input type="number" name="Mes_Nummes">
                                             </div>

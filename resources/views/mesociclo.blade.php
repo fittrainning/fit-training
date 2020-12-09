@@ -50,10 +50,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <input type="hidden" name="Plan_res_fuerza" value="0">
-                                        <input type="hidden" name="Plan_res_resistencia" value="0">
-                                        <input type="hidden" name="Plan_res_velocidad" value="0">
-                                        <input type="hidden" name="Plan_res_flexibilidad" value="0">
+                                       
                                         <input type="hidden" name="Plan_id_Ent" value="{{ Auth::user()->Usu_id }}">
                                     </div>
                                 </div>
