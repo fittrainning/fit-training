@@ -34,7 +34,7 @@
                                                 <select name="Pla_id_Dep">
                                                     @foreach($deportistas as $deportista)
                                                     <option value="{{ $deportista->Dep_Usu_id }}">
-                                                        {{ $deportista->Dep_Usu_id }} - <!--nombre usuario-->
+                                                        {{ $deportista->Dep_Usu_id }} <!--nombre usuario-->
                                                     </option>
                                                     @endforeach
                                                 </select>
@@ -50,10 +50,6 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <input type="hidden" name="Pla_res_fuerza" value="0">
-                                        <input type="hidden" name="Pla_res_resistencia" value="0">
-                                        <input type="hidden" name="Pla_res_velocidad" value="0">
-                                        <input type="hidden" name="Pla_res_flexibilidad" value="0">
                                         <input type="hidden" name="Pla_id_Ent" value="{{ Auth::user()->Usu_id }}">
                                     </div>
                                 </div>
@@ -65,10 +61,10 @@
         
                                 </div>
                                 <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                    <img id="centro1" src="{{ asset('../img/Proceso-1.png') }}">
+                                    <button id="bott" type="submit">Crear Plan</button>
                                 </div>
                                 <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                                    <button id="trans" type="submit"><img id="centro1" src="{{ asset('../img/flechas.png') }}" alt="siguiente"></button>
+                                    
                                 </div>
                             </div>
                         </form>
