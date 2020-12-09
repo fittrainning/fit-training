@@ -42,13 +42,16 @@
                                         <tbody>
                                         @foreach($users as $user)
                                             <tr>
-                                                <td>{{ $user->Usu_tipodoc }}</td>
-                                                <td>{{ $user->Usu_id }}</td>
-                                                <td>{{ $user->name }}</td>
-                                                <td>{{ $user->Usu_apellidos }}</td>
-                                                <td>{{ $user->email }}</td>
-                                                <td>{{ $user->Usu_rol }}</td>
-                                                <td><a href="">Editar</a></td>
+                                                <form action="{{ route('roll',[$user]) }}" method="post">
+                                                    @csrf
+                                                    <td>{{ $user->Usu_tipodoc }}</td>
+                                                    <td>{{ $user->Usu_id }}</td>
+                                                    <td>{{ $user->name }}</td>
+                                                    <td>{{ $user->Usu_apellidos }}</td>
+                                                    <td>{{ $user->email }}</td>
+                                                    <td>{{ $user->Usu_rol }}</td>
+                                                    <td><input type="submit" value="Editar"></td>
+                                                </form>
                                             </tr>
                                         @endforeach
                                         </tbody>
@@ -68,7 +71,7 @@
             
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-md">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="staticBackdropLabel">Ingresar Usuarios</h5>
@@ -77,54 +80,87 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form  action="{{ route('insertarRol') }}" method="POST">
-                                        @csrf
-                                        <div class="form-row align-items-center">
-                                            <div class="col-auto my-1">
-                                                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected>Rol usuario.</option>
-                                                    <option value="1">Director</option>
-                                                    <option value="2">Entrenador</option>
-                                                </select>
-                                                <br>
-                                            </div>
-                                            <br>
-                                            <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">tipo documeno</label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" class="form-control" >
+                                    <div class="row">
+                                        <div class="col-2"></div>
+                                        <div class="col-8">
+                                            <form  action="{{ route('insertar') }}" method="POST">
+                                                @csrf
+                                                <div class="form-row align-items-center">
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-5 col-form-label">Rol</label>
+                                                        <select class="col-sm-7" name="Usu_rol">
+                                                            <option selected>Rol usuario.</option>
+                                                            <option value="director">Director</option>
+                                                            <option value="entrenador">Entrenador</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-5 col-form-label">tipo documeno</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control" name="Usu_tipodoc">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-5 col-form-label">Numero documento</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="number" class="form-control" name="Usu_id">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-5 col-form-label">Nombre  </label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control" name="name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-5 col-form-label">Apellido</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control" name="Usu_apellidos">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-5 col-form-label">Email</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="email" class="form-control" name="email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-5 col-form-label">Fecha de Nacimiento</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="date" class="form-control" name="Usu_fecha_nacimiento">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-5 col-form-label">Telefono</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="tel" class="form-control" name="Usu_telefono">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-5 col-form-label">Contraseña</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="password" class="form-control" name="password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-5 col-form-label">Genero</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control" name="Usu_genero">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-5 col-form-label">Direccion</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control" name="Usu_direccion">
+                                                        </div>
+                                                    </div>
+                                                    <input type="hidden" class="form-control" name="Usu_foto" value="foto/porfile.png">
                                                 </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Numero documento</label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" class="form-control" >
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Nombre  </label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" class="form-control" >
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Apellido</label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" class="form-control" >
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Email</label>
-                                                <div class="col-sm-7">
-                                                    <input type="text" class="form-control" >
-                                                </div>
-                                            </div>
-                                            
-                                           
+                                                <input type="submit"  class="btn btn-primary" name="enviar" value="SUBIR USUARIO">
+                                            </form>
                                         </div>
-                                        <input type="submit"  class="btn btn-primary" name="enviar" value="SUBIR USUARIO">
-                                    </form>
+                                        <div class="col-2"></div>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

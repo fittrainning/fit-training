@@ -62,5 +62,6 @@ Route::resource("Mesociclos", "MesocicloController")->parameters(["Mesociclos"=>
 Route::resource("users", "UsuarioController");
 Route::resource("Deportes", "DeporteController");
 Route::resource("Caracterizacion", "CaracterizacionController");
-Route::post('insertar', 'roles@insertar')->name('insertar');
+Route::post('insertar', 'RolesController@insertar')->name('insertar');
+Route::post('roll', 'RolesController@roll')->name('roll');
 //_________________________________________________________________________

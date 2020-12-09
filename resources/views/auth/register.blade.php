@@ -156,7 +156,7 @@
                         <input id="Usu_rol" type="hidden" class="form-control @error('Usu_rol') is-invalid @enderror" name="Usu_rol" value="deportista" required autocomplete="Usu_rol" autofocus>
 
                         <!-- FOTO -->
-                        <input id="Usu_foto" type="hidden" class="form-control @error('Usu_foto') is-invalid @enderror" name="Usu_foto" value="porfile.png" required autocomplete="Usu_foto" autofocus>
+                        <input id="Usu_foto" type="hidden" class="form-control @error('Usu_foto') is-invalid @enderror" name="Usu_foto" value="foto/porfile.png" required autocomplete="Usu_foto" autofocus>
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo electrónico*') }}</label>
