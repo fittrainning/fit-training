@@ -20,7 +20,7 @@ class FichaController extends Controller
 
 
 //importar
-    function import(Request $request)
+    /*function import(Request $request)
     {
 
      $this->validate($request, [
@@ -52,6 +52,31 @@ class FichaController extends Controller
       }
      }
      return back()->with('success', 'Fichas importadas correctamente.');
+    }*/
+
+    public function import(Request $rows)
+    {
+        $this->validate($rows, [
+            'select_file'  => 'required|mimes:xls,xlsx'
+           ]);
+
+        $data = [];
+
+        foreach ($rows as $row) 
+        {
+            $data[] = array(
+                    'Fic_Cod'  => $row[0],
+                    'Fic_Nombre'        => $row[1],
+                    'Fic_Tipo'       => $row[2],
+                    'Fic_Jornada'          => $row[3],
+                );
+        }
+
+        if(!empty($data))
+      {
+       DB::table('tb_ficha')->insert($data);
+      }
+      return back()->with('success', 'Fichas importadas correctamente.');
     }
 }
 
