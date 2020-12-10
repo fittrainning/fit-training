@@ -92,6 +92,13 @@
                                 @php
                                     $cont=0;
                                 @endphp
+                                @php
+                                    $capac[0][0] = "Fueza";
+
+                                    $capac[1][1] = "Velocidad";
+                                    $capac[2][2] = "Resistencia";
+                                    $capac[3][3] = "Elasticidad";
+                                @endphp
                                     
                                     <tr></tr>
 
