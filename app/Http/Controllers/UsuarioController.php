@@ -89,10 +89,6 @@ class UsuarioController extends Controller
 
         $users= User::findOrFail($id);
         return view("editarperfil",compact("users"));
-
-        //$user->fill($request->input())->saveOrFail();
-        //return redirect()->route("users.index")->with(["menssaje" => "Perfil Actualizado"]);
-        //return response()->json($users);
     }
 
     /**
