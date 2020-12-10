@@ -16,11 +16,23 @@
                                             <div id="bott">Ver<br>Agenda</div>
                                         </a>
                                     </div>
-                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                        <a href="{{ route('Planes.create') }}">
-                                            <div id="bott">Crear Plan de<br>Entrenamiento</div>
-                                        </a>
-                                    </div>
+                                    @foreach($planes as $plan)
+                                        @if(Auth::user()->Usu_id == $plan->Pla_id_Ent)
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <a href="{{ route('Planes.create') }}">
+                                                    <div id="bott">Crear Plan de<br>Entrenamiento</div>
+                                                </a>
+                                            </div>
+                                        @else
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <a href="{{ route('Planes.create') }}">
+                                                    <div id="bott">Crear Plan de<br>Entrenamiento</div>
+                                                </a>
+                                            </div>
+
+                                        @endif
+
+                                    @endforeach
                                     @foreach($planes as $plan)
                                         @if(Auth::user()->Usu_id == $plan->Pla_id_Ent)
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
