@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('¡Has iniciado sesión!') }}
+                    <!--     cd C:/Apache24/htdocs/laravel/fit-training     -->
                 </div>
             </div>
         </div>
