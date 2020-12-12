@@ -576,6 +576,12 @@ a.article:hover {
     background: #9DA7AF;
 }
 
+#cuer td input {
+    border: 0px;
+    width: 100%;
+    font-size: 0.8vw;
+}
+
 #inn {
     padding: 3px;
     padding-left: 10px;

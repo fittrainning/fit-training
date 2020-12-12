@@ -6,6 +6,7 @@ use App\Plan;
 use App\Deporte;
 use App\Deportistas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PlanController extends Controller
 {

@@ -14,7 +14,7 @@
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro3">
                                             <div id="let3">
-                                                <a href="{{ route('Microciclos.create') }}">crear microciclo</a>
+                                                <a href="">crear microciclo</a>
                                             </div>
                                         </div>
                                     </div>
