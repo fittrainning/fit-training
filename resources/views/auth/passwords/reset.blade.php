@@ -8,6 +8,9 @@
             <div class="card" id="card">
                 <br>
                 <br>
+                @if(Auth::user())
+                    
+                @else
                 <div class="row">
                     <div class="col-10"></div>
                     <div class="col-2">
@@ -16,6 +19,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
                 <div class="row">
                     <div class="col-3"></div>
                     <div class="col-6"><img id="imgr" src="{{ asset('img/logo.png') }}"></div>
