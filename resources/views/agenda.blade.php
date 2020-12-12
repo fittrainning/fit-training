@@ -1,8 +1,7 @@
 @extends('layouts.app')
 @section('script')
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
 
 <!--fullcalendar-->
 <script src="{{ asset('calendarioweb/core/main.js') }}" defer></script>
@@ -19,8 +18,7 @@
 <!--estilo de vistas calendario-->
 <link href="{{ asset('calendarioweb/list/main.css') }}" rel="stylesheet">
 <link href="{{ asset('calendarioweb/timegrid/main.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href="{{ asset('css/style1.css') }}" rel="stylesheet">
+
 
 <script>
 
@@ -49,10 +47,13 @@
         },
         dateClick:function(info){
 
-            $('#exampleModal').modal();
-            //console.log(info);
-            calendar.addEvent({ title:"Evento x", date:info.dateStr});
-
+            $('#txtfecha').val(info.dateStr)
+                    $('#exampleModal').modal();
+                    //console.log(info);
+                    calendar.addEvent({
+                        title: "Evento x",
+                        date: info.dateStr
+                    });
         },
 
         eventClick:function(info){
@@ -130,7 +131,7 @@
             <input type="text" class="form-group" name="txthora" id="txthora">
             </div>
             <div class="form-group col-md-12">
-                <label>Descripcion:</label><br> 
+                <label>Descripcion:</label><br>
             <textarea name="txtdescripcion" id="" class="form-group" cols="30" rows="10"></textarea>
             </div>
             <div class="form-group col-md-12">

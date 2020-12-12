@@ -27,26 +27,31 @@ class AnamnesisController extends Controller
         $anamnesisdata = request()->except('_token');
         Anamnesis::insert($anamnesisdata);
 
-
         return 'datos guardados';
     }
 
     public function subirlogros(Request $request)
     {
         //Recibimos el archivo y lo guardamos en la carpeta storage/app/public
-        $request->file('Ana_Logrosdeportivos')->store('public');
+        $request->file('Ana_Logrosdeportivos')->store('public/archivosanam');
+        dd("subido y guardado");
+    }
+    public function subirhisdeportivo(Request $request)
+    {
+        //Recibimos el archivo y lo guardamos en la carpeta storage/app/public
+        $request->file('Ana_HistorialDeportivo')->store('public/archivosanam');
         dd("subido y guardado");
     }
     public function subirhismedico(Request $request)
     {
         //Recibimos el archivo y lo guardamos en la carpeta storage/app/public
-        $request->file('exampleFormControlFile1')->store('public');
+        $request->file('Ana_HistorialMedico')->store('public/archivosanam');
         dd("subido y guardado");
     }
     public function subirhisalimen(Request $request)
     {
         //Recibimos el archivo y lo guardamos en la carpeta storage/app/public
-        $request->file('exampleFormControlFile1')->store('public');
+        $request->file('Ana_HabitosAlimenticios')->store('public/archivosanam');
         dd("subido y guardado");
     }
 
