@@ -41,7 +41,7 @@
                                 @if (Route::has('login'))
                                     <div class="top-right links">
                                         @auth
-                                            <a class="dropdown-item btn" type="button" href="{{ url('/home') }}">Inicio</a>
+                                            <a class="dropdown-item btn" type="button" href="{{ url('/home') }}">Iniciar Sesion</a>
                                         @else
                                             <a class="dropdown-item btn" type="button" href="{{ route('login') }}">Iniciar Sesion</a>
                                         @endauth
