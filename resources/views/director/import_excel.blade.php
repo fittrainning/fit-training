@@ -112,13 +112,13 @@
                                                 <th>Jornada</th>
                                             </tr>
                                             @foreach($data as $row)
-                                            <tr>
-                                                <td>{{ $row->Fic_Cod }}</td>
-                                                <td>{{ $row->Fic_Nombre }}</td>
-                                                <td>{{ $row->Fic_Tipo }}</td>
-                                                <td>{{ $row->Fic_Jornada }}</td>
-                                            </tr>
-                                        @endforeach
+                                                <tr>
+                                                    <td>{{ $row->Fic_Cod }}</td>
+                                                    <td>{{ $row->Fic_Nombre }}</td>
+                                                    <td>{{ $row->Fic_Tipo }}</td>
+                                                    <td>{{ $row->Fic_Jornada }}</td>
+                                                </tr>
+                                            @endforeach
                                         </table>
                                     </div>
                                 </div>

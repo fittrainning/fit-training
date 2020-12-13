@@ -9,7 +9,18 @@
                 <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                     
-  
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+    
+                        </div>
+    
+                        <div  class="col-10"></div>
+                        <div  class="col-2 ">
+                            <div id="cerrar">
+                                <input OnClick="location.href='{{ url('/bateria') }}'" type=image src="{{asset ('img/cerrar.png ')}}" width="30" height="30"><!--input boton de cerrar y regresar a index-->
+                            </div>
+                        </div>
+                    </div>
                     <div id="colo">
                         <br>
                     
@@ -21,7 +32,7 @@
                                         <h3>Registro de Resultados</h3>
                                     </div>
                                 </div><br><br><br>
-                                <form action = "{{ route('rtest') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
+                                <form action = "{{ route('subirt') }}" method="POST" class="form-group">    
                                     @csrf
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -44,16 +55,10 @@
             
                                                 <!-- FECHA -->
                                                 <div class="form-group row">
-                                                    <label for="Usu_fecha_nacimiento" class="col-md-4 col-form-label text-md-right">{{ __('FECHA') }}</label>
+                                                    <label for="Usu_fecha_nacimiento" class="col-md-4 col-form-label text-md-right">FECHA</label>
             
                                                     <div id="let" class="col-md-6">
-                                                        <input id="Usu_fecha_nacimiento" type="date" class="form-control @error('Usu_fecha_nacimiento') is-invalid @enderror" name="Fecha" value="{{ old('Usu_fecha_nacimiento') }}" required autocomplete="Usu_fecha_nacimiento" autofocus>
-            
-                                                        @error('Usu_fecha_nacimiento')
-                                                            <span class="invalid-feedback" role="alert">
-                                                                <strong>{{ $message }}</strong>
-                                                            </span>
-                                                        @enderror
+                                                        <input id="Usu_fecha_nacimiento" type="date" class="form-control" name="Fecha" required >
                                                     </div>
                                                 </div>
             
@@ -97,13 +102,15 @@
                                         <table class="table table-bordered table-striped">
                                             <tr>
                                                 <th>DOCUMENTO</th>
+                                                <th>FECHA</th>
                                                 <th>CALIFICACION</th>
-                                            <!-- foreach-->
+                                                @foreach($dat as $row)
                                                 <tr>
-                                                    <td>tt</td>
-                                                    <td>tt</td>
+                                                    <td>{{ $row->Rem_Usu_id }}</td>
+                                                    <td>{{ $row ->Rem_fecha }}</td>
+                                                    <td>{{ $row->Rem_resultado }}</td>
                                                 </tr>
-                                            
+                                            @endforeach
                                         </table>
                                     </div>
                                 </div>
