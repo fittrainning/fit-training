@@ -21,7 +21,7 @@
                                         <h3>Registro de Resultados</h3>
                                     </div>
                                 </div><br><br><br>
-                                <form action = "{{ route('vtest') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
+                                <form action = "{{ route('rtest') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
                                     @csrf
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -33,11 +33,11 @@
                                                     <label class="col-md-4 col-form-label text-md-right">DOCUMENTO</label>
                                                     <div id="let3" class="col-md-6">
                                                         <select name="Pla_id_Dep">
-                                                           
-                                                            <option value="">
-                                                                 <!--nombre usuario-->
+                                                            @foreach($deportes as $depo)
+                                                            <option value="{{ $depo->Dep_Usu_id }}">
+                                                                {{ $depo->Dep_Usu_id }} <!--nombre usuario-->
                                                             </option>
-                                                           
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div> 
