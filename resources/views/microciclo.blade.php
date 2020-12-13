@@ -30,7 +30,7 @@
                                                     <th>Nº Sesiones</th>
                                                     <th>Acciones</th>
                                                 </tr>
-                                                @foreach($mesos as $meso)
+                                                @foreach($micro as $mic)
                                                     <tr id="cuer">
                                                         <input type="hidden" name="Mes_Id_Gen" value="{{ $meso->Mes_Id_Gen }}">
                                                         <td><input type="text" name="Mes_Id" value="{{ $meso->Mes_Id }}"></td>
@@ -49,13 +49,6 @@
                                                 @endforeach
                                             </table>
                                         </div>
-                                        @foreach($micro as $mic)
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro3">
-                                            <div id="let3">
-                                                {{ $mic->Mic_id}} - {{ $mic->Mic_tipo}}
-                                            </div>
-                                        </div>
-                                        @endforeach
                                     </div>
                                 </div>
                             </div>
