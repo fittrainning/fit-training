@@ -45,9 +45,9 @@
                                                     <div id="let3" class="col-md-6">
                                                         <select name="Pla_id_Dep">
                                                             @foreach($deportes as $depo)
-                                                            <option value="{{ $depo->Dep_Usu_id }}">
-                                                                {{ $depo->Dep_Usu_id }} <!--nombre usuario-->
-                                                            </option>
+                                                                <option value="{{ $depo->Dep_Usu_id }}">
+                                                                    {{ $depo->Dep_Usu_id }} <!--nombre usuario-->
+                                                                </option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -81,13 +81,19 @@
                                             </div>
                                         </div>
                                     </div><br><br>
-                                    <div class="form-group row mb-0">
-                                        <div class=" col-12  text-center">
-                                            <button type="submit" class="btn btn-secondary  btn-sm"  id="buttonns">
-                                                <img src="{{ asset('../img/guardar.png') }}" alt="img" width="35px"> &nbsp; GUARDAR RESULTADO
-                                            </button>
-                                        </div>
-                                    </div> 
+                                   
+                                        <div class="form-group row mb-0">
+                                            <div class=" col-12  text-center">
+                                                @foreach($dat as $row)
+                                                    <a href="{{ route('rtest',) }}">
+                                                        <button type="button" class="btn btn-secondary  btn-sm"  id="buttonns">
+                                                            <img src="{{ asset('../img/guardar.png') }}" alt="img" width="35px"> &nbsp; GUARDAR RESULTADO
+                                                        </button>
+                                                    </a>
+                                                @endforeach
+                                            </div>
+                                        </div> 
+                                   
                                 </form>
                             </div>
                             <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>

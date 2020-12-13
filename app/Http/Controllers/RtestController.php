@@ -9,13 +9,22 @@ Use DB;
 
 class RtestController extends Controller
 {
-    function index()
+    public function index($Rem_Tes_id)
     {
      $dat = rtest::orderBy('Rem_id', 'DESC')->get();
      return view('entrenador.rtest', compact('dat'), ["deportes"=>Deportistas::all()]);
     }
 
+    public function detallet($Rem_Tes_id)
+    {
+        // Seleccionar un registro por su 'id' 
+        
+        $dat = DB::Table('tb_test')->where('Tes_id','=',$Rem_Tes_id)->get();
+        return view('entrenador.rtest', compact('dat'));
+    }
+    
     //RESULTADO TEST
+
     public function rtestt()
     {
         return view('entrenador.rtest');
