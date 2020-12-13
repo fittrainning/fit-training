@@ -20,14 +20,21 @@ class MicrocicloController extends Controller
         return view('microciclo', ["micro"=>Microciclo::all()],["user"=>User::all()]);
     }
 
+    public function lista($meso)
+    {
+        $micro= Microciclo::where('Mic_Mes_Id_Gen', '=', $meso)->get();
+        return view('microciclo', compact('micro'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view('microciclo1', ["plan"=>Plan::all()], ["meso"=>Mesociclo::all()]);
+        $micro= Microciclo::where('Mic_Mes_Id_Gen', '=', $id)->get();
+        return view('microciclo1', compact('micro'));
     }
 
     /**

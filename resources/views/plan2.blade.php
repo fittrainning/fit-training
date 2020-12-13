@@ -6,64 +6,39 @@
             <div id="cont"><br><br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <form action="" method="POST">
+                        <form action="{{ route('Planes.update', $plan->Pla_id) }}" method="POST">
+                            @method("PUT")
                             @csrf
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
-                                    <h2 id="centro">Mesociclo</h2>
+                                    <h2 id="centro">Plan de Entrenamiento</h2>
                                     <hr id="separa"><br>
                                     <div class="row">
-                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
-                                                Tipo
-                                                <select name="Mes_Id" required>
-                                                    <option value="1">Entrante</option>
-                                                    <option value="2">Basico Desarrollador</option>
-                                                    <option value="3">Basico Estabilizador</option>
-                                                    <option value="4">Control</option>
-                                                    <option value="5">Pre-competitivo</option>
-                                                    <option value="6">Competencia</option>
-                                                    <option value="7">Recuperacion</option>
-                                                </select>
+                                                Fecha Inicial
+                                                <input type="date" name="Pla_fecini">
                                             </div>
                                         </div>
-                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
+                                            <div id="let3">
+                                                Fecha Final
+                                                <input type="date" name="Pla_fecfin">
+                                            </div>
+                                        </div>
                                     </div>
                                     <hr id="separa"><br>
                                     <div class="row">
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
-                                                Fecha Inicio
-                                                <input type="date" name="Mes_Fecini" required>
+                                                Deportista
+                                                <input type="text" name="Pla_id_Dep" value="{{$plan->Pla_id_Dep}}">
                                             </div>
                                         </div>
                                         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
                                             <div id="let3">
-                                                Fecha Fin
-                                                <input type="date" name="Mes_Fecfin"required>
-                                            </div>
-                                        </div>
-                                        <input type="hidden" name="Pla_id_Ent" value="{{ Auth::user()->Usu_id }}">
-                                    </div>
-                                    <hr id="separa"><br>
-                                    <div class="row">
-                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
-                                            <div id="let3">
-                                                Numero de sesiones
-                                                <input type="number" name="Mes_Nummes"required>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
-                                            <div id="let3">
-                                                Minutos totales
-                                                <input type="number" name="'Mes_Minutos_Totales"required>
-                                            </div>
-                                        </div><br><br><br>
-                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="centro3">
-                                            <div id="let3">
-                                                N° sesiones por mes
-                                                <input type="number" name="Mes_Num_Sesxmes"required>
+                                                Deporte
+                                                <input type="text" name="Pla_deporte" value="{{ $plan->Pla_deporte }}">
                                             </div>
                                         </div>
                                         <input type="hidden" name="Pla_id_Ent" value="{{ Auth::user()->Usu_id }}">

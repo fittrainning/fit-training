@@ -64,6 +64,10 @@ class HomeController extends Controller
     public function rtest(){
         return view('entrenador.rtest');
     }
+    public function vtest(){
+        $rest = DB::Table('tb_resmensual')->get();
+        return view('entrenador.vtest');
+    }
     
     public function cara(){
         return view('entrenador.caracterizacion');

@@ -11,8 +11,13 @@
                     <div id="buscarme" class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                         <input type="hidden" name="Men_em_Usu_id" value="{{ Auth::user()->Usu_id }}">
                         <select name="Men_re_Usu_id" id="bucarmens">
-                            <option id="buss" value="1234567890">Prueba</option>
-                            <option id="buss" value="1022437184">yo</option>
+                            @foreach ($users as $user)
+                                @if($user->Usu_id == Auth::user()->Usu_id)
+                                    
+                                @else
+                                    <option id="buss" value="{{ $user->Usu_id }}">{{ $user->Usu_id }} - {{ $user->name }}</option>
+                                @endif
+                            @endforeach
                         </select>
                         <img id="bucarmens1" src="{{ asset('img/buscar.png') }}" alt="">
                     </div>

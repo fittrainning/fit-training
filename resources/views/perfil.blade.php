@@ -22,7 +22,7 @@
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                         <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
                             @foreach($users as $user)
-                                @if($user->Usu_id == Auth::user()->Usu_id)
+                                @if($user->Usu_id == Auth::user()->Usu_id && $user->id == Auth::user()->id)
                                     <div>
                                         <div class="row">
                                             <input type="hidden" name="id" value="{{$user->id }}">
@@ -56,11 +56,18 @@
                                                 <input type="text" name="Usu_direccion" value="{{ $user->Usu_direccion }}" readonly>
                                             </div>
                                         </div>
-                                        <div id="color" class="form-group row">
-                                            <label class="col-md-4 col-form-label text-md-left">Contraseña</label>
-                                            <div id="let3" class="col-md-8">
-                                                <input type="password" name="password" value="························" readonly>
+                                        <div class="form-group row mb-0">
+                                            <div class="col-3"></div>
+                                            <div class="col-6">
+                                                @if (Route::has('password.request'))
+                                                    <a href="{{ route('password.request') }}">
+                                                        <button id="conntra" class="btn btn-primary">
+                                                            {{ __('Cambiar Contraseña') }}
+                                                        </button>
+                                                    </a>
+                                                @endif
                                             </div>
+                                            <div class="col-3"></div>
                                         </div>
                                         <div class="form-group row mb-0">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">

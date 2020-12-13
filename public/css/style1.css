@@ -576,6 +576,12 @@ a.article:hover {
     background: #9DA7AF;
 }
 
+#cuer td input {
+    border: 0px;
+    width: 100%;
+    font-size: 0.8vw;
+}
+
 #inn {
     padding: 3px;
     padding-left: 10px;
@@ -662,5 +668,22 @@ a.article:hover {
     padding: 20px;
     margin-left: 25%;
     margin-right: 25%;
+    margin-bottom: 25px;
+}
+
+#conntra {
+    background-color: #CED8E1;
+    color: rgb(16, 24, 51);
+    text-align: center;
+    box-shadow: 0 10px 30px 0 black;
+    border-radius: 50px;
+    border: 0px;
+    width: 80%;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 25px;
 }

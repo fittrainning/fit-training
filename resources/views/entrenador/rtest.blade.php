@@ -15,52 +15,70 @@
                             </div>
                         </div>
                     </div><br><br>
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                            <div id="color" class="content-box-large">
-                                <!-- DOCUMENTO -->
-                                <div class="form-group row">
-                                    <label for="Usu_id" class="col-md-4 col-form-label text-md-right">{{ __('Numero de Documento*') }}</label>
+                    <form action = "{{ route('vtest') }}" method="POST" Enctype="multipart/form-data" class="form-group">    
+                        @csrf
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div id="color" class="content-box-large">
 
-                                    <div id="let" class="col-md-6">
-                                        <input id="Usu_id" type="number" class="form-control @error('Usu_id') is-invalid @enderror" name="Usu_id" value="{{ old('Usu_id') }}" required autocomplete="Usu_id" autofocus>
-                                        @error('Usu_id')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                    <!-- SELECT-->
+
+                                    <div class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">DOCUMENTO</label>
+                                        <div id="let3" class="col-md-6">
+                                            <select name="Pla_id_Dep">
+                                                @foreach($deportistas as $deportista)
+                                                <option value="{{ $deportista->Dep_Usu_id }}">
+                                                    {{ $deportista->Dep_Usu_id }} <!--nombre usuario-->
+                                                </option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div> 
+
+                                    <!-- FECHA -->
+                                    <div class="form-group row">
+                                        <label for="Usu_fecha_nacimiento" class="col-md-4 col-form-label text-md-right">{{ __('FECHA') }}</label>
+
+                                        <div id="let" class="col-md-6">
+                                            <input id="Usu_fecha_nacimiento" type="date" class="form-control @error('Usu_fecha_nacimiento') is-invalid @enderror" name="Fecha" value="{{ old('Usu_fecha_nacimiento') }}" required autocomplete="Usu_fecha_nacimiento" autofocus>
+
+                                            @error('Usu_fecha_nacimiento')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
                                     </div>
-                                </div>
 
-                                <!-- FECHA -->
-                                <div class="form-group row">
-                                    <label for="Usu_fecha_nacimiento" class="col-md-4 col-form-label text-md-right">{{ __('Fecha*') }}</label>
-
-                                    <div id="let" class="col-md-6">
-                                        <input id="Usu_fecha_nacimiento" type="date" class="form-control @error('Usu_fecha_nacimiento') is-invalid @enderror" name="Usu_fecha_nacimiento" value="{{ old('Usu_fecha_nacimiento') }}" required autocomplete="Usu_fecha_nacimiento" autofocus>
-
-                                        @error('Usu_fecha_nacimiento')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
+                                    <!-- SELECT-->
+                                    
+                                    <div class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">CALIFICACION</label>
+                                        <div id="let3" class="col-md-6">
+                                            <select id="selectb" name="Calificacion" class="form-control" required>
+                                                <option> Seleccione la Calificacion</option>
+                                                    <option value="5">Excelente</option>
+                                                    <option value="4">Bien</option>
+                                                    <option value="3">Aceptable</option>
+                                                    <option value="2">Deficiente</option>
+                                                    <option value="1">Critico</option>
+                                            </select>
+                                        </div>
+                                    </div> 
+                                    <center><p>Seleccione una Calificacion donde 5 es Excelente y 1 es Critico</p></center>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                            <table>
-                                <tr>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                                <tr></tr>
-                            </table>
+                        <div class="form-group row mb-0">
+                            <div class="col-12">
+                                <button id="but" type="submit" name="Agregar" class="btn btn-primary">
+                                    {{ __('AGREGAR') }}
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
+                    
                 </div>
             </div>
         </div>

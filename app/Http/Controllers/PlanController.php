@@ -6,6 +6,7 @@ use App\Plan;
 use App\Deporte;
 use App\Deportistas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PlanController extends Controller
 {
@@ -67,13 +68,10 @@ class PlanController extends Controller
      * @param  \App\Plan  $plan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Plan $plan)
+    public function edit(Plan $id)
     {
-        return view("plan2", ["planes" => $plan,]);
-    }
-    public function edit2(Plan $plan)
-    {
-        return view("plan2", ["deportes"=>Deporte::all()]);
+        $plan = Plan::findOrFail($id);
+        return view("plan2", compact('plan'));
     }
 
     /**
@@ -85,7 +83,8 @@ class PlanController extends Controller
      */
     public function update(Request $request, Plan $plan)
     {
-        //
+        $plan->fill($request->input())->saveOrFail();
+        return redirect()->route("Planes.index")->with(["mensaje" => "Plan Actualizado"]);
     }
 
     /**
