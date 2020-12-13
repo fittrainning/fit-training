@@ -83,7 +83,7 @@
                                     </div><br><br>
                                     <div class="form-group row mb-0">
                                         <div class=" col-12  text-center">
-                                            <button type="button" class="btn btn-secondary  btn-sm"  id="buttonns">
+                                            <button type="submit" class="btn btn-secondary  btn-sm"  id="buttonns">
                                                 <img src="{{ asset('../img/guardar.png') }}" alt="img" width="35px"> &nbsp; GUARDAR RESULTADO
                                             </button>
                                         </div>

@@ -11,20 +11,20 @@ class RtestController extends Controller
 {
     function index()
     {
-     $dat = DB::table('tb_resmensual')->orderBy('Rem_id', 'DESC')->get();
-     return view('entrenador.rtest', compact('dat'));
+     $dat = rtest::orderBy('Rem_id', 'DESC')->get();
+     return view('entrenador.rtest', compact('dat'), ["deportes"=>Deportistas::all()]);
     }
 
     //RESULTADO TEST
     public function rtestt()
     {
-        return view('entrenador.rtest', ["deportes"=>Deportistas::all()]);
+        return view('entrenador.rtest');
     }
     
     public function subir(Request $request){
         $nivel = new rtest($request->input());
         $nivel->saveOrFail();
-        return redirect()->route("entrenador.rtest");
+        return redirect()->route("rtest");
     }
 
     public function import(Request $rows)
