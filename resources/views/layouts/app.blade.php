@@ -21,7 +21,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style1.css') }}" rel="stylesheet">
-
+    @yield('script')
     <!-- Logo -->
     <link rel="icon" type="image/png" href="{{ asset('../img/logo.png')}}">
 </head>
@@ -187,7 +187,7 @@
             });
         });
     </script>
-    @yield('script')
+
 
 
     @endguest

@@ -87,6 +87,31 @@
       });
       calendar.setOption('locale','Es');
       calendar.render();
+      $('#btnagregar').click(function(){
+          recolectarDatosGUI("POST");
+      });
+
+      function recolectarDatosGUI(method){
+
+        nuevoEvento={
+
+            Ses_id:$('#txtId').val(),
+            Ses_Mic_Id_Gen:$('#txtIdmicro').val(),
+            Ses_lugar:$('#txtLugar').val(),
+            Ses_color:$('#txtcolor').val(),
+            Ses_textColor:'#FFFFFF',
+            Ses_horastart:$('#txtfecha').val()+" "+$('#txthora').val(),
+            Ses_horaend:$('#txtfecha').val()+" "+$('#txthora').val(),
+            Ses_volumen:$('#txtvolumen').val(),
+            Ses_intensidad:$('#txtintensidad').val(),
+            Ses_calificacion:$('#txtcalificaion').val(),
+            Ses_capacidad:$('#txtcapacidad').val(),
+            Ses_tipo_preparacion:$('#txtpreparacion').val(),
+            '_token':$("meta[name='csrf-token']").attr("content"),
+            '_method':method
+        }
+
+      }
     });
 
   </script>
@@ -123,17 +148,46 @@
             <div class="form-row">
 
             <div class="form-group col-md-6">
-                <label>Titulo:</label><br>
-            <input type="text" class="form-group" name="txttitulo" id="txttitulo">
+                <label>Id:</label><br>
+            <input type="text" class="form-group" name="txtId" id="txtId">
             </div>
             <div class="form-group col-md-4">
-                <label>Hora:</label>
+                <label>id Microciclo:</label>
+            <input type="text" class="form-group" name="txtIdmicro" id="txtIdmicro">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Lugar:</label><br>
+            <input type="text" class="form-group" name="txtLugar" id="txtLugar">
+            </div>
+            <div class="form-group col-md-6">
+                <label>fecha:</label><br>
+            <input type="text" class="form-group" name="txtfecha" id="txthora">
+            </div>
+            <div class="form-group col-md-6">
+                <label>hora:</label><br>
             <input type="text" class="form-group" name="txthora" id="txthora">
             </div>
-            <div class="form-group col-md-12">
-                <label>Descripcion:</label><br>
-            <textarea name="txtdescripcion" id="" class="form-group" cols="30" rows="10"></textarea>
+            <div class="form-group col-md-6">
+                <label>volumen:</label><br>
+            <input type="text" class="form-group" name="txtvolumen" id="txtvolumen">
             </div>
+            <div class="form-group col-md-6">
+                <label>intensidad:</label><br>
+            <input type="text" class="form-group" name="txtintensidad" id="txtintensidad">
+            </div>
+            <div class="form-group col-md-6">
+                <label>calificacion:</label><br>
+            <input type="text" class="form-group" name="txtcalificaion" id="txtcalificaion">
+            </div>
+            <div class="form-group col-md-6">
+                <label>capacidad:</label><br>
+            <input type="text" class="form-group" name="txtcapacidad" id="txtcapacidad">
+            </div>
+            <div class="form-group col-md-6">
+                <label>tipo de preparacion:</label><br>
+            <input type="text" class="form-group" name="txtpreparacion" id="txtpreparacion">
+            </div>
+
             <div class="form-group col-md-12">
                 <label>Color:</label><br>
             <input type="color" name="txtcolor" class="form-group" id="txtcolor">
