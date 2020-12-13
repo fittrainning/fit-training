@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use DB;
 use App\boton;
 use App\rtest;
+use App\Deportistas;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -71,6 +72,8 @@ class BotonController extends Controller
         //dd($request->all());
         //lo campos de request deben ser lo mismos que en el formulario 
         $rtest = new rtest;
+        //$rtest->Rem_Tes_id = $request->idtest;
+        $rtest->Rem_Usu_id = $request->Documento;
         $rtest->Rem_fecha = $request->Fecha;
         $rtest->Rem_resultado = $request->Calificacion;
 
@@ -78,7 +81,7 @@ class BotonController extends Controller
         dd($rtest);
 
         $rtes = DB::Table('tb_resmensual')->get();
-        return view('entrenador.vtest', compact('rtes'));
+        return view('entrenador.vtest', compact('rtes', ["deportistas"=>Deportistas::all()]));
         //return redirect(),('status','$Boton->Tes_nombre');
     }
 

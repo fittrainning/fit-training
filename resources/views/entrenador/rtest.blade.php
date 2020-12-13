@@ -21,19 +21,20 @@
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                 <div id="color" class="content-box-large">
 
-                                    <!-- DOCUMENTO 
-                                    <div class="form-group row">
-                                        <label for="Usu_id" class="col-md-4 col-form-label text-md-right">{{ __('N° DOCUMENTO') }}</label>
+                                    <!-- SELECT-->
 
-                                        <div id="let" class="col-md-6">
-                                            <input id="Usu_id" type="number" class="form-control @error('Usu_id') is-invalid @enderror" name="Documento" value="{{ old('Usu_id') }}" required autocomplete="Usu_id" autofocus>
-                                            @error('Usu_id')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
+                                    <div class="form-group row">
+                                        <label class="col-md-4 col-form-label text-md-right">DOCUMENTO</label>
+                                        <div id="let3" class="col-md-6">
+                                            <select id="selectb" name="Documento" class="form-control" required>
+
+                                                @foreach($deportistas as $deportista)
+                                                <option> {{ $deportista ->Dep_Usu_id }}</option>  
+                                                @endforeach
+
+                                            </select>
                                         </div>
-                                    </div>-->
+                                    </div> 
 
                                     <!-- FECHA -->
                                     <div class="form-group row">
