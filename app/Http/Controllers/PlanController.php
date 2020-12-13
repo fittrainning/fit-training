@@ -68,13 +68,10 @@ class PlanController extends Controller
      * @param  \App\Plan  $plan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Plan $plan)
+    public function edit(Plan $planes)
     {
-        return view("plan2", ["planes" => $plan,]);
-    }
-    public function edit2(Plan $plan)
-    {
-        return view("plan2", ["deportes"=>Deporte::all()]);
+        return view("plan2", ["planes" => $planes,
+        ]);
     }
 
     /**
@@ -86,7 +83,8 @@ class PlanController extends Controller
      */
     public function update(Request $request, Plan $plan)
     {
-        //
+        $plan->fill($request->input())->saveOrFail();
+        return redirect()->route("Planes.index")->with(["mensaje" => "Plan Actualizado"]);
     }
 
     /**
