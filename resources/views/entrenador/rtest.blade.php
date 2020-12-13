@@ -26,12 +26,12 @@
                                     <div class="form-group row">
                                         <label class="col-md-4 col-form-label text-md-right">DOCUMENTO</label>
                                         <div id="let3" class="col-md-6">
-                                            <select id="selectb" name="Documento" class="form-control" required>
-
+                                            <select name="Pla_id_Dep">
                                                 @foreach($deportistas as $deportista)
-                                                <option> {{ $deportista ->Dep_Usu_id }}</option>  
+                                                <option value="{{ $deportista->Dep_Usu_id }}">
+                                                    {{ $deportista->Dep_Usu_id }} <!--nombre usuario-->
+                                                </option>
                                                 @endforeach
-
                                             </select>
                                         </div>
                                     </div> 

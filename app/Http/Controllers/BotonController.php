@@ -67,22 +67,9 @@ class BotonController extends Controller
     }
 
     //RESULTADO TEST
-    public function rtest(Request $request)
+    public function rtest()
     {
-        //dd($request->all());
-        //lo campos de request deben ser lo mismos que en el formulario 
-        $rtest = new rtest;
-        //$rtest->Rem_Tes_id = $request->idtest;
-        $rtest->Rem_Usu_id = $request->Documento;
-        $rtest->Rem_fecha = $request->Fecha;
-        $rtest->Rem_resultado = $request->Calificacion;
-
-        $rtest->save();
-        dd($rtest);
-
-        $rtes = DB::Table('tb_resmensual')->get();
-        return view('entrenador.vtest', compact('rtes'));
-        //return redirect(),('status','$Boton->Tes_nombre');
+        return view('vtest', ["deportistas"=>rtest::all()], ["deportes"=>Deportistas::all()]);
     }
 
 
