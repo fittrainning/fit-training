@@ -81,7 +81,7 @@ class BotonController extends Controller
         dd($rtest);
 
         $rtes = DB::Table('tb_resmensual')->get();
-        return view('entrenador.vtest', compact('rtes', ["deportistas"=>Deportistas::all()]));
+        return view('entrenador.vtest', compact('rtes'));
         //return redirect(),('status','$Boton->Tes_nombre');
     }
 
