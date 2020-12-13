@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\boton;
+use App\rtest;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -62,5 +63,32 @@ class BotonController extends Controller
         
         $bateri = DB::Table('tb_test')->where('Tes_id','=', $Tes_id)->get();
         return view('entrenador.dbateria', compact('bateri'));
+    }
+
+    //RESULTADO TEST
+    public function rtest(Request $request)
+    {
+        //dd($request->all());
+        //lo campos de request deben ser lo mismos que en el formulario 
+        $rtest = new rtest;
+        $rtest->Rem_fecha = $request->Fecha;
+        $rtest->Rem_resultado = $request->Calificacion;
+
+        $rtest->save();
+        dd($rtest);
+
+        $rtes = DB::Table('tb_resmensual')->get();
+        return view('entrenador.vtest', compact('rtes'));
+        //return redirect(),('status','$Boton->Tes_nombre');
+    }
+
+
+    // Detalles del Producto
+    public function dtest($Rem_id)
+    {
+        // Seleccionar un registro por su 'id' 
+        
+        /*$rest = DB::Table('tb_resmensual')->where('Rem_id','=', $Rem_id)->get();
+        return view('entrenador.vtest', compact('rest'));*/
     }
 }

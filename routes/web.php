@@ -41,6 +41,9 @@ Route::post('/create','AnamnesisController@create')->name('create');
 Route::get('/bateria', 'HomeController@bateri')->name('/bateria');
 Route::get('rtest', 'HomeController@rtest')->name('rtest');
 
+Route::get('vtest', 'HomeController@vtest')->name('vtest');
+Route::post('vtest', 'BotonController@rtest')->name('vtest');
+
 Route::get('boton', 'HomeController@boto')->name('boton');
 Route::post('boton', 'BotonController@boto')->name('boton');
 
