@@ -59,7 +59,7 @@ Route::post('/import_excel/import', 'FichaController@import');
 
 Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
 Route::resource("Deportistas", "DeportistaController")->parameters(["Deportistas"=>"Deportista"]);
-Route::resource("Planes", "PlanController")->parameters(["Planes"=>"Plan"]);
+Route::resource("Planes", "PlanController");
 Route::resource("Mesociclos", "MesocicloController")->parameters(["Mesociclos"=>"Mesociclo"]);
 Route::get("Microciclo/{meso}", "MicrocicloController@lista")->name('Microciclo');
 //Route::resource("Microciclos", "MicrocicloController")->parameters(["Microciclos"=>"Microciclo"]);

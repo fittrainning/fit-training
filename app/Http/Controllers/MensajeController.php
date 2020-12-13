@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mensajeria;
+use App\User;
 use Illuminate\Http\Request;
 
 class MensajeController extends Controller
@@ -28,7 +29,7 @@ class MensajeController extends Controller
      */
     public function create()
     {
-        return view("enviarm");
+        return view("enviarm", ["users"=>User::all()]);
     }
 
     /**

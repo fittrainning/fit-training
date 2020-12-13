@@ -68,10 +68,10 @@ class PlanController extends Controller
      * @param  \App\Plan  $plan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Plan $planes)
+    public function edit(Plan $id)
     {
-        return view("plan2", ["planes" => $planes,
-        ]);
+        $plan = Plan::findOrFail($id);
+        return view("plan2", compact('plan'));
     }
 
     /**
