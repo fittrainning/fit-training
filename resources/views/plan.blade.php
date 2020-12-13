@@ -22,7 +22,13 @@
                                     @foreach($planes as $plan)
                                         @if(Auth::user()->Usu_id == $plan->Pla_id_Ent)
                                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                <a href="{{ route('Planes.edit',[$plan->Pla_id]) }}">
+                                                <input type="text" name="" value="{{ $plan->Pla_id }}">
+                                                <input type="text" name="" value="{{ $plan->Pla_fecini }}">
+                                                <input type="text" name="" value="{{ $plan->Pla_fecfin }}">
+                                                <input type="text" name="" value="{{ $plan->Pla_deporte }}">
+                                                <input type="text" name="" value="{{ $plan->Pla_id_Ent }}">
+                                                <input type="text" name="" value="{{ $plan->Pla_id_Dep }}">
+                                                <a href="{{ route("Planes.edit",[$plan->Pla_id]) }}">
                                                     <div id="bott">Editar Plan de<br>Entrenamiento</div>
                                                 </a>
                                             </div>
