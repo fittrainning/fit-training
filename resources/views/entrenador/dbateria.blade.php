@@ -64,15 +64,26 @@
                                     @endif
                                 @endforeach
                             </div><br><br>
-                            <!--<div class="form-group row mb-0">
-                                <div class=" col-12 text-center">
-                                    <a href="{{ route('rtest') }}">
-                                        <button type="button" class="btn btn-secondary  btn-sm"  id="buttonns">
-                                            <img src="{{ asset('../img/22.png') }}" alt="img" width="40px"> &nbsp; INGRESAR RESULTADO
-                                        </button>
-                                    </a>
+                            <div class="row">
+                                <div class="form-group row mb-0">
+                                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center">
+                                        <a href="{{ route('rtest') }}">
+                                            <button type="button" class="btn btn-secondary  btn-sm"  id="buttonns">
+                                                <img src="{{ asset('../img/22.png') }}" alt="img" width="40px"> &nbsp; INGRESAR RESULTADO
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div> 
+                                <div class="form-group row mb-0">
+                                    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center">
+                                        <a href="{{ route('rtest') }}">
+                                            <button type="button" class="btn btn-secondary  btn-sm"  id="buttonns">
+                                                <img src="{{ asset('../img/view.png') }}" alt="img" width="40px"> &nbsp; VER RESULTADO
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>

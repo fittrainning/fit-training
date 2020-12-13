@@ -34,7 +34,7 @@ class MicrocicloController extends Controller
     public function create($id)
     {
         $micro= Microciclo::where('Mic_Mes_Id_Gen', '=', $id)->get();
-        return view('microciclo1', compact('micro')]);
+        return view('microciclo1',[compact('micro')]);
     }
 
     /**
