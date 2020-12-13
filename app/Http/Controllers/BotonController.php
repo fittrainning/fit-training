@@ -69,7 +69,7 @@ class BotonController extends Controller
     //RESULTADO TEST
     public function rtest()
     {
-        return view('vtest', ["deportistas"=>rtest::all()], ["deportes"=>Deportistas::all()]);
+        return view('entrenador.vtest', ["deportistas"=>rtest::all()], ["deportes"=>Deportistas::all()]);
     }
 
 
