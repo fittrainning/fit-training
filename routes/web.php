@@ -49,6 +49,9 @@ Route::post('boton', 'BotonController@boto')->name('boton');
 
 Route::get('dbateria/{Tes_id}', 'BotonController@detalles')->name('dbateria');
 
+Route::get('/vtest', 'HomeController@vtest')->name('/vtest');
+Route::get('vtest/{Rem_id}', 'RtestController@dtin')->name('vtest');
+
 //Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
 Route::get('/entrenadores', 'HomeController@entre')->name('entrenadores');

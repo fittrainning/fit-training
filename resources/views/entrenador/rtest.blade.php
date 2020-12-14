@@ -37,11 +37,16 @@
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div id="color" class="content-box-large">
-                                                <select name="Rem_Tes_id" id="">
-                                                    @foreach($tests as $test)
-                                                        <option value="{{ $test->Tes_id }}">{{ $test->Tes_nombre }}</option>
-                                                    @endforeach
-                                                </select>
+                                                <div class="form-group row">
+                                                    <label class="col-md-4 col-form-label text-md-right">TEST</label>
+                                                    <div id="let3" class="col-md-6">    
+                                                        <select name="Rem_Tes_id" id="">
+                                                            @foreach($tests as $test)
+                                                                <option value="{{ $test->Tes_id }}">{{ $test->Tes_nombre }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
                                                
                                                 <!-- SELECT-->
             
@@ -98,31 +103,6 @@
                                 </form>
                             </div>
                             <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-                        </div>
-                        <hr id="separa">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" id="centro">
-                                <h3 class="panel-title">Datos Test</h3>
-                            </div>
-                                <div class="panel-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered table-striped">
-                                            <tr>
-                                                <th>DOCUMENTO</th>
-                                                <th>FECHA</th>
-                                                <th>CALIFICACION</th>
-                                            </tr>
-                                            @foreach($dat as $row)
-                                                <tr>
-                                                    <td>{{ $row->Rem_Usu_id }}</td>
-                                                    <td>{{ $row ->Rem_fecha }}</td>
-                                                    <td>{{ $row->Rem_resultado }}</td>
-                                                </tr>
-                                            @endforeach
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
