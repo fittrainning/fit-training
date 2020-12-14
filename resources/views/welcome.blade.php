@@ -24,8 +24,8 @@
                     <!--Define el responsive de la barra de navegacion-->
                     <a id="nabo" class="navbar" href="{{ url('/') }}"><img src="img/logo.png" width="95px"></a>
                     <!--Esta etiqueta muestra el logo de la pagina-->
-                    <a id="nabot" class="navbar" href="galeria">GALERIA</a>
-                    <a id="nabot" class="navbar" href="">CONTACTENOS</a>
+                    <a id="nabot" class="navbar" href="#caja">GALERIA</a>
+                    <a id="nabot" class="navbar" href="#copy">CONTACTENOS</a>
                 </nav>
                 <nav class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     <!-- Esta etiqueta define el responsive-->
