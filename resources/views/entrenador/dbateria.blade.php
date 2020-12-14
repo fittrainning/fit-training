@@ -67,7 +67,7 @@
                             
                             <div class="form-group row mb-0">
                                 <div class=" col-12  text-center">
-                                    <a href="{{ route('detallet',[$Boton-> Tes_id]) }}">
+                                    <a href="{{ route('rtest',[$Boton-> Tes_id]) }}">
                                         <button type="button" class="btn btn-secondary  btn-sm"  id="buttonns">
                                             <img src="{{ asset('../img/22.png') }}" alt="img" width="40px"> &nbsp; INGRESAR RESULTADO
                                         </button>

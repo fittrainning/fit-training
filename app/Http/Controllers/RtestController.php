@@ -11,6 +11,7 @@ class RtestController extends Controller
 {
     public function index($Rem_Tes_id)
     {
+        
      $dat = rtest::orderBy('Rem_id', 'DESC')->get();
      return view('entrenador.rtest', compact('dat'), ["deportes"=>Deportistas::all()]);
     }

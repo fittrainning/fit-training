@@ -37,7 +37,10 @@
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div id="color" class="content-box-large">
-            
+                                                @foreach($dat as $dato)
+                                                <input type="hidden">{{ $dato ->Rem_Tes_id }}
+                                                @endforeach
+                                               
                                                 <!-- SELECT-->
             
                                                 <div class="form-group row">
@@ -70,7 +73,7 @@
                                                         <select id="selectb" name="Calificacion" class="form-control" required>
                                                             <option> Seleccione la Calificacion</option>
                                                                 <option value="5">Excelente</option>
-                                                                <option value="4">Bien</option>
+                                                                <option value="4">Buena</option>
                                                                 <option value="3">Aceptable</option>
                                                                 <option value="2">Deficiente</option>
                                                                 <option value="1">Critico</option>
@@ -83,14 +86,10 @@
                                     </div><br><br>
                                    
                                         <div class="form-group row mb-0">
-                                            <div class=" col-12  text-center">
-                                                @foreach($dat as $row)
-                                                    <a href="{{ route('rtest',) }}">
-                                                        <button type="button" class="btn btn-secondary  btn-sm"  id="buttonns">
-                                                            <img src="{{ asset('../img/guardar.png') }}" alt="img" width="35px"> &nbsp; GUARDAR RESULTADO
-                                                        </button>
-                                                    </a>
-                                                @endforeach
+                                            <div class=" col-12  text-center">   
+                                                <button type="submit" class="btn btn-secondary  btn-sm"  id="buttonns">
+                                                    <img src="{{ asset('../img/guardar.png') }}" alt="img" width="35px"> &nbsp; GUARDAR RESULTADO
+                                                </button>
                                             </div>
                                         </div> 
                                    
