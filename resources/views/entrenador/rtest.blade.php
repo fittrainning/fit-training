@@ -37,16 +37,18 @@
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div id="color" class="content-box-large">
-                                                @foreach($dat as $dato)
-                                                <input type="hidden">{{ $dato ->Rem_Tes_id }}
-                                                @endforeach
+                                                <select name="Rem_Tes_id" id="">
+                                                    @foreach($tests as $test)
+                                                        <option value="{{ $test->Tes_id }}">{{ $test->Tes_nombre }}</option>
+                                                    @endforeach
+                                                </select>
                                                
                                                 <!-- SELECT-->
             
                                                 <div class="form-group row">
                                                     <label class="col-md-4 col-form-label text-md-right">DOCUMENTO</label>
                                                     <div id="let3" class="col-md-6">
-                                                        <select name="Pla_id_Dep">
+                                                        <select name="Rem_Usu_id">
                                                             @foreach($deportes as $depo)
                                                                 <option value="{{ $depo->Dep_Usu_id }}">
                                                                     {{ $depo->Dep_Usu_id }} <!--nombre usuario-->
@@ -61,7 +63,7 @@
                                                     <label for="Usu_fecha_nacimiento" class="col-md-4 col-form-label text-md-right">FECHA</label>
             
                                                     <div id="let" class="col-md-6">
-                                                        <input id="Usu_fecha_nacimiento" type="date" class="form-control" name="Fecha" required >
+                                                        <input id="Usu_fecha_nacimiento" type="date" class="form-control" name="Rem_fecha" required >
                                                     </div>
                                                 </div>
             
@@ -70,7 +72,7 @@
                                                 <div class="form-group row">
                                                     <label class="col-md-4 col-form-label text-md-right">CALIFICACION</label>
                                                     <div id="let3" class="col-md-6">
-                                                        <select id="selectb" name="Calificacion" class="form-control" required>
+                                                        <select id="selectb" name="Rem_resultado" class="form-control" required>
                                                             <option> Seleccione la Calificacion</option>
                                                                 <option value="5">Excelente</option>
                                                                 <option value="4">Buena</option>
@@ -109,7 +111,8 @@
                                                 <th>DOCUMENTO</th>
                                                 <th>FECHA</th>
                                                 <th>CALIFICACION</th>
-                                                @foreach($dat as $row)
+                                            </tr>
+                                            @foreach($dat as $row)
                                                 <tr>
                                                     <td>{{ $row->Rem_Usu_id }}</td>
                                                     <td>{{ $row ->Rem_fecha }}</td>
