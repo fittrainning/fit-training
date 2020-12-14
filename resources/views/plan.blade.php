@@ -12,7 +12,7 @@
                                 <hr id="separa"><br>
                                 <div class="row">
                                     <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                        <a href="{{ route('agenda') }}">
+                                        <a href="{{ route('agenda.index') }}">
                                             <div id="bott">Ver<br>Agenda</div>
                                         </a>
                                     </div>

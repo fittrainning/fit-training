@@ -15,6 +15,7 @@ class CreateTbSesionTable extends Migration
     {
         Schema::create('tb_sesion', function (Blueprint $table) {
             $table->smallInteger('Ses_id')->autoIncrement();
+            $table->string('Ses_Titulo');
             $table->Integer('Ses_Mic_Id_Gen');
             $table->string('Ses_lugar');
             $table->string('Ses_color');

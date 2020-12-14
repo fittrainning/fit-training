@@ -15,6 +15,7 @@ class SesionController extends Controller
     public function index()
     {
         //
+        return view('agenda');
     }
 
     /**
@@ -36,6 +37,9 @@ class SesionController extends Controller
     public function store(Request $request)
     {
         //
+        $datosEvento=request()->except(['_token','_method']);
+        sesion::insert($datosEvento);
+        print_r($datosEvento);
     }
 
     /**
@@ -44,9 +48,11 @@ class SesionController extends Controller
      * @param  \App\Sesion  $sesion
      * @return \Illuminate\Http\Response
      */
-    public function show(Sesion $sesion)
+    public function show()
     {
         //
+        $data['sesion']=Sesion::all();
+        return response()->json($data['sesion']);
     }
 
     /**

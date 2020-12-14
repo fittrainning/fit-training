@@ -71,7 +71,7 @@
 
         },
 
-        events:[
+        /*events:[
             {
                 title:"evento 1",
                 start:"2020-09-13 12:30:00",
@@ -83,12 +83,15 @@
                 color:"#FFCCAA",
                 textColor:"#000000"
             }
-        ]
+        ]*/
+            events:"{{ url('/agencia/show') }}"
+
       });
       calendar.setOption('locale','Es');
       calendar.render();
       $('#btnagregar').click(function(){
-          recolectarDatosGUI("POST");
+          objEvento=recolectarDatosGUI("POST");
+          EnviarInformacion('',objEvento);
       });
 
       function recolectarDatosGUI(method){
@@ -96,6 +99,7 @@
         nuevoEvento={
 
             Ses_id:$('#txtId').val(),
+            Ses_Titulo:$('#txtTitulo').val(),
             Ses_Mic_Id_Gen:$('#txtIdmicro').val(),
             Ses_lugar:$('#txtLugar').val(),
             Ses_color:$('#txtcolor').val(),
@@ -110,8 +114,24 @@
             '_token':$("meta[name='csrf-token']").attr("content"),
             '_method':method
         }
+        return (nuevoEvento);
+
 
       }
+      function EnviarInformacion(accion,objEvento){
+
+        $.ajax(
+            {
+                type:"POST",
+                url:"{{ url('/agenda') }}"+accion,
+                data:objEvento,
+                success:function(msg){ console.log(msg);},
+                error:function(){ alert("Hay un error");}
+            }
+        );
+
+      }
+
     });
 
   </script>
@@ -136,9 +156,10 @@
             </button>
             </div>
             <div class="modal-body">
+            <div class="form-group col-md-12">
             Nombre del evento:
-            <input type="text" name="txtid" id="txtid" >
-
+            <input type="text" name="txtTitulo" id="txtTitulo" >
+            </div>
             <br>
             fecha:
             <input type="text" name="txtfecha" id="txtfecha">
@@ -159,10 +180,7 @@
                 <label>Lugar:</label><br>
             <input type="text" class="form-group" name="txtLugar" id="txtLugar">
             </div>
-            <div class="form-group col-md-6">
-                <label>fecha:</label><br>
-            <input type="text" class="form-group" name="txtfecha" id="txthora">
-            </div>
+
             <div class="form-group col-md-6">
                 <label>hora:</label><br>
             <input type="text" class="form-group" name="txthora" id="txthora">
@@ -190,14 +208,10 @@
 
             <div class="form-group col-md-12">
                 <label>Color:</label><br>
-            <input type="color" name="txtcolor" class="form-group" id="txtcolor">
+            <input type="color" name="txtcolor" class="form-group" id="txtcolor" style="width: 90%">
             </div>
 
-
-
             </div>
-
-
 
         </div>
 
