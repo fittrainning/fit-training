@@ -29,7 +29,7 @@ class AnamnesisController extends Controller
         if ($request->hasFile('Ana_Logrosdeportivos')) {
             $anamnesisdata['Ana_Logrosdeportivos']=$request->file('Ana_Logrosdeportivos')->store('uploads','public');
         }
-        /*if ($request->hasFile('Ana_HistorialDeportivo')) {
+        if ($request->hasFile('Ana_HistorialDeportivo')) {
             $anamnesisdata['Ana_HistorialDeportivo']=$request->file('Ana_HistorialDeportivo')->store('uploads','public');
         }
         if ($request->hasFile('Ana_HistorialMedico')) {
@@ -37,7 +37,7 @@ class AnamnesisController extends Controller
         }
         if ($request->hasFile('Ana_HabitosAlimenticios')) {
             $anamnesisdata['Ana_HabitosAlimenticios']=$request->file('Ana_HabitosAlimenticios')->store('uploads','public');
-        }*/
+        }
 
         Anamnesis::insert($anamnesisdata);
 

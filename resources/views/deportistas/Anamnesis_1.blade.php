@@ -37,7 +37,7 @@
                                         <p>
                                             Practica Deporte? &nbsp;
                                             <div id="radio">
-                                                <input type="radio" name="Ana_DepPract" value="si" >
+                                                <input type="radio" name="Ana_DepPract" value="si" checked>
                                                 <label for="huey">si</label>&nbsp;&nbsp;
                                             </div>
 
@@ -71,11 +71,9 @@
                                         </p>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                         <p>Cual? Adjunte pdf</p>&nbsp;
-                                    </div>
-                                    <div class="row d-flex justify-content-center">
                                         <div id="let3">
                                             <div class="form-group">
-                                                <input type="file" class="form-control-file" name="Ana_Logrosdeportivos" value="">
+                                                <input type="file" class="form-control-file" name="Ana_Logrosdeportivos" value="no">
                                             </div>
                                         </div>
                                     </div>
