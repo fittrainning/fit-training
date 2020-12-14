@@ -32,8 +32,12 @@
                                     <strong>{{ $message }}</strong>
                             </div>
                         @endif
-                        <form method="post" enctype="multipart/form-data" action="{{ url('/import_excel/import') }}">
-                        {{ csrf_field() }}
+                        <form action="{{ route('users.import.excel') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            
+                            @if(Session::has('message'))
+                            <p>{{ Session::get('message') }}</p>
+                            @endif
                             <div class="form-group">
                                 <table class="table">
                                     <tr>
@@ -41,15 +45,20 @@
                                             <label>Seleccionar archivo para cargar</label>
                                         </td>
                                         <td width="30">
-                                            <input type="file" name="select_file" />
+                                            <input type="file" name="file">
                                         </td>
                                         <td width="30%" align="left">
                                             <input type="submit" name="upload" class="btn btn-primary" value="Cargar">
                                         </td>
                                     </tr>
                                     <tr>
+                                        <center><p>
+                                            Clic <a href="{{ route('users.excel') }}">aquí</a>
+                                            para descargar en EXCEL las fichas
+                                        </p></center>
+
                                         <td width="40%" align="right"></td>
-                                        <td width="40%" aling="center"><span class="text-muted">.xls, .xslx</span></td>
+                                        <td width="40%" align="center"><span class="text-muted">.xls, .xslx</span></td>
                                         <td width="40%" align="left"></td>
                                     </tr>
                                 </table>
@@ -64,12 +73,9 @@
                                         <h3>Registro de fichas</h3>
                                     </div>
                                 </div>
-                                <p>
-                                    Clic <a href="{{ route('users.excel') }}">aquí</a>
-                                    para descargar en EXCEL las fichas
-                                </p>
+
                         
-                                <form action="{{ route('users.import.excel') }}" method="post" enctype="multipart/form-data">
+                                <!--<form action="{{ route('users.import.excel') }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     
                                     @if(Session::has('message'))
@@ -79,7 +85,7 @@
                                     <input type="file" name="file">
                         
                                     <button>Importar Usuarios</button>
-                                </form>
+                                </form>-->
 
                                 <form action="{{ route('subir') }}" method="post">
                                     @csrf

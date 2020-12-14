@@ -25,7 +25,7 @@ class UserController extends Controller
         $file = $request->file('file');
         Excel::import(new UsersImport, $file);
 
-        return back()->with('message', 'Importanción de usuarios completada');
+        return back()->with('message', 'Importación de fichas completada');
     }
 }
 
