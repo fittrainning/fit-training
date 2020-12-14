@@ -96,7 +96,4 @@ class HomeController extends Controller
     public function anam2(){
         return view('deportistas.Anamnesis_2');
     }
-    public function anam3(){
-        return view('deportistas.Anamnesis_3');
-    }
 }

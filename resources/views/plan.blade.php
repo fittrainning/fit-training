@@ -11,11 +11,13 @@
                                 <h2 id="centro">Plan de Entrenamiento</h2>
                                 <hr id="separa"><br>
                                 <div class="row">
-                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                        <a href="{{ route('agenda.index') }}">
-                                            <div id="bott">Ver<br>Agenda</div>
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+                                    <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                        <a href="{{ route('agenda') }}">
+                                            <div id="bott">Ver Agenda</div>
                                         </a>
                                     </div>
+                                    <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                 </div>
                                 <hr id="separa">
                                 <div class="row">
@@ -32,11 +34,13 @@
                                                     <div id="bott">Editar Plan de<br>Entrenamiento</div>
                                                 </a>
                                             </div>-->
-                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+                                            <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                                 <a href="{{ route('Mesociclos.index') }}">
                                                     <div id="bott">Mesociclos</div>
                                                 </a>
                                             </div>
+                                            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                         @else
                                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                 <a href="{{ route('Planes.create') }}">
