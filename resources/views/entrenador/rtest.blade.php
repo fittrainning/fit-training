@@ -31,7 +31,8 @@
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro">
                                         <h3>Registro de Resultados</h3>
                                     </div>
-                                </div><br><br><br>
+                                </div>
+                                <hr id="separa">
                                 <form action = "{{ route('subirt') }}" method="POST" class="form-group">    
                                     @csrf
                                     <div class="row">

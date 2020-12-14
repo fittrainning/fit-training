@@ -25,17 +25,17 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" id="centro">
                                         <h3 class="panel-title">Datos Test</h3>
-                                    </div><br>
+                                    </div><hr id="separa">
                                         <div class="panel-body">
                                             <div class="table-responsive">
-                                                <table class="table table-bordered table-striped">
-                                                    <tr>
+                                                <table id="tabla" class="table table-striped">
+                                                    <tr id="cabe">
                                                         <th>DOCUMENTO</th>
                                                         <th>FECHA</th>
                                                         <th>CALIFICACION</th>
                                                     </tr>
                                                     @foreach($dat as $row)
-                                                        <tr>
+                                                        <tr id="cuer">
                                                             <td>{{ $row->Rem_Usu_id }}</td>
                                                             <td>{{ $row ->Rem_fecha }}</td>
                                                             <td>{{ $row->Rem_resultado }}</td>

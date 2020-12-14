@@ -30,19 +30,25 @@
                                                 </tr>
                                                 @foreach($mesos as $meso)
                                                     <tr id="cuer">
-                                                        <input type="hidden" name="Mes_Id_Gen" value="{{ $meso->Mes_Id_Gen }}">
-                                                        <td><input type="text" name="Mes_Id" value="{{ $meso->Mes_Id }}"></td>
-                                                        <td><input type="text" name="Mes_Fecini" value="{{ $meso->Mes_Fecini }}"></td>
-                                                        <td><input type="text" name="Mes_Fecfin" value="{{ $meso->Mes_Fecfin }}"></td>
-                                                        <td><input type="text" name="Mes_Nummes" value="{{ $meso->Mes_Nummes }}"></td>
-                                                        <td><input type="text" name="Mes_Minutos_Totales" value="{{ $meso->Mes_Minutos_Totales }}"></td>
-                                                        <td><input type="text" name="Mes_Num_Sesxmes" value="{{ $meso->Mes_Num_Sesxmes }}"></td>
-                                                        <td>
-                                                            <a href="{{ route('Microciclo',[$meso-> Mes_Id_Gen]) }}">
-                                                                <input type="button" value="Microciclos">
-                                                            </a>
-                                                        </td>
-                                                        <td><input type="button" value="Editar"></td>
+                                                        <form action="{{ route('Mesociclos.update', [$meso->id]) }}" method="post">
+                                                            @csrf
+                                                            @method('put')
+                                                            <input type="hidden" name="id" value="{{ $meso->id }}">
+                                                            <td><input type="text" name="Mes_Id" value="{{ $meso->Mes_Id }}"></td>
+                                                            <td><input type="text" name="Mes_Fecini" value="{{ $meso->Mes_Fecini }}"></td>
+                                                            <td><input type="text" name="Mes_Fecfin" value="{{ $meso->Mes_Fecfin }}"></td>
+                                                            <td><input type="text" name="Mes_Nummes" value="{{ $meso->Mes_Nummes }}"></td>
+                                                            <td><input type="text" name="Mes_Minutos_Totales" value="{{ $meso->Mes_Minutos_Totales }}"></td>
+                                                            <td><input type="text" name="Mes_Num_Sesxmes" value="{{ $meso->Mes_Num_Sesxmes }}"></td>
+                                                            <td>
+                                                                <a href="{{ route('Microciclo',[$meso->id]) }}">
+                                                                    <input type="button" value="Microciclos">
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <input type="submit" value="Editar">
+                                                            </td>
+                                                        </form>
                                                     </tr>
                                                 @endforeach
                                             </table>
