@@ -14,7 +14,7 @@ class CreateTbMesocicloTable extends Migration
     public function up()
     {
         Schema::create('tb_mesociclo', function (Blueprint $table) {
-            $table->Integer('Mes_Id_Gen')->autoIncrement();
+            $table->Integer('id')->autoIncrement();
             $table->Integer('Mes_Pla_Id');
             $table->smallInteger('Mes_Id');
             $table->date('Mes_Fecini');

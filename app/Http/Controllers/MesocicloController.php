@@ -18,6 +18,12 @@ class MesocicloController extends Controller
         return view('mesociclo', ["mesos"=>Mesociclo::all()]);
     }
 
+    public function lista($id)
+    {
+        $micro= Mesociclo::where('Mes_Pla_Id', '=', $id)->get();
+        return view('mesociclo', compact('mesos'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -58,9 +64,10 @@ class MesocicloController extends Controller
      * @param  \App\Mesociclo  $mesociclo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Mesociclo $mesociclo)
+    public function edit(Mesociclo $meso)
     {
-        //
+        $mesos= Mesociclo::findOrFail($meso);
+        return view("mesociclo1",compact("mesos"));
     }
 
     /**
@@ -70,9 +77,14 @@ class MesocicloController extends Controller
      * @param  \App\Mesociclo  $mesociclo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Mesociclo $mesociclo)
+    public function update(Request $request, $id)
     {
-        //
+        $mesociclo=request()->except(['_token','_method']);
+
+        Mesociclo::where("id","=",$id)->update($mesociclo);
+
+        $mesos= Mesociclo::findOrFail($id);
+        return view("mesociclo",compact("mesos"));
     }
 
     /**

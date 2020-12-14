@@ -21,24 +21,26 @@
                                 <div class="row">
                                     @foreach($planes as $plan)
                                         @if(Auth::user()->Usu_id == $plan->Pla_id_Ent)
-                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                <a href="{{ route('Planes.edit',[$plan->Pla_id]) }}">
+                                            <input type="hidden" name="Pla_id" value="{{ $plan->Pla_id }}">
+                                            <input type="hidden" name="Pla_fecini" value="{{ $plan->Pla_fecini }}">
+                                            <input type="hidden" name="Pla_fecfin" value="{{ $plan->Pla_fecfin }}">
+                                            <input type="hidden" name="Pla_deporte" value="{{ $plan->Pla_deporte }}">
+                                            <input type="hidden" name="Pla_id_Ent" value="{{ $plan->Pla_id_Ent }}">
+                                            <input type="hidden" name="Pla_id_Dep" value="{{ $plan->Pla_id_Dep }}">
+                                            <!--<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <a href="{ { route("Planes.edit", [$plan-> Pla_id]) }}">
                                                     <div id="bott">Editar Plan de<br>Entrenamiento</div>
+                                                </a>
+                                            </div>-->
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <a href="{{ route('Mesociclos.index') }}">
+                                                    <div id="bott">Mesociclos</div>
                                                 </a>
                                             </div>
                                         @else
                                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                 <a href="{{ route('Planes.create') }}">
                                                     <div id="bott">Crear Plan de<br>Entrenamiento</div>
-                                                </a>
-                                            </div>
-                                        @endif
-                                    @endforeach
-                                    @foreach($planes as $plan)
-                                        @if(Auth::user()->Usu_id == $plan->Pla_id_Ent)
-                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                <a href="{{ route('Mesociclos.index') }}">
-                                                    <div id="bott">Mesociclos</div>
                                                 </a>
                                             </div>
                                         @endif

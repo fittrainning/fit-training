@@ -37,7 +37,7 @@
                                         <p>
                                             Practica Deporte? &nbsp;
                                             <div id="radio">
-                                                <input type="radio" name="Ana_DepPract" value="si" >
+                                                <input type="radio" name="Ana_DepPract" value="si" checked>
                                                 <label for="huey">si</label>&nbsp;&nbsp;
                                             </div>
 
@@ -58,8 +58,7 @@
                                     <div class="row d-flex justify-content-center">
                                         <p>
                                             Posee logros deportivos?:&nbsp;
-                                        </p>
-                                        <div id="radio">
+                                            <div id="radio">
                                                 <input type="radio" name="Ana_Logros" value="si" checked>
                                                 <label for="huey">si</label>&nbsp;&nbsp;
                                             </div>
@@ -68,12 +67,15 @@
                                                 <input type="radio" name="Ana_Logros" value="no">
                                                 <label for="dewey">no</label>
                                             </div>
+                                            
+                                        </p>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                         <p>Cual? Adjunte pdf</p>&nbsp;
-                                        <div class="form-group">
-                                            <input type="file" class="form-control-file" name="Ana_Logrosdeportivos" value="logros">
+                                        <div id="let3">
+                                            <div class="form-group">
+                                                <input type="file" class="form-control-file" name="Ana_Logrosdeportivos" value="no">
+                                            </div>
                                         </div>
-
                                     </div>
 
                                     <hr id="separa">
@@ -83,23 +85,22 @@
                                             Posee experiencia deportiva? &nbsp;
                                         </p>
                                         <div id="radio">
-                                            <input type="radio" name="Ana_HistorialDeportivo" value="si" checked>
+                                            <input type="radio" name="" value="si" checked>
                                             <label for="huey">si</label>&nbsp;&nbsp;
                                         </div>
 
                                         <div id="radio">
-                                            <input type="radio" name="Ana_HistorialDeportivo" value="no">
+                                            <input type="radio" name="" value="no">
                                             <label for="dewey">no</label>
                                         </div>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <p>Cual?&nbsp;</p>
-                                        <div id="let2">
-                                            <input type="text">
-                                        </div>
+                                        <p>Cual? Adjunte pdf</p>&nbsp;
                                     </div>
-                                    <br>
-                                    <div id="centro" class="form-group">
-                                        <input type="file" class="form-control-file">
+                                    <div class="row d-flex justify-content-center">
+                                        <div id="let3">
+                                            <div class="form-group">
+                                                <input type="file" class="form-control-file" name="Ana_HistorialDeportivo" value="">
+                                            </div>
+                                        </div>
                                     </div>
                                     <hr id="separa">
                                     <br>
@@ -113,9 +114,12 @@
                                         <br>
                                         <div class="row d-flex justify-content-center">
                                             &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <p>Adjunte el archivo de su historial medico: </p>  &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <p>Adjunte el archivo de su historial medico: </p>
+                                        </div>
+                                        <br>
+                                        <div class="row d-flex justify-content-center">
                                             <div class="form-group">
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="Ana_HistorialMedico" value="medico">
+                                                <input type="file" class="form-control-file" name="Ana_HistorialMedico" value="">
                                             </div>
                                         </div>
                                         <hr id="separa">
@@ -128,9 +132,12 @@
                                         <br>
                                         <div class="row d-flex justify-content-center">
                                             &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <p>Adjunte el archivo de su historial alimenticio: </p>  &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <p>Adjunte el archivo de su historial alimenticio: </p>
+                                        </div>
+                                        <br>
+                                        <div class="row d-flex justify-content-center">
                                             <div class="form-group">
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="Ana_HabitosAlimenticios" value="comer">
+                                                <input type="file" class="form-control-file" name="Ana_HabitosAlimenticios" value="">
                                             </div>
                                         </div>
                                         <br>

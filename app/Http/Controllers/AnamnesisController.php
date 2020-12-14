@@ -25,16 +25,33 @@ class AnamnesisController extends Controller
     public function create(Request $request)
     {
         $anamnesisdata = request()->except('_token');
+
+        if ($request->hasFile('Ana_Logrosdeportivos')) {
+            $anamnesisdata['Ana_Logrosdeportivos']=$request->file('Ana_Logrosdeportivos')->store('uploads','public');
+        }
+        if ($request->hasFile('Ana_HistorialDeportivo')) {
+            $anamnesisdata['Ana_HistorialDeportivo']=$request->file('Ana_HistorialDeportivo')->store('uploads','public');
+        }
+        if ($request->hasFile('Ana_HistorialMedico')) {
+            $anamnesisdata['Ana_HistorialMedico']=$request->file('Ana_HistorialMedico')->store('uploads','public');
+        }
+        if ($request->hasFile('Ana_HabitosAlimenticios')) {
+            $anamnesisdata['Ana_HabitosAlimenticios']=$request->file('Ana_HabitosAlimenticios')->store('uploads','public');
+        }
+
         Anamnesis::insert($anamnesisdata);
 
-        return 'datos guardados';
+        return redirect()->route("home")->with(["menssaje" => "datos guardados",]);
     }
 
     public function subirlogros(Request $request)
     {
         //Recibimos el archivo y lo guardamos en la carpeta storage/app/public
-        $request->file('Ana_Logrosdeportivos')->store('public/archivosanam');
-        dd("subido y guardado");
+        $anamnesisdata = request()->except('_token');
+
+        if ($request->hasFile('Ana_HistorialDeportivo')) {
+            $anamnesisdata['Ana_HistorialDeportivo']=$request->file('Ana_HistorialDeportivo')->store('uploads','public');
+        }
     }
     public function subirhisdeportivo(Request $request)
     {

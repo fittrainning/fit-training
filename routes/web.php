@@ -31,7 +31,6 @@ Route::get('/editar_perfil', 'HomeController@editar')->name('editar_perfil');
 Route::get('/estadisticas', 'HomeController@estadi')->name('estadisticas');
 Route::get('/agenda', 'HomeController@agenda')->name('agenda');
 
-
 Route::get('/anam1', 'HomeController@anam1')->name('anam1');
 Route::get('/anam2', 'HomeController@anam2')->name('anam2');
 Route::get('/anam3', 'HomeController@anam3')->name('anam3');
@@ -39,15 +38,18 @@ Route::post('/create','AnamnesisController@create')->name('create');
 
 //
 Route::get('/bateria', 'HomeController@bateri')->name('/bateria');
-Route::get('rtest', 'HomeController@rtest')->name('rtest');
 
-Route::get('vtest', 'HomeController@vtest')->name('vtest');
-Route::post('vtest', 'BotonController@rtest')->name('vtest');
+Route::get('rtest', 'RtestController@index')->name('rtest');
+//Route::get('detallet/{Rem_Tes_id}', 'RtestController@detallet')->name('detallet');
+Route::post('subirt', 'RtestController@subir')->name('subirt');
 
 Route::get('boton', 'HomeController@boto')->name('boton');
 Route::post('boton', 'BotonController@boto')->name('boton');
 
 Route::get('dbateria/{Tes_id}', 'BotonController@detalles')->name('dbateria');
+
+Route::get('/vtest', 'HomeController@vtest')->name('/vtest');
+Route::get('vtest/{Rem_id}', 'RController@dtin')->name('vtest');
 
 //Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
@@ -59,7 +61,7 @@ Route::post('/import_excel/import', 'FichaController@import');
 
 Route::resource("Mensajes", "MensajeController")->parameters(["Mensajes"=>"Mensaje"]);
 Route::resource("Deportistas", "DeportistaController")->parameters(["Deportistas"=>"Deportista"]);
-Route::resource("Planes", "PlanController");
+Route::resource("Planes", "PlanController")->parameters(["Planes"=>"Plan"]);
 Route::resource("Mesociclos", "MesocicloController")->parameters(["Mesociclos"=>"Mesociclo"]);
 Route::get("Microciclo/{meso}", "MicrocicloController@lista")->name('Microciclo');
 //Route::resource("Microciclos", "MicrocicloController")->parameters(["Microciclos"=>"Microciclo"]);
@@ -71,3 +73,6 @@ Route::post('insertar', 'RolesController@insertar')->name('insertar');
 Route::post('roll', 'RolesController@roll')->name('roll');
 Route::post('subir', 'FichaController@subir')->name('subir');
 //_________________________________________________________________________
+
+Route::get('user-list-excel',    'UserController@exportExcel')->name('users.excel');
+Route::post('import-list-excel', 'UserController@importExcel')->name('users.import.excel');

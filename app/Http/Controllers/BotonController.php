@@ -3,8 +3,6 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\boton;
-use App\rtest;
-use App\Deportistas;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -65,5 +63,4 @@ class BotonController extends Controller
         $bateri = DB::Table('tb_test')->where('Tes_id','=', $Tes_id)->get();
         return view('entrenador.dbateria', compact('bateri'));
     }
-    
 }

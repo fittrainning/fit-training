@@ -19,7 +19,7 @@ class CreateLlavesForaneasTable extends Migration
         });
 
         Schema::table('tb_dosificacion', function (Blueprint $table) {
-            $table->foreign('Dos_Mes_Id_Gen')->references('Mes_Id_Gen')->on('tb_mesociclo')->onUpdate('cascade');
+            $table->foreign('Dos_Mes_Id_Gen')->references('id')->on('tb_mesociclo')->onUpdate('cascade');
         });
 
         Schema::table('tb_sesion', function (Blueprint $table) {
@@ -53,7 +53,7 @@ class CreateLlavesForaneasTable extends Migration
         });
 
         Schema::table('tb_microciclo', function (Blueprint $table) {
-            $table->foreign('Mic_Mes_Id_Gen')->references('Mes_Id_Gen')->on('tb_mesociclo')->onUpdate('cascade');
+            $table->foreign('Mic_Mes_Id_Gen')->references('id')->on('tb_mesociclo')->onUpdate('cascade');
         });
 
         Schema::table('tb_mesociclo', function (Blueprint $table) {

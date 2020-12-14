@@ -70,7 +70,7 @@ class PlanController extends Controller
      */
     public function edit(Plan $id)
     {
-        $plan = Plan::findOrFail($id);
+        $plan = Plan::findOrFail($id)->first();
         return view("plan2", compact('plan'));
     }
 

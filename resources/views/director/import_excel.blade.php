@@ -12,7 +12,7 @@
                             <h3>Importar fichas de Excel</h3>
                         </div>
                     </div>
-  
+
                     <div id="colo">
                         <br />
                         @if(count($errors) > 0)
@@ -32,8 +32,12 @@
                                     <strong>{{ $message }}</strong>
                             </div>
                         @endif
-                        <form method="post" enctype="multipart/form-data" action="{{ url('/import_excel/import') }}">
-                        {{ csrf_field() }}
+                        <form action="{{ route('users.import.excel') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            
+                            @if(Session::has('message'))
+                            <p>{{ Session::get('message') }}</p>
+                            @endif
                             <div class="form-group">
                                 <table class="table">
                                     <tr>
@@ -41,15 +45,20 @@
                                             <label>Seleccionar archivo para cargar</label>
                                         </td>
                                         <td width="30">
-                                            <input type="file" name="select_file" />
+                                            <input type="file" name="file">
                                         </td>
                                         <td width="30%" align="left">
                                             <input type="submit" name="upload" class="btn btn-primary" value="Cargar">
                                         </td>
                                     </tr>
                                     <tr>
+                                        <center><p>
+                                            Clic <a href="{{ route('users.excel') }}">aquí</a>
+                                            para descargar en EXCEL las fichas
+                                        </p></center>
+
                                         <td width="40%" align="right"></td>
-                                        <td width="40%" aling="center"><span class="text-muted">.xls, .xslx</span></td>
+                                        <td width="40%" align="center"><span class="text-muted">.xls, .xslx</span></td>
                                         <td width="40%" align="left"></td>
                                     </tr>
                                 </table>
@@ -64,6 +73,20 @@
                                         <h3>Registro de fichas</h3>
                                     </div>
                                 </div>
+
+                        
+                                <!--<form action="{{ route('users.import.excel') }}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    
+                                    @if(Session::has('message'))
+                                    <p>{{ Session::get('message') }}</p>
+                                    @endif
+                        
+                                    <input type="file" name="file">
+                        
+                                    <button>Importar Usuarios</button>
+                                </form>-->
+
                                 <form action="{{ route('subir') }}" method="post">
                                     @csrf
                                     <div class="form-row align-items-center">
@@ -104,21 +127,21 @@
                             </div>
                                 <div class="panel-body">
                                     <div class="table-responsive">
-                                        <table class="table table-bordered table-striped">
-                                            <tr>
+                                        <table id="tabla" class="table table-striped">
+                                            <tr id="cabe">
                                                 <th>Codigo ficha</th>
                                                 <th>Nombre</th>
                                                 <th>Tipo</th>
                                                 <th>Jornada</th>
                                             </tr>
                                             @foreach($data as $row)
-                                            <tr>
-                                                <td>{{ $row->Fic_Cod }}</td>
-                                                <td>{{ $row->Fic_Nombre }}</td>
-                                                <td>{{ $row->Fic_Tipo }}</td>
-                                                <td>{{ $row->Fic_Jornada }}</td>
-                                            </tr>
-                                        @endforeach
+                                                <tr id="cuer">
+                                                    <td>{{ $row->Fic_Cod }}</td>
+                                                    <td>{{ $row->Fic_Nombre }}</td>
+                                                    <td>{{ $row->Fic_Tipo }}</td>
+                                                    <td>{{ $row->Fic_Jornada }}</td>
+                                                </tr>
+                                            @endforeach
                                         </table>
                                     </div>
                                 </div>
