@@ -12,11 +12,11 @@ class RController extends Controller
     {
         // Seleccionar un registro por su 'id' 
         
-        $dat = rtest::where('Rem_id','=',$Rem_id)->get();
+        $dat = rtest::where('Rem_Tes_id','=',$Rem_id)->get();
         return view('entrenador.vtest', compact('dat'));
     }
 
-    public function import(Request $rows)
+        public function import(Request $rows)
     {
 
         $dat = [];
