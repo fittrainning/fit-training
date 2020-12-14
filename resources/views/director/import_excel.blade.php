@@ -12,7 +12,7 @@
                             <h3>Importar fichas de Excel</h3>
                         </div>
                     </div>
-  
+
                     <div id="colo">
                         <br />
                         @if(count($errors) > 0)
@@ -127,15 +127,15 @@
                             </div>
                                 <div class="panel-body">
                                     <div class="table-responsive">
-                                        <table class="table table-bordered table-striped">
-                                            <tr>
+                                        <table id="tabla" class="table table-striped">
+                                            <tr id="cabe">
                                                 <th>Codigo ficha</th>
                                                 <th>Nombre</th>
                                                 <th>Tipo</th>
                                                 <th>Jornada</th>
                                             </tr>
                                             @foreach($data as $row)
-                                                <tr>
+                                                <tr id="cuer">
                                                     <td>{{ $row->Fic_Cod }}</td>
                                                     <td>{{ $row->Fic_Nombre }}</td>
                                                     <td>{{ $row->Fic_Tipo }}</td>
