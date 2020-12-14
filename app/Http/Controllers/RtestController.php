@@ -36,25 +36,5 @@ class RtestController extends Controller
         $nivel->saveOrFail();
         return redirect()->route("rtest");
     }
-
-    public function import(Request $rows)
-    {
-
-        $dat = [];
-
-        foreach ($rows as $row) 
-        {
-            $dat[] = array(
-                    'Rem_Usu_id'  => $row[0],
-                    'Rem_fecha'        => $row[1],
-                    'Rem_resultado'       => $row[2],
-                );
-        }
-
-        if(!empty($dat))
-      {
-       DB::table('tb_resmensual')->insert($dat);
-      }
-      return back();
-    }
+    
 }
