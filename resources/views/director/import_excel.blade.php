@@ -64,6 +64,23 @@
                                         <h3>Registro de fichas</h3>
                                     </div>
                                 </div>
+                                <p>
+                                    Clic <a href="{{ route('users.excel') }}">aquí</a>
+                                    para descargar en EXCEL las fichas
+                                </p>
+                        
+                                <form action="{{ route('users.import.excel') }}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    
+                                    @if(Session::has('message'))
+                                    <p>{{ Session::get('message') }}</p>
+                                    @endif
+                        
+                                    <input type="file" name="file">
+                        
+                                    <button>Importar Usuarios</button>
+                                </form>
+
                                 <form action="{{ route('subir') }}" method="post">
                                     @csrf
                                     <div class="form-row align-items-center">
