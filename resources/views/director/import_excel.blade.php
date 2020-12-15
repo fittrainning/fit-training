@@ -122,7 +122,6 @@
                                                     <input type="submit"  class="btn btn-primary" name="enviar" value="Crear Ficha">
                                                 </div>
                                             </div>
-                                        
                                         </div>
                                     </div>
                                 </form>
