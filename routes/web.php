@@ -40,7 +40,6 @@ Route::post('/create','AnamnesisController@create')->name('create');
 Route::get('/bateria', 'HomeController@bateri')->name('/bateria');
 
 Route::get('rtest', 'RtestController@index')->name('rtest');
-//Route::get('detallet/{Rem_Tes_id}', 'RtestController@detallet')->name('detallet');
 Route::post('subirt', 'RtestController@subir')->name('subirt');
 
 Route::get('boton', 'HomeController@boto')->name('boton');
