@@ -70,7 +70,7 @@
                                             
                                         </p>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <p>Cual? Adjunte pdf</p>&nbsp;
+                                        <p>Cuales?</p>&nbsp;
                                         <div id="let3">
                                             <div class="form-group">
                                                 <input type="file" class="form-control-file" name="Ana_Logrosdeportivos" value="no">
