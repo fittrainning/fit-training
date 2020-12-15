@@ -28,7 +28,7 @@ class AnamnesisController extends Controller
 
         if ($request->hasFile('Ana_Logrosdeportivos')) {
             $anamnesisdata['Ana_Logrosdeportivos']=$request->file('Ana_Logrosdeportivos')->store('uploads','public');
-        }
+        } 
         if ($request->hasFile('Ana_HistorialDeportivo')) {
             $anamnesisdata['Ana_HistorialDeportivo']=$request->file('Ana_HistorialDeportivo')->store('uploads','public');
         }
