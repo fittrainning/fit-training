@@ -79,7 +79,7 @@
                                 <div class=" col-12  text-center">
                                     <a href="{{ route('vtest', [$Boton -> Tes_id] ) }}">
                                         <button type="button" class="btn btn-secondary  btn-sm"  id="buttonns">
-                                            <img src="{{ asset('../img/guardar.png') }}" alt="img" width="35px"> &nbsp; VER RESULTADO
+                                            &nbsp;&nbsp;&nbsp;<img src="{{ asset('../img/view.png') }}" alt="img" width="40px"> &nbsp;&nbsp; VER RESULTADO &nbsp;&nbsp;&nbsp;&nbsp;
                                         </button>
                                     </a>
                                 </div>
