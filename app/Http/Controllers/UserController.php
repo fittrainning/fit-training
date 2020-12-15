@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade as PDF;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Exports\UsersExport;
 use App\Imports\UsersImport;
+
+use App\Exports\UseExport;
 
 use App\Ficha;
 
@@ -27,6 +28,13 @@ class UserController extends Controller
 
         return back()->with('message', 'Importación de fichas completada');
     }
+
+    //_________________________________________________________
+    public function ExportExcell()
+    {
+    	return Excel::download(new UseExport, 'Usuario.xlsx');
+    }
+    //_________________________________________________________
 }
 
 

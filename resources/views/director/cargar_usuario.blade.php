@@ -9,13 +9,26 @@
                     <h1>Gestion de Usuarios</h1>
                 </div>
                 <br>
+                @if($message = Session::get('success'))
+                    <div class="alert alert-success alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>{{ $message }}</strong>
+                    </div>
+                @endif
+                <form action="{{ route('users.import.excel') }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <center><p>
+                        Clic <a href="{{ route('users.excel') }}">aquí</a>
+                        para descargar los usuarios en un archivo EXCEL
+                    </p></center>
+                </form>
                 <br>
                 <div class="d-flex justify-content-around">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         Ver Usuarios Creados
                     </button>
-            
+                    
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
@@ -26,6 +39,7 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
+
                                 <div class="modal-body">
                                     <table class="table table-striped">
                                         <thead>

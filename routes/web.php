@@ -75,3 +75,7 @@ Route::post('subir', 'FichaController@subir')->name('subir');
 
 Route::get('user-list-excel',    'UserController@exportExcel')->name('users.excel');
 Route::post('import-list-excel', 'UserController@importExcel')->name('users.import.excel');
+
+//_________________________________________________________________________
+
+Route::get('user-list-excel',    'UserController@ExportExcell')->name('users.excel');
