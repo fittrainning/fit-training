@@ -70,7 +70,7 @@
                                             
                                         </p>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <p>Cual? Adjunte pdf</p>&nbsp;
+                                        <p>Cuales?</p>&nbsp;
                                         <div id="let3">
                                             <div class="form-group">
                                                 <input type="file" class="form-control-file" name="Ana_Logrosdeportivos" value="no">
@@ -83,16 +83,16 @@
                                     <div class="row d-flex justify-content-center">
                                         <p>
                                             Posee experiencia deportiva? &nbsp;
+                                            <div id="radio">
+                                                <input type="radio" name="Ana_HistorialDeportivo" value="si" checked>
+                                                <label for="huey">si</label>&nbsp;&nbsp;
+                                            </div>
+    
+                                            <div id="radio">
+                                                <input type="radio" name="Ana_HistorialDeportivo" value="no">
+                                                <label for="dewey">no</label>
+                                            </div>
                                         </p>
-                                        <div id="radio">
-                                            <input type="radio" name="" value="si" checked>
-                                            <label for="huey">si</label>&nbsp;&nbsp;
-                                        </div>
-
-                                        <div id="radio">
-                                            <input type="radio" name="" value="no">
-                                            <label for="dewey">no</label>
-                                        </div>
                                         <p>Cual? Adjunte pdf</p>&nbsp;
                                     </div>
                                     <div class="row d-flex justify-content-center">
