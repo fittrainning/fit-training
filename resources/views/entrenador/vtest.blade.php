@@ -28,7 +28,7 @@
                                     </div><hr id="separa">
                                         <div class="panel-body">
                                             <div class="table-responsive">
-                                                <table id="tabla" class="table table-striped">
+                                                <table id="tabla" class="table table-striped text-center" >
                                                     <tr id="cabe">
                                                         <th>DOCUMENTO</th>
                                                         <th>FECHA</th>
@@ -36,7 +36,7 @@
                                                     </tr>
                                                     @foreach($dat as $row)
                                                         <tr id="cuer">
-                                                            <td>{{ $row->Rem_Usu_id }}</td>
+                                                            <td >{{ $row->Rem_Usu_id }}</td>
                                                             <td>{{ $row ->Rem_fecha }}</td>
                                                             <td>{{ $row->Rem_resultado }}</td>
                                                         </tr>
