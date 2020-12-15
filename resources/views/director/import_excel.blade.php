@@ -72,7 +72,7 @@
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="centro">
                                         <h3>Registro de fichas</h3>
                                     </div>
-                                </div>
+                                </div><br>
 
                         
                                 <!--<form action="{{ route('users.import.excel') }}" method="post" enctype="multipart/form-data">
@@ -89,33 +89,42 @@
 
                                 <form action="{{ route('subir') }}" method="post">
                                     @csrf
-                                    <div class="form-row align-items-center">
-                                        <div class="form-group row">
-                                            <label  class="col-sm-5 col-form-label">Codigo</label>
-                                            <div class="col-sm-7">
-                                                <input type="text" class="form-control" name="Fic_Cod">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+                                                <div class="form-group row">
+                                                    <label class="col-md-4 col-form-label text-md-left">Codigo</label>
+                                                    <div id="let2" class="col-md-6">
+                                                        <input type="text" class="form-control" name="Fic_Cod">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-md-4 col-form-label text-md-left">Nombre</label>
+                                                    <div id="let2" class="col-md-6">
+                                                        <input type="text" class="form-control" name="Fic_Nombre">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-md-4 col-form-label text-md-left">Tipo</label>
+                                                    <div id="let2" class="col-md-6">
+                                                        <input type="text" class="form-control" name="Fic_Tipo">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-md-4 col-form-label text-md-left">Jornada</label>
+                                                    <div id="let2" class="col-md-6">
+                                                        <input type="text" class="form-control" name="Fic_Jornada">
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label  class="col-sm-5 col-form-label">Nombre</label>
-                                            <div class="col-sm-7">
-                                                <input type="text" class="form-control" name="Fic_Nombre">
+                                            <div class="form-group row mb-0">
+                                                <div class=" col-12  text-center">
+                                                    <input type="submit"  class="btn btn-primary" name="enviar" value="Crear Ficha">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label  class="col-sm-5 col-form-label">Tipo</label>
-                                            <div class="col-sm-7">
-                                                <input type="text" class="form-control" name="Fic_Tipo">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label  class="col-sm-5 col-form-label">Jornada</label>
-                                            <div class="col-sm-7">
-                                                <input type="text" class="form-control" name="Fic_Jornada">
-                                            </div>
+                                        
                                         </div>
                                     </div>
-                                    <input type="submit"  class="btn btn-primary" name="enviar" value="Crear Ficha">
                                 </form>
                             </div>
                             <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
@@ -129,10 +138,10 @@
                                     <div class="table-responsive">
                                         <table id="tabla" class="table table-striped">
                                             <tr id="cabe">
-                                                <th>Codigo ficha</th>
-                                                <th>Nombre</th>
-                                                <th>Tipo</th>
-                                                <th>Jornada</th>
+                                                <th>CODIGO FICHA</th>
+                                                <th>NOMBRE</th>
+                                                <th>TIPO</th>
+                                                <th>JORNADA</th>
                                             </tr>
                                             @foreach($data as $row)
                                                 <tr id="cuer">
