@@ -118,7 +118,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row mb-0">
-                                                <div class=" col-12  text-center">
+                                                <div class=" col-12 ">
                                                     <input type="submit"  class="btn btn-primary" name="enviar" value="Crear Ficha">
                                                 </div>
                                             </div>
