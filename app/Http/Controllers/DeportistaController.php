@@ -35,7 +35,10 @@ class DeportistaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $deportista = new Deportistas($request->input());
+        $deportista->saveOrFail();
+        return redirect()->route("anam1")->with(["menssaje" => "campos registrados",
+        ]);
     }
 
     /**

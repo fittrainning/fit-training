@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\deporte;
 use App\Entrenador;
+use App\Ficha;
 use App\User;
 use Illuminate\Http\Request;
 use DB;
@@ -90,11 +92,12 @@ class HomeController extends Controller
 
 
     // vistas deportista
-    public function anam1(){
+    public function anam2(){
         return view('deportistas.Anamnesis_1');
     }
-    public function anam2(){
-        return view('deportistas.Anamnesis_2');
+
+    public function anam1(){
+        return view('deportistas.Anamnesis_2', ["deportes"=>deporte::all()], ["fichas"=>Ficha::all()]);
     }
     public function anam3(){
         return view('deportistas.Anamnesis_3');

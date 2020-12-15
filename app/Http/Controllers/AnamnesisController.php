@@ -26,15 +26,16 @@ class AnamnesisController extends Controller
     {
         $anamnesisdata = request()->except('_token');
 
-        if ($request->hasFile('Ana_Logrosdeportivos')) {
-            $anamnesisdata['Ana_Logrosdeportivos']=$request->file('Ana_Logrosdeportivos')->store('uploads','public');
-        } 
+        $anamnesisdata['Ana_Logrosdeportivos']=$request->file('Ana_Logrosdeportivos')->store('uploads','public');
+
         if ($request->hasFile('Ana_HistorialDeportivo')) {
             $anamnesisdata['Ana_HistorialDeportivo']=$request->file('Ana_HistorialDeportivo')->store('uploads','public');
         }
+
         if ($request->hasFile('Ana_HistorialMedico')) {
             $anamnesisdata['Ana_HistorialMedico']=$request->file('Ana_HistorialMedico')->store('uploads','public');
         }
+
         if ($request->hasFile('Ana_HabitosAlimenticios')) {
             $anamnesisdata['Ana_HabitosAlimenticios']=$request->file('Ana_HabitosAlimenticios')->store('uploads','public');
         }

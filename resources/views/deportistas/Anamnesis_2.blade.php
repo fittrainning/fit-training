@@ -6,56 +6,55 @@
             <div id="cont"><br><br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <form action="" method="post"><!-- Falta asignar el action -->
+                        <form action="{{ route('Deportistas.store') }}" method="post">
+                            @csrf
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
                                     <br>
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="cenn">
-                                            <h3>Historial clinico</h3>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row d-flex justify-content-center">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <p>Adjunte el archivo de su historial medico: </p>  &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <div class="form-group">
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            <h3>Completa los datos de tu perfil</h3>
                                         </div>
                                     </div>
                                     <hr id="separa">
                                     <br>
-                                    <div class="row">
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="cenn">
-                                            <h3>Alimentacion</h3>
-                                        </div>
-                                    </div>
-                                    <br>
                                     <div class="row d-flex justify-content-center">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <p>Adjunte el archivo de su historial alimenticio: </p>  &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <div class="form-group">
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        <div id="color" class="form-group row">
+                                            <label class="col-lg-4 col-form-label text-lg-left">Ficha</label>
+                                            <div id="let3" class="col-lg-8">
+                                                <select name="Dep_Cod_Fic">
+                                                    @foreach($fichas as $ficha)
+                                                        <option value="{{ $ficha->Fic_Cod }}">{{ $ficha->Fic_Cod }} - {{ $ficha->Fic_Nombre }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                    <br>
+                                    <div class="row d-flex justify-content-center">
+                                        <div id="color" class="form-group row">
+                                            <label class="col-lg-4 col-form-label text-lg-left">Deporte</label>
+                                            <div id="let3" class="col-lg-8">
+                                                <select name="Dep_cod_Dee">
+                                                    @foreach($deportes as $deporte)
+                                                        <option value="{{ $deporte->Dee_cod }}">{{ $deporte->Dee_cod }} - {{ $deporte->Dee_nombre }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="Dep_Usu_id" value="{{ Auth::user()->Usu_id }}" readonly>
+                                    <input type="hidden" name="Dep_estado" value="1" readonly>
+                                    <input type="hidden" name="Dep_razon" value="ninguna" readonly>
                                 </div>
                             </div>
                             <br>
-                            <br>
                             <div class="row">
-                                <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                                    <a href="{{ route('anam1') }}">
-                                        <img id="centro1" src="{{ asset('../img/flechas_1.png') }}" alt="atras">
-                                    </a>
-                                </div>
+                                <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                                 <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
                                     <img id="centro1" src="{{ asset('../img/Proceso-2.png') }}">
                                 </div>
                                 <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                                    <a href="{{ route('anam3') }}">
-                                        <img id="centro1" src="{{ asset('../img/flechas.png') }}" alt="siguiente">
-                                    </a>
+                                    <input id="enviar"  type="submit" value="">
                                 </div>
                             </div>
                         </form>
