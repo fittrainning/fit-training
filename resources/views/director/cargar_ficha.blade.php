@@ -164,7 +164,7 @@
         <form method="post" enctype="multipart/form-data" action="{{ url('/import_excel/import') }}">
             {{ csrf_field() }}
             <div class="form-group">
-                <table class="table text-center">
+                <table class="table">
                     <tr>
                         <td width="40%" align="right"><label>Seleccionar archivo para cargar</label></td>
                         <td width="30">
@@ -220,7 +220,7 @@
             </div>
                 <div class="panel-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped">
+                        <table class="table table-bordered table-striped text-center">
                             <tr>
                                 <th>Codigo ficha</th>
                                 <th>Nombre</th>
