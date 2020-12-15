@@ -39,7 +39,7 @@
                             <p>{{ Session::get('message') }}</p>
                             @endif
                             <div class="form-group">
-                                <table class="table">
+                                <table class="table table-striped text-center" >
                                     <tr>
                                         <td width="40%" align="right">
                                             <label>Seleccionar archivo para cargar</label>
@@ -135,7 +135,7 @@
                             </div>
                                 <div class="panel-body">
                                     <div class="table-responsive">
-                                        <table id="tabla" class="table table-striped">
+                                        <table id="tabla" class="table table-striped text-center" >
                                             <tr id="cabe">
                                                 <th>CODIGO FICHA</th>
                                                 <th>NOMBRE</th>
