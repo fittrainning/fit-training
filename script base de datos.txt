@@ -23,3 +23,18 @@ INSERT INTO tb_fed VALUE
 
 INSERT INTO tb_entrenador VALUE
 ('1022437184', '12345', 'Tecnologo', 'futbol', NULL, NULL, NULL);
+
+INSERT INTO tb_planentrenamiento VALUE
+(123, '2020-12-01', '2021-07-01', 'uno muy hijuemadre\r\n', '1022437184', '1234567890', NULL, NULL, NULL);
+
+INSERT INTO tb_mesociclo VALUE
+(1, 123, 1, '2020-12-01', '2020-12-31', 12, 2000, 6, NULL, NULL, NULL);
+
+INSERT INTO tb_microciclo VALUE
+(1, 1, 2, 'suave', '2020-12-02', 'muchas', '120mm', 2, 3, 4, NULL, NULL, NULL);
+
+INSERT INTO tb_sesion VALUE
+(1, 'titulos', 1, 'centro', '#000000', '#FFFFFF', '2020-12-28 10:30:00', '2020-12-28 10:30:00', 4, 5, '5', '3', 're', NULL, NULL, NULL),
+(2, 'titulos', 1, 'centro', '#000000', '#FFFFFF', '2021-01-05 10:30:00', '2021-01-05 10:30:00', 4, 5, '5', '3', 're', NULL, NULL, NULL),
+(12, 'titulos', 1, 'centro', '#000000', '#FFFFFF', '2020-12-29 10:30:00', '2020-12-29 10:30:00', 4, 5, '5', '3', 're', NULL, NULL, NULL);
+

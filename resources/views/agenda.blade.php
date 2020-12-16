@@ -56,35 +56,62 @@
                     });
         },
 
-        eventClick:function(info){
+        eventClick:function(info) {
 
             console.log(info);
+
             console.log(info.event.title);
+
+            console.log(info.event.color);
             console.log(info.event.start);
+
 
             console.log(info.event.end);
             console.log(info.event.textColor);
             console.log(info.event.backgroundColor);
 
-            console.log(info.event.extendedProps.descripcion);
 
+            console.log(info.event.extendedProps.Ses_id);
+            console.log(info.event.extendedProps.Ses_Mic_Id_Gen);
+            console.log(info.event.extendedProps.Ses_lugar);
+            console.log(info.event.extendedProps.Ses_volumen);
+            console.log(info.event.extendedProps.Ses_intensidad);
+            console.log(info.event.extendedProps.Ses_calificacion);
+            console.log(info.event.extendedProps.Ses_capacidad);
+            console.log(info.event.extendedProps.Ses_tipo_preparacion);
+
+            $('#txtId').val(info.event.Ses_id);
+            $('#txtTitulo').val(info.event.title);
+            $('#txtIdmicro').val(info.event.Ses_Mic_Id_Gen);
+            $('#txtLugar').val(info.event.Ses_lugar);
+            $('#txtcolor').val(info.event.color);
+            $('#txtfecha').val(info.event.start);
+            $('#txthora').val(info.event.start);
+            $('#txtvolumen').val(info.event.Ses_volumen);
+            $('#txtintensidad').val(info.event.Ses_intensidad);
+            $('#txtcalificaion').val(info.event.Ses_calificacion);
+            $('#txtcapacidad').val(info.event.Ses_capacidad);
+            $('#txtpreparacion').val(info.event.Ses_tipo_preparacion);
+
+
+            $('#exampleModal').modal();
 
         },
 
         /*events:[
             {
                 title:"evento 1",
-                start:"2020-09-13 12:30:00",
+                start:"2020-12-13 12:30:00",
                 descripcion:"Descripcion del evento 1"
             },{
                 title:"evento 1",
                 start:"2020-09-13 12:30:00",
-                end:"2020-09-20 12:30:00",
+                end:"2021-01-20 12:30:00",
                 color:"#FFCCAA",
                 textColor:"#000000"
             }
         ]*/
-            events:"{{ url('/agencia/show') }}"
+            events:"{{url('/sesion/show')}}"
 
       });
       calendar.setOption('locale','Es');
@@ -99,13 +126,13 @@
         nuevoEvento={
 
             Ses_id:$('#txtId').val(),
-            Ses_Titulo:$('#txtTitulo').val(),
+            title:$('#txtTitulo').val(),
             Ses_Mic_Id_Gen:$('#txtIdmicro').val(),
             Ses_lugar:$('#txtLugar').val(),
-            Ses_color:$('#txtcolor').val(),
-            Ses_textColor:'#FFFFFF',
-            Ses_horastart:$('#txtfecha').val()+" "+$('#txthora').val(),
-            Ses_horaend:$('#txtfecha').val()+" "+$('#txthora').val(),
+            color:$('#txtcolor').val(),
+            textColor:'#FFFFFF',
+            start:$('#txtfecha').val()+" "+$('#txthora').val(),
+            end:$('#txtfecha').val()+" "+$('#txthora').val(),
             Ses_volumen:$('#txtvolumen').val(),
             Ses_intensidad:$('#txtintensidad').val(),
             Ses_calificacion:$('#txtcalificaion').val(),
@@ -123,7 +150,7 @@
         $.ajax(
             {
                 type:"POST",
-                url:"{{ url('/agenda') }}"+accion,
+                url:"{{ url('sesion') }}"+accion,
                 data:objEvento,
                 success:function(msg){ console.log(msg);},
                 error:function(){ alert("Hay un error");}
@@ -174,7 +201,13 @@
             </div>
             <div class="form-group col-md-4">
                 <label>id Microciclo:</label>
-            <input type="text" class="form-group" name="txtIdmicro" id="txtIdmicro">
+
+            <select name="txtIdmicro"  class="form-group" id="txtIdmicro">
+                @foreach ($idmicro as $micro)
+                <option value="{{$micro->Mic_Id_Gen}}">{{$micro->Mic_Id_Gen}} - {{$micro->Mic_tipo}}</option>
+
+                @endforeach
+            </select>
             </div>
             <div class="form-group col-md-6">
                 <label>Lugar:</label><br>

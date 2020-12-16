@@ -59,7 +59,7 @@ class CreateLlavesForaneasTable extends Migration
         Schema::table('tb_mesociclo', function (Blueprint $table) {
             $table->foreign('Mes_Pla_Id')->references('Pla_id')->on('tb_planentrenamiento')->onUpdate('cascade');
         });
-        
+
         Schema::table('tb_planentrenamiento', function (Blueprint $table) {
             $table->foreign('Pla_id_Ent')->references('Ent_Usu_id')->on('tb_entrenador');
             $table->foreign('Pla_id_Dep')->references('Dep_Usu_id')->on('tb_deportistas');
