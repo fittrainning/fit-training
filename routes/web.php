@@ -53,6 +53,8 @@ Route::get('vtest/{Rem_id}', 'RController@dtin')->name('vtest');
 //Route::get('/ficha', 'HomeController@ficha')->name('ficha');
 Route::get('/usuario', 'HomeController@usuario')->name('usuario');
 Route::get('/entrenadores', 'HomeController@entre')->name('entrenadores');
+Route::resource('entrenador', 'EntrenadorController');
+Route::resource('director', 'DirectorController');
 //________________________________________________________________________
 Route::get('/import_excel', 'FichaController@index')->name('import_excel');
 Route::post('/import_excel/import', 'FichaController@import');

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\deporte;
 use App\Entrenador;
+use App\Fentrenador;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -15,7 +17,7 @@ class EntrenadorController extends Controller
      */
     public function index()
     {
-        return view("director.entrenador", ["entrenadores"=>Entrenador::all()], ["users"=>User::all()]);
+        return view("completar", ["fichas"=>Fentrenador::all()], ["deportes"=>deporte::all()]);
     }
 
     /**
