@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Entrenador;
+use App\User;
 use Illuminate\Http\Request;
 
 class EntrenadorController extends Controller
@@ -14,8 +15,7 @@ class EntrenadorController extends Controller
      */
     public function index()
     {
-        return view("director.entrenador", ["entrenadores" => $mensajeria,
-        ]);
+        return view("director.entrenador", ["entrenadores"=>Entrenador::all()], ["users"=>User::all()]);
     }
 
     /**
@@ -36,7 +36,10 @@ class EntrenadorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $entrenador = new Entrenador($request->input());
+        $entrenador->saveOrFail();
+        return redirect()->route("home")->with(["menssaje" => "Perfil Completado",
+        ]);
     }
 
     /**

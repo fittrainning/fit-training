@@ -35,7 +35,10 @@ class DirectorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $deportista = new Director($request->input());
+        $deportista->saveOrFail();
+        return redirect()->route("home")->with(["menssaje" => "Perfil Completado",
+        ]);
     }
 
     /**

@@ -15,7 +15,6 @@ class CreateTbDeportistasTable extends Migration
     {
         Schema::create('tb_deportistas', function (Blueprint $table) {
             $table->string('Dep_Usu_id')->primary();
-            $table->string('Dep_deporte');
             $table->integer('Dep_estado');
             $table->string('Dep_razon');
             $table->integer('Dep_Cod_Fic');

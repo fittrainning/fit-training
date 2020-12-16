@@ -37,7 +37,7 @@ class DeportistaController extends Controller
     {
         $deportista = new Deportistas($request->input());
         $deportista->saveOrFail();
-        return redirect()->route("anam1")->with(["menssaje" => "campos registrados",
+        return redirect()->route("anam1")->with(["menssaje" => "Perfil Completado",
         ]);
     }
 
