@@ -213,6 +213,7 @@
                 <input type="submit"  class="btn btn-primary" name="enviar" value="Crear Ficha">
             </div>
         </form>
+        
         <hr id="separa">
         <div class="panel panel-default">
             <div class="panel-heading">

@@ -84,4 +84,6 @@ Route::get('user-list-excel',    'UserController@ExportExcell')->name('users.exc
 
 Route::get('/estadisticas', 'HomeController@estadi')->name('estadisticas');
 Route::post('/estadisticas/all','HomeController@all')->name('estadisticas/all');
-Route::post('completar', 'Fentrenador@completar')->name('completar');
+
+Route::resource('completa', 'FentrenadorController');
+Route::post('completar', 'FentrenadorController@tabla')->name('completar');

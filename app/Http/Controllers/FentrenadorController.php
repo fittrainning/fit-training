@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Fentrenador;
 use Illuminate\Http\Request;
-use App\Fentreador;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class FentrenadorController extends Controller
 {
@@ -16,12 +15,13 @@ class FentrenadorController extends Controller
      */
     public function index()
     {
-        //
+        $data = Fentrenador::orderBy('Fed_cod', 'DESC')->get();
+        return view('completarfichas', compact('data'));
     }
-    public function Completar(Request $request){
+    public function create(Request $request){
         $nivel = new Fentrenador($request->input());
         $nivel->saveOrFail();
-        return redirect()->route("completarfichas")->with(["menssaje" => "ficha creado",
+        return redirect()->route("completa.index")->with(["menssaje" => "ficha creado",]);
     }
     public function tabla($Fed_cod){
         
@@ -43,7 +43,6 @@ class FentrenadorController extends Controller
                     'Fed_nombre'        => $row[2],
                     'Fed_tipo'       => $row[3],
                     'Fed_jornada'       => $row[4],
-                    'Fed_id_Ent'       => $row[5],
                 );
         }
 

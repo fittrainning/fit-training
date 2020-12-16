@@ -20,12 +20,4 @@ $(document).ready(function() {
         $('#ecc2').hide();
         $('#ecc1').hide();
     });
-
-    $.ajax({
-        url: '/estadisticas/all',
-        method: 'POST',
-        dat: $('#form1').serialize()
-    }).done(function(res) {
-        alert(res);
-    });
 });
