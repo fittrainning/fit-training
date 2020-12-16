@@ -39,13 +39,13 @@
                             <p>{{ Session::get('message') }}</p>
                             @endif
                             <div class="form-group">
-                                <table class="table">
+                                <table class="table table-striped text-center" >
                                     <tr>
-                                        <td width="40%" align="right">
+                                        <td width="40%" align="right" id="letras">
                                             <label>Seleccionar archivo para cargar</label>
                                         </td>
                                         <td width="30">
-                                            <input type="file" name="file">
+                                            <input type="file" name="file" id="letras">
                                         </td>
                                         <td width="30%" align="left">
                                             <input type="submit" name="upload" class="btn btn-primary" value="Cargar">
@@ -58,7 +58,7 @@
                                         </p></center>
 
                                         <td width="40%" align="right"></td>
-                                        <td width="40%" align="center"><span class="text-muted">.xls, .xslx</span></td>
+                                        <td width="40%" align="center"><span id="letras"> solo archivos .xls, .xslx</span></td>
                                         <td width="40%" align="left"></td>
                                     </tr>
                                 </table>
@@ -116,12 +116,12 @@
                                                         <input type="text" class="form-control" name="Fic_Jornada">
                                                     </div>
                                                 </div>
+                                            </div><br>
+                                            
+                                            <div class="d-grid gap-4 col-4 mx-auto ">
+                                                <input type="submit"  class="btn btn-primary" name="enviar" value="CREAR FICHA">
                                             </div>
-                                            <div class="form-group row mb-0">
-                                                <div class=" col-12 ">
-                                                    <input type="submit"  class="btn btn-primary" name="enviar" value="Crear Ficha">
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </form>
@@ -135,7 +135,7 @@
                             </div>
                                 <div class="panel-body">
                                     <div class="table-responsive">
-                                        <table id="tabla" class="table table-striped">
+                                        <table id="tabla" class="table table-striped text-center" >
                                             <tr id="cabe">
                                                 <th>CODIGO FICHA</th>
                                                 <th>NOMBRE</th>

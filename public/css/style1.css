@@ -8,6 +8,10 @@
     text-align-last: center;
 }
 
+#usuario {
+    width: 140%;
+}
+
 #letras {
     font-family: Arial Rounded MT;
     color: #ffffff;
