@@ -80,11 +80,25 @@
 
             $('#txtId').val(info.event.extendedProps.Ses_id);
             $('#txtTitulo').val(info.event.title);
+
+            mes = (info.event.start.getMonth()+1);
+            dia = (info.event.start.getDate());
+
+            anio = (info.event.start.getFullYear());
+
+            mes=(mes<10)?"0"+mes:mes;
+            mes=(dia<10)?"0"+dia:dia;
+
+            hora = (info.event.start.getHours()+":"+info.event.start.getMinutes());
+
+
+
+
             $('#txtIdmicro').val(info.event.extendedProps.Ses_Mic_Id_Gen);
             $('#txtLugar').val(info.event.extendedProps.Ses_lugar);
             $('#txtcolor').val(info.event.color);
-            $('#txtfecha').val(info.event.start);
-            $('#txthora').val(info.event.start);
+            $('#txtfecha').val(anio+" - "+mes+" - "+dia);
+            $('#txthora').val(hora);
             $('#txtvolumen').val(info.event.extendedProps.Ses_volumen);
             $('#txtintensidad').val(info.event.extendedProps.Ses_intensidad);
             $('#txtcalificaion').val(info.event.extendedProps.Ses_calificacion);
@@ -117,6 +131,15 @@
       $('#btnagregar').click(function(){
           objEvento=recolectarDatosGUI("POST");
           EnviarInformacion('',objEvento);
+      });
+
+      $('#btnborrar').click(function(){
+          objEvento=recolectarDatosGUI("DELETE");
+          EnviarInformacion('/'+$('#txtId').val(),objEvento);
+      });
+      $('#btnmodificar').click(function(){
+          objEvento=recolectarDatosGUI("PATCH");
+          EnviarInformacion('/'+$('#txtId').val(),objEvento);
       });
 
       function recolectarDatosGUI(method){
@@ -279,4 +302,3 @@
         <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
     </div>
 @endsection
-

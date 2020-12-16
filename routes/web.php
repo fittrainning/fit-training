@@ -35,7 +35,7 @@ Route::get('/anam1', 'HomeController@anam1')->name('anam1');
 Route::get('/anam2', 'HomeController@anam2')->name('anam2');
 Route::get('/anam3', 'HomeController@anam3')->name('anam3');
 Route::post('/create','AnamnesisController@create')->name('create');
-
+Route::resource('sesion', 'SesionController');
 //
 Route::get('/bateria', 'HomeController@bateri')->name('/bateria');
 

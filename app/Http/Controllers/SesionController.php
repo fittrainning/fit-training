@@ -54,8 +54,8 @@ class SesionController extends Controller
     {
         //
 
-        $data['sesion']=Sesion::all();
-       return response()->json($data['sesion']);
+        $data['sesions']=Sesion::all();
+       return response()->json($data['sesions']);
     }
 
     /**
@@ -79,6 +79,8 @@ class SesionController extends Controller
     public function update(Request $request, Sesion $sesion)
     {
         //
+        //$datosEvento=request()->except(['_token','_method']);
+        //$respuesto=evento::where()
     }
 
     /**
@@ -87,8 +89,11 @@ class SesionController extends Controller
      * @param  \App\Sesion  $sesion
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sesion $sesion)
+    public function destroy( $sesion)
     {
         //
+        $sesions=sesion::findOrFail($sesion);
+        sesion::destroy($sesion);
+        return response()->json($sesion);
     }
 }
