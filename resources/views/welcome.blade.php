@@ -155,7 +155,11 @@
                                     </div>
                                     <div class="modal-body">
                                         <p id="letra">
-                                            ....
+                                            El baloncesto es una disciplina deportiva mundial y olímpica de tipo aciclico ya que tiene acciones
+                                            discontinuas, es un juego de conjunto y de pelota muy dinámico y se practica en invierno como en verano
+                                            estos dos últimos apuntes son importantes para esta disciplina ya que en el momento de la creación
+                                            del baloncesto contemporáneo el baloncesto nace bajo la necesidad que se pueda practicar un deporte
+                                            en invierno y que sea dinámico, no estático
                                         </p>
                                         <br>
                                         <br>
@@ -191,7 +195,8 @@
                                     </div>
                                     <div class="modal-body">
                                         <p id="letra">
-                                            ...
+                                            El juego del vóleibol se caracteriza por que la pelota debe siempre estar en movimiento mediante los goles de los jugadores, siendo faltas acciones como la retención del esférico por un jugador o por un equipo.
+                                            El jugador tiene que evitar que el balón llegue al suelo.
                                         </p>
                                         <br>
                                         <br>
@@ -227,7 +232,8 @@
                                     </div>
                                     <div class="modal-body">
                                         <p id="letra">
-                                            ...
+                                            Consiste en la práctica de una serie de disciplinas físicas diversas, tales como carreras, lanzamientos, saltos y marchas, así como de sus formas combinadas,
+                                            a través de una cantidad de pruebas deportivas consecutivas.
                                         </p>
                                         <br>
                                         <br>
