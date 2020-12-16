@@ -28,7 +28,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/editar_perfil', 'HomeController@editar')->name('editar_perfil');
 
-Route::get('/estadisticas', 'HomeController@estadi')->name('estadisticas');
 Route::get('/agenda', 'HomeController@agenda')->name('agenda');
 
 Route::get('/anam1', 'HomeController@anam1')->name('anam1');
@@ -36,7 +35,7 @@ Route::get('/anam2', 'HomeController@anam2')->name('anam2');
 Route::get('/anam3', 'HomeController@anam3')->name('anam3');
 Route::post('/create','AnamnesisController@create')->name('create');
 Route::resource('sesion', 'SesionController');
-//
+
 Route::get('/bateria', 'HomeController@bateri')->name('/bateria');
 
 Route::get('rtest', 'RtestController@index')->name('rtest');
@@ -81,3 +80,7 @@ Route::post('import-list-excel', 'UserController@importExcel')->name('users.impo
 //_________________________________________________________________________
 
 Route::get('user-list-excel',    'UserController@ExportExcell')->name('users.excel');
+
+
+Route::get('/estadisticas', 'HomeController@estadi')->name('estadisticas');
+Route::post('/estadisticas/all','HomeController@all')->name('estadisticas/all');

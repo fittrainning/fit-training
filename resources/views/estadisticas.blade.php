@@ -47,8 +47,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <form method="post" action="/estadisticas/all" id="form1">
+                            <form method="POST" action="{{ url('/estadisticas/all') }}" id="form1">
                                 @csrf
+                                @method('post')
                                 <input type="text" name="id" value="1">
                                 <input type="mail" name="">
                             </form>
