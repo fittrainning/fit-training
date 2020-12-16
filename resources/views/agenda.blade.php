@@ -48,12 +48,10 @@
         dateClick:function(info){
 
             $('#txtfecha').val(info.dateStr)
-                    $('#exampleModal').modal();
-                    //console.log(info);
-                    calendar.addEvent({
-                        title: "Evento x",
-                        date: info.dateStr
-                    });
+            $('#exampleModal').modal();
+
+            //console.log(info);
+            //calendar.addEvent({title: "Evento x",date: info.dateStr});
         },
 
         eventClick:function(info) {
@@ -80,18 +78,18 @@
             console.log(info.event.extendedProps.Ses_capacidad);
             console.log(info.event.extendedProps.Ses_tipo_preparacion);
 
-            $('#txtId').val(info.event.Ses_id);
+            $('#txtId').val(info.event.extendedProps.Ses_id);
             $('#txtTitulo').val(info.event.title);
-            $('#txtIdmicro').val(info.event.Ses_Mic_Id_Gen);
-            $('#txtLugar').val(info.event.Ses_lugar);
+            $('#txtIdmicro').val(info.event.extendedProps.Ses_Mic_Id_Gen);
+            $('#txtLugar').val(info.event.extendedProps.Ses_lugar);
             $('#txtcolor').val(info.event.color);
             $('#txtfecha').val(info.event.start);
             $('#txthora').val(info.event.start);
-            $('#txtvolumen').val(info.event.Ses_volumen);
-            $('#txtintensidad').val(info.event.Ses_intensidad);
-            $('#txtcalificaion').val(info.event.Ses_calificacion);
-            $('#txtcapacidad').val(info.event.Ses_capacidad);
-            $('#txtpreparacion').val(info.event.Ses_tipo_preparacion);
+            $('#txtvolumen').val(info.event.extendedProps.Ses_volumen);
+            $('#txtintensidad').val(info.event.extendedProps.Ses_intensidad);
+            $('#txtcalificaion').val(info.event.extendedProps.Ses_calificacion);
+            $('#txtcapacidad').val(info.event.extendedProps.Ses_capacidad);
+            $('#txtpreparacion').val(info.event.extendedProps.Ses_tipo_preparacion);
 
 
             $('#exampleModal').modal();
@@ -152,7 +150,13 @@
                 type:"POST",
                 url:"{{ url('sesion') }}"+accion,
                 data:objEvento,
-                success:function(msg){ console.log(msg);},
+                success:function(msg){
+                   console.log(msg);
+
+                    $('#exampleModal').modal('toggle');
+                    calendar.refetchEvents();
+
+                },
                 error:function(){ alert("Hay un error");}
             }
         );
