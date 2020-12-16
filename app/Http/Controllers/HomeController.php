@@ -49,6 +49,11 @@ class HomeController extends Controller
     public function estadi(){
         return view('estadisticas');
     }
+    
+    public function all(Request $request)
+    {
+        return 'hola';
+    }
 
     // vistas entrenador
     public function bateri(){

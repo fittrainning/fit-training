@@ -20,4 +20,15 @@ $(document).ready(function() {
         $('#ecc2').hide();
         $('#ecc1').hide();
     });
+
+    $.ajax({
+        url: '/estadisticas/all',
+        method: 'POST',
+        dat: {
+            id: 1,
+            _token: $('input[name="_token"]').val()
+        }
+    }).done(function(res) {
+        alert(res);
+    });
 });
