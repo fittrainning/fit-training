@@ -24,10 +24,7 @@ $(document).ready(function() {
     $.ajax({
         url: '/estadisticas/all',
         method: 'POST',
-        dat: {
-            id: 1,
-            _token: $('input[name="_token"]').val()
-        }
+        dat: $('#form1').serialize()
     }).done(function(res) {
         alert(res);
     });
