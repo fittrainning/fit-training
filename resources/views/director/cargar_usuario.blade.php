@@ -17,7 +17,7 @@
                 @endif
                 <form action="{{ route('users.import.excel') }}" method="post" enctype="multipart/form-data">
                     @csrf
-                    <center><p>
+                    <center><p id="letras">
                         Clic <a href="{{ route('users.excel') }}">aquí</a>
                         para descargar los usuarios en un archivo EXCEL
                     </p></center>
@@ -45,7 +45,7 @@
                                         <thead>
                                         <tr>
                                             <th scope="col">Tipo de Documento</th>
-                                            <th scope="col">NUmero Documento</th>
+                                            <th scope="col">Numero Documento</th>
                                             <th scope="col">Nombre</th>
                                             <th scope="col">Apellido</th>
                                             <th scope="col">E-mail</th>
@@ -99,78 +99,100 @@
                                         <div class="col-8">
                                             <form  action="{{ route('insertar') }}" method="POST">
                                                 @csrf
-                                                <div class="form-row align-items-center">
-                                                    <div class="form-group row">
-                                                        <label class="col-sm-5 col-form-label">Rol</label>
-                                                        <select class="col-sm-7" name="Usu_rol">
-                                                            <option selected>Rol usuario.</option>
-                                                            <option value="director">Director</option>
-                                                            <option value="entrenador">Entrenador</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label  class="col-sm-5 col-form-label">tipo documeno</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="text" class="form-control" name="Usu_tipodoc">
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label class="col-md-4 col-form-label text-md-left">Rol</label>
+                                                            <div  class="col-md-6">
+                                                                <select class="form-select " name="Usu_rol">
+                                                                    <option selected>Rol usuario</option>
+                                                                    <option value="director">Director</option>
+                                                                    <option value="entrenador">Entrenador</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label  class="col-sm-5 col-form-label">Numero documento</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="number" class="form-control" name="Usu_id">
+                                                        
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label class="col-md-4 col-form-label text-md-left">Tipo documento</label>
+                                                            <div  class="col-md-6">
+                                                                <select class="form-select "  name="Usu_tipodoc">
+                                                                    <option value="C.C">Cedula de Ciudadania</option>
+                                                                    <option value="T.I">Tarjeta de Indentidad</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label  class="col-sm-5 col-form-label">Nombre  </label>
-                                                        <div class="col-sm-7">
-                                                            <input type="text" class="form-control" name="name">
+                                                    
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label class="col-md-4 col-form-label text-md-left">Numero documento</label>
+                                                            <div class="col-md-6">
+                                                                <input type="number" class="form-control" name="Usu_id">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label  class="col-sm-5 col-form-label">Apellido</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="text" class="form-control" name="Usu_apellidos">
+
+                                                   
+                                                    
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label class="col-md-4 col-form-label text-md-left">Nombre</label>
+                                                            <div class="col-md-6">
+                                                                <input type="text" class="form-control" name="name">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label  class="col-sm-5 col-form-label">Email</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="email" class="form-control" name="email">
+                                                        
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label  class="col-md-4 col-form-label text-md-left">Apellido</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" name="Usu_apellidos">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label  class="col-sm-5 col-form-label">Fecha de Nacimiento</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="date" class="form-control" name="Usu_fecha_nacimiento">
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label  class="col-md-4 col-form-label text-md-left">Email</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="email" class="form-control" name="email">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label  class="col-sm-5 col-form-label">Telefono</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="tel" class="form-control" name="Usu_telefono">
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label  class="col-md-4 col-form-label text-md-left">Fecha de Nacimiento</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="date" class="form-control" name="Usu_fecha_nacimiento">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label  class="col-sm-5 col-form-label">Contraseña</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="password" class="form-control" name="password">
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label  class="col-md-4 col-form-label text-md-left">Telefono</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="tel" class="form-control" name="Usu_telefono">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label  class="col-sm-5 col-form-label">Genero</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="text" class="form-control" name="Usu_genero">
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label  class="col-md-4 col-form-label text-md-left">Contraseña</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="password" class="form-control" name="password">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label  class="col-sm-5 col-form-label">Direccion</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="text" class="form-control" name="Usu_direccion">
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label  class="col-md-4 col-form-label text-md-left">Genero</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-select "  name="Usu_genero">
+                                                                    <option value="Femenino">Femenino</option>
+                                                                    <option value="Masculino">Masculino</option>
+                                                                    <option value="Otro">Otro</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
+                                                        <div class="form-group row" id="usuario"> 
+                                                            <label  class="col-md-4 col-form-label text-md-left">Direccion</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" name="Usu_direccion">
+                                                            </div>
+                                                        </div>
+                                                        <input type="hidden" class="form-control" name="Usu_foto" value="foto/porfile.png">
+                                                
                                                     </div>
-                                                    <input type="hidden" class="form-control" name="Usu_foto" value="foto/porfile.png">
                                                 </div>
-                                                <input type="submit"  class="btn btn-primary" name="enviar" value="SUBIR USUARIO">
+
+                                                <div class="d-grid gap-2 col-6 mx-auto ">
+                                                    <input type="submit"  class="btn btn-primary" name="enviar" value="SUBIR USUARIO">
+                                                </div>
                                             </form>
                                         </div>
                                         <div class="col-2"></div>
