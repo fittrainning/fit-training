@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Fentrenador;
 use Illuminate\Http\Request;
+use App\Fentreador;
+use DB;
 
 class FentrenadorController extends Controller
 {
@@ -16,70 +18,40 @@ class FentrenadorController extends Controller
     {
         //
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function Completar(Request $request){
+        $nivel = new Fentrenador($request->input());
+        $nivel->saveOrFail();
+        return redirect()->route("completarfichas")->with(["menssaje" => "ficha creado",
+    }
+    public function tabla($Fed_cod){
+        
+        $dat = Fentrenador::where('Fed_cod','=',$Fed_cod)->get();
+        return view('completarfichas', compact('dat'));
+        
+    }    
+   
+    public function import(Request $rows)
     {
-        //
+
+        $dat = [];
+
+        foreach ($rows as $row) 
+        {
+            $dat[] = array(
+                    'Fed_id_Dir'       => $row[0],
+                    'Fed_cod'  => $row[1],
+                    'Fed_nombre'        => $row[2],
+                    'Fed_tipo'       => $row[3],
+                    'Fed_jornada'       => $row[4],
+                    'Fed_id_Ent'       => $row[5],
+                );
+        }
+
+        if(!empty($dat))
+      {
+       DB::table('tb_fed')->insert($dat);
+      }
+      return back();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Fentrenador  $fentrenador
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Fentrenador $fentrenador)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Fentrenador  $fentrenador
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Fentrenador $fentrenador)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Fentrenador  $fentrenador
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Fentrenador $fentrenador)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Fentrenador  $fentrenador
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Fentrenador $fentrenador)
-    {
-        //
-    }
 }

@@ -81,3 +81,5 @@ Route::post('import-list-excel', 'UserController@importExcel')->name('users.impo
 //_________________________________________________________________________
 
 Route::get('user-list-excel',    'UserController@ExportExcell')->name('users.excel');
+
+Route::post('completar', 'Fentrenador@completar')->name('completar');

@@ -16,7 +16,7 @@ class RController extends Controller
         return view('entrenador.vtest', compact('dat'));
     }
 
-        public function import(Request $rows)
+    public function import(Request $rows)
     {
 
         $dat = [];
