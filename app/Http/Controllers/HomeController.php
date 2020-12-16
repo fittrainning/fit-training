@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\deporte;
+use App\Director;
 use App\Entrenador;
 use App\Ficha;
 use App\User;
@@ -31,7 +32,7 @@ class HomeController extends Controller
     // vistas generales
     public function index()
     {
-        return view('entrenador.inicioen');
+        return view('entrenador.inicioen', ["entrenadores"=>Entrenador::all()], ["directores"=>Director::all()]);
     }
 
     public function editar()
