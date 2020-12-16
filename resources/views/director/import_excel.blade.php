@@ -63,7 +63,6 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        
 
                                         <center><p id="letras">
                                             Clic <a href="{{ route('users.excel') }}">aquí</a>

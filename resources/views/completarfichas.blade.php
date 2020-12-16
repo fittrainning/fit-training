@@ -9,15 +9,17 @@
                     <div class="row" id="color" >
                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
                         <div id="centro" class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                            <h3 id="titulo">Fichas de Entrenamiento Deportivo</h3>
+                            
                         </div>
                         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+                        
                         <div  class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                             <div id="cerrar">
                                 <a href="{{route("home")}}"><img src="{{ asset('img/cerrar.png') }}" width="30" height="30"></a>
                             </div>
                         </div>
                     </div>
+                    <h3 id="xd" class=" text-md-center">Fichas de Entrenamiento Deportivo</h3>
                     <br>
                     <hr id="separa">
                     <div class="row" id="color" >
@@ -31,29 +33,32 @@
                                         
                                     </div>
                                     <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-                                    <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                        <div class="form-row align-items-center">
+                                    
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+                                                
                                             <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Codigo</label>
-                                                <div class="col-sm-7">
+                                                <label  class="col-md-4 col-form-label text-md-left" >Codigo</label>
+                                                <div id="let2" class="col-md-6">
                                                     <input type="text" class="form-control" name="Fed_cod">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Nombre</label>
-                                                <div class="col-sm-7">
+                                                <label  class="col-md-4 col-form-label text-md-left" >Nombre</label>
+                                                <div id="let2" class="col-md-6">
                                                     <input type="text" class="form-control" name="Fed_nombre">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Tipo</label>
-                                                <div class="col-sm-7">
+                                                <label  class="col-md-4 col-form-label text-md-left" >Tipo</label>
+                                                <div id="let2" class="col-md-6">
                                                     <input type="text" class="form-control" name="Fed_tipo">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label  class="col-sm-5 col-form-label">Jornada</label>
-                                                <div class="col-sm-7">
+                                                <label  class="col-md-4 col-form-label text-md-left" >Jornada</label>
+                                                <div id="let2" class="col-md-6">
                                                     <input type="text" class="form-control" name="Fed_jornada">
                                                 </div>
                                             </div>
