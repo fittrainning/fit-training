@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Microciclo;
 use App\Sesion;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class SesionController extends Controller
     public function index()
     {
         //
-        return view('agenda');
+        return view('agenda',["idmicro"=>Microciclo::all()]);
+
     }
 
     /**
@@ -51,8 +53,9 @@ class SesionController extends Controller
     public function show()
     {
         //
+
         $data['sesion']=Sesion::all();
-        return response()->json($data['sesion']);
+       return response()->json($data['sesion']);
     }
 
     /**
