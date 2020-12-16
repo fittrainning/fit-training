@@ -21,6 +21,7 @@
                         Clic <a href="{{ route('users.excel') }}">aquí</a>
                         para descargar los usuarios en un archivo EXCEL
                     </p></center>
+
                 </form>
                 <br>
                 <div class="d-flex justify-content-around">

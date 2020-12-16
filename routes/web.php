@@ -77,11 +77,13 @@ Route::post('subir', 'FichaController@subir')->name('subir');
 Route::get('user-list-excel',    'UserController@exportExcel')->name('users.excel');
 Route::post('import-list-excel', 'UserController@importExcel')->name('users.import.excel');
 
+Route::get('user-list-pdf',      'UserController@exportPdf')->name('users.pdf');
 //_________________________________________________________________________
 
 Route::get('user-list-excel',    'UserController@ExportExcell')->name('users.excel');
+Route::get('user-list-pdf',      'UserController@ExporttPdff')->name('users.pdf');
 
-
+//__________________________________________________________________________
 Route::get('/estadisticas', 'HomeController@estadi')->name('estadisticas');
 Route::post('/estadisticas/all','HomeController@all')->name('estadisticas/all');
 

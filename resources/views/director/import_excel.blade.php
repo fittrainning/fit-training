@@ -63,7 +63,9 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <center><p>
+                                        
+
+                                        <center><p id="letras">
                                             Clic <a href="{{ route('users.excel') }}">aquí</a>
                                             para descargar en EXCEL las fichas
                                         </p></center>
