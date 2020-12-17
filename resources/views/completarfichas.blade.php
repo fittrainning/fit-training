@@ -25,7 +25,7 @@
                     <div class="row" id="color" >
                         <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
                         <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                            <form action="{{route("completa.create")}}" method="POST">
+                            <form action="{{route("subirr")}}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="colo">
@@ -76,20 +76,20 @@
                             <hr id="separa">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Datos fichas Entrenador</h3>
+                                    <h3 id="xd" class=" text-md-center">Datos fichas Entrenador</h3><br>
                                 </div>
                                     <div class="panel-body">
                                         <div class="table-responsive">
-                                            <table class="table table-bordered table-striped text-center">
-                                                <tr>
-                                                    <th>Director</th>
-                                                    <th>Codigo ficha</th>
-                                                    <th>Nombre</th>
-                                                    <th>Tipo</th>
-                                                    <th>Jornada</th>
+                                            <table id="tabla" class="table table-striped text-center" >
+                                                <tr id="cabe">
+                                                    <th>DIRECTOR</th>
+                                                    <th>CODIGO FICHA</th>
+                                                    <th>NOMBRE</th>
+                                                    <th>TIPO</th>
+                                                    <th>JORNADA</th>
                                                 </tr>
                                                 @foreach($data as $row)
-                                                <tr>
+                                                <tr id="cuer">
                                                     <td>{{ $row->Fed_id_Dir }}</td>
                                                     <td>{{ $row->Fed_cod }}</td>
                                                     <td>{{ $row->Fed_nombre }}</td>

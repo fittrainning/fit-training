@@ -8,27 +8,17 @@ use Illuminate\Support\Facades\DB;
 
 class FentrenadorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $data = Fentrenador::orderBy('Fed_cod', 'DESC')->get();
+        $data = DB::table('tb_fed')->orderBy('Fed_cod', 'DESC')->get();
         return view('completarfichas', compact('data'));
     }
-    public function create(Request $request){
+    public function subirr(Request $request){
         $nivel = new Fentrenador($request->input());
         $nivel->saveOrFail();
         return redirect()->route("completa.index")->with(["menssaje" => "ficha creado",]);
     }
-    public function tabla($Fed_cod){
-        
-        $dat = Fentrenador::where('Fed_cod','=',$Fed_cod)->get();
-        return view('completarfichas', compact('dat'));
-        
-    }    
+   
    
     public function import(Request $rows)
     {

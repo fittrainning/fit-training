@@ -19,6 +19,8 @@ class CreateTbFedTable extends Migration
             $table->string('Fed_tipo');
             $table->string('Fed_jornada');
             $table->string('Fed_id_Dir')->references('Dir_Usu_id')->on('tb_director')->onUpdate('cascade');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
