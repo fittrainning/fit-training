@@ -7,6 +7,11 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div id="est" class="row">
+                        <div id="visitor">
+                            {{ $dec->Dee_nombre }}
+
+                            {!! $lava->render('Barchart', 'Dee_nombre', 'graph') !!}
+                        </div>
                         <div id="ecoo" class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                             <div class="ec1">
                                 <div id="ebot">

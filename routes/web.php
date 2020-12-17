@@ -89,3 +89,5 @@ Route::resource('completa', 'FentrenadorController');
 
 
 Route::post('subirr', 'FentrenadorController@subirr')->name('subirr');
+
+Route::post('Esta/{id}', 'DeporteController@tabla')->name('Esta');

@@ -19,13 +19,13 @@ INSERT INTO tb_director VALUE
 ("9876543210", 'futbol', NULL, NULL, NULL);
 
 INSERT INTO tb_fed VALUE
-('12345', 'Externo', 'Externo', 'mixta', '9876543210');
+('12345', 'Externo', 'Externo', 'mixta', '9876543210', NULL, NULL, NULL);
 
 INSERT INTO tb_entrenador VALUE
 ('1022437184', '12345', 'Tecnologo', 'futbol', NULL, NULL, NULL);
 
 INSERT INTO tb_planentrenamiento VALUE
-(123, '2020-12-01', '2021-07-01', 'uno muy hijuemadre\r\n', '1022437184', '1234567890', NULL, NULL, NULL);
+(123, '2020-12-01', '2021-07-01', '1', '1022437184', '1234567890', NULL, NULL, NULL);
 
 INSERT INTO tb_mesociclo VALUE
 (1, 123, 1, '2020-12-01', '2020-12-31', 12, 2000, 6, NULL, NULL, NULL);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Deporte;
 use Illuminate\Http\Request;
+use Khill\Lavacharts\Lavacharts;
 
 class DeporteController extends Controller
 {
@@ -85,5 +86,22 @@ class DeporteController extends Controller
     public function destroy(Deporte $deporte)
     {
         //
+    }
+
+    public function tabla($id)
+    {
+        $dec=Deporte::find($id);
+        $deportes=array(0,0,0);
+        foreach($dec->ratings as $raiting){
+            $deportes[$raiting->$raiting - 1] += 1;
+        }
+        $lava=new Lavacharts();
+        $graficodeportes=$lava->DataTable();
+        $graficodeportes->addStringColumn('Dee_nombre')->addNumberColumn('Dee_cod');
+        for($i=1; $i <= count($deportes); $i ++){
+            $graficodeportes->addRow(['deportes'.$i, $deportes[$i = 1]]);
+        }
+        $lava->Barchart('Dee_nombre', $graficodeportes);
+        return view('estadisticas', ['dec' => $dec, 'lava' => $lava]);
     }
 }
